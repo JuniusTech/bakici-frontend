@@ -1,0 +1,133 @@
+.Navbar {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 1728px;
+  height: 154px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.NavbarNew {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 1728px;
+  height: 154px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.Navbar-Collapse {
+  margin-top: 71px;
+}
+.Navbar-Button {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 178px;
+  height: 38px;
+  margin: 3px;
+  padding: 0px;
+  color: #263238;
+  border: 1px solid #263238;
+  border-radius: 19px;
+}
+.Navbar-Button:hover {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 178px;
+  height: 38px;
+  margin: 3px;
+  /* margin-top: 71px; */
+  padding: 0px;
+  color: #263238;
+  border: 1px solid #263238;
+}
+.Navbar-ButtonNew{
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 178px;
+  height: 38px;
+  margin: 3px;
+  /* margin-top: 71px; */
+  padding: 0px;
+  color: #ffffff;
+  background-color: #E88585;
+  border: 1px solid #E88585;
+  border-radius: 19px;
+}
+.Navbar-ButtonNew:hover{
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 178px;
+  height: 38px;
+  margin: 3px;
+  /* margin-top: 71px; */
+  padding: 0px;
+  color: #ffffff;
+  background-color: #E88585;
+  border: 1px solid #E88585;
+}
+.Navbar-LinkNew {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 178px;
+  height: 38px;
+  margin: 3px;
+  padding: 0px;
+  color: #263238;
+  border: 1px solid #ffffff;
+  border-radius: 19px;
+}
+.Navbar-LinkNew:hover {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  width: 178px;
+  height: 38px;
+  margin: 3px;
+  padding: 0px;
+  color: #263238;
+  border: 1px solid #ffffff;
+  border-radius: 19px;
+}
+.Navbar-Link {
+  margin: 3px;
+}
+
+
+.Navbar-Logo {
+  width: 141px;
+  height: 116px;
+  /* position: absolute;
+  top: 19px;
+  z-index: 1; */
+}
+.Navbar-Bakici-MagnifyingGlass {
+  width: 22px;
+  height: 22px;
+}
+
+.Navbar-ise-ProfilePlus {
+  width: 22px;
+  height: 22px;
+}
+.Navbar-Login-Profile {
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (max-width: 900px) {
+  .seperator {
+    width: 30%;
+    height: 0px;
+    border: 0.5px solid #263238;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .seperator {
+    width: 0px;
+    height: 100%;
+    border: 0.5px solid #263238;
+  }
+}

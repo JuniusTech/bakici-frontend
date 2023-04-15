@@ -1,0 +1,90 @@
+.BakiciOlma{
+    position: absolute;
+    top: 2716px;
+    width: 1728px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.BakiciOlma-Text{ 
+    font-family: 'Georama', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 57px;
+    color: #455A64;
+    margin-bottom: 75px;
+    
+}
+.BakiciOlma-Box{
+    width: 1728px;
+    height: 598px;
+    background-color:rgba(69, 120, 136, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.BakiciOlma-Box-Cards{
+    width: 1728px;
+    height: 508px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 0px 236px 0px 235px;
+}
+.BakiciOlma-Box-Card-Number{
+    width: 30px;
+    height: 57px;
+    font-family: 'Georama', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    margin: 27px auto 28px auto;
+    line-height: 57px;
+    color: #FFE8AC;
+
+}
+.BakiciOlma-Box-Card-Icon{
+    width: 172px;
+    height: 172px;
+
+}
+.BakiciOlma-Box-Card-Text {
+    width: 290px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 25px;
+    color: #FFF;
+    margin-top: 25px;
+    padding: 0px 10px 0px 10px;
+    
+
+}
+.BakiciOlma-Box-Card-Hr{
+    height: 93.5px;
+    border: 0.5px solid #FFF;
+    position: relative;
+    top: 280px;
+    margin: px ;
+}
+
+.BakiciOlma-Button{
+    margin: 105.5px 719px 34px 720px;
+    width: 284px;
+    height: 74px;
+    background-color: #FF9191;
+    color: white;
+    font-family: 'Georama', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 38px;
+    border: 0px solid #FF9191;
+    border-radius: 37px;
+}

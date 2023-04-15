@@ -1,0 +1,94 @@
+.Footer {
+  position: absolute;
+  top: 4730px;
+  width: 1728px;
+  height: 465px;
+  background-color: #37474f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer-Fİrst {
+  width: 1728px;
+  height: 416px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 72px;
+  justify-content: space-around;
+}
+
+.Footer-Fİrst-First-Logo {
+  width: 171px;
+  height: 140px;
+  margin-top: 41px;
+}
+
+.Footer-Fİrst-Second,
+.Footer-Fİrst-Third,
+.Footer-Fİrst-Fourth {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-items: center;
+}
+.Footer-Fİrst-Second-Title,
+.Footer-Fİrst-Third-Title,
+.Footer-Fİrst-Fourth-Title {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #c7c7c7;
+  margin-bottom: 45px;
+}
+
+.Footer-Fİrst-Second-Link,
+.Footer-Fİrst-Third-Link,
+.Footer-Fİrst-Fourth-Link {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  color: #c7c7c7;
+  text-decoration: none;
+}
+.Footer-Fİrst-Fifth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 320px;
+    margin-top: 87px;
+    text-align: left;
+}
+
+.klarna,
+.mastercard{
+    font-family: "Prompt";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    color: #EBEBEB;
+}
+.mastercard{
+    margin-left: 10px;
+}
+.Footer-Second {
+  width: 1728px;
+  height: 48px;
+  border-top: 0.5px solid #ebebeb;
+  text-align: center;
+  padding: auto; 
+}
+.Footer-Second-Text{
+    font-family: "Prompt";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #c7c7c7;
+}

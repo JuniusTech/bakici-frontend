@@ -1,0 +1,24 @@
+.HomeBackground1 {
+  position: absolute;
+  width: 1150.69px;
+  height: 1086px;
+  z-index: -1;
+  right: 0;
+  top: -8px;
+}
+.HomeBackground2 {
+  position: absolute;
+  width: 523px;
+  height: 1046px;
+  top: 1420px;
+  z-index: -1;
+  right: 0;
+}
+.HomeBackground3{
+  position: absolute;
+  width: 523px;
+  height: 1046px;
+  top: 1943px;
+  left: 0;
+  z-index: -1;
+}

@@ -1,0 +1,119 @@
+.Home-First {
+  position: absolute;
+  top :305px;
+  left: 0;
+  width: 1728px;
+  display: flex;
+
+}
+.Home-First-Text-Form {
+  position: absolute;
+  top:52.5px;
+  display: flex;
+  flex-direction: column;
+  left:80px;
+}
+
+.Home-First-Text {
+  padding: 0;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 57px;
+  font-family: "Georama";
+  text-transform: uppercase;
+  width: 728px;
+  height: 114px;
+  margin-left: 24px;
+}
+.Form-input {
+  width: 300px;
+  height: 64px;
+  border-radius: 7px;
+}
+.Child-Location {
+  padding-left: 37px;
+}
+.Home-First-Form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 53px 59px;
+  width: 767px;
+  height: 329px;
+  border: 1px solid #c7c7c7;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 67px;
+}
+
+.Home-First-Button {
+  background-color: #ff9090;
+  border: 1px solid #ff9090;
+  border-radius: 7px;
+  width: 300px;
+  height: 64px;
+  margin-top: 30px;
+  font-size: 28px;
+  font-family: "Georama";
+  font-weight: 400;
+}
+.Home-First-Button:hover {
+  background-color: #ff9090;
+  border: 1px solid #ff9090;
+  border-radius: 7px;
+  width: 300px;
+  height: 64px;
+  margin-top: 30px;
+  font-size: 28px;
+  font-family: "Georama";
+  font-weight: 400;
+}
+.Arrow {
+  width: 17px;
+  height: 16px;
+  position: relative;
+  bottom: 45px;
+  left: 110px;
+}
+.Arrow-tarih {
+  width: 17px;
+  height: 16px;
+  position: relative;
+  bottom: 45px;
+  left: 123px;
+}
+.Child {
+  width: 24px;
+  color: #c7c7c7;
+  height: 24px;
+  position: relative;
+  bottom: 45px;
+  right: 120px;
+}
+
+.Location {
+  width: 22px;
+  color: #c7c7c7;
+  height: 27px;
+  position: relative;
+  bottom: 45px;
+  right: 120px;
+}
+.Form-Label {
+  position: relative;
+  top: 6px;
+  right: 90px;
+}
+.Form-Label-location {
+  position: relative;
+  top: 6px;
+  right: 70px;
+}
+
+.Home-First-img {
+  position: absolute;
+  right: 115.32px;
+  width: 675.68px;
+  height: 631.29px;
+}
