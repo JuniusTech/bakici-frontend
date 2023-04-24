@@ -1,0 +1,50 @@
+.MusteriKayitOnay {
+  width: 1728px;
+}
+.LogoBeyaz {
+  position: absolute;
+  width: 674.7px;
+  height: 597.56px;
+  top:-20px;
+  left: -60px;
+}
+.logo {
+  position: absolute;
+  left: 94px;
+  top: 43px;
+  width: 141px;
+  height: 114px;
+}
+.MusteriKayitOnay-h1 {
+  position: absolute;
+  width: 419px;
+    height: 36px;
+  left: 655px;
+  top: 87px;
+  font-family: Georama, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #467888;
+}
+.ilustration {
+  position: absolute;
+  width: 415.54px;
+  height: 439.52px;
+  left: 656px;
+  top: 292px;
+}
+.MusteriKayitOnay-btn {
+  position: absolute;
+  width: 400px;
+  height: 52px;
+  left: 664px;
+  top: 857px;
+  background: #455a64;
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  border-radius: 26px;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 20px;
+  color: #ffffff;
+}

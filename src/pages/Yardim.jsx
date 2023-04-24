@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Yardim = () => {
-  return <div>Yardım....123</div>;
-};
+  return (
+    <div>Yardim</div>
+  )
+}
 
-export default Yardim;
+export default Yardim
