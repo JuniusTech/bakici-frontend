@@ -21,66 +21,72 @@ const MusteriKayit = () => {
       <div className="MusteriKayit-Container">
         
         <div className="MusteriKayit-FormContainer">
-          <h1 className="MusteriKayit-Form-Title">BİLGİLERİNİZİ GİRİNİZ</h1>
+          <h1 className="MusteriKayit-Form-Title">BİLGİLERİNİZİ GİRİN</h1>
           <form className="MusteriKayit-Form-Form">
-            <label htmlFor="name" className="MusteriKayit-Form-Label">
+            <label htmlFor="name" className="MusteriKayit-Form-Label label-isim">
               isim ve Soyisim
             </label>
             <br />
             <input
               type="text"
               placeholder="isim ve soyisim"
-              className="MusteriKayit-Form-Input"
+              className="MusteriKayit-Form-Input input-isim"
             />
             <br />
-            <label htmlFor="email" className="MusteriKayit-Form-Label">
+            <label htmlFor="email" className="MusteriKayit-Form-Label label-mail">
               Email
             </label>
             <br />
             <input
               type="email"
               placeholder="mail@gmail.com"
-              className="MusteriKayit-Form-Input"
+              className="MusteriKayit-Form-Input input-mail"
             />
             <br />
-            <label htmlFor="tel" className="MusteriKayit-Form-Label">
+            <label htmlFor="tel" className="MusteriKayit-Form-Label label-tel">
               Telefon Numaranız
             </label>
             <br />
             <input
               type="tel"
               placeholder="5XX XXX XX XX"
-              className="MusteriKayit-Form-Input"
+              className="MusteriKayit-Form-Input input-tel"
             />
             <br />
-            <label htmlFor="password" className="MusteriKayit-Form-Label">
+            <label htmlFor="password" className="MusteriKayit-Form-Label label-sifre">
               Şifre
             </label>
             <br />
             <input
               type="password"
               placeholder="Min. 6 karakter"
-              className="MusteriKayit-Form-Input"
+              className="MusteriKayit-Form-Input input-sifre"
             />
             <br />
-            <label htmlFor="password" className="MusteriKayit-Form-Label">
+            <p className="MusteriKayit-Form-Text-1">
+            Sifreniz en az 6 karakterden olusmalidir
+            </p>
+            <p className="MusteriKayit-Form-Text-2">
+            Sifrenizde en az bir sembol bulunmalidir. ornegin: @, !
+            </p>
+            <label htmlFor="password" className="MusteriKayit-Form-Label label-sifreTekrar">
               Şifre Tekrar
             </label>
             <br />
             <input
               type="password"
               placeholder="Min. 6 karakter"
-              className="MusteriKayit-Form-Input"
+              className="MusteriKayit-Form-Input input-sifreTekrar"
             />
             <br />
-            <label htmlFor="select" className="MusteriKayit-Form-Label">
+            <label htmlFor="select" className="MusteriKayit-Form-Label label-sehir">
               Şehir Girin
             </label>
             <br />
             <select
               name="select"
               id="select"
-              className="MusteriKayit-Form-Select"
+              className="MusteriKayit-Form-Input input-sehir"
             >
               <option value="İstanbul">İstanbul</option>
               <option value="Ankara">Ankara</option>
@@ -92,12 +98,12 @@ const MusteriKayit = () => {
             </select>
             <br />
             <button className="MusteriKayit-Form-Submit">Kayıt Ol</button>
-            <div className="MusteriKayit-Form-Text-Link-Container">
-              <p className="MusteriKayit-Form-Text-Link">Hesabınız var mı?</p>
-              <NavLink to="/login" className="MusteriKayit-Form-Text-Link">
+            
+              <p className="MusteriKayit-Form-TextLink-Text">Hesabınız varmı?</p>
+              <NavLink to="/login" className="MusteriKayit-Form-TextLink-Link">
                 Oturum Açın
               </NavLink>
-            </div>
+            
           </form>
         </div>
       
