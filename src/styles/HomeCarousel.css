@@ -33,3 +33,18 @@
 .Carouselx-Button {
   margin-top: 100px;
 }
+
+.button-span-right {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url(../assets/arrow-right-circle.svg);
+  background-size: cover;
+}
+.button-span-left {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url(../assets/arrow-left-circle.svg);
+  background-size: cover;
+}

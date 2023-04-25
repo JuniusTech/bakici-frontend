@@ -1,0 +1,88 @@
+.MusteriKayit {
+  width: 1728px;
+  height: 1104px;
+}
+.MusteriKayit-Logo {
+  position: absolute;
+  left: 50px;
+  top: 23px;
+  width: 140.63px;
+  height: 116.07px;
+    z-index: 1;
+}
+
+.MusteriKayit-Link {
+  position: absolute;
+  right: 108px;
+  top: 38px;
+  font-family: Georama, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: underline;
+  z-index: 1;
+}
+.MusteriKayit-Logo2 {
+  position: absolute;
+  width: 674.7px;
+    height: 606.04px;
+    left: -70px;
+    top: -20px;
+    z-index: -1;
+}
+.MusteriKayit-Container{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MusteriKayit-FormContainer {
+  width: 841px;
+}
+
+.MusteriKayit-Form-Text-Link-Container {
+  /* width: 200px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.MusteriKayit-İmgContainer {
+
+  width: 887px;
+  height: 1104px;
+  background: linear-gradient(180deg, #455A64 0%, #2D83AC 100%);
+filter: blur(5px);
+z-index: -1;
+
+
+}
+.MusteriKayit-İmg{
+    position: absolute;
+    width: 756px;
+    height: 756px;
+    left: 907px;
+    top: 174px;
+    z-index: 1;
+}
+
+.MusteriKayit-İmg-Title{
+    position: absolute;
+    width: 426px;
+    height: 240px;
+    left: 1074px;
+    top: 392px;
+    z-index: 1; 
+    text-transform: uppercase;
+    
+    font-family: Georama, sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 80px;
+    text-align: center;
+    color: #ffffff;
+}

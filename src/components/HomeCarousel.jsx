@@ -40,7 +40,7 @@ const HomeCarousel = () => {
             data-bs-slide="prev"
           >
             <span
-              className="carousel-control-prev-icon"
+              className="button-span-left"
               aria-hidden="true"
             ></span>
             
@@ -52,9 +52,11 @@ const HomeCarousel = () => {
             data-bs-slide="next"
           >
             <span
-              className="carousel-control-next-icon"
+              className=" button-span-right "
               aria-hidden="true"
-            ></span>
+            >
+              
+            </span>
             
           </button>
         </div>
