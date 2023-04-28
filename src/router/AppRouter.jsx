@@ -10,7 +10,6 @@ import MusteriKayit from "../pages/MusteriKayit";
 import MusteriKayitOnay from "../pages/MusteriKayitOnay";
 
 
-
 const AppRouter = () => {
   return (
     <BrowserRouter>      
