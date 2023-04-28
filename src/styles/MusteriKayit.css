@@ -119,33 +119,43 @@
   left: 236px;
   top: 604px;
 }
-.MusteriKayit-Form-Text-1{
-position: absolute;
-width: 207px;
-height: 16px;
-left: 236px;
-top: 671px;
-font-family: 'Georama';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height, or 133% */
-color: #CCCCCC;
+.password-toogle-icon1 {
+  position: absolute;
+  left: 600px;
+  top: 618px;
 }
-.MusteriKayit-Form-Text-2{
-position: absolute;
-width: 273px;
-height: 16px;
-left: 236px;
-top: 694px;
-font-family: 'Georama';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height, or 133% */
-color: #CCCCCC;
+.password-toogle-icon2 {
+  position: absolute;
+  left: 600px;
+  top: 775px;
+}
+.MusteriKayit-Form-Text-1 {
+  position: absolute;
+  width: 207px;
+  height: 16px;
+  left: 236px;
+  top: 671px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  color: #cccccc;
+}
+.MusteriKayit-Form-Text-2 {
+  position: absolute;
+  width: 273px;
+  height: 16px;
+  left: 236px;
+  top: 694px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  color: #cccccc;
 }
 
 .label-sifreTekrar {
@@ -168,6 +178,16 @@ color: #CCCCCC;
   position: absolute;
   left: 236px;
   top: 863px;
+  padding-right: 20px;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background: transparent;
+  background-image: url("../assets/Vector.svg");
+  background-repeat: no-repeat;
+  background-position-x: 365px;
+  background-position-y: 23px;
+  margin-right: 2rem;
 }
 .MusteriKayit-Form-Submit {
   position: absolute;
@@ -197,34 +217,34 @@ color: #CCCCCC;
   cursor: pointer;
 }
 
-.MusteriKayit-Form-TextLink-Text{
+.MusteriKayit-Form-TextLink-Text {
   position: absolute;
-width: 120px;
-height: 24px;
-left: 276px;
-top: 1038px;
-font-family: 'Georama';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
-color: #C4C4C4;
+  width: 120px;
+  height: 24px;
+  left: 276px;
+  top: 1038px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  color: #c4c4c4;
 }
-.MusteriKayit-Form-TextLink-Link{
+.MusteriKayit-Form-TextLink-Link {
   position: absolute;
-width: 90px;
-height: 24px;
-left: 470px;
-top: 1038px;
-font-family: 'Georama';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
-text-decoration-line: underline;
-color: #476D73;
+  width: 90px;
+  height: 24px;
+  left: 470px;
+  top: 1038px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-decoration-line: underline;
+  color: #476d73;
 }
 
 .MusteriKayit-İmgContainer {
