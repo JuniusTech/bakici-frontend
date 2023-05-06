@@ -91,7 +91,7 @@ const CareZoneNavbar = () => {
               className="me-3 active Navbar-Link"
               style={navstyle2}
               onClick={() => setExpanded(expanded & false)}
-              to="/register"
+              to="/anauyelik"
             >
               Üye Olun
             </NavLink>

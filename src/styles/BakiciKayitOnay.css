@@ -1,0 +1,46 @@
+.BakiciKayitOnay {
+  width: 1728px;
+  height: 1137px;
+}
+.BakiciKayitOnay_h1 {
+  position: absolute;
+  width: 358px;
+  height: 120px;
+  left: 674px;
+  top: 73px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #455a64;
+}
+
+.ILUSTRASYON-2 {
+  position: absolute;
+  width: 662px;
+  height: 586px;
+  left: 533px;
+  top: 276px;
+}
+.BakiciKayitOnay_button {
+  position: absolute;
+  width: 400px;
+  height: 52px;
+  left: 664px;
+  top: 1015px;
+
+  background: #455a64;
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  border-radius: 26px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  color: #ffffff;
+}
