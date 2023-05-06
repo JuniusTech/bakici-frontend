@@ -1,0 +1,92 @@
+.MisafirLoginYonlendirici {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  height: 702px;
+  width: 1022;
+}
+
+.MisafirLoginYonlendirici_h1 {
+  position: absolute;
+  width: 357px;
+  height: 24px;
+  left: 335px;
+  top: 70px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  color: #455a64;
+}
+.MisafirLoginYonlendirici_p1 {
+  position: absolute;
+  width: 910px;
+  height: 24px;
+  left: 56px;
+  top: 136px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  color: #455a64;
+}
+.MisafirLoginYonlendirici_p1_span {
+  color: #467888;
+  font-weight: 600;
+}
+
+.ilustrasyon4 {
+  position: absolute;
+  width: 425.44px;
+  height: 236.65px;
+  left: 298px;
+  top: 233px;
+}
+.MisafirLoginYonlendirici_button {
+  position: absolute;
+  width: 400px;
+  height: 52px;
+  left: 309px;
+  top: 564px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #455a64;
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  border-radius: 26px;
+}
+.MisafirLoginYonlendirici_p2 {
+  position: absolute;
+  width: 164px;
+  height: 24px;
+  left: 379px;
+  top: 648px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #c4c4c4;
+}
+.MisafirLoginYonlendirici_navlink {
+  position: absolute;
+  width: 70px;
+  height: 24px;
+  left: 573px;
+  top: 648px;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #476d73;
+}
