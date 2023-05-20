@@ -2,7 +2,9 @@ import React from 'react'
 
 const Yardim = () => {
   return (
-    <div>Yardim</div>
+    <div>Yardim
+      deneme
+    </div>
   )
 }
 
