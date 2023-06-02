@@ -1,13 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logoBeyaz1 from "../assets/logoBeyaz1.svg";
 import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg";
 import "../styles/BakiciKayit.css";
 import profileImg from "../assets/Ellipse54.svg";
 import sifreIcon from "../assets/sifre-icon.svg";
-import usePasswordToggle1, {
-  usePasswordToggle2,
-} from "../components/usePasswordToggle";
+import usePasswordToggle1 from "../components/usePasswordToggle";
 
 const BakiciKayit = () => {
   const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1();
