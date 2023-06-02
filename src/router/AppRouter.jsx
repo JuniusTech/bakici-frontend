@@ -11,11 +11,11 @@ import MusteriKayitOnay from "../pages/MusteriKayitOnay";
 import AnaUyelik from "../pages/AnaUyelik";
 import BakiciKayitOnay from "../pages/BakiciKayitOnay";
 import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici";
-
+import BakiciKayit from "../pages/BakiciKayit";
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>      
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
@@ -27,12 +27,14 @@ const AppRouter = () => {
         <Route path="/musterikayitonay" element={<MusteriKayitOnay />} />
         <Route path="/anauyelik" element={<AnaUyelik />} />
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
-        <Route path="/misafirloginyonlendirici" element={<MisafirLoginYonlendirici />} />
+        <Route path="/bakicikayit" element={<BakiciKayit />} />
+        <Route
+          path="/misafirloginyonlendirici"
+          element={<MisafirLoginYonlendirici />}
+        />
 
-        
         <Route path="*" element={<Home />} />
-
-      </Routes>      
+      </Routes>
     </BrowserRouter>
   );
 };

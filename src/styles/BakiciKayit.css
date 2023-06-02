@@ -1,0 +1,136 @@
+.bakici-kayit {
+    color: #467888;
+    font-family: 'Georama';
+}
+
+.bakici-kayit__profile {}
+
+.bakici-kayit__profile-form {
+    display: flex;
+    padding: 45px 0 250px;
+    position: relative;
+    margin-top: 26px;
+    background-color: rgba(245, 245, 245, 0.5);
+}
+
+
+.bakici-kayit__profile-form-sol {
+    flex: 1;
+    text-align: left;
+    padding: 0 132px;
+    /* padding-top: 97px; */
+}
+
+.bakici-kayit__profile-baslik {
+    font-size: 36px;
+}
+
+.bakici-kayit__profile-info {
+    display: flex;
+    margin-top: 85px;
+    margin-bottom: 60px;
+    gap: 2rem;
+}
+
+.bakici-kayit__avatar {
+    height: fit-content;
+    position: relative;
+
+}
+
+.bakici-kayit__avatar .img {
+    /* position: relative; */
+}
+
+.bakici-kayit__avatar .add-img {
+    position: absolute;
+    background-color: #467888;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    bottom: 22px;
+    right: 18px;
+}
+
+.bakici-kayit__avatar .plus1 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 14px;
+    height: 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.bakici-kayit__avatar .plus2 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 0;
+    height: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.bakici-kayit__description {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.bakici-kayit__desc-label {
+    margin-bottom: 17px;
+}
+
+.bakici-kayit__textarea {
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #455A64;
+}
+
+.bakici-kayit__input-div {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: relative;
+}
+
+.bakici-kayit__input-label {
+    margin-bottom: 10px;
+}
+
+.bakici-kayit__input {
+    height: 51px;
+    border: 1px solid rgba(69, 90, 100, 0.8);
+    box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+    border-radius: 25.5px;
+    margin-bottom: 18px;
+}
+
+.bakici-kayit__sifre-bilgi {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #CCCCCC;
+}
+
+.bakici-kayit__sifre-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+
+.bakici-kayit__divider {
+    position: absolute;
+    height: 1039.26px;
+    border: 1px solid rgba(69, 90, 100, 0.8);
+    top: 0;
+    left: 50%;
+    margin-top: 52px;
+}
+
+.bakici-kayit__profile-form-sağ {
+    flex: 1;
+    text-align: left;
+    /* padding-top: 97px; */
+}
