@@ -39,120 +39,61 @@
 }
 .Form-Label {
   display: flex;
-  color: #455A64;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Georama";
 }
-
 .Form-input {
   width: 300px;
   height: 64px;
-  color: #C7C7C7;
-  border: 1px solid #C7C7C7;
-  margin-top: 11px;
-  border-radius: 32px;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin-bottom: -19px;
+  border-radius: 7px;
 }
-
-.Form-input:hover{
-  border: 1px solid #2D83AC;
-  
-}
-
-.Form-input .react-select__control{
-  height: 150px;
-}
-
-.Form-input::placeholder{
-  color: #C7C7C7;
-}
-
-.Form-input:focus{
-  border-color: #2D83AC;
-  outline: none;
-  
-}
-
-.Form-input:focus::-webkit-input-placeholder, .Form-input:focus{
-  color: #2D83AC;
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
-  background: url("../assets/calendar.svg") no-repeat;
-  border-width: thin;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  right: 22px;
-}
-
-#Choose-date{
-  padding-left: 21px;
-}
-
-.image-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 30px;
-}
-
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.Child-Location {
+  padding-left: 37px;
 }
 
 .Home-First-Button {
-  color: white;
   background-color: #ff9090;
   border: 1px solid #ff9090;
-  border-radius: 32px;
+  border-radius: 7px;
   width: 300px;
   height: 64px;
-  margin-top: 35px;
+  margin-top: 30px;
   font-size: 28px;
   font-family: "Georama";
   font-weight: 400;
-  
 }
 .Home-First-Button:hover {
-  background: #FDA9A9
-}
-.Search-Logo{
-  margin: 16px 0 16px 20px;
-}
-.Location , .Arrow, .Child{
-  cursor: pointer;
+  background-color: #ff9090;
+  border: 1px solid #ff9090;
+  border-radius: 7px;
+  width: 300px;
+  height: 64px;
+  margin-top: 30px;
+  font-size: 28px;
+  font-family: "Georama";
+  font-weight: 400;
 }
 .Arrow {
   width: 17px;
   height: 16px;
   position: relative;
-  bottom: 46px;
-  left: 260px;
+  bottom: 45px;
+  left: 110px;
 }
 .Arrow-tarih {
-  width: 18px;
-  height: 18.5px;
+  width: 17px;
+  height: 16px;
   position: relative;
-  bottom: 40px;
-  left: 303px;
+  bottom: 45px;
+  left: 123px;
 }
 .Child {
   width: 24px;
   color: #c7c7c7;
   height: 24px;
   position: relative;
-  bottom: 26px;
-  left: 24px;
+  bottom: 45px;
+  right: 120px;
 }
 
 .Location {
@@ -160,8 +101,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #c7c7c7;
   height: 27px;
   position: relative;
-  bottom: 29px;
-  left: 24px;
+  bottom: 45px;
+  right: 120px;
 }
 
 .Form-Label-location {
