@@ -49,7 +49,7 @@ const CareZoneNavbar = () => {
     <>
     {visible ? (
     <Navbar expand="md" className="Navbar  " expanded={expanded}>
-      <div className="container-fluid  ">
+      <div className="container-fluid ">
         <Navbar.Brand style={{marginLeft:'80px'}}>
           <NavLink
             className=" active"
