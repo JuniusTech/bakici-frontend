@@ -11,7 +11,7 @@ import BakiciOlma from "../components/BakiciOlma";
 import HomeCarousel from "../components/HomeCarousel";
 import HomeLastComp from "../components/HomeLastComp";
 import Footer from "../components/Footer";
-import Navbar from "../components/NavbarHome";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (

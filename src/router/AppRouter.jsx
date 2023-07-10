@@ -28,10 +28,7 @@ const AppRouter = () => {
         <Route path="/anauyelik" element={<AnaUyelik />} />
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
         <Route path="/bakicikayit" element={<BakiciKayit />} />
-        <Route
-          path="/misafirloginyonlendirici"
-          element={<MisafirLoginYonlendirici />}
-        />
+        <Route path="/misafirloginyonlendirici" element={<MisafirLoginYonlendirici />}/>
 
         <Route path="*" element={<Home />} />
       </Routes>
