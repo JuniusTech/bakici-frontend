@@ -8,8 +8,7 @@ import Profile from "../assets/Profile.svg";
 import ProfilePlus from "../assets/ProfilePlus.svg";
 import MagnifyingGlassNew from "../assets/MagnifyingGlassNew.svg";
 import ProfilePlusNew from "../assets/ProfilePlusNew.svg";
-import "../styles/NavbarHome.css";
-import "../styles/NavbarHome.css";
+import "../styles/Navbar.css";
 
 import CareZone from "../assets/CareZone.svg";
 
