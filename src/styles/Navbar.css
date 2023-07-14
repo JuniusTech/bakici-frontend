@@ -4,6 +4,7 @@
   width: 1728px;
   height: 154px;
   position: fixed;
+  border-bottom: 1px solid #455A64;
   top: 0;
   z-index: 1;
 }
