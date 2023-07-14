@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 50px;
     height: 100%;
 }
 
@@ -14,7 +13,6 @@
     height: 100px;
     width: 100%;
     border-bottom: 1px solid #455a6449;
-    margin-top: 155px;
 }
 
 .bakici_link_text,
@@ -118,6 +116,7 @@
 .bakici_kullanmaya_basla p {
     font-size: 14px;
     color: #455A64;
+    text-align: start;
     padding-bottom: 24px;
 }
 
