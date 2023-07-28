@@ -90,3 +90,10 @@
   color: #E88485;
 
 }
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
