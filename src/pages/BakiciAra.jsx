@@ -1,3 +1,5 @@
+import BakiciFiltre from "../components/BakiciFiltre";
+import NavbarBakici from "../components/NavbarBakici";
 import React, { useEffect, useState } from "react";
 import "../styles/bakiciara.css";
 import Bakicikart from "../components/Bakicikart";
@@ -18,26 +20,36 @@ const BakiciAra = () => {
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     setCurrentItems(items.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, items]);
+  }, [itemOffset]);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = event.selected * itemsPerPage;
-    console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
     setItemOffset(newOffset);
   };
 
   return (
-    <>
-      <div className="row">
-        {currentItems.map((item) => (
-          <div key={item} className="d-grid col-xl-3 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-2 my-sm-1">
-            <Bakicikart />
-          </div>
-        ))}
+    <div className="">
+      <NavbarBakici />
+      <div className="d-flex">
+        <BakiciFiltre />
+
+        <div className="row m-0">
+          {currentItems.map((item) => (
+            <div
+              key={item}
+              className="d-grid col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-2 my-sm-1"
+            >
+              <Bakicikart />
+            </div>
+          ))}
+        </div>
       </div>
       <ReactPaginate
-      className="pagination"
+        className="pagination"
         forcePage={itemOffset / itemsPerPage}
         nextLabel="next >"
         onPageChange={handlePageClick}
@@ -58,8 +70,8 @@ const BakiciAra = () => {
         activeClassName="active"
         renderOnZeroPageCount={null}
       />
-    </>
-  )
-}
+    </div>
+  );
+};
 
 export default BakiciAra;
