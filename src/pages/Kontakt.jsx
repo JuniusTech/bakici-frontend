@@ -19,8 +19,8 @@ import kontakt_arrow from "../assets/Kontakt_Arrow.svg"
 import Footer from '../components/Footer';
 import Kontakt_Tuba_Photo from "../assets/Kontakt-Tuba-Photo.svg"
 import { Link, NavLink } from 'react-router-dom';
-import DatePicker, { DateObject } from "react-datepicker"
-import "react-multi-date-picker/styles/layouts/mobile.css"
+import DatePicker, { DateObject } from "react-datepicker";
+import "react-multi-date-picker/styles/layouts/mobile.css";
 import { Controller, useForm } from 'react-hook-form'
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";

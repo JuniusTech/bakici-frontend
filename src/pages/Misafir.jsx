@@ -6,7 +6,7 @@ import misafir from "./../assets/misafir.svg"
 const Misafir = () => {
 
   return (
-    <div>
+    <div className='text-center'>
     <h1 className='misafir-top-h1'>
     Basarmak Uzeresiniz!!!
     </h1>

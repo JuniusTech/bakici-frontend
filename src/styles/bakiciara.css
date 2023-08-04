@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300;500&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@200;400&family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+.card-img-top {
+    border-radius: 8px;
+    background: #00000033;
+}
+
+.heart_container {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 5%;
+    left: 85%;
+    border-radius: 50%;
+    background: #EBEBEBCC;
+}
+
+.kalp_image {
+    width: 18px;
+    height: 16px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-title {
+    width: 133px;
+    height: 29px;
+    top: 199px;
+    left: 22px;
+}
+
+.bakici_name_container h5 {
+    font-family: "Georama", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+.bakici_name_container>img {
+    width: 16px;
+    height: 16px;
+    top: 206px;
+    left: 282px;
+    margin-left: 5px;
+}
+
+.bakici_info_container p {
+    font-family: "Georama", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.bakici_location_icon {
+    width: 21px;
+    height: 26px;
+    top: 257px;
+    left: 23px;
+    margin: 0 5px;
+    margin-right: 15px;
+    color: #467888;
+}
+
+.bakici_clock_icon {
+    width: 24px;
+    height: 24px;
+    top: 304px;
+    left: 22px;
+    margin: 0 5px;
+    margin-right: 15px;
+    color: #467888;
+}
+
+.bakici_money_icon {
+    width: 24px;
+    height: 18px;
+    top: 349px;
+    left: 22px;
+    margin: 0 5px;
+    margin-right: 15px;
+    color: #467888;
+}
+
+.card-body a {
+    font-family: "Georama", sans-serif;
+    color: #E88485;
+
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

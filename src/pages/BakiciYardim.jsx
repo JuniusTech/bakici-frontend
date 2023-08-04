@@ -44,7 +44,7 @@ fontWeight: "300",};
         // <Navbar />
     }
     
-    <div className='yardim'>
+    <div className='yardim text-center'>
         <h3 className='yardim-h3'>SIKÇA SORULAN SORULAR</h3>
         <hr className='yardim-hr'/>
         <img src={soruIsareti} alt="" className='yardim-img'/>

@@ -39,10 +39,10 @@ fontWeight: "300",};
         // <Navbar />
     }
     
-    <div className='yardim'>
-        <h3 className='yardim-h3'>SIKÇA SORULAN SORULAR</h3>
+    <div className='yardim text-center'>
+        <h3 className='yardim-h3 text-center'>SIKÇA SORULAN SORULAR</h3>
         <hr className='yardim-hr'/>
-        <img src={soruIsareti} alt="" className='yardim-img'/>
+        <img src={soruIsareti} alt="" className='yardim-img '/>
         <div className='yardim__accordions container'>
 
             <div className="accordion" id="accordionExample">
