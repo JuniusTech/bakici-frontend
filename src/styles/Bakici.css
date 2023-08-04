@@ -33,11 +33,13 @@
     font-size: 22px;
     color: #467888;
     padding: 62px 0 45px 0;
+    text-align: center;
+    justify-content: center;
 }
 
 .bakici_current_work {
     position: relative;
-    width: 95%;
+    width: 80rem;
     height: 280px;
     margin: auto;
     background-color: #CDE49C4D;
@@ -91,11 +93,11 @@
     font-size: 14px;
     position: absolute;
     right: 20px;
-    bottom: 0;
+    bottom: 20px;
 }
 
 .bakici_kullanmaya_basla {
-    width: 100%;
+    width: 85rem;
     height: auto;
     background-color: #F5F5F54D;
     padding: 55px 20px;
@@ -104,6 +106,7 @@
     align-items: flex-start;
     margin-top: 55px;
     border-radius: 7px;
+    margin-bottom: 55px;
 }
 
 .bakici_kullanmaya_basla h3 {
@@ -111,6 +114,7 @@
     font-weight: 500;
     font-size: 24px;
     padding-bottom: 24px;
+    padding-left: 40px;
 }
 
 .bakici_kullanmaya_basla p {
@@ -118,6 +122,8 @@
     color: #455A64;
     text-align: start;
     padding-bottom: 24px;
+    padding-left: 40px;
+    
 }
 
 .bakici_kullanmaya_basla .tasks {
@@ -126,6 +132,8 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 200px;
+    padding-left: 40px;
+    padding-right: 50px;
 }
 
 .bakici_kullanmaya_basla .tasks span {
@@ -152,6 +160,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-left: 50px;
+    padding-right: 10px;
+
 }
 
 .genel_sayfa .side h2 {
@@ -177,6 +188,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 }
 
 .genel_sayfa .side .side1_section2 span {
@@ -189,6 +201,7 @@
     color: #467888;
     text-decoration: underline;
     text-underline-offset: 2px;
+    padding-left: 5px;
 }
 
 .genel_sayfa .side .side2_section1,
@@ -223,6 +236,7 @@
     color: #455A64;
     display: flex;
     align-items: flex-start;
+    padding-left: 5px;
 }
 
 .genel_sayfa .side .side2_section2 .warning {
@@ -252,6 +266,7 @@
     height: 100vh;
     margin: 0px 64px;
     background-color: #455a6449;
+    
 }
 
 .genel_sayfa .side .divider {
@@ -259,6 +274,7 @@
     height: 50px;
     margin-right: 12px;
     margin-left: 24px;
+    
 }
 
 .genel_sayfa .side .side2_section2 .warning span {
