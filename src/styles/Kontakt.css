@@ -1,0 +1,175 @@
+.kontakt{
+    margin: auto;
+    border-radius: 7px;
+background: rgba(245, 245, 245, 0.30);
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
+    max-width: 70%;
+    min-width: 400px;
+    padding: 10px 8% ;
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-h1{
+  margin-top: 100px;
+  color: #455A64;
+font-family: Georama;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.kontakt-hr{
+  width: 50%;
+  margin: 20px auto;
+}
+.Kontakt-Form-Label{
+    width: 100%;
+    position: relative;
+    display: flex;
+  color: #455A64;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Georama";
+}
+.Form-Select{
+    width: 100%;
+}
+
+.Location , .Arrow, .Child{
+    cursor: pointer;
+  }
+  .Kontakt-Arrow {
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    top: 60px;
+    right: 3%;
+  }
+
+  #option-age{
+    margin-top: 57px;
+  }
+
+  .Kontakt-Form-Input{
+    background: url(../assets/calendar.svg);
+    background-position: 98% 50%;
+ 
+    background-repeat: no-repeat;
+
+    width: 100%;
+  height: 64px;
+  color: #2D83AC;
+  
+  border: 1px solid #C7C7C7;
+  margin-top: 11px;
+  border-radius: 32px;
+  cursor: pointer;
+  box-sizing: border-box;
+  }
+  .datepicker{
+    width: 100%;
+  }
+
+  .datepicker-class{
+    color: red !important;
+    background-color: red !important;
+  }
+
+  .Kontakt-Form-Input:hover{
+    border: 1px solid #2D83AC;
+    
+  }
+  #option-date{
+    margin-top: 57px;
+  }
+
+  .Kontakt-TextArea{
+    width: 100%;
+    color: #2D83AC;
+    margin-top: 11px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #C7C7C7;
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.20);
+
+  }
+
+  .Kontakt-TextArea:hover{
+    border-color: #2D83AC;
+  }
+
+  .Kontakt-TextArea:focus{
+    border-color: #2D83AC;
+    outline: none;
+  }
+  .Kontakt-Form-Button{
+    border-radius: 30px;
+    background: #E88385;
+    box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.10);
+    width: 100%;
+    color: white;
+    border: none;
+    margin-top: 57px;
+    padding: 10px;
+  }
+
+  .kontakt-bottom-info{
+    text-align: justify;
+    color: #455A64;
+font-family: Prompt;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: 35px; /* 175% */
+margin-top: 50px;
+margin-bottom: 200px;
+  }
+
+  .kontakt-photo{
+    width: 150px;
+    margin: 50px auto 20px;
+  }
+
+  .kontakt-bas-info{
+    color: #455A64;
+font-family: Georama;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 66.667% */
+margin-top: 165px;
+margin-bottom: 150px;
+  }
+  .Kontakt-return{
+    color: #467888;
+font-family: Georama;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 100% */
+text-decoration-line: underline;
+margin-bottom: 0;
+  }
+  .Kontakt-return:hover{
+    color: #467888;
+  }
+
+  .date-picker{
+    background-color: #455A64;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../assets/calendar.svg") no-repeat;
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: 22px;
+}

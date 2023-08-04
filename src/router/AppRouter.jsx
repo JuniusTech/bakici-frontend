@@ -13,7 +13,11 @@ import BakiciKayitOnay from "../pages/BakiciKayitOnay";
 import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici";
 import BakiciKayit from "../pages/BakiciKayit";
 import Bakici from "../pages/Bakici/Bakici";
-
+import OfflineYardim from "../pages/OfflineYardim";
+import BakiciYardim from "../pages/BakiciYardim";
+import Kontakt from "../pages/Kontakt";
+import KontaktBasarili from "../pages/KontaktBasarili";
+import Misafir from "../pages/Misafir";
 const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -21,7 +25,10 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/yardim" element={<Yardim />} />
+        <Route path="/yardim" element={<OfflineYardim />} />
+        <Route path="/bakyardim" element={<BakiciYardim />} />
+        <Route path="/misafir" element={<Misafir />} />
+        <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/bakiciara" element={<BakiciAra />} />
         <Route path="/isebasvur" element={<IseBasvur />} />
         <Route path="/musterikayit" element={<MusteriKayit />} />
@@ -31,6 +38,7 @@ const AppRouter = () => {
         <Route path="/bakicikayit" element={<BakiciKayit />} />
         <Route path="/misafirloginyonlendirici" element={<MisafirLoginYonlendirici />}/>
         <Route path="/profile" element={<Bakici />}/>
+        <Route path="/kontaktbas" element={<KontaktBasarili />}/>
 
         <Route path="*" element={<Home />} />
       </Routes>

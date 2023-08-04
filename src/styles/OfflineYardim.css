@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap');
+
+.yardim-h3{
+    color: var(--deep-blue, #457888);
+font-family: Georama;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 50px;
+margin-top: 100px;
+}
+
+.yardim-hr{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.yardim-img{
+    width: 400px;
+    height: 200px;
+}
+.yardim__accordions{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.accordion-body{
+    color: #000;
+    font-family: Prompt;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+}
+.accordion-button{
+    background-color: grey;
+    display: flex;
+    padding: 15px 30px;
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+
+    
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+    
+}
+
+.accordion-button.collapsed::after {
+    background-color: "#EFEFEF";
+    color: "#000";
+    line-height: "40px";
+    font-weight: "300";
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("./../assets/collapsed_icon.svg");
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("./../assets/not_collapsed_icon.svg");
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    transform: rotate(360deg)
+}
+
+.accordion-collapse{
+    text-align: left;
+}
+
+.footer{
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-color: blue !important;
+}
+
+.profil{
+    color: var(--deep-blue, #457888);
+font-family: Georama;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+.dateImg{
+    width: 90%;
+    height: 90%;
+}
+
+.date-arrow-cls{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: 10% 0 10% 10%;
+}
+
+.leftArrowClass{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+}
+
+.bottomDateImg{
+    width: 90%;
+    height: 90%;
+    margin: 10% 0 10% 10%;
+}
+
+@media screen and (min-width:600px) {
+    .bottomDateImg{
+        width: 60%;
+        height: 60%;
+        margin: 10% 0 10% 10%;
+    }
+
+    
+}
