@@ -42,7 +42,7 @@ const MusteriKayit = () => {
           alt="logoBeyaz2 "
           className="MusteriKayit-Logo2"
         />
-        <NavLink to="/" className="MusteriKayit-Link text-white fs-4 z-3">
+        <NavLink to="/" className="MusteriKayit-Link fs-4 z-3">
           Anasayfa
         </NavLink>
       </nav>
@@ -58,17 +58,17 @@ const MusteriKayit = () => {
           <h1 className="MusteriKayit-Form-Title text-center">
             BİLGİLERİNİZİ GİRİN
           </h1>
-          <form className="MusteriKayit-Form-Form m-auto">
+          <form className="MusteriKayit-Form-Form mx-auto pb-4">
             <label
               htmlFor="name"
               className="MusteriKayit-Form-Label label-isim"
             >
-              isim ve Soyisim
+              İsim ve Soyisim
             </label>
             <br />
             <input
               type="text"
-              placeholder="isim ve soyisim"
+              placeholder="İsim ve soyisim"
               className="MusteriKayit-Form-Input input-isim"
             />
             <br />
@@ -158,7 +158,7 @@ const MusteriKayit = () => {
             </div>
             <button className="MusteriKayit-Form-Submit">Kayıt Ol</button>
             <div className="d-flex justify-content-around">
-              <p className="MusteriKayit-Form-TextLink-Text">
+              <p className="MusteriKayit-Form-TextLink-Text fw-medium text-black-50">
                 Hesabınız varmı?
               </p>
               <NavLink to="/login" className="MusteriKayit-Form-TextLink-Link">

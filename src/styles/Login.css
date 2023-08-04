@@ -2,27 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   margin: 0;
 }
 .login-form-container {
   display: flex;
   flex-direction: column;
-  width: 858px;
-  height: 1207px;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
 }
 .login-logo {
-  position: absolute;
-  top: 63px;
-  left: 323px;
   width: 211px;
   height: 174px;
+  margin: 55px auto;
+
 }
 .login-form {
-  position: absolute;
-  width: 400px;
-  height: 762px;
-  top: 356px;
-  left: 217px;
   display: flex;
   flex-direction: column;  
   align-items: center;
@@ -35,12 +31,9 @@
   line-height: 24px;
   text-align: center;
   color: #455a64;
-  position: absolute;
-  left: 106px;
+  margin: 20px 0;
 }
 .login-form-btn {
-  position: absolute;
-  top: 79px;
   width: 400px;
   height: 60px;
   background: #fff;
@@ -53,6 +46,8 @@
   font-size: 20px;
   line-height: 16px;
   color: #455a64;
+  margin: 20px 0;
+  padding: 10px 0 ;
 }
 .login-form-btn-icon {
   width: 30px;
@@ -61,22 +56,27 @@
   left: -20px;
 }
 .login-form-text {
-  position: absolute;
-  top: 194px;
+  margin: 20px 0;
   font-family: "Georama";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 16px;
   color: #c7c7c7;
+  white-space: nowrap;
 }
 .login-form-text-span {
   color: rgba(69, 90, 100, 0.5);
+  
+}
+.login-form-email-div{
+  position: relative;
+  margin: 20px 0;
 }
 .login-form-label-email{
   position: absolute;
-  top: 265px;
-  left: 8px;
+  left: 10px;
+  text-align: left;
   width: 59px;
   height: 24px;
   font-family: "Georama";
@@ -86,10 +86,13 @@
   line-height: 24px;
   color: #467888;
 }
+.login-form-password-div{
+  position: relative;
+  margin: 20px 0;
+}
 .login-form-label-password{
   position: absolute;
-  top: 421px;
-  left: 8px;
+  left: 10px;
   width: 59px;
   height: 24px;
   font-family: "Georama";
@@ -100,9 +103,8 @@
   color: #467888;
 }
 .login-form-input-email {
-  position: absolute;
-  top: 306px;
   box-sizing: border-box;
+  margin-top: 15px;
   width: 400px;
   height: 60px;
   background: #ffffff;
@@ -115,12 +117,11 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 16px;
-  color: #c7c7c7;
+  color: #000;
 }
 .login-form-input-password {
-  position: absolute;
-  top: 462px;
   box-sizing: border-box;
+  margin-top: 15px;
   width: 400px;
   height: 60px;
   background: #ffffff;
@@ -133,11 +134,10 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 16px;
-  color: #c7c7c7;
+  color: #000;
 }
 .login-form-submit-btn {
-  position: absolute;
-  top:577px;
+  margin: 20px 0;
   width: 400px;
   height: 60px;
   background: #455a64;
@@ -151,8 +151,6 @@
   color: #ffffff;
 }
 .login-form-text-span-dot {
-  position: absolute;
-  top:692px;
   font-family: "Georama";
   font-style: normal;
   font-weight: 400;
@@ -161,8 +159,6 @@
   color: rgba(69, 90, 100, 0.4);
 }
 .login-form-text-link-container{
-  position: absolute;
-  top: 738px;
   width: 300px;
   display: flex;
   flex-direction: row;
@@ -187,9 +183,21 @@
   color: #476d73;
 }
 .login-img-container {
-  width: 870px;
-  height: 1207px;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
   background-image: url("../assets/Loginİmg.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+ 
+}
+
+
+@media only screen and (max-width: 1800px)  {
+  .login-logo {
+    width: 100px;
+    height: 150px;
+    margin: 20px auto;
+  }
 }
