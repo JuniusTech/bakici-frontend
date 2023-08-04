@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
-
 
 a {
   text-decoration: none;
@@ -20,12 +15,12 @@ body {
   
   position: relative;
   /* width: 1728px; */
-  text-align: center;
+  /* text-align: center; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {

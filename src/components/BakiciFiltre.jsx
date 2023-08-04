@@ -223,9 +223,9 @@ const Filtre = () => {
     <div className="m-4">
       <div className="bakici-filtre__path d-flex align-items-center gap-2 ">
         <img src={homeicon} alt="" />
-        <p className="text-black-50">Anasayfa</p>
+        <p className="text-black-50 m-0">Anasayfa</p>
         <FontAwesomeIcon icon={faChevronRight} className="text-black-50" />
-        <p className="fw-semibold">Bakıcılar</p>
+        <p className="fw-semibold m-0">Bakıcılar</p>
       </div>
 
       <div className="bakici-filtre__formcontainer">
@@ -303,7 +303,7 @@ const Filtre = () => {
               className="bakici-filtre__selectdiv d-flex justify-content-between align-items-center px-4 pb-2 yasclose"
               onClick={() => setYasOpen(!yasOpen)}
             >
-              <p className="yasclose">Yaş Aralığı</p>
+              <p className="yasclose m-0">Yaş Aralığı</p>
               <img
                 src={right}
                 className="bakici-filtre__arrow yasclose"
@@ -374,7 +374,7 @@ const Filtre = () => {
               className="bakici-filtre__selectdiv d-flex justify-content-between align-items-center px-4 pb-2 ucretclose"
               onClick={() => setUcretOpen(!ucretOpen)}
             >
-              <p className="ucretclose">Ücret</p>
+              <p className="ucretclose m-0">Ücret</p>
               <img
                 src={right}
                 className="bakici-filtre__arrow ucretclose"
