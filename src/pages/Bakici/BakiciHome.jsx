@@ -7,9 +7,14 @@ import Clock from "../../assets/Clock";
 import Hearth from "../../assets/Hearth";
 import HomeMap from "../../assets/Home";
 
+
+
 const BakiciHome = () => {
   return (
+   
+    
     <div className="bakici_content">
+      
         <p className="bakici_hello">Merhaba, Tugba</p>
 
         {/* TODO: Sonradan component haline getirilecek backend bağlandığında şimdilik böyle kalacak */}
@@ -41,11 +46,10 @@ const BakiciHome = () => {
         </div>
 
         <div className="bakici_kullanmaya_basla">
+       
           <h3 className="title">Care Zone kullanmaya baslayin</h3>
           <p>
-            Platform genelinde güven ve güvenliği sağlamak için lütfen
-            profilinizi tamamlamak üzere aşağıdaki bilgileri girmis oldugunuzdan
-            emin olunuz.
+            Platform genelinde güven ve güvenliği sağlamak için lütfen profilinizi tamamlamak üzere aşağıdaki bilgileri girmis oldugunuzdan emin olunuz.
           </p>
 
           <div className="tasks">
@@ -224,6 +228,7 @@ const BakiciHome = () => {
           </div>
 
           <div className="genel_sayfa">
+          
             <div className="side">
               <div className="section1">
                 <h2>PROFİL DURUMU</h2>
@@ -268,13 +273,16 @@ const BakiciHome = () => {
                   </div>
 
                   <h3>Baska uyariniz bulunmamaktadir</h3>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    
+      
   )
 }
 
-export default BakiciHome
+export default BakiciHome;
