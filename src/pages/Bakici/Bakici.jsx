@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../styles/Bakici.css";
 import BakiciHome from "./BakiciHome";
+import NavbarBakici from '../../components/NavbarBakici';
+import Footer from '../../components/Footer';
 
 const secondNavLinks = [
   {
@@ -34,7 +36,11 @@ const Bakici = () => {
   const [selectedNav, setSelectedNav] = useState(secondNavLinks[0]);
 
   return (
+    <>
+    <NavbarBakici/>
+ 
     <div className="bakici">
+    
       <div className="bakici_links">
         {secondNavLinks.map((link) => (
           <span
@@ -49,9 +55,15 @@ const Bakici = () => {
             {link.title}
           </span>
         ))}
+      
       </div>
+      
       {selectedNav.Component()}
+     
     </div>
+    <Footer/>
+    </>
+    
   );
 };
 

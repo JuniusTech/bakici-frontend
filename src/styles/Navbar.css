@@ -1,134 +1,167 @@
+/* Navbar styles */
 .Navbar {
   font-family: "Georama", sans-serif;
   font-size: 24px;
-  width: 1728px;
-  height: 154px;
+  border-bottom: 1px solid #455a64;
   position: fixed;
-  border-bottom: 1px solid #455A64;
   top: 0;
   z-index: 1;
 }
+
 .NavbarNew {
   font-family: "Georama", sans-serif;
   font-size: 24px;
-  width: 1728px;
-  height: 154px;
   position: fixed;
   top: 0;
   z-index: 1;
   background-color: #ffffff;
 }
-.Navbar-Collapse {
+
+/* Navbar Collapse styles */
+.Navbar .Navbar-Collapse {
   margin-top: 71px;
 }
-.Navbar-Button {
-  font-family: "Georama", sans-serif;
-  font-size: 24px;
-  width: 178px;
-  height: 38px;
-  margin: 3px;
-  padding: 0px;
-  color: #263238;
-  border: 1px solid #263238;
-  border-radius: 19px;
-}
-.Navbar-Button:hover {
-  font-family: "Georama", sans-serif;
-  font-size: 24px;
-  width: 178px;
-  height: 38px;
-  margin: 3px;
-  /* margin-top: 71px; */
-  padding: 0px;
-  color: #263238;
-  border: 1px solid #263238;
-}
-.Navbar-ButtonNew{
-  font-family: "Georama", sans-serif;
-  font-size: 24px;
-  width: 178px;
-  height: 38px;
-  margin: 3px;
-  /* margin-top: 71px; */
-  padding: 0px;
-  color: #ffffff;
-  background-color: #E88585;
-  border: 1px solid #E88585;
-  border-radius: 19px;
-}
-.Navbar-ButtonNew:hover{
-  font-family: "Georama", sans-serif;
-  font-size: 24px;
-  width: 178px;
-  height: 38px;
-  margin: 3px;
-  /* margin-top: 71px; */
-  padding: 0px;
-  color: #ffffff;
-  background-color: #E88585;
-  border: 1px solid #E88585;
-}
+
+/* Navbar Button styles */
+.Navbar-Button,
+.Navbar-ButtonNew,
 .Navbar-LinkNew {
   font-family: "Georama", sans-serif;
-  font-size: 24px;
-  width: 178px;
-  height: 38px;
+  font-size: 1rem;
+  background-color: #ffc4c0;
+  background: transparent;
+  /* display: flex; */
+  /* width: 178px;
+  height: 38px; */
   margin: 3px;
   padding: 0px;
   color: #263238;
-  border: 1px solid #ffffff;
+  border: 1px solid #263238;
   border-radius: 19px;
+  /*  */
+  justify-content: space-around;
+  align-items: center;
 }
+
+.Navbar-Button:hover {
+  color: #ffffff;
+  background-color: #e88585;
+  border: 1px solid #e88585;
+}
+
+/* Navbar Button New styles */
+.Navbar-ButtonNew,
+.Navbar-ButtonNew:hover {
+  color: #ffffff;
+  background-color: #e88585;
+  border: 1px solid #e88585;
+}
+
+/* Navbar Link New styles */
+.Navbar-LinkNew,
 .Navbar-LinkNew:hover {
-  font-family: "Georama", sans-serif;
-  font-size: 24px;
-  width: 178px;
-  height: 38px;
-  margin: 3px;
-  padding: 0px;
   color: #263238;
   border: 1px solid #ffffff;
-  border-radius: 19px;
-}
-.Navbar-Link {
-  margin: 3px;
 }
 
-
+/* Navbar Logo styles */
 .Navbar-Logo {
-  width: 141px;
-  height: 116px;
-  /* position: absolute;
-  top: 19px;
-  z-index: 1; */
-}
-.Navbar-Bakici-MagnifyingGlass {
-  width: 22px;
-  height: 22px;
+  width: 60%;
+  height: auto;
 }
 
-.Navbar-ise-ProfilePlus {
-  width: 22px;
-  height: 22px;
-}
-.Navbar-Login-Profile {
-  width: 22px;
-  height: 22px;
+/* Navbar Icon styles */
+.Navbar-Bakici-MagnifyingGlass,
+.Navbar-ise-ProfilePlus,
+.Navbar-Login-Profile,
+.userSignUpIcon {
+  width: 1rem;
+  height: auto;
+  margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 900px) {
-  .seperator {
-    width: 30%;
-    height: 0px;
-    border: 0.5px solid #263238;
-    margin: 10px auto;
+/*  */
+#basic-navbar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto !important ;
+  /* margin-right: auto !important; */
+}
+.navExpandedMenu {
+  display: block;
+  background-color: red;
+  margin-left: auto;
+
+  margin: auto;
+  order: 1;
+}
+
+#navExpandContainer {
+  display: flex;
+  width: 100%;
+  max-height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blue; */
+  margin-top: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 992px) {
+  .Navbar {
+    /* Adjust width for mobile devices */
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Hide the Navbar New in mobile devices */
+  .NavbarNew {
+    display: none;
+  }
+
+  .Navbar-Logo {
+    width: 100px;
+    height: 75px;
   }
 }
 
-@media screen and (min-width: 900px) {
-  .seperator {
-    width: 0px;
-    height: 100%;
-    border: 0.5px solid #263238;
+@media screen and (min-width: 992px) {
+  /* Adjust the width of the Navbar for larger devices */
+  .Navbar {
+    width: 100%;
   }
+}
+
+@media screen and (max-width: 500px) {
+  #navExpandContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blue; */
+  }
+
+  .navExpandedMenu {
+    order: 2;
+  }
+  .Navbar-Logo {
+    display: none;
+  }
+}
+
+.Navbar {
+  display: flex;
+}
+#nav-item-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e88585;
+}
+
+.toggleIcon {
+  background-color: #e88585;
 }
