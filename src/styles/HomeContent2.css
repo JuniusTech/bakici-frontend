@@ -63,6 +63,7 @@
   margin: auto;
   margin-top: 35px;
 }
+
 .Bakici {
   /* position: absolute; */
   /* top: 1789px;
@@ -87,18 +88,10 @@
   background-color: rgba(69, 90, 100, 0.9);
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
-.Bakici-Box-Cards {
-  /* width: 1728px;
-  height: 508px; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 138px 0px 138px;
-}
+
 .Bakici-Box-Card-Number {
   /* width: 30px;
   height: 57px; */
@@ -106,14 +99,12 @@
   font-size: 48px;
   font-weight: 600;
   text-align: center;
-  margin: 27px auto 28px auto;
+  margin: auto;
+  /* margin: 27px auto 28px auto; */
   line-height: 57px;
   color: #ffe8ac;
 }
-.Bakici-Box-Card-Icon {
-  /* width: 172px;
-  height: 172px; */
-}
+
 .Bakici-Box-Card-Text {
   /* width: 290px; */
   font-family: "Prompt", sans-serif;
@@ -137,11 +128,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 18.75rem;
-    height: 4rem;
-    /* width: 300px;
-     height: 64px; */
+    padding: 1rem;
     color: #c7c7c7;
     border: 1px solid #c7c7c7;
     /* margin-top: 11px; */
@@ -152,34 +139,11 @@
     font-weight: 500;
     font-family: "Georama", sans-serif;
     color: white;
-    /* margin-top: 50px;
-    margin-bottom:1rem; */
-    /* background-color: rgba(255, 196, 192, 1); */
     background-color:rgba(255, 144, 144, 1);
     text-align: center;
     line-height: 38px;
-    border: 0px solid #ff9191;
+    /* border: 0px solid #ff9191; */
     border-radius: 37px;
-
-
-
-
-
-  /* margin: 105.5px 719px 34px 720px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 284px;
-  height: 74px;
-  background-color:rgba(255, 144, 144, 1);
-  color: white;
-  font-family: "Georama", sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 38px;
-  border: 0px solid #ff9191;
-  border-radius: 37px; */
 }
 
 .BakiciOlma {
@@ -207,17 +171,15 @@
   background-color: rgba(69, 120, 136, 0.9);
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .BakiciOlma-Box-Cards {
-  /* width: 1728px;
-  height: 508px; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 236px 0px 235px;
+
 }
 .BakiciOlma-Box-Card-Number {
   /* width: 30px;

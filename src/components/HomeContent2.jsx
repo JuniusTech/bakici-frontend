@@ -35,7 +35,7 @@ function HomeContent2() {
                 <p className="Bakici-Text">BAKICI MI ARIYORSUNUZ? </p>
                 <Row className="Bakici-Box">
                     <Col className="Bakici-Box-Card">
-                        <div className="Bakici-Box-Card">
+                        <div xs={12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">1</p>
                             <img
                                 className="Bakici-Box-Card-Icon"
@@ -48,10 +48,10 @@ function HomeContent2() {
                         </div>
                     </Col>
                     <Col>
-                        <div className="Bakici-Box-Card">
+                        <div xs={12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">2</p>
                             <img
-                                className=" Bakici-Box-Card-Icon"
+                                className="Bakici-Box-Card-Icon"
                                 src={group48}
                                 alt="group48"
                             />
@@ -59,7 +59,7 @@ function HomeContent2() {
                         </div>
                     </Col>
                     <Col>
-                        <div className="Bakici-Box-Card">
+                        <div xs= {12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">3</p>
                             <img
                                 className=" Bakici-Box-Card-Icon"
@@ -72,7 +72,7 @@ function HomeContent2() {
                         </div>
                     </Col>
                     <Col>
-                        <div className="Bakici-Box-Card">
+                    <div xs= {12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">4</p>
                             <img
                                 className=" Bakici-Box-Card-Icon"
@@ -85,7 +85,7 @@ function HomeContent2() {
                         </div>
                     </Col>
                     <Col>
-                        <div className="Bakici-Box-Card">
+                    <div xs= {12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">5</p>
                             <img
                                 className=" Bakici-Box-Card-Icon"
@@ -97,19 +97,17 @@ function HomeContent2() {
                             </p>
                         </div>
                     </Col>
-                    <Col md={6}>
+                    <Col xs={12} md={6} className='d-flex justify-content-center align-self-center'>
                         <button className="Bakici-Button">BAKICI ARA</button>
                     </Col>
-
                 </Row>
             </Container>
             <img className="HomeBackground3" src={HomeBackground3} alt="" />
-
             <Container className="BakiciOlma">
                 <p className="BakiciOlma-Text">İŞ Mİ ARIYORSUNUZ? </p>
                 <Row className="BakiciOlma-Box">
                     <Col className="BakiciOlma-Box-Card">
-                        <div className="BakiciOlma-Box-Card">
+                        <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">1</p>
                             <img
                                 className="BakiciOlma-Box-Card-Icon"
@@ -121,9 +119,8 @@ function HomeContent2() {
                             </p>
                         </div>
                     </Col>
-
                     <Col>
-                        <div className="BakiciOlma-Box-Card">
+                    <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">2</p>
                             <img
                                 className=" BakiciOlma-Box-Card-Icon"
@@ -135,9 +132,8 @@ function HomeContent2() {
                             </p>
                         </div>
                     </Col>
-
                     <Col>
-                        <div className="BakiciOlma-Box-Card">
+                    <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">3</p>
                             <img
                                 className=" BakiciOlma-Box-Card-Icon"
@@ -149,9 +145,8 @@ function HomeContent2() {
                             </p>
                         </div>
                     </Col>
-
                     <Col>
-                        <div className="BakiciOlma-Box-Card">
+                    <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">4</p>
                             <img
                                 className=" BakiciOlma-Box-Card-Icon"
@@ -161,7 +156,7 @@ function HomeContent2() {
                             <p className="BakiciOlma-Box-Card-Text">Ekibe hosgeldiniz</p>
                         </div>
                     </Col>
-                    <Col md={6}>
+                    <Col xs={12} md={6} className='d-flex justify-content-center align-self-center'>
                         <button className="BakiciOlma-Button">İŞE BAŞVUR</button>
                     </Col>
                 </Row>
