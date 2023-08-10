@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import homeicon from "../assets/homeicon.svg";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import right from "../assets/right.svg";
-import down from "../assets/down.svg";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 import { useState } from "react";
 import Select, { components } from "react-select";
 
@@ -11,6 +12,7 @@ const Filtre = () => {
   const [calisma, setCalisma] = useState([]);
   const [yasOpen, setYasOpen] = useState(false);
   const [ucretOpen, setUcretOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
 
   const handleChange = (e) => {
     setCalisma(e);
@@ -228,9 +230,12 @@ const Filtre = () => {
         <p className="fw-semibold m-0">Bakıcılar</p>
       </div>
 
-      <div className="bakici-filtre__formcontainer">
+      <div className="bakici-filtre__formcontainer ">
         <p className="bakici-filtre__formbaslik">GELİŞTİRİLMİŞ ARAMA</p>
-        <div className="bakici-filtre__form">
+
+        <div
+          className={`bakici-filtre__form  ${filterOpen ? "active" : "close"} `}
+        >
           <div className="bakici-filtre__selectdiv">
             <Select
               className="bakici-filtre__select"
@@ -298,9 +303,9 @@ const Filtre = () => {
             />
           </div>
 
-          <div className="w-100 position-relative yasclose">
+          <div className="bakici-filtre__select-container w-100 position-relative yasclose">
             <div
-              className="bakici-filtre__selectdiv d-flex justify-content-between align-items-center px-4 pb-2 yasclose"
+              className="bakici-filtre__selectdiv ucret-yas d-flex justify-content-between align-items-center px-4 pb-2 yasclose"
               onClick={() => setYasOpen(!yasOpen)}
             >
               <p className="yasclose m-0">Yaş Aralığı</p>
@@ -369,9 +374,9 @@ const Filtre = () => {
 
           {/* <NumInputDiv open={ucretOpen} setOpen={setUcretOpen} label="Ücret" /> */}
 
-          <div className="w-100 position-relative ucretclose">
+          <div className="w-100 position-relative ucretclose bakici-filtre__select-container">
             <div
-              className="bakici-filtre__selectdiv d-flex justify-content-between align-items-center px-4 pb-2 ucretclose"
+              className="bakici-filtre__selectdiv ucret-yas d-flex justify-content-between align-items-center px-4 pb-2 ucretclose"
               onClick={() => setUcretOpen(!ucretOpen)}
             >
               <p className="ucretclose m-0">Ücret</p>
@@ -423,6 +428,20 @@ const Filtre = () => {
           </div>
 
           <button className="bakici-filtre__button">FİLTRELE</button>
+        </div>
+        <div className="text-center d-block d-lg-none mb-2">
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            className=""
+            style={{
+              cursor: "pointer",
+              rotate: filterOpen ? "180deg" : "0deg",
+              width: "20px",
+              height: "20px",
+              transition: "all 0.3s ease",
+            }}
+            onClick={() => setFilterOpen(!filterOpen)}
+          />
         </div>
       </div>
     </div>
