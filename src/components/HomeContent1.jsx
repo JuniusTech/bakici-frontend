@@ -181,7 +181,7 @@ function HomeContent1() {
     ];
     return (
         <div className="home-container">
-            <img className="HomeBackground1" src={HomeBackground} alt="" />
+            <img className="HomeBackground1" src={HomeBackground} alt="#" />
             <div className="Home-First">
                 <div className="Home-First-Text-Form">
                     <h1 className="Home-First-Text">

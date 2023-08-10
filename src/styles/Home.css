@@ -1,116 +1,11 @@
-/*
-.HomeBackground1 {
-  position: absolute;
-  width: 1150.69px;
-  height: 1086px;
-  z-index: -1;
-  right: 0;
-  top: -8px;
-}
-*/
-
-.HomeBackground2 {
-  position: absolute;
-  width: 523px;
-  height: 1046px;
-  top: 1420px;
-  z-index: -1;
-  right: 0;
-}
-.HomeBackground3{
-  position: absolute;
-  width: 523px;
-  height: 1046px;
-  top: 1943px;
-  left: 0;
-  z-index: -1;
-}
-/*
-.Home-First {
-  position: absolute;
-  top: 305px;
-  left: 0;
-  width: 1728px;
-  display: flex;
-}
-.Home-First-Text-Form {
-  position: absolute;
-  top: 52.5px;
-  display: flex;
-  flex-direction: column;
-  left: 80px;
-}
-
-.Home-First-Text {
-  padding: 0;
-  text-align: center;
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 57px;
-  font-family: "Georama";
-  text-transform: uppercase;
-  width: 728px;
-  height: 114px;
-  margin-left: 24px;
-}
-.Home-First-Form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 53px 59px;
-  width: 767px;
-  height: 329px;
-  border: 1px solid #c7c7c7;
-  border-radius: 6px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 67px;
-}
-
-*/
 .Form-Label {
   display: flex;
-  color: #455A64;
+  color: #455a64;
   flex-direction: column;
   align-items: flex-start;
   font-family: "Georama";
 }
 
-/*
-.Form-input {
-  width: 300px;
-  height: 64px;
-  color: #C7C7C7;
-  border: 1px solid #C7C7C7;
-  margin-top: 11px;
-  border-radius: 32px;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin-bottom: -19px;
-}
-
-.Form-input:hover{
-  border: 1px solid #2D83AC;
-  
-}
-
-.Form-input .react-select__control{
-  height: 150px;
-}
-
-.Form-input::placeholder{
-  color: #C7C7C7;
-}
-
-.Form-input:focus{
-  border-color: #2D83AC;
-  outline: none;
-  
-}
-
-.Form-input:focus::-webkit-input-placeholder, .Form-input:focus{
-  color: #2D83AC;
-}
-*/
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);
@@ -124,7 +19,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 22px;
 }
 
-#Choose-date{
+#Choose-date {
   padding-left: 21px;
 }
 
@@ -141,30 +36,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   left: 0;
 }
 
-/*
-
-.Home-First-Button {
-  color: white;
-  background-color: #ff9090;
-  border: 1px solid #ff9090;
-  border-radius: 32px;
-  width: 300px;
-  height: 64px;
-  margin-top: 35px;
-  font-size: 28px;
-  font-family: "Georama";
-  font-weight: 400;
-  
-}
-.Home-First-Button:hover {
-  background: #FDA9A9
-}
-
-*/
-.Search-Logo{
+.Search-Logo {
   margin: 16px 0 16px 20px;
 }
-.Location , .Arrow, .Child{
+.Location,
+.Arrow,
+.Child {
   cursor: pointer;
 }
 .Arrow {
@@ -204,316 +81,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   top: 6px;
   right: 70px;
 }
-
-/*
-.Home-First-img {
-  position: absolute;
-  right: 115.32px;
-  width: 675.68px;
-  height: 631.29px;
-}
-*/
-
-.Description{
-  position:absolute;
-  top: 1095px;
-  height: 555px;
-  width: 1728px;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  
-
-}
-
-.Description-Title{
-
-  font-family: 'Georama', sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 97px;
-  color: #455A64;
-}
-.Description-Hr1{
-  width: 232px;
-  border:  1px solid #455A64;
-  margin: auto;
-  margin-bottom: 76px;
-}
-.Description-Text{
-  font-family: 'Prompt', sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  text-align: center;
-  line-height: 50px;
-  width: 1573px;
-  height: 290px;
-  color: #455A64;
-}
-.Description-Hr2{
-  width: 528px;
-  border:  1px solid #455A64;
-  margin: auto;
-  margin-top: 35px;
-}
-.Bakici{
-  position: absolute;
-  top: 1789px;
-  width: 1728px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-.Bakici-Text{ 
-  font-family: 'Georama', sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 57px;
-  color: #455A64;
-  margin-bottom: 75px;
-  
-}
-.Bakici-Box{
-  width: 1728px;
-  height: 616px;
-  background-color: rgba(69, 90, 100, 0.9);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-
-}
-.Bakici-Box-Cards{
-  width: 1728px;
-  height: 508px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 138px 0px 138px;
-}
-.Bakici-Box-Card-Number{
-  width: 30px;
-  height: 57px;
-  font-family: 'Georama', sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  text-align: center;
-  margin: 27px auto 28px auto;
-  line-height: 57px;
-  color: #FFE8AC;
-
-}
-.Bakici-Box-Card-Icon{
-  width: 172px;
-  height: 172px;
-
-}
-.Bakici-Box-Card-Text {
-  width: 290px;
-  font-family: 'Prompt', sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: center;
-  line-height: 25px;
-  color: #FFF;
-  margin-top: 25px;
-  padding: 0px 10px 0px 10px;
-  
-
-}
-.Bakici-Box-Card-Hr{
-  height: 93.5px;
-  border: 0.5px solid #FFF;
-  position: relative;
-  top: 280px;
-  margin: px ;
 }
 
-.Bakici-Button{
-  margin: 105.5px 719px 34px 720px;
-  width: 284px;
-  height: 74px;
-  background-color: #FF9191;
-  color: white;
-  font-family: 'Georama', sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 38px;
-  border: 0px solid #FF9191;
-  border-radius: 37px;
-}
-
-.BakiciOlma{
-  position: absolute;
-  top: 2716px;
-  width: 1728px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-.BakiciOlma-Text{ 
-  font-family: 'Georama', sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 57px;
-  color: #455A64;
-  margin-bottom: 75px;
-  
-}
-.BakiciOlma-Box{
-  width: 1728px;
-  height: 598px;
-  background-color:rgba(69, 120, 136, 0.9);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-.BakiciOlma-Box-Cards{
-  width: 1728px;
-  height: 508px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 236px 0px 235px;
-}
-.BakiciOlma-Box-Card-Number{
-  width: 30px;
-  height: 57px;
-  font-family: 'Georama', sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  text-align: center;
-  margin: 27px auto 28px auto;
-  line-height: 57px;
-  color: #FFE8AC;
-
-}
-.BakiciOlma-Box-Card-Icon{
-  width: 172px;
-  height: 172px;
-
-}
-.BakiciOlma-Box-Card-Text {
-  width: 290px;
-  font-family: 'Prompt', sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: center;
-  line-height: 25px;
-  color: #FFF;
-  margin-top: 25px;
-  padding: 0px 10px 0px 10px;
-  
-
-}
-.BakiciOlma-Box-Card-Hr{
-  height: 93.5px;
-  border: 0.5px solid #FFF;
-  position: relative;
-  top: 280px;
-  margin: px ;
-}
-
-.BakiciOlma-Button{
-  margin: 105.5px 719px 34px 720px;
-  width: 284px;
-  height: 74px;
-  background-color: #FF9191;
-  color: white;
-  font-family: 'Georama', sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 38px;
-  border: 0px solid #FF9191;
-  border-radius: 37px;
-}
-
-.Carouselx {
-  position: absolute;
-  top: 3648px;
-  width: 1728px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.Carouselx-Text {
-  font-family: "Georama", sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 57px;
-  color: #455a64;
-  margin-bottom: 75px;
-}
-
-.Carouselx-Box {
-  width: 1728px;
-  height: 558px;
-  background-image: url(../assets/musteri-yorumlari.svg);
-  background-size: cover;
-}
-.mustericarousel {
-  margin: auto;
-  margin-top: 103px;
-  height: 352px;
-  width: 690px;
-}
-
-.Carouselx-Button {
-  margin-top: 100px;
-}
-
-.button-span-right {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-image: url(../assets/arrow-right-circle.svg);
-  background-size: cover;
-}
-.button-span-left {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-image: url(../assets/arrow-left-circle.svg);
-  background-size: cover;
-}
 .HomeLastComp {
-  position: absolute;
-  top: 4338px;
+  padding: 2rem 0;
 }
 .HomeLastCompLogo {
-  position: relative;
-  width: 1728px;
-  height: 182px;
-  left: 753px;
-  top: 54px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+
 }
 .HomeLastCompText {
-    position: relative;
-    width: 691px;
-    height: 50px;
-    left: 518px;
-    top: 93px;
-    
-    font-family: 'Prompt';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 50px;    
-    text-align: center;
-    
-    color: rgba(69, 90, 100, 0.9);
-    
+  font-size: 2rem;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 800;
+  line-height: 50px;
+  text-align: center;
+  color: rgba(69, 90, 100, 0.9);
 }

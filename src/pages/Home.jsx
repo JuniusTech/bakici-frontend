@@ -31,6 +31,9 @@ import musteri2 from "../assets/musteri2.svg";
 import musteri3 from "../assets/musteri3.svg";
 import Logo from "../assets/logo.svg";
 import HomeContent1 from "../components/HomeContent1";
+import HomeContent2 from "../components/HomeContent2";
+import HomeContent3 from "../components/HomeContent3";
+import { Container } from "react-bootstrap";
 
 const Home = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -201,204 +204,16 @@ const Home = () => {
       <Navbar />
       {/* <img className="HomeBackground1" src={HomeBackground} alt="" /> */}
       <HomeContent1 />
-      <div className="Description">
-        <p className="Description-Title">CAREZONE NASIL ÇALIŞIYOR?</p>
-        <hr className="Description-Hr1" />
-        <p className="Description-Text">
-          Hayatımızın en değerli varlıklarından biri olan bebeklerimizin
-          sağlıklı ve mutlu bir şekilde büyümesi ebeveynler için çok önemlidir.
-          Ancak günümüzde, iş hayatının yoğunluğu ve diğer nedenlerden dolayı
-          ebeveynler bebekleriyle yeterince ilgilenemeyebilirler. İşte tam da bu
-          noktada biz sizin için devreye giriyoruz. Bebeklerin güvenliği,
-          sağlığı ve mutluluğu için gereken hizmetleri sağlayan bebek bakıcıları
-          ile ebeveynleri buluşturuyoruz.{" "}
-        </p>
-        <hr className="Description-Hr2" />
-      </div>
-      <img className="HomeBackground2" src={HomeBackground2} alt="" />
-      <div className="Bakici">
-        <p className="Bakici-Text">BAKICI MI ARIYORSUNUZ? </p>
-        <div className="Bakici-Box">
-          <div className="Bakici-Box-Cards">
-            <div className="Bakici-Box-Card">
-              <p className="Bakici-Box-Card-Number">1</p>
-              <img
-                className=" Bakici-Box-Card-Icon"
-                src={group52}
-                alt="group52"
-              />
-              <p className="Bakici-Box-Card-Text">
-                Istediginiz bakiciyi websitemizden secin
-              </p>
-            </div>
-            <hr className="Bakici-Box-Card-Hr" />
-
-            <div className="Bakici-Box-Card">
-              <p className="Bakici-Box-Card-Number">2</p>
-              <img
-                className=" Bakici-Box-Card-Icon"
-                src={group48}
-                alt="group48"
-              />
-              <p className="Bakici-Box-Card-Text">Gorusme icin randevu alin</p>
-            </div>
-            <hr className="Bakici-Box-Card-Hr" />
-
-            <div className="Bakici-Box-Card">
-              <p className="Bakici-Box-Card-Number">3</p>
-              <img
-                className=" Bakici-Box-Card-Icon"
-                src={group49}
-                alt="group49"
-              />
-              <p className="Bakici-Box-Card-Text">
-                Bakiciniz ile gerekli gorusmelerinizi yapin
-              </p>
-            </div>
-            <hr className="Bakici-Box-Card-Hr" />
-
-            <div className="Bakici-Box-Card">
-              <p className="Bakici-Box-Card-Number">4</p>
-              <img
-                className=" Bakici-Box-Card-Icon"
-                src={group50}
-                alt="group50"
-              />
-              <p className="Bakici-Box-Card-Text">
-                Anlasmanizi ekibimize bildirin
-              </p>
-            </div>
-            <hr className="Bakici-Box-Card-Hr" />
-
-            <div className="Bakici-Box-Card">
-              <p className="Bakici-Box-Card-Number">5</p>
-              <img
-                className=" Bakici-Box-Card-Icon"
-                src={group51}
-                alt="group51"
-              />
-              <p className="Bakici-Box-Card-Text">
-                Guvenli sekilde bakim servisimizin tadini cikarin.
-              </p>
-            </div>
-          </div>
-          <button className="Bakici-Button">BAKICI ARA</button>
-        </div>
-      </div>
-      <img className="HomeBackground3" src={HomeBackground3} alt="" />
-
-      <div className="BakiciOlma">
-        <p className="BakiciOlma-Text">İŞ Mİ ARIYORSUNUZ? </p>
-        <div className="BakiciOlma-Box">
-          <div className="BakiciOlma-Box-Cards">
-            <div className="BakiciOlma-Box-Card">
-              <p className="BakiciOlma-Box-Card-Number">1</p>
-              <img
-                className=" BakiciOlma-Box-Card-Icon"
-                src={kaydolİcon}
-                alt="Kaydolİcon"
-              />
-              <p className="BakiciOlma-Box-Card-Text">
-                Sisteme Kaydinizi yapin
-              </p>
-            </div>
-            <hr className="BakiciOlma-Box-Card-Hr" />
-
-            <div className="BakiciOlma-Box-Card">
-              <p className="BakiciOlma-Box-Card-Number">2</p>
-              <img
-                className=" BakiciOlma-Box-Card-Icon"
-                src={testİcon}
-                alt="Testİcon"
-              />
-              <p className="BakiciOlma-Box-Card-Text">
-                Online bakici yeterlilik testini yapin
-              </p>
-            </div>
-            <hr className="BakiciOlma-Box-Card-Hr" />
-
-            <div className="BakiciOlma-Box-Card">
-              <p className="BakiciOlma-Box-Card-Number">3</p>
-              <img
-                className=" BakiciOlma-Box-Card-Icon"
-                src={kurdelaİcon}
-                alt="Kurdelaİcon"
-              />
-              <p className="BakiciOlma-Box-Card-Text">
-                Yeterlilik bilgilerinizi sistemimize girin
-              </p>
-            </div>
-            <hr className="BakiciOlma-Box-Card-Hr" />
-
-            <div className="BakiciOlma-Box-Card">
-              <p className="BakiciOlma-Box-Card-Number">4</p>
-              <img
-                className=" BakiciOlma-Box-Card-Icon"
-                src={teamİcon}
-                alt="teamİcon"
-              />
-              <p className="BakiciOlma-Box-Card-Text">Ekibe hosgeldiniz</p>
-            </div>
-          </div>
-          <button className="BakiciOlma-Button">İŞE BAŞVUR</button>
-        </div>
-      </div>
-      <div className="Carouselx">
-        <p className="Carouselx-Text">" KULLANICILARIMIZ NELER DİYOR "</p>
-        <div className="Carouselx-Box">
-          <div
-            id="carouselExampleInterval"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src={musteri2}
-                  className="d-block w-50 mustericarousel"
-                  alt="..."
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={musteri1}
-                  className="d-block w-50 mustericarousel"
-                  alt="..."
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={musteri3}
-                  className="d-block w-50 mustericarousel"
-                  alt="..."
-                />
-              </div>
-            </div>
-            <button
-              className="carousel-control-prev Carouselx-Button"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="prev"
-            >
-              <span className="button-span-left" aria-hidden="true"></span>
-            </button>
-            <button
-              className="carousel-control-next Carouselx-Button"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="next"
-            >
-              <span className=" button-span-right " aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <HomeContent2/>
+      <HomeContent3/>
       <div className="HomeLastComp">
-        <img src={Logo} alt="Logo" className="HomeLastCompLogo" />
-        <p className="HomeLastCompText">
-          “ Bebekleriniz için en iyi bakımı bizimle bulun “
-        </p>
-      </div>
+            <Container>
+                <img src={Logo} alt="Logo" className="HomeLastCompLogo" />
+                <p className="HomeLastCompText">
+                    “ Bebekleriniz için en iyi bakımı bizimle bulun “
+                </p>
+            </Container>
+        </div>
       {/* <Footer /> */}
     </div>
   );
