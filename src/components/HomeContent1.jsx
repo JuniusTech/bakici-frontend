@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 import Select from "react-select";
 import "../styles/HomeContent1.css";
 import HomeBackground from "../assets/HomeBackground.svg";
