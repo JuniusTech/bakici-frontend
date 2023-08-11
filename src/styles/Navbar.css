@@ -1,4 +1,4 @@
-/* Navbar styles */
+
 .Navbar {
   font-family: "Georama", sans-serif;
   font-size: 24px;
@@ -6,6 +6,19 @@
   position: fixed;
   top: 0;
   z-index: 1;
+  transition: background-color 0.5s ease; /* Geçiş süresi ve animasyon tipini ayarlar */
+  
+}
+
+.scrolled {
+  font-family: "Georama", sans-serif;
+  font-size: 24px;
+  border-bottom: 1px solid #455a64;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  transition: transform 0.5s ease;
 }
 
 .NavbarNew {
@@ -22,19 +35,26 @@
   margin-top: 71px;
 }
 
+/* .nav-buttons-container {
+  display: block;
+  width: 20%;
+  background-color: red;
+} */
+
+
 /* Navbar Button styles */
 .Navbar-Button,
 .Navbar-ButtonNew,
 .Navbar-LinkNew {
+  box-sizing: border-box;
   font-family: "Georama", sans-serif;
   font-size: 1rem;
   background-color: #ffc4c0;
   background: transparent;
-  /* display: flex; */
-  /* width: 178px;
-  height: 38px; */
+  /* min-width: 105px;
+  min-height: 28px; */
+  width: 100%;
   margin: 3px;
-  padding: 0px;
   color: #263238;
   border: 1px solid #263238;
   border-radius: 19px;
