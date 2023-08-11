@@ -65,12 +65,7 @@
 }
 
 .Bakici {
-  /* position: absolute; */
-  /* top: 1789px;
-  width: 1728px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   margin-top: 8rem;
 }
 .Bakici-Text {

@@ -37,13 +37,6 @@
   /* margin: auto; */
 }
 
-.Home-First-img {
-  /* background-color: blue; */
-  /* position: absolute; */
-  /* right: 115.32px;
-    width: 675.68px;
-    height: 631.29px; */
-}
 
 .Home-First-Text-Form {
   display: flex;
@@ -73,7 +66,7 @@
 .Home-First-Form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0rem 2rem;
   margin-left: 1rem;
   /* width: 767px;
@@ -85,6 +78,12 @@
   /* margin-top: 5rem; */
 }
 
+/* .formBakiciAriyor {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+} */
+
 .Search-button {
   display: flex;
   flex-direction: row;
@@ -95,7 +94,7 @@
   height: 4rem;
   /* width: 300px;
    height: 64px; */
-  color: #c7c7c7;
+  /* color: #c7c7c7; */
   border: 1px solid #c7c7c7;
   /* margin-top: 11px; */
   border-radius: 32px;
@@ -103,7 +102,8 @@
   box-sizing: border-box;
   font-size: 1rem;
   color: white;
-  margin-top: 50px;
+  /* margin: auto 0; */
+  margin-top: 42px;
   margin-bottom:1rem;
   /* background-color: rgba(255, 196, 192, 1); */
   background-color:rgba(255, 144, 144, 1);

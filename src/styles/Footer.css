@@ -92,6 +92,8 @@ align-self: center;
   flex-direction: column;
   text-align: left;
   justify-items: center;
+  /* border-right: 1px solid 
+  rgba(235, 235, 235, 1); */
 }
 .Footer-Fİrst-Second-Title,
 .Footer-Fİrst-Third-Title,
@@ -120,17 +122,18 @@ align-self: center;
 .Footer-Fİrst-Fifth {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     /* width: 320px;
     margin-top: 87px; */
-    text-align: left;
+    /* text-align: left; */
 }
 
 .Footer-Fİrst-Fifth-First,
 .Footer-Fİrst-Fifth-Second,
 .Footer-Fİrst-Fifth-Third {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

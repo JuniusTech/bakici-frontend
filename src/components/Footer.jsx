@@ -12,8 +12,8 @@ const Footer = () => {
     <div className="Footer">
       <div className="Footer-Fİrst">
         <Container className="footer-container">
-          <Row className="footer-container-row d-xl-flex flex-xl-row justify-content-xl-around">
-            <Col xs={12} md={2} lg= {2} className="footer-column1">
+          <Row className="footer-container-row ">
+            <Col xs={12} md={12} xxl= {2} className="footer-column1 mb-5">
               <div className="Footer-Logo Footer-Fİrst-First">
                 <img
                   src={logoFooter}
@@ -22,8 +22,8 @@ const Footer = () => {
                 />
               </div>
             </Col>
-            <Col xs={6} md={3} lg= {3}>
-              <div className="Footer-Fİrst-Second">
+            <Col xs={12} md={6} xxl= {3} >
+              <div className="Footer-Fİrst-Second text-center text-md-start text-lg-center text-xxl-start">
                 <h3 className="Footer-Fİrst-Second-Title">Populer Aramalar</h3>
                 <NavLink to="#" className="Footer-Fİrst-Second-Link">
                   <p>CareZone nasıl çalışıyor</p>
@@ -39,8 +39,8 @@ const Footer = () => {
                 </NavLink>
               </div>
             </Col>
-            <Col xs={6} md={3} lg={2}>
-              <div className="Footer-Fİrst-Third">
+            <Col xs={12} md={6} xxl={2}>
+              <div className="Footer-Fİrst-Third text-center text-md-start text-lg-center text-xxl-start">
                 <h3 className="Footer-Fİrst-Third-Title">Hakkımızda</h3>
                 <NavLink to="#" className="Footer-Fİrst-Second-Link">
                   <p>Hakkımızda</p>
@@ -56,8 +56,8 @@ const Footer = () => {
                 </NavLink>
               </div>
             </Col>
-            <Col xs={6} md={2} lg={2}>
-              <div className="Footer-Fİrst-Fourth">
+            <Col xs={12} md={6} xxl={2} >
+              <div className="Footer-Fİrst-Fourth text-center text-md-start text-lg-center text-xxl-start">
                 <h3 className="Footer-Fİrst-Fourth-Title">İletişim</h3>
                 <NavLink to="#" className="Footer-Fİrst-Second-Link">
                   <p>Brazil Green Way</p>
@@ -70,16 +70,16 @@ const Footer = () => {
                 </NavLink>
               </div>
             </Col>
-            <Col xs={6} md={2} lg= {3} className="footer-column5">
-              <div className="Footer-Fİrst-Fifth d-xxl-flex flex-xxl-row">
-                <div className="Footer-Fİrst-Fifth-First">
+            <Col xs={12} md={6} xxl= {3} className="footer-column5 mt-md-3">
+              <div className="Footer-Fİrst-Fifth d-flex flex-row d-lg-flex flex-lg-row">
+                <div className="Footer-Fİrst-Fifth-First mx-2">
                   <img
                     src={visa}
                     alt=""
                     className="Footer-Fİrst-Fifth-img1 m-2"
                   />
                 </div>
-                <div className="Footer-Fİrst-Fifth-Second">
+                <div className="Footer-Fİrst-Fifth-Second mx-2">
                   <img
                     src={klarna}
                     alt=""
@@ -87,7 +87,7 @@ const Footer = () => {
                   />
                   <p className="klarna">Klarna</p>
                 </div>
-                <div className="Footer-Fİrst-Fifth-Third">
+                <div className="Footer-Fİrst-Fifth-Third mx-2">
                   <img
                     src={mastercard}
                     alt=""
