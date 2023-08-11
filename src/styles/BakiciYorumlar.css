@@ -1,0 +1,100 @@
+.bakici-yorumlar .bakici-yorumlar-p{
+    margin: 50px auto;
+    color: #455A64;
+font-family: Georama;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.bakici-yorumlar-data{
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 118px;
+border: 1px solid #455A64;
+background: #FFF;
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.11), 1px 2px 2px 0px rgba(0, 0, 0, 0.15), 1px 1px 1px 1px rgba(0, 0, 0, 0.20);
+}
+
+.bakici-yorumlar-data-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 55px;
+}
+
+.bakici-yorumlar-data-top-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bakici-yorumlar-data-top-left-img{
+    position: relative;
+    top: -50px;
+    
+}
+
+.bakici-yorumlar-data-top-left-p{
+    text-align: center;
+    color: #455A64;
+font-family: Georama;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+align-items: end;
+margin: 0 10px 80px;
+}
+
+.bakici-yorumlar-data-top-right-point{
+    text-align: center;
+}
+
+.bakici-yorumlar-data-top-right-type{
+    color: #455A64;
+font-family: Georama;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-align: center;
+}
+
+.bakici-yorumlar-data-bottom{
+    color: #455A64;
+font-family: Georama;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
+
+.bakici-yorumlar-data-date-top{
+    margin-bottom: 100px;
+}
+.bakici-yorumlar-hr{
+    width: 40%;
+}
+
+
+.bakici-yorumlar-date{
+    color: #C7C7C7;
+font-family: Georama;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+white-space: nowrap;
+}
+
+.bakici-yorumlar-date-today{
+    color: #455A64;
+font-family: Georama;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+white-space: nowrap;
+}

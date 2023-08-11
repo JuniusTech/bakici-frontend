@@ -56,7 +56,7 @@
   left: -20px;
 }
 .login-form-text {
-  margin: 20px 0;
+  margin: 10px 0;
   font-family: "Georama";
   font-style: normal;
   font-weight: 400;
@@ -199,5 +199,9 @@
     width: 100px;
     height: 150px;
     margin: 20px auto;
+  }
+  .login-form-title{
+    margin: 10px auto;
+    font-size: 30px;
   }
 }

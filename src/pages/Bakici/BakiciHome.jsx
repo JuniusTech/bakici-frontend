@@ -10,6 +10,8 @@ import HomeMap from "../../assets/Home";
 
 
 const BakiciHome = () => {
+
+ 
   return (
    
     
