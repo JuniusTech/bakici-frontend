@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300;400;500&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@200;400&family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+.info-section-container {
+  width: 38%;
+  margin: 0 1rem;
+  padding: 0;
+  background-color: rgba(245, 245, 245, 0.3);
+  box-shadow: 5px 5px rgba(206, 205, 205, 0.3);
+  border-radius: 7px;
+}
+
+.info-section-contents {
+  padding: 0;
+  margin: 0 2rem;
+}
+
+.bakici-info-container {
+  width: 100%;
+  margin: 0;
+  padding: 0%;
+  font-family: Georama;
+  border-radius: 7px;
+}
+.bakici-info-first {
+  padding: 1rem 0;
+}
+
+.bakici-info-first-image-container {
+  width: 30%;
+}
+
+.bakici-info-first-hr {
+  margin: 8% auto;
+  width: 100%;
+}
+
+.kontakt-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  width: 18.75rem;
+  height: 2rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 32px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: white;
+  /* margin-bottom:1rem; */
+  background-color: rgba(232, 133, 133, 1);
+}
+
+.kontakt-button:hover {
+  background-color: rgb(255, 144, 144);
+}
+
+.klarna-icon {
+  background-color: 
+  rgba(53, 53, 53, 1);
+  border-radius: 50%;
+}
