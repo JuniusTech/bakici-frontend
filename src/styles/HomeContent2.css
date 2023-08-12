@@ -31,9 +31,12 @@
   color: #455a64;
 }
 .Description-Hr1 {
-  border: 1px solid #455a64;
+  border: 1px solid 
+  rgba(69, 90, 100, 1);
+  width: 20%;
   margin: auto;
   margin-bottom: 76px;
+  color: red;
 }
 .Description-Text {
   font-family: "Prompt", sans-serif;
@@ -44,7 +47,9 @@
   color: #455a64;
 }
 .Description-Hr2 {
-  border: 1px solid #455a64;
+  border: 1px solid 
+  rgba(69, 90, 100, 1);
+  width: 40%;
   margin: auto;
   margin-top: 35px;
 }
@@ -91,32 +96,11 @@
   padding: 0px 10px 0px 10px;
 }
 .Bakici-Box-Card-Hr {
-  height: 93.5px;
-  border: 0.5px solid #fff;
-  position: relative;
-  top: 280px;
-}
-
-.Bakici-Button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    color: #c7c7c7;
-    border: 1px solid #c7c7c7;
-    /* margin-top: 11px; */
-    border-radius: 32px;
-    cursor: pointer;
-    box-sizing: border-box;
-    font-size: 2rem;
-    font-weight: 500;
-    font-family: "Georama", sans-serif;
-    color: white;
-    background-color:rgba(255, 144, 144, 1);
-    text-align: center;
-    line-height: 38px;
-    border-radius: 37px;
+  height: 100px;
+  border: 2px solid 
+  rgba(235, 235, 235, 1);
+  top: 230px;
+  left: 100%;
 }
 
 .BakiciOlma {
@@ -170,18 +154,19 @@
 }
 .BakiciOlma-Box-Card-Hr {
   height: 93.5px;
-  border: 0.5px solid #fff;
+  border: 0.5px solid rgba(235, 235, 235, 1);
   position: relative;
   top: 280px;
-  margin: px;
+  left: 100%;
 }
 
+.Bakici-Button, 
 .BakiciOlma-Button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
     width: 18.75rem;
     height: 4rem;
     color: #c7c7c7;
@@ -201,3 +186,4 @@
     border: 0px solid #ff9191;
     border-radius: 37px;
 }
+
