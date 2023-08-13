@@ -1,7 +1,5 @@
 import React from "react";
-import homeicon from "../assets/homeicon.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
 import Kalp from "../images/kalp.png";
 import Bakici from "../images/Bakıcı1-single.png";
 import "../styles/BakiciInfo.css";
@@ -13,15 +11,7 @@ import Group from "../images/Group.png";
 
 function BakiciInfo() {
   return (
-    <>
-      <div className="bakici-filtre__path d-flex align-items-center gap-2 mt-4">
-        <img src={homeicon} alt="" />
-        <p className="text-black-50 m-0">Anasayfa</p>
-        <FontAwesomeIcon icon={faChevronRight} className="text-black-50" />
-        <p className="text-black-50 m-0">Bakıcılar</p>
-        <FontAwesomeIcon icon={faChevronRight} className="text-black-50" />
-        <p className="fw-semibold m-0">Tuğba Aksoy</p>
-      </div>
+    <>  
       <div className="info-section-container">
         <div className="info-section-contents">
           <div className="bakici-info-container">

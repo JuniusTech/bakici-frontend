@@ -34,7 +34,6 @@ const BakiciAra = () => {
 
   return (
     <>
-    <SingleBakici/>
     <div className="">
       <NavbarBakici />
       <div className="d-flex flex-column flex-lg-row">
