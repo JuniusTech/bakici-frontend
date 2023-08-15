@@ -8,10 +8,12 @@ import "../styles/Navbar.css";
 import * as ReactBootStrap from "react-bootstrap";
 
 import CareZone from "../assets/CareZone.svg";
-
+import AnaUyelik from "./AnaUyelik";
 
 const CareZoneNavbar = () => {
   const [expanded, setExpanded] = useState(false);
+
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -31,10 +33,6 @@ const CareZoneNavbar = () => {
     };
   }, []);
   
-  
-  
-  
-  
   const navstyle = {
     color: "#263238",
     textDecoration: "none",
@@ -44,31 +42,23 @@ const CareZoneNavbar = () => {
     textDecoration: "underline",
   };
 
-
-
-
   return (
     <div>
       <ReactBootStrap.Navbar collapseOnSelect expand="md" variant="dark"  className={`Navbar ${isScrolled ? 'scrolled' : ''}`}>
+
         <ReactBootStrap.Navbar.Brand href="#home">
-          <NavLink
-            className=" active"
-            style={navstyle}
-            to="/"
-          >
+          <NavLink className=" active" style={navstyle} to="/">
             <img className="Navbar-Logo" src={CareZone} alt="CareZone" />
           </NavLink>
         </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggleIcon" />
+        <ReactBootStrap.Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          className="toggleIcon"
+        />
         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-          <ReactBootStrap.Nav className="m-auto">
-          </ReactBootStrap.Nav>
+          <ReactBootStrap.Nav className="m-auto"></ReactBootStrap.Nav>
           <ReactBootStrap.Nav>
-            <NavLink
-              className="me-3 active"
-              style={navstyle}
-              to="/bakiciara"
-            >
+            <NavLink className="me-3 active" style={navstyle} to="/bakiciara">
               <Button className="Navbar-Button">
                 Bakıcı Ara{" "}
                 <img
@@ -97,9 +87,11 @@ const CareZoneNavbar = () => {
               className="me-3 active Navbar-Link"
               style={navstyle2}
               onClick={() => setExpanded(false)}
-              to="/anauyelik"
             >
-              <Button className="Navbar-Button">
+              <Button
+                className="Navbar-Button"
+                onClick={() => setOpenAnaUyelik(true)}
+              >
                 Üye Olun
                 <img
                   className="Navbar-ise-ProfilePlus"
@@ -107,13 +99,8 @@ const CareZoneNavbar = () => {
                   alt="Profile"
                 />
               </Button>
-
             </NavLink>
-            <NavLink
-              className="me-3 active"
-              style={navstyle}
-              to="/login"
-            >
+            <NavLink className="me-3 active" style={navstyle} to="/login">
               <Button className="Navbar-Button">
                 Oturum Aç{" "}
                 <img
@@ -145,13 +132,15 @@ const CareZoneNavbar = () => {
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>
       </ReactBootStrap.Navbar>
+      <AnaUyelik
+        openAnaUyelik={openAnaUyelik}
+        setOpenAnaUyelik={setOpenAnaUyelik}
+      />
     </div>
-  )
-
+  );
 };
 
 export default CareZoneNavbar;
-
 
 
 ///////YAPILAN//////////////////////////////

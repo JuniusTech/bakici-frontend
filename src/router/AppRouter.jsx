@@ -8,7 +8,6 @@ import BakiciAra from "../pages/BakiciAra";
 import IseBasvur from "../pages/IseBasvur";
 import MusteriKayit from "../pages/MusteriKayit";
 import MusteriKayitOnay from "../pages/MusteriKayitOnay";
-import AnaUyelik from "../pages/AnaUyelik";
 import BakiciKayitOnay from "../pages/BakiciKayitOnay";
 import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici";
 import BakiciKayit from "../pages/BakiciKayit";
@@ -33,12 +32,15 @@ const AppRouter = () => {
         <Route path="/isebasvur" element={<IseBasvur />} />
         <Route path="/musterikayit" element={<MusteriKayit />} />
         <Route path="/musterikayitonay" element={<MusteriKayitOnay />} />
-        <Route path="/anauyelik" element={<AnaUyelik />} />
+        {/* <Route path="/anauyelik" element={<AnaUyelik />} /> */}
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
         <Route path="/bakicikayit" element={<BakiciKayit />} />
-        <Route path="/misafirloginyonlendirici" element={<MisafirLoginYonlendirici />}/>
-        <Route path="/profile" element={<Bakici />}/>
-        <Route path="/kontaktbas" element={<KontaktBasarili />}/>
+        <Route
+          path="/misafirloginyonlendirici"
+          element={<MisafirLoginYonlendirici />}
+        />
+        <Route path="/profile" element={<Bakici />} />
+        <Route path="/kontaktbas" element={<KontaktBasarili />} />
 
         <Route path="*" element={<Home />} />
       </Routes>
