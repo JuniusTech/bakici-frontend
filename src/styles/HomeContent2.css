@@ -1,0 +1,203 @@
+.HomeContent2-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeBackground2 {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+}
+.HomeBackground3 {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.Description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.Description-Title {
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  color: #455a64;
+}
+.Description-Hr1 {
+  border: 1px solid #455a64;
+  margin: auto;
+  margin-bottom: 76px;
+}
+.Description-Text {
+  font-family: "Prompt", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 50px;
+  color: #455a64;
+}
+.Description-Hr2 {
+  border: 1px solid #455a64;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.Bakici {
+
+  margin-top: 8rem;
+}
+.Bakici-Text {
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 57px;
+  color: #455a64;
+  margin-bottom: 75px;
+}
+.Bakici-Box {
+  background-color: rgba(69, 90, 100, 0.9);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.Bakici-Box-Card-Number {
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin: auto;
+  line-height: 57px;
+  color: #ffe8ac;
+}
+
+.Bakici-Box-Card-Text {
+  font-family: "Prompt", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  margin-top: 25px;
+  padding: 0px 10px 0px 10px;
+}
+.Bakici-Box-Card-Hr {
+  height: 93.5px;
+  border: 0.5px solid #fff;
+  position: relative;
+  top: 280px;
+}
+
+.Bakici-Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #c7c7c7;
+    border: 1px solid #c7c7c7;
+    /* margin-top: 11px; */
+    border-radius: 32px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Georama", sans-serif;
+    color: white;
+    background-color:rgba(255, 144, 144, 1);
+    text-align: center;
+    line-height: 38px;
+    border-radius: 37px;
+}
+
+.BakiciOlma {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.BakiciOlma-Text {
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 57px;
+  color: #455a64;
+  margin-bottom: 75px;
+}
+.BakiciOlma-Box {
+  background-color: rgba(69, 120, 136, 0.9);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.BakiciOlma-Box-Cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.BakiciOlma-Box-Card-Number {
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin: 27px auto 28px auto;
+  line-height: 57px;
+  color: #ffe8ac;
+}
+
+.BakiciOlma-Box-Card-Text {
+  font-family: "Prompt", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  margin-top: 25px;
+  padding: 0px 10px 0px 10px;
+}
+.BakiciOlma-Box-Card-Hr {
+  height: 93.5px;
+  border: 0.5px solid #fff;
+  position: relative;
+  top: 280px;
+  margin: px;
+}
+
+.BakiciOlma-Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 18.75rem;
+    height: 4rem;
+    color: #c7c7c7;
+    border: 1px solid #c7c7c7;
+    border-radius: 32px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Georama", sans-serif;
+    color: white;
+    margin-top: 50px;
+    margin-bottom:1rem;
+    background-color:rgba(255, 144, 144, 1);
+    text-align: center;
+    line-height: 38px;
+    border: 0px solid #ff9191;
+    border-radius: 37px;
+}
