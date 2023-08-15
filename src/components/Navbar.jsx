@@ -27,12 +27,12 @@ const CareZoneNavbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   const navstyle = {
     color: "#263238",
     textDecoration: "none",
@@ -44,8 +44,16 @@ const CareZoneNavbar = () => {
 
   return (
     <div>
-      <ReactBootStrap.Navbar collapseOnSelect expand="md" variant="dark"  className={`Navbar ${isScrolled ? 'scrolled' : ''}`}>
-
+      <AnaUyelik
+        openAnaUyelik={openAnaUyelik}
+        setOpenAnaUyelik={setOpenAnaUyelik}
+      />
+      <ReactBootStrap.Navbar
+        collapseOnSelect
+        expand="md"
+        variant="dark"
+        className={`Navbar ${isScrolled ? "scrolled" : ""}`}
+      >
         <ReactBootStrap.Navbar.Brand href="#home">
           <NavLink className=" active" style={navstyle} to="/">
             <img className="Navbar-Logo" src={CareZone} alt="CareZone" />
@@ -112,11 +120,13 @@ const CareZoneNavbar = () => {
             </NavLink>
             <NavLink
               className="me-3 active Navbar-Link"
-              style={{
-                // marginRight: "1rem",
-                // color: "#263238",
-                // textDecoration: "underline",
-              }}
+              style={
+                {
+                  // marginRight: "1rem",
+                  // color: "#263238",
+                  // textDecoration: "underline",
+                }
+              }
               onClick={() => setExpanded(false)}
               to="/yardim"
             >
@@ -132,16 +142,11 @@ const CareZoneNavbar = () => {
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>
       </ReactBootStrap.Navbar>
-      <AnaUyelik
-        openAnaUyelik={openAnaUyelik}
-        setOpenAnaUyelik={setOpenAnaUyelik}
-      />
     </div>
   );
 };
 
 export default CareZoneNavbar;
-
 
 ///////YAPILAN//////////////////////////////
 
@@ -156,10 +161,9 @@ export default CareZoneNavbar;
 
 // import CareZone from "../assets/CareZone.svg";
 
-
 // const CareZoneNavbar = () => {
 //   const [expanded, setExpanded] = useState(false);
-  
+
 //   const navstyle = {
 //     color: "#263238",
 //     textDecoration: "none",
@@ -168,7 +172,6 @@ export default CareZoneNavbar;
 //     color: "#263238",
 //     textDecoration: "underline",
 //   };
-
 
 //   return (
 //     <div>
