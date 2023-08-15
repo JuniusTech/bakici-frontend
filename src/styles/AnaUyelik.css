@@ -1,64 +1,94 @@
+.AnaUyelik-container {
+  visibility: hidden;
+}
+
+.AnaUyelik-container.active {
+  visibility: visible;
+}
+
+.AnaUyelik-bg {
+  opacity: 0;
+}
+
+.AnaUyelik-bg.active {
+  opacity: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000086;
+  z-index: 50;
+  transition: all 1s ease-in-out;
+}
+
 .AnaUyelik {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  position: relative;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.AnaUyelik.active {
+  transition: all 1s ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 672px;
-  width: 1440px;
+  width: 80%;
+  background-color: #ffffff;
+  z-index: 50;
 }
+
 .AnaUyelik-nav-logo {
-  width: 100%;
-  display: flex;
-  align-items: center;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
-.AnaUyelik-nav-logo-img {
-  position: absolute;
-  width: 140.63px;
-  height: 116.07px;
-  left: 90px;
-  top: 34px;
-}
+
 .AnaUyelik-nav-logo-h1 {
-  position: absolute;
-  width: 574px;
-  height: 36px;
-  left: 433px;
-  top: 74px;
-  font-family: "Georama";
-  font-style: normal;
   font-weight: 600;
   font-size: 48px;
   line-height: 36px;
   text-transform: uppercase;
   color: #467888;
 }
+
 .AnaUyelik-main {
-  width: 50%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  gap: 4rem;
+  margin-top: 1rem;
 }
+
+.AnaUyelik-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.AnaUyelik-main-left,
+.AnaUyelik-main-right {
+  text-align: center;
+}
+
 .AnaUyelik-main-left-img {
-  position: absolute;
   width: 208px;
   height: 208px;
-  top: 253px;
-  left: 301px;
 }
+
 .AnaUyelik-main-left-img:hover {
-  
+
   transform: scale(1.1);
   transition: 0.5s;
   filter: brightness(150%)
 }
+
 .AnaUyelik-main-left-p {
-  position: absolute;
-  width: 265px;
-  height: 36px;
-  left: 271px;
-  top: 535px;
   font-family: "Georama";
   font-style: normal;
   font-weight: 600;
@@ -67,25 +97,20 @@
   text-transform: uppercase;
   color: #455a64;
 }
+
 .AnaUyelik-main-right-img {
-  position: absolute;
   width: 208px;
   height: 208px;
-  left: 936px;
-  top: 253px;
 }
+
 .AnaUyelik-main-right-img:hover {
-  
+
   transform: scale(1.1);
   transition: 0.5s;
   filter: brightness(150%)
 }
+
 .AnaUyelik-main-right-p {
-  position: absolute;
-  width: 265px;
-  height: 36px;
-  left: 909px;
-  top: 535px;
   font-family: "Georama";
   font-style: normal;
   font-weight: 600;
