@@ -10,6 +10,10 @@ import RedHeart from "../images/RedHeart.png";
 import LanguageIcon from "../images/LanguageIcon.png";
 import DeneyimIcon from "../images/DeneyimIcon.png";
 import EngelliIcon from "../images/EngelliIcon.png";
+import SaatIcon from "../images/DetayClock.png";
+import GeceIcon from "../images/DetayGeceIcon.png";
+import EkServisIcon1 from "../images/EkServisIcon1.png";
+import EkServisIcon2 from "../images/EkServisIcon2.png";
 
 // import { baseUrl } from "./config";
 
@@ -98,18 +102,68 @@ function BakiciDetail() {
         </div>
         <div className="deneyim-container">
           <h5>DENEYİMLERİ</h5>
-          <div className="d-flex justify-content-between bg-warning">
-            <div className="d-block">
-              <img src={LanguageIcon} alt="" className="mw-100 float-start m-auto"/>
+          <div className="d-flex justify-content-between mb-4">
+            <div className="d-flex justify-content-center align-items-center">
+              <img src={LanguageIcon} alt="" className="px-2" />
               <p className="">İyi seviye Ingilizce konusabiliyorum</p>
             </div>
-            <div className="d-block">
-              <img src={DeneyimIcon} alt="" className="float-start m-auto"/>
-              <p className="" >+ 2 yil deneyim</p>
+            <div className="d-flex justify-content-center align-items-center">
+              <img src={DeneyimIcon} alt="" className="px-2" />
+              <p className="">+ 2 yil deneyim</p>
             </div>
-            <div className="d-block">
-              <img src={EngelliIcon} alt="" className="float-start m-auto" />
+            <div className="d-flex justify-content-center align-items-center">
+              <img src={EngelliIcon} alt="" className="px-2" />
               <p className="">Engelli cocuk bakimi</p>
+            </div>
+          </div>
+        </div>
+        <div className="servisler-container">
+          <h5>TUĞBANIN SERVİSLERİ</h5>
+          <div>
+            <div className="d-flex justify-content-between">
+              <div className="d-block">
+                <img src={SaatIcon} alt="" className="float-start px-2" />
+                <div className="tarife-container">
+                  <h6>Gündüz Tarife</h6>
+                  <p>
+                    Gunduz tarifesinde ekstra calisma saatleri durumunda
+                    alinacak ucret
+                  </p>
+                </div>
+              </div>
+              <div className="tarife-ücret">
+                <h4>30TL/Saati</h4>
+              </div>
+            </div>
+            <div className="d-flex justify-content-between">
+              <div className="d-block">
+                <img src={GeceIcon} alt="" className="float-start px-2" />
+                <div className="tarife-container">
+                  <h6>Gece Tarife</h6>
+                  <p>Gece yatili cocuk bakimi tarifesi</p>
+                </div>
+              </div>
+              <div className="tarife-ücret">
+                <h4>200TL/Gecesi</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ek-servisler-container">
+          <h5>TUĞBANIN EK SERVİSİ</h5>
+          <div>
+            <div className="d-flex justify-content-between">
+              <div className="d-block">
+                <img src={EkServisIcon1} alt="" className="float-start px-2" />
+                <p>Montesori egitimi / aktiviteleri</p>
+              </div>
+            </div>
+            <div className="d-flex justify-content-between">
+              <div className="d-block">
+                <img src={EkServisIcon2} alt="" className="float-start px-3" />
+                <p className="ek-servis-content">Ebeveyn isyerinden cocugu almak/ birakmak</p>
+              </div>
             </div>
           </div>
         </div>

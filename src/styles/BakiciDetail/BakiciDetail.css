@@ -48,12 +48,14 @@
 
 .bakici-detail-hakkinda-container {
   width: 90%;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .bakici-detail-hakkinda-container h5 {
   font-size: 2.25rem;
   font-family: "Georama", sans-serif;
+  margin-bottom: 1rem;
+  color: rgba(69, 90, 100, 1);
 }
 
 .bakici-detail-hakkinda-container p {
@@ -69,19 +71,87 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .deneyim-container h5 {
   font-size: 2.25rem;
   font-family: "Georama", sans-serif;
+  margin-bottom: 1rem;
+  color: rgba(69, 90, 100, 1);
 }
 
 .deneyim-container p {
   font-family: "Georama", sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
-  line-height: 28.66px;
+  /* line-height: 28.66px; */
+  margin: 0;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.servisler-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.servisler-container h5 {
+  font-size: 2.25rem;
+  font-family: "Georama", sans-serif;
+  margin-bottom: 1rem;
+  color: rgba(69, 90, 100, 1);
+}
+
+.servisler-container p {
+  font-family: "Georama", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  /* line-height: 28.66px; */
+  margin: 0;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+.tarife-container {
+  padding: 0 5rem;
+}
+
+.tarife-container h6 {
+  color: rgba(70, 120, 136, 1);
+}
+
+.tarife-ücret h4 {
+  color: rgba(69, 90, 100, 1);
+}
+
+
+.ek-servisler-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.ek-servisler-container h5 {
+  font-size: 2.25rem;
+  font-family: "Georama", sans-serif;
+  margin-bottom: 1rem;
+  color: rgba(69, 90, 100, 1);
+}
+
+.ek-servisler-container p {
+  font-family: "Georama", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  /* line-height: 28.66px; */
+  margin: 0;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.ek-servis-content {
+  margin: 0, 5rem;
 }
