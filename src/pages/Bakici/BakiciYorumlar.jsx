@@ -44,7 +44,7 @@ const BakiciYorumlar = () => {
     let data =[
         {
         name:"Fulya Karabulut",
-        date:"10-08-2023",
+        date:"11-08-2023",
         comment:"Memnun kaldik, oglum ile kaliteli vakit gecirdiler. Montesori aktiviteleri hosumuza gitti.",
         point:"⭐⭐⭐⭐⭐",
         work_type:"Part-time",

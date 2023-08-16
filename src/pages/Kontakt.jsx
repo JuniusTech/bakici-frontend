@@ -24,6 +24,7 @@ import "react-multi-date-picker/styles/layouts/mobile.css";
 import { Controller, useForm } from 'react-hook-form'
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
+import NavbarBakici from '../components/NavbarBakici';
 const Kontakt = () => {
     const [arrow, setArrow] = useState(Arrow);
     const [arrow2, setArrow2] = useState(Arrow);
@@ -40,7 +41,8 @@ const Kontakt = () => {
     const [startDate, endDate] = dateRange;
     let nav = useNavigate();
     let test = "";
-
+    
+    const [arr, setarr] = useState([])
     const filterColor =
       "  invert(48%) sepia(31%) saturate(841%) hue-rotate(155deg) brightness(90%) contrast(103%)";
     
@@ -315,6 +317,7 @@ const Kontakt = () => {
       }
   return (
     <>
+    <NavbarBakici/>
     <div className='kontakt'>
     <h1 className='text-center kontakt-h1'>KONTAKT TUGBA AKSOY</h1>
     <img src={Kontakt_Tuba_Photo} alt="" className='kontakt-photo'/>
@@ -404,13 +407,17 @@ const Kontakt = () => {
       required
       form="external-form"
       onChange={(update) => {
-        console.log(update);
         if(checked){
-          const arr = [];
-          arr.push(update);
+          if(arr[0]){
+            setarr([...arr,update])
+          }else{
+            arr.push(update);
+          }
+          
           arr.push(null);
           console.log(arr);
           setDateRange(arr);
+          
           setformData({...formData,start_date:arr[0],end_date:""})
         }else{
           setDateRange(update);
