@@ -33,7 +33,7 @@
 .slider-bottom-hr {
   border: 1px solid rgba(69, 90, 100, 0.5);
   width: 100%;
-  margin: 2rem auto;
+  margin: 3rem auto;
   /* margin-bottom: 76px; */
 }
 .bakici-detail-favorilenme {
@@ -48,7 +48,7 @@
 
 .bakici-detail-hakkinda-container {
   width: 90%;
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 .bakici-detail-hakkinda-container h5 {
@@ -71,7 +71,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 .deneyim-container h5 {
@@ -95,7 +95,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 .servisler-container h5 {
@@ -130,7 +130,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 .ek-servisler-container h5 {
@@ -183,3 +183,127 @@
   letter-spacing: 0em;
   text-align: left;
 }
+
+.yorumlar-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.yorumlar-container h5 {
+  font-size: 2.25rem;
+  font-family: "Georama", sans-serif;
+  margin: 3rem 0;
+  color: rgba(69, 90, 100, 1);
+}
+
+.yorumlar-container p {
+  font-family: "Georama", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  /* line-height: 28.66px; */
+  margin: 2% 0;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0 5% ;
+}
+
+.yorumlar-box {
+  border: 1px solid 
+  rgba(69, 90, 100, 0.5);
+  margin: 4rem 0;
+  position: relative;
+}
+
+.rating_wrap {
+  display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+  justify-content: center;
+  float: right;
+	margin-top: 7px;
+  padding: 0 10%;
+}
+
+.rating_wrap .rating {
+  overflow: hidden;
+  position: relative;
+  height: 60px;
+  font-size: 32px;
+  width: 180px;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rating::before {
+	font-size: 32px;
+	content: "\f005\f005\f005\f005\f005";
+	top: 0;
+	position: absolute;
+	left: 0;
+	float: left;
+	color: #F6BC3E;
+}
+
+.product_rate {
+	overflow: hidden;
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding-top: 1.5em;
+	color: #F6BC3E;
+  width: 94%;
+}
+
+.product_rate::before {
+	font-size: 32px;
+	content: "\f005\f005\f005\f005\f005";
+	top: 0;
+	position: absolute;
+	left: 0;
+	font-weight: 900;
+}
+
+.yorumcu-image {
+  /* align-self: flex-start; */
+  align-self: center;
+  position: absolute;
+  /* top: 266%; */
+  top: -75px;
+  left: 5%;
+}
+
+.name-star-info-container {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.page-link {
+margin: 0 20%;
+}
+
+.next-item {
+  background-color: 
+  rgba(70, 120, 136, 1);
+  color: white;
+}
+
+.page-item {
+  display: flex;
+  width: 4%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.active-page {
+  background-color: red;
+}
+
