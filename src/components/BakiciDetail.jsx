@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/BakiciDetail/BakiciDetail.css";
 import Bakici1 from "../images/Bakıcı1.png";
 import Bakici2 from "../images/Bakıcı2.png";
@@ -14,10 +14,16 @@ import SaatIcon from "../images/DetayClock.png";
 import GeceIcon from "../images/DetayGeceIcon.png";
 import EkServisIcon1 from "../images/EkServisIcon1.png";
 import EkServisIcon2 from "../images/EkServisIcon2.png";
-
+import TarihSecimi from "./TarihSecimi";
+import Select from "react-select";
+import useSelectOptions from "./select/useSelectOptions";
+import Kalp from "../images/RedHeart.png"
 // import { baseUrl } from "./config";
 
 function BakiciDetail() {
+  const [specialDays, setspecialDays] = useState([]);
+  const [tarife, setTarife] = useState([]);
+  const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions();
   var settings = {
     dots: true,
     infinite: false,
@@ -52,6 +58,22 @@ function BakiciDetail() {
       },
     ],
   };
+
+  const handleDatesSelected = (dates) => {
+    setspecialDays([...specialDays, ...dates]);
+  };
+
+  const handleChange = (e) => {
+    setTarife(e);
+  };
+
+  const gündüzTarife = [
+    { value: "gunduz", label: "Sadece gündüz bakıcılığı" },
+    { value: "hsoGunduz", label: "Sadece haftasonu gündüz" },
+    { value: "hici", label: "Sadece hafta içi yatılı" },
+    { value: "hso", label: "Sadece hafta sonu yatılı" },
+    { value: "tum", label: "Pazar dahil tüm günler" },
+  ];
 
   return (
     <div className="bakici-detail-container">
@@ -162,11 +184,42 @@ function BakiciDetail() {
             <div className="d-flex justify-content-between">
               <div className="d-block">
                 <img src={EkServisIcon2} alt="" className="float-start px-3" />
-                <p className="ek-servis-content">Ebeveyn isyerinden cocugu almak/ birakmak</p>
+                <p className="ek-servis-content">
+                  Ebeveyn isyerinden cocugu almak/ birakmak
+                </p>
               </div>
             </div>
           </div>
         </div>
+          <div className="gündüz-tarife-container">
+            <Select
+              className="tarife-select"
+              isMulti
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              controlShouldRenderValue={false}
+              options={gündüzTarife}
+              isSearchable={false}
+              placeholder={
+                tarife.length
+                  ? `${tarife.length} Çalışma Şekli Seçildi`
+                  : "Gündüz Tarife"
+              }
+              components={{
+                Option: CheckboxOption,
+                ClearIndicator: null,
+              }}
+              styles={selectStyles}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="tarih-container">
+          <TarihSecimi onDatesSelected={handleDatesSelected}  />
+          </div>
+          <div>
+            <h5>YORUMLAR</h5>
+          </div>
+          
       </div>
     </div>
   );

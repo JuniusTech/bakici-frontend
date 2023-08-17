@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import "../styles/bakiciara.css";
 import Bakicikart from "../components/Bakicikart";
 import ReactPaginate from "react-paginate";
-import SingleBakici from "./SingleBakici";
 
 const BakiciAra = () => {
   const items = [...Array(17).keys()];
