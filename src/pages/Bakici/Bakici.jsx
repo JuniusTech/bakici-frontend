@@ -4,6 +4,7 @@ import BakiciHome from "./BakiciHome";
 import BakiciYorumlar from "./BakiciYorumlar";
 import NavbarBakici from '../../components/NavbarBakici';
 import Footer from '../../components/Footer';
+import BakiciTakvim from "./BakiciTakvim";
 
 const secondNavLinks = [
   {
@@ -19,7 +20,7 @@ const secondNavLinks = [
   {
     id: 3,
     title: "TAKVIM",
-    Component: () => <div>Takvim</div>,
+    Component: () => <BakiciTakvim/>,
   },
   {
     id: 4,

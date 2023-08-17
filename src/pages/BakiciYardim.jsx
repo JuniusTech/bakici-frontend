@@ -228,7 +228,7 @@ fontWeight: "300",};
                 </div>
             </div>
 
-            <div className="accordion" id="accordionExample2">
+            <div className="accordion mb-5" id="accordionExample2">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed"  onClick={handleClick} type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">

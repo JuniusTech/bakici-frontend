@@ -8,9 +8,12 @@ import "../styles/Navbar.css";
 import * as ReactBootStrap from "react-bootstrap";
 
 import CareZone from "../assets/CareZone.svg";
+import AnaUyelik from "./AnaUyelik";
 
 const CareZoneNavbar = () => {
   const [expanded, setExpanded] = useState(false);
+
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -41,6 +44,10 @@ const CareZoneNavbar = () => {
 
   return (
     <div>
+      <AnaUyelik
+        openAnaUyelik={openAnaUyelik}
+        setOpenAnaUyelik={setOpenAnaUyelik}
+      />
       <ReactBootStrap.Navbar
         collapseOnSelect
         expand="md"
@@ -88,9 +95,18 @@ const CareZoneNavbar = () => {
               className="me-3 active Navbar-Link-Uye-Yardım"
               style={navstyle2}
               onClick={() => setExpanded(false)}
-              to="/anauyelik"
             >
-              Üye Olun
+              <Button
+                className="Navbar-Button"
+                onClick={() => setOpenAnaUyelik(true)}
+              >
+                Üye Olun
+                <img
+                  className="Navbar-ise-ProfilePlus"
+                  src={ProfilePlus}
+                  alt="Profile"
+                />
+              </Button>
             </NavLink>
             <NavLink className="me-3 active" style={navstyle} to="/login">
               <Button className="Navbar-Button">
@@ -119,7 +135,7 @@ const CareZoneNavbar = () => {
 
 export default CareZoneNavbar;
 
-/////////12.08.2023 ORJİNAL HALİ////////
+///////YAPILAN//////////////////////////////
 
 // import Button from "react-bootstrap/Button";
 // import { useEffect, useState } from "react";
@@ -134,24 +150,6 @@ export default CareZoneNavbar;
 
 // const CareZoneNavbar = () => {
 //   const [expanded, setExpanded] = useState(false);
-//   const [isScrolled, setIsScrolled] = useState(false);
-
-//   const handleScroll = () => {
-//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-//     if (scrollTop > 0) {
-//       setIsScrolled(true);
-//     } else {
-//       setIsScrolled(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
 
 //   const navstyle = {
 //     color: "#263238",

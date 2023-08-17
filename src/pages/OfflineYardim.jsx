@@ -137,7 +137,7 @@ fontWeight: "300",};
                 </div>
             </div>
 
-            <div className="accordion" id="accordionExample2">
+            <div className="accordion mb-5" id="accordionExample2">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed"  onClick={handleClick} type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -150,12 +150,6 @@ fontWeight: "300",};
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div className='d-flex gap-5 justify-content-center'>
-            <Link to="/bakyardim">Bakici Yardim</Link>
-            <Link to="/misafir">Misafir Yönlendir</Link>
-            <Link to="/kontakt">Kontakt</Link>
             </div>
             
         </div>

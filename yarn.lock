@@ -7890,6 +7890,13 @@ react-multi-date-picker@^4.1.2:
     react-date-object "^2.1.5"
     react-element-popper "^2.1.6"
 
+react-nice-dates@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-nice-dates/-/react-nice-dates-3.1.0.tgz#1be7dc18397a54a81e6b37bae460a34c058e5a14"
+  integrity sha512-tOsA7tB2E9q+47nZwrk2ncK2rOUublNOWPVnY/N2HFDLO8slexGaAfOTKpej2KzPxCN3gcvOKeE2/9vua2LAjQ==
+  dependencies:
+    classnames "^2.2.6"
+
 react-onclickoutside@^6.12.2:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.13.0.tgz#e165ea4e5157f3da94f4376a3ab3e22a565f4ffc"
