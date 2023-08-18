@@ -22,12 +22,12 @@ function HomeContent3() {
                             <img src={musteri3} className="d-block w-100" alt="..." />
                         </Carousel.Item>
                     </Carousel>
-                    <Button className="Carouselx-Button carousel-control-prev" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    {/* <Button className="Carouselx-Button carousel-control-prev" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                         <span className="button-span-left" aria-hidden="true"></span>
-                    </Button>
-                    <Button className="Carouselx-Button carousel-control-next" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    </Button> */}
+                    {/* <Button className="Carouselx-Button carousel-control-next" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
                         <span className="button-span-right" aria-hidden="true"></span>
-                    </Button>
+                    </Button> */}
                 </div>
             </Container>
         </div>

@@ -1,4 +1,3 @@
-
 .Navbar {
   font-family: "Georama", sans-serif;
   font-size: 24px;
@@ -7,7 +6,6 @@
   top: 0;
   z-index: 1;
   transition: background-color 0.5s ease; /* Geçiş süresi ve animasyon tipini ayarlar */
-  
 }
 
 .scrolled {
@@ -40,7 +38,6 @@
   width: 20%;
   background-color: red;
 } */
-
 
 /* Navbar Button styles */
 .Navbar-Button,
@@ -185,3 +182,15 @@
 .toggleIcon {
   background-color: #e88585;
 }
+
+.Navbar-Link-Uye-Yardım {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Georama", sans-serif;
+  font-size: 1rem;
+  color: #263238;
+  justify-content: space-around;
+  align-items: center;
+}
+

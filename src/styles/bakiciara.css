@@ -25,35 +25,39 @@
 }
 
 .card-title {
-    width: 133px;
-    height: 29px;
+    /* width: 133px;
+    height: 29px; */
     top: 199px;
     left: 22px;
 }
 
 .bakici_name_container h5 {
     font-family: "Georama", sans-serif;
-    font-size: 22px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 29px;
     letter-spacing: 0em;
+    margin: 0; /**/
 }
 
-.bakici_name_container>img {
-    width: 16px;
-    height: 16px;
-    top: 206px;
+.bakici_name_container img {
+    /* width: 16px;
+    height: 16px; */
+    /* top: 206px;
     left: 282px;
-    margin-left: 5px;
+    margin-left: 5px; */
+    margin-left: 5px; /**/
 }
+  
 
 .bakici_info_container p {
     font-family: "Georama", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 24px;
     letter-spacing: 0em;
-    text-align: left;
+    /* text-align: left; */
+    margin: 0; /**/
 }
 
 .bakici_location_icon {
@@ -98,3 +102,28 @@
     justify-content: center;
     align-items: center;
 }
+
+/**********************/
+
+.bakici_name_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .bakici_info_container {
+    margin-bottom: 1rem;
+  }
+
+  .bakici_info_container div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .bakici_info_container img {
+    /* width: 24px;
+    height: 24px; */
+    margin-right: 0.5rem;
+  }

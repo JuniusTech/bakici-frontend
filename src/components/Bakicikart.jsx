@@ -9,7 +9,7 @@ import "../styles/bakiciara.css";
 
 function Bakicikart() {
   return (
-    <div className="card-body mx-lg-2 mx-md-3 mx-sm-3 py-lg-3 py-md-2">
+    <div className="card-body mx-lg-auto mx-md-3 mx-sm-3 py-lg-3 py-md-2">
       <div className="position-relative">
         <img src={Bakici} className="card-img-top" alt="..." />
         <div className="heart_container position-absolute">

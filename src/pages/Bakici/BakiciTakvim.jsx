@@ -171,6 +171,7 @@ const BakiciTakvim = () => {
   }
   return (
     <div className='bakici-takvim'>
+
     <h3 className='bakici-takvim-hello'>Merhaba, Tugba</h3>
     <p className='bakici-takvim-profil-durumu'>Profil durumu : Aktif</p>
     <p className='bakici-takvim-profil-bilgi'>Profilinizin aktif olmasi icin musait oldugunuz gunleri takvimi kullanarak guncelleyebilirsiniz.</p>

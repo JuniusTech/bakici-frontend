@@ -34,7 +34,7 @@ function HomeContent2() {
             <Container className="Bakici">
                 <p className="Bakici-Text">BAKICI MI ARIYORSUNUZ? </p>
                 <Row className="Bakici-Box">
-                    <Col className="Bakici-Box-Card">
+                    <Col className="Bakici-Box-Card position-relative">
                         <div xs={12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">1</p>
                             <img
@@ -44,10 +44,13 @@ function HomeContent2() {
                             />
                             <p className="Bakici-Box-Card-Text">
                                 Istediginiz bakiciyi websitemizden secin
+                                
                             </p>
+                            <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
-                    </Col>
-                    <Col>
+                        
+                    </Col>                  
+                    <Col className="Bakici-Box-Card position-relative">
                         <div xs={12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">2</p>
                             <img
@@ -56,9 +59,10 @@ function HomeContent2() {
                                 alt="group48"
                             />
                             <p className="Bakici-Box-Card-Text">Gorusme icin randevu alin</p>
+                            <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="Bakici-Box-Card position-relative">
                         <div xs= {12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">3</p>
                             <img
@@ -69,9 +73,10 @@ function HomeContent2() {
                             <p className="Bakici-Box-Card-Text">
                                 Bakiciniz ile gerekli gorusmelerinizi yapin
                             </p>
+                            <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="Bakici-Box-Card position-relative">
                     <div xs= {12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">4</p>
                             <img
@@ -82,9 +87,10 @@ function HomeContent2() {
                             <p className="Bakici-Box-Card-Text">
                                 Anlasmanizi ekibimize bildirin
                             </p>
+                            <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="Bakici-Box-Card position-relative">
                     <div xs= {12} className="Bakici-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="Bakici-Box-Card-Number">5</p>
                             <img
@@ -106,7 +112,7 @@ function HomeContent2() {
             <Container className="BakiciOlma">
                 <p className="BakiciOlma-Text">İŞ Mİ ARIYORSUNUZ? </p>
                 <Row className="BakiciOlma-Box">
-                    <Col className="BakiciOlma-Box-Card">
+                    <Col className="BakiciOlma-Box-Card position-relative">
                         <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">1</p>
                             <img
@@ -117,9 +123,10 @@ function HomeContent2() {
                             <p className="BakiciOlma-Box-Card-Text">
                                 Sisteme Kaydinizi yapin
                             </p>
+                            <hr className="BakiciOlma-Box-Card-Hr position-absolute" />
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="BakiciOlma-Box-Card position-relative">
                     <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">2</p>
                             <img
@@ -130,9 +137,10 @@ function HomeContent2() {
                             <p className="BakiciOlma-Box-Card-Text">
                                 Online bakici yeterlilik testini yapin
                             </p>
+                            <hr className="BakiciOlma-Box-Card-Hr position-absolute" />
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="BakiciOlma-Box-Card position-relative">
                     <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">3</p>
                             <img
@@ -143,9 +151,10 @@ function HomeContent2() {
                             <p className="BakiciOlma-Box-Card-Text">
                                 Yeterlilik bilgilerinizi sistemimize girin
                             </p>
+                            <hr className="BakiciOlma-Box-Card-Hr position-absolute" />
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="BakiciOlma-Box-Card position-relative">
                     <div xs={12} className="BakiciOlma-Box-Card d-flex flex-column justify-content-center align-items-center">
                             <p className="BakiciOlma-Box-Card-Number">4</p>
                             <img

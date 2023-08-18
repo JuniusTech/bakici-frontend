@@ -17,6 +17,7 @@ import BakiciYardim from "../pages/BakiciYardim";
 import Kontakt from "../pages/Kontakt";
 import KontaktBasarili from "../pages/KontaktBasarili";
 import Misafir from "../pages/Misafir";
+import SingleBakici from "../pages/SingleBakici";
 const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -35,13 +36,10 @@ const AppRouter = () => {
         {/* <Route path="/anauyelik" element={<AnaUyelik />} /> */}
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
         <Route path="/bakicikayit" element={<BakiciKayit />} />
-        <Route
-          path="/misafirloginyonlendirici"
-          element={<MisafirLoginYonlendirici />}
-        />
-        <Route path="/profile" element={<Bakici />} />
-        <Route path="/kontaktbas" element={<KontaktBasarili />} />
-
+        <Route path="/misafirloginyonlendirici" element={<MisafirLoginYonlendirici />}/>
+        <Route path="/profile" element={<Bakici />}/>
+        <Route path="/kontaktbas" element={<KontaktBasarili />}/>
+        <Route path="/singlebakici" element= {<SingleBakici/>}/>
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
