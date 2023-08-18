@@ -1,9 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg";
 import "../styles/BakiciKayit.css";
 import profileImg from "../assets/Ellipse54.svg";
 import sifreIcon from "../assets/sifre-icon.svg";
+import plus from "../assets/plus.svg";
+import pen from "../assets/pen.svg";
 import docIcon from "../assets/doc.svg";
 import homeIcon from "../assets/home-icon.svg";
 import usePasswordToggle1 from "../components/usePasswordToggle";
@@ -56,15 +58,13 @@ const BakiciKayit = () => {
   return (
     <div className="bakici-kayit">
       <nav className="p-4" style={{ height: "155px" }}>
-        <img
-          src={MusteriKayitLogo}
-          alt="MusteriKayitLogo"
-          className="MusteriKayit-Logo"
-        />
-
-        <NavLink to="/" className="MusteriKayit-Link">
-          Anasayfa
-        </NavLink>
+        <Link to="/">
+          <img
+            src={MusteriKayitLogo}
+            alt="MusteriKayitLogo"
+            className="MusteriKayit-Logo"
+          />
+        </Link>
       </nav>
       <div className="bakici-kayit__profile">
         <h1 className="text-center">GENEL BİLGİLERİNİZİ GİRİN</h1>
@@ -72,7 +72,7 @@ const BakiciKayit = () => {
           className="bakici-kayit__profile-form d-flex align-items-center align-items-xl-start flex-column flex-xl-row"
           action=""
         >
-          <div className="bakici-kayit__profile-form-sol ms-0 ms-xl-5">
+          <div className="bakici-kayit__profile-form-sol ms-0 ms-xl-5 ps-xl-5">
             <h3 className="bakici-kayit__profile-baslik">Profil Bilgileri</h3>
             <div className="bakici-kayit__profile-info">
               <div className="bakici-kayit__avatar">
@@ -275,8 +275,118 @@ const BakiciKayit = () => {
           </div>
         </form>
       </div>
-      <div className="bakici-kayit__evrak">
-        <h1>RESMİ DOKÜMANLARINIZI EKLEYİN</h1>
+
+      {/* Mesai --------------- */}
+
+      <div className="bakici-kayit__mesai text-center my-5">
+        <h1 className="text-uppercase ">
+          Calismak istediginiz Mesai SEKLINIZI SECINIZ
+        </h1>
+
+        <div className="bakici-kayit__mesai-div d-flex flex-column m-auto  my-5">
+          <div className="d-flex gap-3 align-items-center ">
+            <input
+              type="checkbox"
+              name=""
+              id="sgündüz"
+              style={{ width: "20px", height: "20px" }}
+            />
+            <label className="bakici-kayit__mesai-label" htmlFor="sgündüz">
+              Sadece gündüz bakıcılığı
+            </label>
+          </div>
+
+          <div className="d-flex gap-3 align-items-center">
+            <input
+              type="checkbox"
+              name=""
+              id="hsonugündüz"
+              style={{ width: "20px", height: "20px" }}
+            />
+            <label className="bakici-kayit__mesai-label" htmlFor="hsonugündüz">
+              Sadece haftasonu gunduz bakıcılığı
+            </label>
+          </div>
+          <div className="d-flex gap-3 align-items-center">
+            <input
+              type="checkbox"
+              name=""
+              id="haiciyatili"
+              style={{ width: "20px", height: "20px" }}
+            />
+            <label className="bakici-kayit__mesai-label" htmlFor="haiciyatili">
+              Sadece haftaiçi yatılı bakıcılık
+            </label>
+          </div>
+          <div className="d-flex gap-3 align-items-center">
+            <input
+              type="checkbox"
+              name=""
+              id="hsonuyatili"
+              style={{ width: "20px", height: "20px" }}
+            />
+            <label className="bakici-kayit__mesai-label" htmlFor="hsonuyatili">
+              Sadece haftasonu yatılı bakıcılık
+            </label>
+          </div>
+          <div className="d-flex gap-3 align-items-center">
+            <input
+              type="checkbox"
+              name=""
+              id="tümyatili"
+              style={{ width: "20px", height: "20px" }}
+            />
+            <label className="bakici-kayit__mesai-label" htmlFor="tümyatili">
+              Pazar dahil tüm günler yatılı bakıcılık
+            </label>
+          </div>
+        </div>
+      </div>
+
+      {/* Mesai son ----------------------  */}
+
+      <div className="bakici-kayit__calisma-deneyim position-relative py-4">
+        <div className="d-flex w-75 m-auto">
+          <div className="flex-grow-1">
+            <h1>Çalışma Detayları</h1>
+            <p className="bakici-kayit__input-label mt-5">
+              Ücret beklentinizi belirtin
+            </p>
+            <div className="bakici-kayit__select-div">
+              <Select
+                className="bakici-kayit__select"
+                options={ilceler}
+                placeholder="İlçe"
+                styles={selectStyles}
+              />
+            </div>
+          </div>
+          <div className="divider"></div>
+
+          <div className="flex-grow-1 ms-5">
+            <h1>Deneyim</h1>
+            <div className="bakici-kayit__deneyim mt-5">
+              <h6 className="" style={{ textDecoration: "underline" }}>
+                Bakıcı
+              </h6>
+              <h6>Abc Kreşi</h6>
+              <p className="">Oca 2022 - Oca 2023 - 1 yıl</p>
+            </div>
+            <div className="bakici-kayit__buttons d-flex justify-content-around align-items-center mt-5">
+              <p
+                className="my-0 d-flex align-items-center gap-2"
+                style={{ textDecoration: "underline" }}
+              >
+                Tekrar Düzenle{" "}
+                <img className="" src={pen} alt="pen" width={14} />
+              </p>
+              <button className="">
+                {" "}
+                <img src={plus} alt="plus" width={24} /> Deneyim Ekle
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
