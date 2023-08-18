@@ -164,6 +164,7 @@
     /* width: 5rem; */
     border: 1px solid rgba(69, 90, 100, 0.8);
     margin-right: 8rem;
+    margin-left: 2rem;
     /* top: 0; */
     /* left: 50%; */
     margin-top: 52px;
@@ -176,4 +177,42 @@
     /* flex: 1; */
     text-align: left;
     /* padding-top: 97px; */
+}
+
+.bakici-kayit__mesai-div {
+    width: fit-content
+}
+
+.bakici-kayit__mesai-label {
+    color: black;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.bakici-kayit__calisma-deneyim {
+    background-color: rgba(245, 245, 245, 0.5);
+}
+
+.bakici-kayit__calisma-deneyim .divider {
+    width: 2px;
+    height: 250px;
+    background-color: #9aaeb8;
+    position: absolute;
+    transform: translate(50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.bakici-kayit__deneyim {
+    line-height: 12px;
+}
+
+.bakici-kayit__buttons button {
+
+    background-color: rgba(232, 132, 133, 1);
+    color: white;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 24px;
 }
