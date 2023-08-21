@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+
+
+
+.about_me_container{
+  width: 53rem;
+  height: 140rem;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: relative;
+  /* top: 19.4rem; */
+  left: 12rem;
+  bottom: 57.3rem;
+  
+ 
+
+}
+.about_me{
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  text-align: center;
+
+}
+.about_me_text {
+  width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+justify-content: center;
+
+}
+ .about_me_text img{
+  width:32px;
+height: 32px;
+padding-top:3px;
+
+ }
+
+ .about_photo{
+  width: 154px;
+height: 157px;
+top: 470px;
+left: 850px;
+border: 1px;
+position: absolute;
+  text-align: center;
+  justify-content: center;
+ }
+
+.change_btn{
+  width: 150px;
+  height: 40px;
+  border-radius: 26px;
+  background-color: #e88585;
+  position: absolute;
+  width: 179px;
+height: 42px;
+top: 670px;
+left: 840px;
+border-radius: 19px;
+  border: none;
+  text-align: center;
+  justify-content: center;
+
+}
+.change_btn:hover {
+  background: #fda9a9;
+}
+.change_btn span {
+  font-family: Georama;
+font-size: 22px;
+font-weight: 400;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+color:#ffffff;
+
+}
+
+.change_btn img {
+  width: 25px;
+height: 25px;
+margin-bottom:5px;
+
+}
+
+
+
+.personal_information{
+  width:25rem;
+  height: 20rem;
+  position: relative;
+  left: 14rem;
+  bottom:168rem;
+
+  
+}
+
+
+.name_surname{
+  font-family: Georama;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #467888;
+
+
+}
+
+
+.name_surname_text,
+.e_mail_text,
+.phone_text
+{
+  
+  
+  width: 350px;
+height: 51px;
+top: 456px;
+left: 316px;
+border-radius: 25.5px;
+border: 1px solid #455a64cc;
+  border-radius: 52px;
+  margin-top: 1rem;
+}
+
+
+
+.e_mail{
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  padding-top: 10px;
+}
+
+.phone_number{
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  padding-top: 10px;
+}
+
+.kaydet_hakkimda_btn {
+  width: 350px;
+height: 52px;
+top: 740px;
+left: 316px;
+border-radius: 26px;
+background: #e88585;
+border: none;
+margin-top: 2rem;
+
+}
+.kaydet_hakkimda_btn:hover {
+  background: #fda9a9;
+}
+.kaydet_hakkimda_btn span {
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+}
+
+.hakkimda_line{
+  width: 50rem;
+  border: 1px solid #455A64;
+  opacity: 50%;
+ position: relative;
+ right: 15rem;
+ top:10rem;
+ 
+}
+
+.new_mail_container{
+  width: 40rem;
+  height: 25rem;
+  position: relative;
+  top: 15rem;
+  right: 10.5rem;
+  background: #F5F5F5;
+
+  
+}
+.new_mail_header,
+.change_password_header{
+  width: 40rem;
+  height: 2.5rem;
+  background: #455A64;
+
+}
+
+.new_mail_header span
+{
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+   position: relative;
+  left: 16rem;
+  
+ 
+  
+}
+
+
+
+
+.password_text,
+.email_text,
+.again_email_text
+{
+  width: 350px;
+height: 51px;
+top: 456px;
+left: 316px;
+border-radius: 25.5px;
+border: 1px solid #455a64cc;
+  border-radius: 52px;
+  
+ 
+  
+ 
+
+}
+
+.password_header,
+.email_header,
+.again_email_header
+{
+  font-family: Georama;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #467888;
+padding-left: 5rem;
+margin-top: 2rem;
+
+
+
+
+}
+.email_kaydet_btn{
+  width: 10rem;
+  height: 40px;
+  border-radius: 26px;
+  background-color: #e88585;
+  position: absolute;
+  margin-top: 1rem;
+  border: none;
+  width: 184px;
+height: 52px;
+top: 300px;
+left: 400px;
+border-radius: 26px;
+
+
+ 
+}
+.email_kaydet_btn:hover{
+  background: #fda9a9;
+}
+.email_kaydet_btn span{
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color:#ffffff;
+  
+
+ 
+}
+
+.hakkimda_mail_recompose{
+  color: #467888;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  font-size: 20px;
+  position: absolute;
+  width: 184px;
+  height: 24px;
+  top: 330px;
+  left: 150px;
+  
+}
+.change_password_container{
+  width: 40rem;
+  height: 25rem;
+  position: relative;
+  top: 20rem;
+  right: 10.5rem;
+  background: #F5F5F5;
+}
+.change_password_header span{
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  left: 15rem;
+  
+}
+
+.delete_operations{
+  width: 40rem;
+  height: 10rem;
+  position: relative;
+  top:10rem;
+  left: 0;
+  background: #F5F5F5;
+  border-radius:7px;
+}
+.delete{
+  background: #E3E3E3;
+  width: 40rem;
+  height: 2.5rem;
+  border: none;
+
+
+}
+.delete span{
+font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: left;
+color: #ffffff;
+position: relative;
+
+ 
+}
+.profile_delete{
+  background: #F64D4D;
+  width: 40rem;
+  height: 3rem;
+  border-radius:26px;
+  border: none;
+  margin-top: 2rem;
+}
+.profile_delete span{
+font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: left;
+color: #ffffff;
+position: relative;
+ 
+  
+}

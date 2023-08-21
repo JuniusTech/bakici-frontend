@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    
+    
 }
 
 .bakici_links {
@@ -283,3 +285,110 @@
     color: #F64D4D;
     margin-left: 8px;
 }
+@media (min-width: 1200px) and (max-width: 1400px){
+
+    .genel_sayfa .divider {
+        display: none;
+    }
+    .genel_sayfa .side .divider {
+        display: none;
+        width: auto;
+    }
+    .bakici_current_work {
+        width: 60rem;
+    }
+    .bakici_kullanmaya_basla {
+        width:65rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .bakici_links {
+        flex-direction: column;
+        height: auto;
+    }
+    .bakici_links .bakici_link_text {
+        margin-bottom: 3%;
+    }
+    
+    .genel_sayfa .divider {
+        display: none;
+    }
+    .genel_sayfa .side .divider {
+        display: none;
+        width: auto;
+    }
+    .bakici_current_work {
+        width: 45rem;
+        margin-left: 4rem;
+    }
+    .bakici_kullanmaya_basla {
+        width:50rem;
+        margin-left: 2rem;
+       
+    }
+    .genel_sayfa .side .side2_section2 h2{
+        position: relative;
+        bottom: 1rem;
+        
+    }
+}
+
+
+@media (max-width: 768px) {
+    .bakici_links {
+        flex-direction: column;
+        height: auto;
+    }
+    .bakici_links .bakici_link_text {
+        margin-bottom: 3%;
+    }
+    
+    .genel_sayfa .divider {
+        display: none;
+    }
+    .genel_sayfa .side .divider {
+        display: none;
+        width: auto;
+    }
+    .bakici_current_work {
+        width: 40rem;
+       
+    }
+    .bakici_kullanmaya_basla {
+        width:45rem;
+       
+
+        
+    }
+    .genel_sayfa .side .side2_section2 {
+        position: relative;
+        bottom: 2rem;
+        
+    }
+  
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .bakici_kullanmaya_basla {
+        width: auto;
+        
+    }
+    .genel_sayfa .side {
+        margin: 20% 0 20% 0;
+        
+    }
+    .bakici_current_work {
+        width: auto;
+        
+    }
+    .genel_sayfa .side .side2_section2 {
+        position: relative;
+        bottom: 1.5rem;
+        
+    }
+    
+}
+

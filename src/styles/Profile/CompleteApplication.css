@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+
+
+.complete_application_container {
+    width: 50rem;
+    height: 31rem;
+    padding: 0px 0px 71px 0px;
+    border-radius: 7px;
+    border: 2px solid #457888;
+    /* display: flex; */
+    position: absolute;
+    top: 19.5rem;
+    left: 33rem;
+  }
+  
+  .complete_application {
+    width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+
+  }
+  
+  .complete_application_text {
+    width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: center;
+padding-left:10rem;
+  }
+  .complete_application_text img {
+    width: 30px;
+    height: 30px;
+   
+   
+  }
+  .complete_application_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 70%;
+    border-radius: 26px;
+    /* padding-top: 10px; */
+  }
+  
+  .number {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e88585;
+    color: black;
+    margin-right: 20rem;
+  }
+  .number span {
+    margin-left: 8px;
+    font-family: Georama;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    left: 20%;
+  }
+  .number_tick {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #00c38a;
+    margin-right: 20rem;
+  }
+  
+  .number_tick span {
+    margin-left: 8px;
+    font-family: Georama;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    left: 20%;
+    color: black;
+  }
+  .number_line {
+    width: 3px;
+    height: 20px;
+    background-color: #e88585;
+    flex-grow: 1;
+    margin-right:20rem;
+  }
+  
+  .onay_btn {
+    width: 265px;
+    height: 40px;
+    border-radius: 26px;
+    background-color: #e88585;
+    position: absolute;
+    top: 26rem;
+    border: none;
+  }
+  .onay_btn:hover {
+    background: #fda9a9;
+  }
+  .onay_btn span {
+    font-family: Georama;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #ffffff;
+    justify-content: center;
+  }
+  

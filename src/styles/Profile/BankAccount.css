@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+
+
+.bank_account_container{
+    width: 50rem;
+  height: 53rem;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: absolute;
+  top: 19.4rem;
+  left: 33rem;
+  bottom: 57.3rem;
+}
+
+.bank_account{
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  position: relative;
+  text-align: center
+}
+.bank_account_text{
+  width: 100%;
+  height: 64px;
+font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: center;
+color: #ffffff;
+ 
+
+}
+
+.bank_account_text img{
+  width:32px;
+height: 32px;
+padding-left: 5px;
+margin-bottom: 2px;
+}
+.iban_container{
+    width: 40rem;
+    height: 25rem;
+    position: relative;
+    top: 4rem;
+    left:5rem;
+    background: #F5F5F5;
+
+
+
+}
+.iban_header{
+    width: 100%;
+    height: 2.5rem;
+    background: #455A64;
+  
+  }
+
+  .iban_header span
+  {
+    font-family: Georama;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 2rem;
+   
+   
+  }
+  .iban_label{
+    font-family: Georama;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #467888;
+top: 108px;
+left: 43px;
+position: absolute;
+
+
+  }
+  .iban_text{
+    width: 370px;
+height: 50px;
+position: absolute;
+top: 94px;
+left: 240px;
+border-radius: 26px;
+border: 1px solid #455A64CC; 
+
+  }
+  .iban_kaydet_btn{
+
+width: 184px;
+height: 52px;
+top: 450px;
+left: 500px;
+border-radius: 26px;
+background:#e88585;
+border: none;
+position: absolute;
+
+  }
+  .iban_kaydet_btn span{
+    font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color:#ffffff;
+  }
+  .iban_kaydet_btn:hover {
+    background: #fda9a9;
+  }

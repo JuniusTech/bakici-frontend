@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+
+
+
+.my_address_container {
+  width: 50rem;
+  height: 25rem;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: absolute;
+  top: 19.5rem;
+  left: 33rem;
+}
+.my_address {
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  text-align: center;
+}
+.my_address_text {
+  width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+font-family: Georama;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+justify-content: center;
+
+}
+.my_address_text img {
+  width: 40px;
+  height: 40px;
+  left: 4px;
+  bottom: 5px;
+  position: relative;
+}
+
+.address_header_container {
+  width: 30rem;
+  height: 6rem;
+  position: absolute;
+  top: 5rem;
+}
+.address_header {
+  width: 30rem;
+  height: 5rem;
+  padding-left: 3rem;
+}
+.address_header span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+.address_text {
+  width: 40rem;
+  height: 2rem;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+.town_header_container {
+  width: 25rem;
+  height: 6rem;
+  position: absolute;
+  top: 5rem;
+}
+.town_header {
+  width: 30rem;
+  height: 5rem;
+  padding-left: 3rem;
+}
+.town_header span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+.town_text {
+  width: 18rem;
+  height: 2rem;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+.city_header {
+  width: 30rem;
+  height: 5rem;
+  padding-left: 3rem;
+}
+.city_header span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+.city_text {
+  width: 18rem;
+  height: 2rem;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+.city_header_container {
+  width: 25rem;
+  height: 6rem;
+  position: absolute;
+  top: 5rem;
+  left: 22rem;
+}
+.recompose {
+  color: #467888;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  font-size: 22px;
+  position: relative;
+  top: 3rem;
+  right: 12rem;
+ 
+
+}
+
+.kaydet_adress_btn {
+  width: 18rem;
+  height: 40px;
+  border-radius: 26px;
+  background-color: #e88585;
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+  margin-top: 1rem;
+  border: none;
+  color: #ffffff;
+}
+.kaydet_adress_btn span{
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+}
+.kaydet_adress_btn:hover {
+  background: #fda9a9;
+}
