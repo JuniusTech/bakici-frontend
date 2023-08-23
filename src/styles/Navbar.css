@@ -183,6 +183,17 @@
   background-color: #e88585;
 }
 
+.Navbar-Link-Uye-Ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Georama", sans-serif;
+  font-size: 1rem;
+  color: #263238;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .Navbar-Link-Uye-Yardım {
   display: flex;
   justify-content: center;
@@ -194,3 +205,16 @@
   align-items: center;
 }
 
+.Navbar-Separator {
+  margin: auto;
+  margin-right: 15px; /* Adjust the margin as needed */
+  border-left: 1px solid rgba(38, 50, 56, 1); /* Change the color as needed */
+  height: 30px;
+}
+
+@media screen and (max-width: 770px) {
+  .Navbar-Separator {
+    /* Adjust width for mobile devices */
+    display: none;
+  }
+}

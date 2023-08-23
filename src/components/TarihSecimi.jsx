@@ -1,29 +1,30 @@
 import React, { useState } from "react";
-import { format, isSameDay } from "date-fns";
+import { isSameDay } from "date-fns";
 import { tr } from "date-fns/locale";
-// import DatePicker, { START_DATE } from "react-nice-dates";
-import DatePicker from "react-datepicker";
+import {
+  Calendar,
+  DatePickerCalendar,
+  DateRangePickerCalendar,
+  START_DATE,
+} from "react-nice-dates";
+import "../styles/TarihSecimi.css";
 import "react-nice-dates/build/style.css";
 
-
-const TarihSecimi = ({onDatesSelected}) => {
+const TarihSecimi = ({ onDatesSelected }) => {
   const [startDate, setStartDate] = useState();
   const [checked, setChecked] = useState(false);
   const [selectedDates, setSelectedDates] = useState([]);
-  const [endDate, setEndDate] = useState()
+  const [endDate, setEndDate] = useState();
   const [dateRange, setDateRange] = useState(checked ? "" : [null, null]);
   const [formData, setformData] = useState({
-    start_date:new Date(),
-    end_date:""
+    start_date: new Date(),
+    end_date: "",
   });
 
-  const handleDayClick = (date) => {
-    setSelectedDates([...selectedDates, date]);
-  };
-
-  const getDateColor = () => {
-    return formData.date ? { color: "#2D83AC" } : null;
-  };
+  const [focus, setFocus] = useState(START_DATE);
+  const [available, setavailable] = useState(false);
+  const [specialDays, setspecialDays] = useState([]);
+  const [specialDays2, setspecialDays2] = useState([]);
 
   function CustomMultipleInput({ innerRef, onFocus, value, onChange }) {
     return (
@@ -43,53 +44,87 @@ const TarihSecimi = ({onDatesSelected}) => {
       />
     );
   }
+  const handleFocusChange = (newFocus) => {
+    setFocus(newFocus || START_DATE);
+  };
+  const getDateColor = () => {
+    return formData.date ? { color: "#2D83AC" } : null;
+  };
+  const modifiers = {
+    special: (date) =>
+      specialDays.some((day) => day.getTime() === date.getTime()),
+    customBackground: (date) => {
+      if (available) {
+      }
+      // Return true for the dates you want to change the background color of
+      // For example, let's change the background color of August 15th
+      return specialDays.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
+    },
+    customBackground2: (date) => {
+      if (available) {
+      }
+      // Return true for the dates you want to change the background color of
+      // For example, let's change the background color of August 15th
+
+      return specialDays2.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
+    },
+    selected: (date) =>
+      selectedDates.some((selectedDate) => isSameDay(selectedDate, date)),
+  };
+  const modifiersClassNames = {
+    highlight: "-highlight",
+    customBackground: "-customBackground",
+    customBackground2: "-customBackground2",
+  };
+
+
+  const handleDayClick = (date) => {
+    setSelectedDates([...selectedDates, date]);
+  };
 
   return (
     <div>
-      <label className="Kontakt-Form-Label" id="option-date">
-        TARIH SECINIZ
-        <DatePicker
-          customInput={<CustomMultipleInput />}
-          wrapperClassName="datepicker"
-          selected={checked ? startDate : false}
-          selectsRange={checked ? false : true}
-          startDate={checked ? [...selectedDates] : startDate}
-          endDate={checked ? [...selectedDates] : endDate}
-          required
-          form="external-form"
-          onChange={(update) => {
-            if (checked) {
-              const arr = [];
-              arr.push(update);
-              arr.push(null);
-              setDateRange(arr);
-              setStartDate(arr[0]);
-              setEndDate(arr[0]);
-              console.log(startDate);
-              setEndDate("");
-              handleDayClick(update);
-            } else {
-              setDateRange(update);
-              setStartDate(update[0]);
-              setEndDate(update[1]);
-            }
-            onDatesSelected(update);
-          }}
-        >
-          <label className="">
-            <input
-              type="checkbox"
-              defaultChecked={checked}
-              className=" text-black"
-              style={{ marginLeft: "5px" }}
-              onChange={() => setChecked(!checked)}
-            />
+      <div className="bakici-takvim-date-range-picker-calendar-1">
+        {checked ? (
+          <Calendar
+            onDayClick={handleDayClick}
+            locale={tr}
+            modifiers={modifiers}
+            modifiersClassNames={modifiersClassNames}
+          />
+        ) : (
+          <DateRangePickerCalendar
+            startDate={startDate}
+            endDate={endDate}
+            focus={focus}
+            onStartDateChange={setStartDate}
+            onEndDateChange={setEndDate}
+            onFocusChange={handleFocusChange}
+            locale={tr}
+            modifiers={modifiers}
+            modifiersClassNames={modifiersClassNames}
+          />
+        )}
 
-            <p className=" d-inline ms-2">ARDISIK GUN SECME</p>
-          </label>
-        </DatePicker>
+        <div className="bakici-takvim-bottom-right-kutucuklar">
+          <div className="bakici-takvim-bottom-right-kutucuklar-musait">
+            <div className="bakici-takvim-bottom-right-kutucuklar-ilk"></div>
+            <p className="bakici-takvim-bottom-right-kutucuklar-text">Musait</p>
+          </div>
 
-      </label>
+          <div className="bakici-takvim-bottom-right-kutucuklar-degil">
+            <div className="bakici-takvim-bottom-right-kutucuklar-ikinci"></div>
+            <p className="bakici-takvim-bottom-right-kutucuklar-text">
+              Musait degil
+            </p>
+          </div>
+
+          <div className="bakici-takvim-bottom-right-kutucuklar-dolu">
+            <div className="bakici-takvim-bottom-right-kutucuklar-üçüncü"></div>
+            <p className="bakici-takvim-bottom-right-kutucuklar-text">Dolu</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

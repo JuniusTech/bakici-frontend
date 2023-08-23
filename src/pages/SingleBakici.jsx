@@ -19,11 +19,11 @@ function SingleBakici() {
         <FontAwesomeIcon icon={faChevronRight} className="text-black-50" />
         <p className="fw-semibold m-0">Tuğba Aksoy</p>
       </div>
-      <div className="d-flex">
-        <Col md={3} className="">
+      <div className="d-flex flex-column flex-md-row">
+        <Col md={3} className="px-3">
           <BakiciInfo />
         </Col>
-        <Col md={9} className="ms-2">
+        <Col md={9} className="ms-2 px-3">
           <BakiciDetail />
         </Col>
       </div>

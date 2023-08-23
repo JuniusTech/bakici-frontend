@@ -311,12 +311,12 @@ function BakiciDetail() {
         <div className="bakici-detail-hakkinda-container">
           <h5>HAKKINDA</h5>
           <p>
-            Merhaba ben Tugba Aksoy. 23 Yasindayim. 3 yillik bakicilik deneyimim
-            var. Cogunlukla okul oncesi cocuklar ile calistim. Cocuklari cok
-            seviyorum. Montessori egitimi aldim bu sebeble cocuklarla birlikte
-            kaliteli vakit gecirmek en buyuk hedefim. Ankara da ailemle ile
-            beraber yasiyorum. Universite ogrencisiyim, ek gelir kazanmak ve
-            cocuklarla vakit gecirmeyi seviyorum.
+            Merhaba ben Tuğba Aksoy. 23 Yaşındayım. 3 yıllık bakıcılık deneyimim
+            var. Çoğunlukla okul öncesi çocuklar ile çalıştım. çocukları çok
+            seviyorum. Montessori eğitimi aldım bu sebeble çocuklarla birlikte
+            kaliteli vakit geçirmek en büyük hedefim. Ankara'da ailemle ile
+            beraber yaşıyorum. Üniversite öğrencisiyim, ek gelir kazanmak ve
+            çocuklarla vakit geçirmeyi seviyorum.
           </p>
         </div>
         <div className="deneyim-container">
@@ -324,7 +324,7 @@ function BakiciDetail() {
           <div className="d-flex justify-content-between my-4">
             <div className="d-flex justify-content-center align-items-center">
               <img src={LanguageIcon} alt="" className="px-2" />
-              <p className="">İyi seviye Ingilizce konusabiliyorum</p>
+              <p className="">İyi seviye İngilizce konuşabiliyorum</p>
             </div>
             <div className="d-flex justify-content-center align-items-center">
               <img src={DeneyimIcon} alt="" className="px-2" />
@@ -332,7 +332,7 @@ function BakiciDetail() {
             </div>
             <div className="d-flex justify-content-center align-items-center">
               <img src={EngelliIcon} alt="" className="px-2" />
-              <p className="">Engelli cocuk bakimi</p>
+              <p className="">Engelli çocuk bakımı</p>
             </div>
           </div>
         </div>
@@ -345,8 +345,8 @@ function BakiciDetail() {
                 <div className="tarife-container">
                   <h6>Gündüz Tarife</h6>
                   <p>
-                    Gunduz tarifesinde ekstra calisma saatleri durumunda
-                    alinacak ucret
+                    Gündüz tarifesinde ekstra çalışma saatleri durumunda
+                    alınacak ücret
                   </p>
                 </div>
               </div>
@@ -359,7 +359,7 @@ function BakiciDetail() {
                 <img src={GeceIcon} alt="" className="float-start px-2" />
                 <div className="tarife-container">
                   <h6>Gece Tarife</h6>
-                  <p>Gece yatili cocuk bakimi tarifesi</p>
+                  <p>Gece yatılı çocuk bakımı tarifesi</p>
                 </div>
               </div>
               <div className="tarife-ücret my-2">
@@ -375,14 +375,14 @@ function BakiciDetail() {
             <div className="d-flex justify-content-between my-2">
               <div className="d-block my-2">
                 <img src={EkServisIcon1} alt="" className="float-start px-2" />
-                <p>Montesori egitimi / aktiviteleri</p>
+                <p>Montesori eğitimi / aktiviteleri</p>
               </div>
             </div>
             <div className="d-flex justify-content-between my-2">
               <div className="d-block my-2">
                 <img src={EkServisIcon2} alt="" className="float-start px-3" />
                 <p className="ek-servis-content">
-                  Ebeveyn isyerinden cocugu almak/ birakmak
+                  Ebeveyn işyerinden çocuğu almak/ bırakmak
                 </p>
               </div>
             </div>

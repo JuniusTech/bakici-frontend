@@ -2,12 +2,13 @@
   max-width: 100%;
   background-color: rgba(245, 245, 245, 0.3);
   border-radius: 7px;
+  box-shadow: 5px 5px rgba(206, 205, 205, 0.3);
 }
 .bakici-detail-slider-container {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 90%;
+  width: 80%;
 }
 
 .bakici-detail-name-container {
@@ -154,23 +155,21 @@
   margin: 0, 5rem;
 }
 
-.gündüz-tarife-container {
+.Kontakt-Form-Label-1{
   width: 90%;
-  height: 68px;
-  outline: none;
-  /* padding: 0 10px; */
-  border: 2px solid rgba(250, 195, 192, 0.3);
-  border-radius: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding-top: 10px;
-  color: rgba(69, 90, 100, 1);
-  cursor: pointer;
   margin: auto;
+  position: relative;
+  display: flex;
+color: #455A64;
+flex-direction: column;
+align-items: flex-start;
+font-family: "Georama";
 }
+
 
 .tarih-container {
   width: 90%;
-  margin: auto;
+  margin: 3rem auto;
 }
 
 .tarife-select {
