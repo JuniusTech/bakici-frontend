@@ -12,7 +12,7 @@ import MyPhotos from "../../components/Profile/MyPhotos";
 import BankAccount from "../../components/Profile/BankAccount";
 
 const BakiciProfile = () => {
-  const [activeTab, setActiveTab] = useState("");
+  const [activeTab, setActiveTab] = useState("Hakkımda");
 
   const handleContentClick = (tab) => {
     setActiveTab(tab);
@@ -31,7 +31,7 @@ const BakiciProfile = () => {
             {["Hakkımda", "Profil Açıklaması", "Adresim", "Hizmetlerim", "Deneyim Bilgilerim", "Fotoğraflarım", "Banka Hesabım", "Bakıcı Başvurusunu Tamamla", "Ücret"].map((tab) => (
               <li
                 key={tab}
-                className={`content_text ${activeTab === tab ? "active" : ""}`}
+                c className={`content_text ${activeTab === tab ? "active" : ""}`}
                 onClick={() => handleContentClick(tab)}
               >
                 {tab}

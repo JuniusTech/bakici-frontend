@@ -32,7 +32,9 @@ const ProfileDescription = () => {
                 lineHeight: "50px",
                 letterSpacing: "0em",
                 textAlign: "left",
-                paddingLeft:"1rem"
+                paddingLeft:"1rem",
+                color: "#7C7C7C66"
+
               }}
             />
             </div>
@@ -47,7 +49,8 @@ const ProfileDescription = () => {
               Yazım ve dilbilgisi hatalarından kaçının. Telefon numaraları,
               e-posta adresleri, sosyal medya hesapları gibi iletişim
               bilgilerinin ve diğer harici bağlantıların belirtilmesine izin
-              verilmez. Bakıcılık mesleğindeki temel motivasyonunuz nedir?
+              verilmez. <br />
+              Bakıcılık mesleğindeki temel motivasyonunuz nedir?<br />
               Önceki deneyimleriniz nelerdir?
             </p>
           

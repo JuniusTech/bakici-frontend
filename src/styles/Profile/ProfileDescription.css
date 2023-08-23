@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
 
-
-
 .profile_comment_container {
   width: 53rem;
-  height: 53rem;
-  /* padding: 0px 0px 71px 0px; */
+  height: 1000px;
+  padding: 0px 0px 71px 0px;
   border-radius: 7px;
   border: 2px solid #457888;
-  position: absolute;
-  top: 19.4rem;
-  left: 33rem;
-  bottom: 57.3rem;
+  position: relative;
+  top: 84px;
+  left: 200px;
+  margin-bottom: 10rem;
 }
 .profile_comment {
-width: 100%;
+  width: 100%;
   height: 64px;
   padding: 20px 30px 20px 30px;
   gap: 10px;
@@ -28,42 +26,43 @@ width: 100%;
   gap: 19px;
   color: #ffffff;
   display: flex;
-font-family: Georama;
-font-size: 24px;
-font-weight: 500;
-line-height: 38px;
-letter-spacing: 0em;
-justify-content: center;
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  justify-content: center;
 }
-.profile_comment_text img{
+.profile_comment_text img {
   width: 40px;
-height: 40px;
-left: 4px;
-bottom: 5px;
-position: relative;
-
+  height: 40px;
+  left: 4px;
+  bottom: 5px;
+  position: relative;
 }
 .profile_content {
-  width: 40rem;
-  height: 50rem;
-  text-align: center;
-  justify-content: center;
+  width: 800px;
+  height: 951px;
+  top: 100px;
+  left: 100px;
+  border-radius: 26px;
   position: absolute;
-  left: 6rem;
-  top: 6rem;
 }
 .profile_header_container {
-  width: 30rem;
-  height: 10rem;
+  width: 700px;
+  height: 151px;
   text-align: left;
+  top: 127px;
+  left: 63px;
+  gap: 13px;
 }
 .profile_header {
-  width: 30rem;
-  height: 5rem;
+  width: 666px;
+  height: 88px;
 }
 .profile_header span {
   font-family: Georama;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 38px;
   letter-spacing: 0em;
@@ -72,15 +71,15 @@ position: relative;
 }
 .profile_header p {
   font-family: Georama;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 50px;
   letter-spacing: 0em;
   text-align: left;
 }
 .profile_header_text {
-  width: 40rem;
-  height: 2rem;
+  width: 100%;
+  height: 51px;
   border: 1px solid #455a64cc;
   border-radius: 5px;
 }
@@ -93,7 +92,7 @@ position: relative;
 
 .comment span {
   font-family: Georama;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 38px;
   letter-spacing: 0em;
@@ -102,7 +101,7 @@ position: relative;
 }
 .comment p {
   font-family: Georama;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 40px;
   letter-spacing: 0em;
@@ -116,13 +115,15 @@ position: relative;
   border-radius: 5px;
 }
 .kaydet_btn {
-  width: 265px;
-  height: 40px;
+  width: 399px;
+  height: 52px;
+  top: 180px;
+  left: 130px;
+  padding: 14px 162px 14px 162px;
   border-radius: 26px;
+  gap: 10px;
+  position: relative;
   background-color: #e88585;
-  position: absolute;
-  top: 42rem;
-  left: 12rem;
   border: none;
 }
 .kaydet_btn:hover {
@@ -130,7 +131,7 @@ position: relative;
 }
 .kaydet_btn span {
   font-family: Georama;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;

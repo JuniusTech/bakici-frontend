@@ -27,11 +27,13 @@ const NavbarBakici = () => {
 
       <nav className="navbar-bakici row border-bottom border-2 m-0">
         <div className="col-2">
-          <img
-            src={MusteriKayitLogo}
-            alt="MusteriKayitLogo"
-            className="MusteriKayit-Logo"
-          />
+          <Link to="/home">
+            <img
+              src={MusteriKayitLogo}
+              alt="MusteriKayitLogo"
+              className="MusteriKayit-Logo"
+            />
+          </Link>
         </div>
         <div className="col-10 d-flex gap-4 justify-content-end align-items-center pe-4">
           <Link className="navbar-bakici__button" to="/bakiciara">
@@ -83,7 +85,7 @@ const NavbarBakici = () => {
                   <img className="" src={Profile} alt="Profile" />
                 </Link>
 
-                <Link className="navbar-bakici__yardim ">Yardım</Link>
+                <Link className="navbar-bakici__yardim " to="/yardim">Yardım</Link>
               </div>
               <DropdownButton
                 id="dropdown-basic-button"

@@ -1,24 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
 
-
-
-
-  .information_profile_container {
-    width: 24%;
-    height: 31rem;
-    top: 3.8rem;
-    right: 28rem;
-    border-radius: 7px;
-    border: 2px solid #457888;
-    display: flex;
-    position: relative;
-    margin-bottom: 30rem;
-
-
-
-  }
-
-
+.information_profile_container {
+  width: 25%;
+  height: 500px;
+  top: 334px;
+  left: 80px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  display: flex;
+  position: absolute;
+  
+}
 
 .information_profile {
   width: 100%;
@@ -33,32 +25,28 @@
   gap: 19px;
   color: #ffffff;
   display: flex;
-font-family: Georama;
-font-size: 24px;
-font-weight: 500;
-line-height: 38px;
-letter-spacing: 0em;
-text-align: left;
-
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  justify-content: center;
+  align-items: center;
 }
 .information_profile_text img {
   width: 34px;
-height: 36px;
-top: 5px;
-left: 5px;
-
+  height: 36px;
+  text-align: right;
 }
 .information_profile_content {
   width: 500px;
-  height:400px;
-  top: 20px;
-  left: 0;
+  height: 400px;
+  top: 80px;
   gap: 24px;
-  position: relative;
-  
+  position: absolute;
 }
 .content_text {
-  color: #455A64;
+  color: #455a64;
   list-style: none;
   font-family: Georama;
   font-size: 22px;
@@ -67,19 +55,12 @@ left: 5px;
   letter-spacing: 0em;
   text-align: left;
   cursor: pointer;
-  
-
-}
-.content_text:hover {
-  color: rgb(61, 61, 66);
 }
 
-
-
-
-
-
-
+.content_text.active {
+  color: #455a64;
+  font-weight: 700;
+}
 
 /* 
  @media (min-width: 1200px) and (max-width: 1400px){
@@ -279,4 +260,4 @@ left: 5px;
   }
   }
   
- */
+  */

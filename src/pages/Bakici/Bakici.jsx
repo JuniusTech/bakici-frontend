@@ -20,12 +20,12 @@ const secondNavLinks = [
   },
   {
     id: 3,
-    title: "TAKVIM",
+    title: "TAKVİM",
     Component: () => <BakiciTakvim/>,
   },
   {
     id: 4,
-    title: "PROFIL",
+    title: "PROFİL",
     Component: () => <BakiciProfile />,
   },
   {

@@ -27,7 +27,7 @@ const MyExperiences = () => {
           type="checkbox"
           className='experience_checkbox'
         />
-       Sadece haftasonu gunduz bakıcılığı
+       Özel gereksinimli bireylerle çalıştım.
       </label>
       <br />
       <label>
@@ -35,7 +35,7 @@ const MyExperiences = () => {
           type="checkbox"
           className='experience_checkbox'
         />
-       Sadece haftaiçi yatılı bakıcılık
+      Davranış bozukluğu gösteren bebeklerle çalıştım.
       </label>
       <br />
       <label>
@@ -43,7 +43,7 @@ const MyExperiences = () => {
           type="checkbox"
           className='experience_checkbox'
         />
-       Sadece haftasonu yatılı bakıcılık 
+       Daha önce ilk yardım yaptım.
       </label>
       <br />
       <label>
@@ -51,7 +51,15 @@ const MyExperiences = () => {
           type="checkbox"
           className='experience_checkbox'
         />
-       Pazar dahil tüm günler yatılı bakıcılık
+      Çocuk eğitimi konusunda sertifikam var.
+      </label>
+      <br />
+      <label>
+        <input
+          type="checkbox"
+          className='experience_checkbox'
+        />
+     Çocuk eğitimi konusunda birden fazla yönteme hakimim.
       </label>
       <button className="kaydet_experience_btn"><span>Kaydet</span></button>
         </div>

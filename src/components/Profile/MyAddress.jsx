@@ -6,7 +6,7 @@ import { faPencil} from "@fortawesome/free-solid-svg-icons";
 
 const MyAddress = () => {
   return (
-    <div>
+    <>
         <div className="my_address_container">
           <div className="my_address">
            <div className="my_address_text">
@@ -56,12 +56,12 @@ const MyAddress = () => {
             />
             </div>
             <p className="recompose">Tekrar düzenle <FontAwesomeIcon icon={faPencil }/></p>
-            <button className="kaydet_adress_btn"><span>Kaydet</span></button>
+            <button className="kaydet_address_btn"><span>Kaydet</span></button>
             </div>
           </div>
           </div>
           </div>
-    </div>
+    </>
   )
 }
 
