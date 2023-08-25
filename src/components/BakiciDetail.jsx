@@ -289,18 +289,18 @@ function BakiciDetail() {
             <img src={Bakici1} alt="" className="d-block w-100" />
           </div>
         </Slider>
-        <div className="d-flex justify-content-between w-100 mt-3">
-          <div className="d-flex justify-content-between align-items-center">
-            <div class="rating_wrap justify-content-between">
-              <div class="rating">
+        <div className="bakici-detail-heart-star-text-container d-flex flex-column justify-content-center align-items-center w-100 mt-3 flex-md-row justify-content-md-between">
+          <div className="d-flex justify-content-center align-items-center my-1">
+            <div class="rating_wrap justify-content-between m-0">
+              <div class="rating ">
                 <div class="product_rate"></div>
               </div>
             </div>
-            <p className="mb-0 mx-4 bakici-detail-star-rate">4.7</p>
+            <p className="m-0 bakici-detail-star-rate">4.7</p>
           </div>
-          <div className="d-flex justify-content-between align-items-center">
-            <img src={RedHeart} alt="" />
-            <p className="mb-0 mx-4 bakici-detail-favorilenme">
+          <div className="d-flex justify-content-center align-items-center my-1">
+            <img src={RedHeart} alt="" className="heart-icon" />
+            <p className="bakici-detail-favorilenme m-0">
               7 kişi favori listesine ekledi
             </p>
           </div>
@@ -321,45 +321,45 @@ function BakiciDetail() {
         </div>
         <div className="deneyim-container">
           <h5>DENEYİMLERİ</h5>
-          <div className="d-flex justify-content-between my-4">
-            <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex flex-column justify-content-between my-4 flex-sm-row">
+            <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={LanguageIcon} alt="" className="px-2" />
-              <p className="">İyi seviye İngilizce konuşabiliyorum</p>
+              <p className="text-center">İyi seviye İngilizce konuşabiliyorum</p>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={DeneyimIcon} alt="" className="px-2" />
-              <p className="">+ 2 yil deneyim</p>
+              <p className="text-center">+ 2 yil deneyim</p>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={EngelliIcon} alt="" className="px-2" />
-              <p className="">Engelli çocuk bakımı</p>
+              <p className="text-center">Engelli çocuk bakımı</p>
             </div>
           </div>
         </div>
         <div className="servisler-container">
           <h5>TUĞBANIN SERVİSLERİ</h5>
           <div>
-            <div className="d-flex justify-content-between my-4">
-              <div className="d-block my-2">
-                <img src={SaatIcon} alt="" className="float-start px-2" />
+            <div className="d-flex flex-column justify-content-between my-4 flex-sm-row">
+              <div className="d-flex flex-column justify-content-center align-items-center d-md-block my-2">
+                <img src={SaatIcon} alt="" className="float-start" />
                 <div className="tarife-container">
-                  <h6>Gündüz Tarife</h6>
+                  <h6 className="text-center text-sm-start">Gündüz Tarife</h6>
                   <p>
                     Gündüz tarifesinde ekstra çalışma saatleri durumunda
                     alınacak ücret
                   </p>
                 </div>
               </div>
-              <div className="tarife-ücret my-2">
+              <div className="tarife-ücret d-flex flex-column justify-content-center align-items-center d-md-block my-2">
                 <h4>30TL/Saati</h4>
               </div>
             </div>
-            <div className="d-flex justify-content-between my-4">
-              <div className="d-block my-2">
+            <div className="d-flex flex-column justify-content-between my-4 flex-sm-row">
+              <div className="d-flex flex-column justify-content-center align-items-center d-md-block my-2">
                 <img src={GeceIcon} alt="" className="float-start px-2" />
                 <div className="tarife-container">
-                  <h6>Gece Tarife</h6>
-                  <p>Gece yatılı çocuk bakımı tarifesi</p>
+                  <h6 className="text-center text-sm-start">Gece Tarife</h6>
+                  <p className="text-center text-sm-start">Gece yatılı çocuk bakımı tarifesi</p>
                 </div>
               </div>
               <div className="tarife-ücret my-2">
@@ -368,7 +368,6 @@ function BakiciDetail() {
             </div>
           </div>
         </div>
-
         <div className="ek-servisler-container">
           <h5>TUĞBANIN EK SERVİSİ</h5>
           <div className="my-4">

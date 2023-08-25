@@ -31,6 +31,10 @@
   color: rgba(69, 90, 100, 1);
 }
 
+.heart-icon {
+  max-width: 20%;
+}
+
 .slider-bottom-hr {
   border: 1px solid rgba(69, 90, 100, 0.5);
   width: 100%;
@@ -41,7 +45,7 @@
   font-family: "Georama";
   font-size: 1rem;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 0.75rem;
   letter-spacing: 0em;
   text-align: center;
   color: rgba(232, 131, 133, 1);
@@ -155,17 +159,16 @@
   margin: 0, 5rem;
 }
 
-.Kontakt-Form-Label-1{
+.Kontakt-Form-Label-1 {
   width: 90%;
   margin: auto;
   position: relative;
   display: flex;
-color: #455A64;
-flex-direction: column;
-align-items: flex-start;
-font-family: "Georama";
+  color: #455a64;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Georama";
 }
-
 
 .tarih-container {
   width: 90%;
@@ -205,67 +208,113 @@ font-family: "Georama";
   margin: 2% 0;
   letter-spacing: 0em;
   text-align: left;
-  padding: 0 5% ;
+  padding: 0 5%;
 }
 
 .yorumlar-box {
-  border: 1px solid 
-  rgba(69, 90, 100, 0.5);
+  border: 1px solid rgba(69, 90, 100, 0.5);
   margin: 4rem 0;
   position: relative;
 }
 
 .rating_wrap {
   display: -ms-flexbox;
-	display: flex;
-	-ms-flex-align: center;
-	align-items: center;
-	position: relative;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
   justify-content: center;
   float: right;
-	margin-top: 7px;
+  margin-top: 7px;
   padding: 0 10%;
 }
 
 .rating_wrap .rating {
   overflow: hidden;
   position: relative;
-  height: 60px;
-  font-size: 32px;
-  width: 180px;
+  height: 25px;
+  font-size: 18px;
+  width: 101.25px;
   font-family: "Font Awesome 5 Free";
   display: inline-block;
   vertical-align: middle;
 }
 
 .rating::before {
-	font-size: 32px;
-	content: "\f005\f005\f005\f005\f005";
-	top: 0;
-	position: absolute;
-	left: 0;
-	float: left;
-	color: #F6BC3E;
+  font-size: 18px;
+  content: "\f005\f005\f005\f005\f005";
+  top: 0;
+  position: absolute;
+  left: 0;
+  float: left;
+  color: #f6bc3e;
 }
 
 .product_rate {
-	overflow: hidden;
-	float: left;
-	top: 0;
-	left: 0;
-	position: absolute;
-	padding-top: 1.5em;
-	color: #F6BC3E;
-  width: 94%;
+  overflow: hidden;
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding-top: 1.5em;
+  color: #f6bc3e;
+  width: 60%;
 }
 
 .product_rate::before {
-	font-size: 32px;
-	content: "\f005\f005\f005\f005\f005";
-	top: 0;
-	position: absolute;
-	left: 0;
-	font-weight: 900;
+  font-size: 18px;
+  content: "\f005\f005\f005\f005\f005";
+  top: 0;
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .rating_wrap .rating {
+    height: 25px;
+    font-size: 16px;
+    width: 90px;
+  }
+
+  .rating::before {
+    font-size: 16px;
+  }
+
+  .product_rate::before {
+    font-size: 16px;
+  }
+  .bakici-detail-favorilenme {
+    font-size: 1rem;
+  }
+
+  .bakici-detail-star-rate {
+    font-size: 0.75rem;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+
+  .heart-icon {
+    max-width: 20%;
+  }
+
+  .bakici-detail-hakkinda-container h5 {
+    font-size: 1.25rem;
+  }
+  .deneyim-container h5 {
+    font-size: 1.25rem;
+  }
+  .servisler-container h5 {
+    font-size: 1.25rem;
+  }
+
+  .ek-servisler-container h5 {
+    font-size: 1.25rem;
+  }
+
+  .yorumlar-container h5 {
+    font-size: 1.25rem;
+  }
 }
 
 .yorumcu-image {
@@ -285,12 +334,11 @@ font-family: "Georama";
 }
 
 .page-link {
-margin: 0 20%;
+  margin: 0 20%;
 }
 
 .next-item {
-  background-color: 
-  rgba(70, 120, 136, 1);
+  background-color: rgba(70, 120, 136, 1);
   color: white;
 }
 
@@ -299,10 +347,8 @@ margin: 0 20%;
   width: 4%;
   justify-content: center;
   align-items: center;
-  
 }
 
 .active-page {
   background-color: red;
 }
-
