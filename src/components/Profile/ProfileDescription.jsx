@@ -33,7 +33,8 @@ const ProfileDescription = () => {
                 letterSpacing: "0em",
                 textAlign: "left",
                 paddingLeft:"1rem",
-                color: "#7C7C7C66"
+                color: "#7C7C7C66",
+                opacity:"0.5"
 
               }}
             />
@@ -67,7 +68,8 @@ const ProfileDescription = () => {
                 textAlign: "left",
                 color: "#7C7C7C66",
                 paddingBottom:"10rem",
-                paddingLeft:"1rem"
+                paddingLeft:"1rem",
+                opacity:"0.5"
               
 
                 

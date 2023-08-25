@@ -56,6 +56,7 @@ const AboutMe = () => {
               className="name_surname_text"
               style={{
                 paddingLeft:"1rem",
+                opacity: "0.5"
                 
               }}
             />
@@ -69,7 +70,9 @@ const AboutMe = () => {
         className='e_mail_text'
         placeholder='isim@email.com'
         style={{
-          paddingLeft:"1rem"
+          paddingLeft:"1rem",
+          opacity: "0.5"
+         
         }}
         
       />
@@ -84,7 +87,9 @@ const AboutMe = () => {
         className='phone_text'
         placeholder='800 2738 9700'
         style={{
-          paddingLeft:"1rem"
+          paddingLeft:"1rem",
+          opacity: "0.5"
+         
         }}
 
       />
@@ -103,7 +108,9 @@ const AboutMe = () => {
               className="password_text"
               style={{
                 paddingLeft:"1rem",
-                marginLeft: "2.7rem"
+                marginLeft: "2.7rem",
+                opacity: "0.5",
+                
               }}
             />
             </div>
@@ -116,7 +123,9 @@ const AboutMe = () => {
               className="again_email_text"
               style={{
                 paddingLeft:"1rem",
-                marginLeft:"4.5rem"
+                marginLeft:"4.5rem",
+                opacity: "0.5"
+               
               }}
             />
             </div>
@@ -128,7 +137,9 @@ const AboutMe = () => {
               className="email_text"
               style={{
                 paddingLeft:"1rem",
-                marginLeft:"0.5rem"
+                marginLeft:"0.5rem",
+                opacity: "0.5"
+                
               }}
             />
             </div>
@@ -147,7 +158,9 @@ const AboutMe = () => {
               className="password_text"
               style={{
                 paddingLeft:"1rem",
-                marginLeft: "2.5rem"
+                marginLeft: "2.5rem",
+                opacity: "0.5"
+                
               }}
             />
             </div>
@@ -160,7 +173,8 @@ const AboutMe = () => {
               className="password_text"
               style={{
                 paddingLeft:"1rem",
-                marginLeft:"1rem"
+                marginLeft:"1rem",
+                opacity: "0.5"
               }}
             />
             </div>
@@ -172,7 +186,8 @@ const AboutMe = () => {
               className="password_text"
               style={{
                 paddingLeft:"1rem",
-                marginLeft:"2rem"
+                marginLeft:"2rem",
+                opacity: "0.5"
               }}
             />
             </div>

@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Prompt:wght@300&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+.pay_container {
+  width: 53rem;
+  height: 2450px;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: relative;
+  top: 84px;
+  left: 200px;
+  margin-bottom: 30rem;
+}
+
+.pay {
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  text-align: center;
+}
+
+.pay_text {
+  width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  justify-content: center;
+}
+
+.pay_text img {
+  width: 35px;
+  height: 35px;
+  padding-left: 5px;
+  margin-bottom: 2px;
+}
+
+.pay_detail_container {
+  width: 750px;
+  height: 566px;
+  position: relative;
+  top: 4rem;
+  left: 45px;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+.pay_detail_header {
+  width: 100%;
+  height: 51px;
+  background: #455a64;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.pay_detail_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 2rem;
+  justify-content: left;
+  display: flex;
+  padding-top: 8px;
+}
+.pay_daily_label {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  width: 92px;
+  height: 25px;
+  top: 107px;
+  left: 57px;
+  position: absolute;
+}
+.pay_daily {
+  width: 305px;
+  height: 93px;
+  top: 153px;
+  left: 57px;
+  position: absolute;
+}
+.pay_daily span {
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+ 
+}
+.pay_daily_text {
+  width: 210px;
+  height: 52px;
+  top: 120px;
+  left: 400px;
+  border-radius: 26px;
+  border: 1px solid #455a64cc;
+  position: absolute;
+  color: #000000;
+}
+
+.daily_time {
+  width: 68px;
+  height: 50px;
+  top: 185px;
+  left: 400px;
+  position: absolute;
+  font-family: Prompt;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.daily_line {
+  width: 600px;
+  top: 269.5px;
+  left: 65.5px;
+  border: 0.5px solid #455a64;
+  position: absolute;
+  opacity: 50%;
+}
+
+.pay_weekly_label {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  width: 106px;
+  height: 25px;
+  top: 301px;
+  left: 57px;
+  position: absolute;
+}
+.pay_weekly {
+  width: 305px;
+  height: 93px;
+  top: 343px;
+  left: 57px;
+  position: absolute;
+}
+.pay_weekly span {
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.pay_weekly_text {
+  width: 210px;
+  height: 52px;
+  top: 326px;
+  left: 400px;
+  border-radius: 26px;
+  border: 1px solid #455a64cc;
+  position: absolute;
+}
+
+.weekly_time {
+  width: 92px;
+  height: 50px;
+  top: 390px;
+  left: 400px;
+  position: absolute;
+  font-family: Prompt;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.weekly_line {
+  width: 600px;
+  top: 463px;
+  left: 66px;
+  border: 0.5px solid #455a64;
+  position: absolute;
+  opacity: 50%;
+}
+.import_text {
+  width: 600px;
+  height: 30px;
+  top: 495px;
+  left: 70px;
+  position: absolute;
+}
+.import_text img {
+  width: 22px;
+  height: 22px;
+  top: 0;
+  right: 10px;
+  position: relative;
+}
+.import_text span {
+  font-family: Prompt;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e88385;
+}
+
+.owertime_container {
+  width: 750px;
+  height: 547px;
+  position: relative;
+  top: 200px;
+  left: 45px;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+
+.owertime_header {
+  width: 100%;
+  height: 51px;
+  background: #455a64;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.owertime_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 2rem;
+  justify-content: left;
+  display: flex;
+  padding-top: 8px;
+}
+.owertime_day_container {
+  width: 700px;
+  height: 411px;
+  top: 98px;
+  left: 35px;
+  position: absolute;
+}
+.owertime_day_label {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  width: 146px;
+  height: 25px;
+  top: 6px;
+  left: 83px;
+  position: absolute;
+}
+.owertime_day {
+  width: 305px;
+  height: 93px;
+  top: 45px;
+  left: 86px;
+  position: absolute;
+}
+.owertime_day span {
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.owertime_day_text {
+  width: 210px;
+  height: 52px;
+  top: 56px;
+  left: 370px;
+  border-radius: 26px;
+  border: 1px solid #455a64cc;
+  position: absolute;
+}
+
+.owertime_day_time {
+  width: 68px;
+  height: 50px;
+  top: 57px;
+  left: 600px;
+  position: absolute;
+  font-family: Prompt;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.owertime_night_container {
+  width: 334px;
+  height: 103px;
+  top: 209px;
+  left: 6px;
+  position: absolute;
+}
+.owertime_night_label {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  width: 146px;
+  height: 25px;
+  top: 6px;
+  left: 83px;
+  position: absolute;
+}
+.owertime_night {
+  width: 305px;
+  height: 93px;
+  top: 45px;
+  left: 86px;
+  position: absolute;
+}
+.owertime_night span {
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.owertime_night_text {
+  width: 210px;
+  height: 52px;
+  top: 56px;
+  left: 360px;
+  border-radius: 26px;
+  border: 1px solid #455a64cc;
+  position: absolute;
+}
+
+.owertime_night_time {
+  width: 82px;
+  height: 50px;
+  top: 60px;
+  left: 600px;
+  position: absolute;
+  font-family: Prompt;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.work_routine_container {
+  width: 750px;
+  height: 732px;
+  position: relative;
+  top: 350px;
+  left: 45px;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+.work_routine_header {
+  width: 100%;
+  height: 51px;
+  background: #455a64;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.work_routine_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 2rem;
+  justify-content: left;
+  display: flex;
+  padding-top: 8px;
+}
+.work_routine_text {
+  width: 438px;
+  height: 29px;
+  top: 77px;
+  left: 37px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.daily_routine_container {
+  width: 700px;
+  height: 152px;
+  top: 119px;
+  left: 25px;
+  border-radius: 7px;
+  border: 1px solid #467888;
+  background-color: #ffffff;
+  position: absolute;
+}
+.daily_routine_label {
+  width: 92px;
+  height: 29px;
+  top: 40px;
+  left: 70px;
+  position: absolute;
+}
+
+.daily_routine_label span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+
+.form-check-input:checked {
+  background-color: #457888;
+}
+
+.weekly_routine_container {
+  width: 700px;
+  height: 336px;
+  top: 305px;
+  left: 27px;
+  border-radius: 7px;
+  border: 1px solid #467888;
+  background-color: #ffffff;
+  position: absolute;
+}
+.weekly_routine_label {
+  width: 92px;
+  height: 29px;
+  top: 40px;
+  left: 70px;
+  position: absolute;
+}
+
+.weekly_routine_label span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+
+.form-check-input:checked {
+  background-color: #457888;
+}
+.radio-1 {
+  width: 24px;
+  height: 24px;
+  top: 30px;
+  left: 300px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.radio-2 {
+  width: 24px;
+  height: 24px;
+  top: 90px;
+  left: 300px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.radio_1_text {
+  width: 300px;
+  height: 24px;
+  top: 30px;
+  left: 420px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #c7c7c7;
+}
+.radio_2_text {
+  width: 300px;
+  height: 24px;
+  top: 90px;
+  left: 420px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #c7c7c7;
+}
+.weekly_routine_line {
+  width: 600px;
+  top: 491.5px;
+  left: 70px;
+  border: 0.5px;
+  border: 0.5px solid #455a64;
+  position: absolute;
+  opacity: 50%;
+}
+
+.routine_import_text {
+  width: 600px;
+  height: 30px;
+  top: 525px;
+  left: 80px;
+  position: absolute;
+}
+.routine_import_text img {
+  width: 22px;
+  height: 22px;
+  top: 0;
+  right: 10px;
+  position: relative;
+}
+.routine_import_text span {
+  font-family: Prompt;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e88385;
+}
+.pay_recompose {
+  color: #467888;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  width: 200px;
+  height: 24px;
+  top: 800px;
+  left: 10px;
+  position: absolute;
+  font-size: 22px;
+}
+
+.pay_kaydet_btn {
+  width: 399px;
+  height: 52px;
+  top: 800px;
+  left: 350px;
+  position: absolute;
+  padding: 14px 162px 14px 162px;
+  border-radius: 26px;
+  gap: 10px;
+  background: #e88585;
+  border: none;
+}
+.pay_kaydet_btn:hover {
+  background: #fda9a9;
+}
+.pay_kaydet_btn span {
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 40px;
+}
+

@@ -24,7 +24,10 @@ const MyAddress = () => {
               placeholder="Merkez mah. Darülaceze Cad. No:8 P.K : 34381"
               className="address_text"
               style={{
-                paddingLeft:"1rem"
+                paddingLeft:"1rem",
+                opacity: "0.5",
+                border:"1px solid #455a64c"
+               
               }}
             />
             </div>
@@ -37,7 +40,9 @@ const MyAddress = () => {
               placeholder="Şişli"
               className="town_text"
               style={{
-                paddingLeft:"1rem"
+                paddingLeft:"1rem",
+                opacity: "0.5",
+                border:"1px solid #455a64c"
               }}
             />
             </div>
@@ -51,7 +56,9 @@ const MyAddress = () => {
               placeholder="İstanbul"
               className="city_text"
               style={{
-                paddingLeft:"1rem"
+                paddingLeft:"1rem",
+                opacity: "0.5",
+                border:"1px solid #455a64c"
               }}
             />
             </div>

@@ -34,9 +34,10 @@
   align-items: center;
 }
 .information_profile_text img {
-  width: 34px;
+  width: 30px;
   height: 36px;
-  text-align: right;
+  position: relative;
+  right: 0;
 }
 .information_profile_content {
   width: 500px;
@@ -62,7 +63,7 @@
   font-weight: 700;
 }
 
-/* 
+
  @media (min-width: 1200px) and (max-width: 1400px){
  
   .information_profile_container {
@@ -100,6 +101,10 @@
     position: absolute;
     
    
+  }
+  .information_profile_text {
+    font-size: 20px;
+
   }
   
 
@@ -146,6 +151,10 @@
     
     
     
+  }
+  .information_profile_text {
+    font-size: 20px;
+
   }
 }
 @media (max-width: 768px) {
@@ -199,6 +208,10 @@
   .town_text{
     width: 5rem;
   }
+  .information_profile_text {
+    font-size: 20px;
+
+  }
   }
 
 @media (min-width: 480px) and (max-width: 768px) {
@@ -226,7 +239,7 @@
   }
   .complete_application_content{
     width: auto;
-    justify-content: center;
+    
   }
   .profile_comment_container{
     max-width: 100%; 
@@ -258,6 +271,10 @@
   .town_text{
     width: 5rem;
   }
+  .information_profile_text {
+    font-size: 20px;
+
+  }
   }
   
-  */
+ 

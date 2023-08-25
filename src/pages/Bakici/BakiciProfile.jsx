@@ -10,6 +10,7 @@ import CompleteApplication from "../../components/Profile/CompleteApplication";
 import MyExperiences from "../../components/Profile/MyExperiences";
 import MyPhotos from "../../components/Profile/MyPhotos";
 import BankAccount from "../../components/Profile/BankAccount";
+import Pay from "../../components/Profile/Pay";
 
 const BakiciProfile = () => {
   const [activeTab, setActiveTab] = useState("Hakkımda");
@@ -49,6 +50,7 @@ const BakiciProfile = () => {
       {activeTab === "Fotoğraflarım" && <MyPhotos/>}
       {activeTab === "Banka Hesabım" && <BankAccount/>}
       {activeTab === "Bakıcı Başvurusunu Tamamla" && <CompleteApplication />}
+      {activeTab === "Ücret" && <Pay/>}
       
      
     </>

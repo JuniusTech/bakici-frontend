@@ -50,11 +50,13 @@
   top: 4rem;
   left: 60px;
   background: #f5f5f5;
+  border-radius: 7px;
 }
 .iban_header {
   width: 100%;
   height: 51px;
   background: #455a64;
+  border-radius: 7px 7px 0px 0px;
 }
 
 .iban_header span {
