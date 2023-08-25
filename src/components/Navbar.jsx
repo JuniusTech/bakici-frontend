@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import MagnifyingGlass from "../assets/MagnifyingGlass.svg";
 import Profile from "../assets/Profile.svg";
 import ProfilePlus from "../assets/ProfilePlus.svg";
@@ -15,6 +15,12 @@ const CareZoneNavbar = () => {
 
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    setExpanded(false);
+    setOpenAnaUyelik(true);
+  };
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -67,7 +73,10 @@ const CareZoneNavbar = () => {
           <ReactBootStrap.Nav className="m-auto"></ReactBootStrap.Nav>
           <ReactBootStrap.Nav>
             <NavLink className="me-3 active" style={navstyle} to="/bakiciara">
-              <Button className="Navbar-Button">
+              <Button
+                className="Navbar-Button"
+                onClick={() => navigate("bakiciara")}
+              >
                 Bakıcı Ara{" "}
                 <img
                   className="Navbar-Bakici-MagnifyingGlass"
@@ -82,7 +91,10 @@ const CareZoneNavbar = () => {
               onClick={() => setExpanded(false)}
               to="/isebasvur"
             >
-              <Button className="Navbar-Button">
+              <Button
+                className="Navbar-Button"
+                onClick={() => navigate("isebasvur")}
+              >
                 İşe Başvur{" "}
                 <img
                   className="Navbar-ise-ProfilePlus"
@@ -91,22 +103,13 @@ const CareZoneNavbar = () => {
                 />
               </Button>
             </NavLink>
+            <span className="Navbar-Separator"></span>
             <NavLink
-              className="me-3 active Navbar-Link-Uye-Yardım"
+              className="me-3 active Navbar-Link-Uye-Ol"
               style={navstyle2}
-              onClick={() => setExpanded(false)}
+              onClick={handleClick}
             >
-              <Button
-                className="Navbar-Button"
-                onClick={() => setOpenAnaUyelik(true)}
-              >
-                Üye Olun
-                <img
-                  className="Navbar-ise-ProfilePlus"
-                  src={ProfilePlus}
-                  alt="Profile"
-                />
-              </Button>
+              Üye Olun
             </NavLink>
             <NavLink className="me-3 active" style={navstyle} to="/login">
               <Button className="Navbar-Button">

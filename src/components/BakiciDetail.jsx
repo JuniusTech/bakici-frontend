@@ -21,11 +21,26 @@ import Yorumcu1 from "../images/yorumcu1.png";
 import Yorumcu2 from "../images/Yorumcu2.png";
 import ReactPaginate from "react-paginate";
 import { useEffect } from "react";
+import kontakt_arrow from "../assets/Kontakt_Arrow.svg";
+import Time1 from "../assets/Time1.svg";
+import Time2 from "../assets/Time2.svg";
+import Time3 from "../assets/Time3.svg";
 // import { baseUrl } from "./config";
 
 function BakiciDetail() {
   const [specialDays, setspecialDays] = useState([]);
   const [tarife, setTarife] = useState([]);
+  const [imgColor, setImgColor] = useState("");
+  const [formData, setformData] = useState({
+    selectedOption: "",
+    age: "",
+    start_date: new Date(),
+    end_date: "",
+    message: "",
+  });
+  const filterColor =
+    "  invert(48%) sepia(31%) saturate(841%) hue-rotate(155deg) brightness(90%) contrast(103%)";
+
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions();
   var settings = {
     dots: true,
@@ -60,6 +75,160 @@ function BakiciDetail() {
         },
       },
     ],
+  };
+
+  const service_options = [
+    {
+      label: (
+        <div>
+          <img
+            src={Time1}
+            height="30px"
+            width="30.72px"
+            style={{ marginRight: "20px" }}
+          />
+          Sadece gündüz bakıcılığı{" "}
+        </div>
+      ),
+      value: " Sadece Gündüz Bakiciliği",
+    },
+    {
+      label: (
+        <div>
+          <img
+            src={Time1}
+            height="30px"
+            width="30.72px"
+            style={{ marginRight: "20px" }}
+          />
+          Sadece haftasonu gündüz bakıcılığı{" "}
+        </div>
+      ),
+      value: "Sadece Haftasonu Gündüz Bakiciligi",
+      imageSrc: "path/to/image1.jpg",
+    },
+    {
+      label: (
+        <div className="image-container">
+          <img
+            src={Time2}
+            height="30px"
+            width="30.72px"
+            style={{ marginRight: "20px" }}
+          />
+          <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
+            {" "}
+            Sadece hafta içi yatili bakıcılık
+          </p>
+        </div>
+      ),
+      value: "Sadece hafta içi yatili bakicilik",
+      imageSrc: "path/to/image1.jpg",
+    },
+    {
+      label: (
+        <div className="image-container">
+          <img
+            src={Time2}
+            height="30px"
+            width="30.72px"
+            style={{ marginRight: "20px" }}
+          />
+          <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
+            {" "}
+            Sadece hafta sonu yatili bakıcılık
+          </p>
+        </div>
+      ),
+      value: "Sadece hafta sonu yatili bakicilik",
+      imageSrc: "path/to/image1.jpg",
+    },
+    {
+      label: (
+        <div className="image-container">
+          <img
+            src={Time3}
+            height="30px"
+            width="30.72px"
+            style={{ marginRight: "20px" }}
+          />
+          <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
+            {" "}
+            Pazar dahil tüm günler yatili bakıcılık
+          </p>
+        </div>
+      ),
+      imageSrc: "path/to/image1.jpg",
+    },
+  ];
+
+  const customStyles = {
+    control: (provided, state) => {
+      if (state.selectProps.id === "second-select") {
+        if (state.hasValue) {
+        } else {
+          test = "10px 50px";
+        }
+      }
+
+      return {
+        ...provided,
+        width: "100%",
+        ...(state.selectProps.id === "first-select" && {
+          padding: state.hasValue ? "10px 10px" : "10px 10px",
+        }),
+        ...(state.selectProps.id === "second-select" && {
+          padding: state.hasValue ? "10px 10px" : "10px 50px",
+        }),
+        height: "64px",
+        margin: "11px 0 -19px 0",
+        cursor: "pointer",
+        textAlign: "left",
+        border: state.isFocused ? "1px solid #2D83AC" : "1px solid #C7C7C7",
+        borderRadius: "32px",
+        boxShadow: "none",
+        "&:hover": {
+          border: "1px solid #2D83AC",
+        },
+      };
+    },
+    singleValue: (provided, state) => ({
+      ...provided,
+      color: "#2D83AC", // Set the desired color for the selected value
+      filter: filterColor,
+    }),
+    placeholder: (provided, state) => ({
+      ...provided,
+      color: state.isFocused ? "#2D83AC" : "#C7C7C7", // Set the desired color for the placeholder text
+      fontWeight: state.isFocused ? "500" : "",
+      ...(state.selectProps.id === "second-select" && {
+        color: state.isFocused ? "white" : "#C7C7C7",
+      }),
+    }),
+    menu: (provided) => ({
+      ...provided,
+      border: "1px solid #2D83AC",
+      borderRadius: "17px",
+      marginTop: "28px",
+    }),
+    menuList: (provided, state) => ({
+      ...provided,
+      paddingTop: 0,
+      paddingBottom: 0,
+    }),
+    option: (base, { data, isDisabled, isFocused, isSelected }) => {
+      return {
+        ...base,
+        borderBottom: "1px solid rgba(69, 90, 100, 0.8)",
+        borderRadius: "16px",
+        textAlign: "left",
+        paddingLeft: "27px",
+        backgroundColor: isFocused ? "#EBEBEB" : "",
+        color: isSelected ? "#EBEBEB" : "",
+        color: "#455A64;",
+        cursor: "pointer",
+      };
+    },
   };
 
   const handleDatesSelected = (dates) => {
@@ -142,12 +311,12 @@ function BakiciDetail() {
         <div className="bakici-detail-hakkinda-container">
           <h5>HAKKINDA</h5>
           <p>
-            Merhaba ben Tugba Aksoy. 23 Yasindayim. 3 yillik bakicilik deneyimim
-            var. Cogunlukla okul oncesi cocuklar ile calistim. Cocuklari cok
-            seviyorum. Montessori egitimi aldim bu sebeble cocuklarla birlikte
-            kaliteli vakit gecirmek en buyuk hedefim. Ankara da ailemle ile
-            beraber yasiyorum. Universite ogrencisiyim, ek gelir kazanmak ve
-            cocuklarla vakit gecirmeyi seviyorum.
+            Merhaba ben Tuğba Aksoy. 23 Yaşındayım. 3 yıllık bakıcılık deneyimim
+            var. Çoğunlukla okul öncesi çocuklar ile çalıştım. çocukları çok
+            seviyorum. Montessori eğitimi aldım bu sebeble çocuklarla birlikte
+            kaliteli vakit geçirmek en büyük hedefim. Ankara'da ailemle ile
+            beraber yaşıyorum. Üniversite öğrencisiyim, ek gelir kazanmak ve
+            çocuklarla vakit geçirmeyi seviyorum.
           </p>
         </div>
         <div className="deneyim-container">
@@ -155,7 +324,7 @@ function BakiciDetail() {
           <div className="d-flex justify-content-between my-4">
             <div className="d-flex justify-content-center align-items-center">
               <img src={LanguageIcon} alt="" className="px-2" />
-              <p className="">İyi seviye Ingilizce konusabiliyorum</p>
+              <p className="">İyi seviye İngilizce konuşabiliyorum</p>
             </div>
             <div className="d-flex justify-content-center align-items-center">
               <img src={DeneyimIcon} alt="" className="px-2" />
@@ -163,7 +332,7 @@ function BakiciDetail() {
             </div>
             <div className="d-flex justify-content-center align-items-center">
               <img src={EngelliIcon} alt="" className="px-2" />
-              <p className="">Engelli cocuk bakimi</p>
+              <p className="">Engelli çocuk bakımı</p>
             </div>
           </div>
         </div>
@@ -176,8 +345,8 @@ function BakiciDetail() {
                 <div className="tarife-container">
                   <h6>Gündüz Tarife</h6>
                   <p>
-                    Gunduz tarifesinde ekstra calisma saatleri durumunda
-                    alinacak ucret
+                    Gündüz tarifesinde ekstra çalışma saatleri durumunda
+                    alınacak ücret
                   </p>
                 </div>
               </div>
@@ -190,7 +359,7 @@ function BakiciDetail() {
                 <img src={GeceIcon} alt="" className="float-start px-2" />
                 <div className="tarife-container">
                   <h6>Gece Tarife</h6>
-                  <p>Gece yatili cocuk bakimi tarifesi</p>
+                  <p>Gece yatılı çocuk bakımı tarifesi</p>
                 </div>
               </div>
               <div className="tarife-ücret my-2">
@@ -206,41 +375,51 @@ function BakiciDetail() {
             <div className="d-flex justify-content-between my-2">
               <div className="d-block my-2">
                 <img src={EkServisIcon1} alt="" className="float-start px-2" />
-                <p>Montesori egitimi / aktiviteleri</p>
+                <p>Montesori eğitimi / aktiviteleri</p>
               </div>
             </div>
             <div className="d-flex justify-content-between my-2">
               <div className="d-block my-2">
                 <img src={EkServisIcon2} alt="" className="float-start px-3" />
                 <p className="ek-servis-content">
-                  Ebeveyn isyerinden cocugu almak/ birakmak
+                  Ebeveyn işyerinden çocuğu almak/ bırakmak
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="gündüz-tarife-container">
-          <Select
-            className="tarife-select"
-            isMulti
-            closeMenuOnSelect={false}
-            hideSelectedOptions={false}
-            controlShouldRenderValue={false}
-            options={gündüzTarife}
-            isSearchable={false}
-            placeholder={
-              tarife.length
-                ? `${tarife.length} Çalışma Şekli Seçildi`
-                : "Gündüz Tarife"
-            }
-            components={{
-              Option: CheckboxOption,
-              ClearIndicator: null,
-            }}
-            styles={selectStyles}
-            onChange={handleChange}
-          />
-        </div>
+
+        {/* <div className="gündüz-tarife-container"> */}
+          <label className="Kontakt-Form-Label-1" id="option-servis">
+            SERVIS
+            <Select
+              id="first-select"
+              className="Form-Select"
+              styles={customStyles}
+              options={service_options}
+              isSearchable={false}
+              components={{
+                DropdownIndicator: () => null,
+                IndicatorSeparator: () => null,
+              }}
+              openMenuOnFocus={true}
+              required
+              value={service_options.find(
+                (option) => option.value === formData.selectedOption
+              )}
+              onChange={(event) =>
+                setformData({ ...formData, selectedOption: event.value })
+              }
+              placeholder="Gunduz Tarife"
+            />
+            <img
+              style={{ filter: imgColor }}
+              src={kontakt_arrow}
+              alt="Arrow"
+              className="Kontakt-Arrow"
+            />
+          </label>
+  
         <div className="tarih-container">
           <TarihSecimi onDatesSelected={handleDatesSelected} />
         </div>
