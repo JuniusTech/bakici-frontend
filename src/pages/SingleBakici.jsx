@@ -20,10 +20,10 @@ function SingleBakici() {
         <p className="fw-semibold m-0">Tuğba Aksoy</p>
       </div>
       <div className="d-flex flex-column flex-md-row">
-        <Col md={3} className="px-3">
+        <Col md={3} className="px-0 px-md-3">
           <BakiciInfo />
         </Col>
-        <Col md={9} className="ms-2 px-3">
+        <Col md={9} className="ms-2 px-0 px-md-3">
           <BakiciDetail />
         </Col>
       </div>
