@@ -29,7 +29,7 @@ const Footer = () => {
                   <p>CareZone nasıl çalışıyor</p>
                 </NavLink>
                 <NavLink to="#" className="Footer-Fİrst-Second-Link">
-                  <p>En çok sorulan sorular</p>
+                  <p>Sıkça Sorulan Sorular</p>
                 </NavLink>
                 <NavLink to="#" className="Footer-Fİrst-Second-Link">
                   <p>Çocuk bakımı</p>

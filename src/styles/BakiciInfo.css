@@ -18,7 +18,7 @@
   width: 100%;
   margin: 0;
   padding: 0%;
-  font-family: Georama;
+  font-family: "Georama";
   border-radius: 7px;
 }
 .bakici-info-first {
@@ -60,4 +60,13 @@
   background-color: 
   rgba(53, 53, 53, 1);
   border-radius: 50%;
+}
+
+@media (max-width:768px) {
+
+  .kontakt-button {
+    width: 12.75rem;
+    height: 1rem;
+    font-size: 0.75rem;
+  }
 }

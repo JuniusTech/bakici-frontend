@@ -11,11 +11,11 @@ import Group from "../images/Group.png";
 
 function BakiciInfo() {
   return (
-    <>  
+    <>
       <div className="info-section-container">
         <div className="info-section-contents">
           <div className="bakici-info-container">
-            <div className="bakici-info-first d-flex justify-content-between">
+            <div className="bakici-info-first d-flex flex-column justify-content-center align-items-center text-center d-sm-flex flex-sm-row justify-content-sm-between text-sm-start px-sm-2">
               <div className="bakici-info-first-image-container d-flex justify-content-center align-items-center">
                 <img
                   src={Bakici}
@@ -34,24 +34,24 @@ function BakiciInfo() {
             </div>
             <hr className="bakici-info-first-hr" />
             <div className="d-flex flex-column">
-              <div className="d-flex justify-content-between align-items-center my-4">
+              <div className="d-flex flex-column justify-content-center align-items-center my-2  text-center  text-sm-start  d-sm-flex flex-sm-row justify-content-sm-between align-items-sm-center px-sm-2 my-sm-4">
                 <img src={Child} alt="" className="me-1" />
                 <p className="mx-0 my-0">
                   Yeni dogan veya kres donemi cocuk bakimi
                 </p>
               </div>
-              <div className="d-flex justify-content-evenly align-items-center">
-                <div className="w-75">
+              <div className="d-flex flex-column justify-content-evenly align-items-center d-sm-flex flex-sm-row justify-content-sm-evenly align-items-sm-center">
+                <div className="w-75 d-flex flex-column justify-content-center align-items-center d-sm-flex flex-sm-column justify-content-sm-start align-items-sm-start text-center">
                   <h5 className="">Haftalık</h5>
-                  <p className="">
+                  <p className="text-center text-sm-start">
                     6 / 24 saat cocuk bakimi Pazartesi - Cumartesi
                   </p>
                 </div>
-                <div className="w-25">
-                  <h5>1000 TL</h5>
+                <div className="w-25 d-flex justify-content-center align-items-center d-sm-flex justify-content-sm-start align-items-sm-start">
+                  <h5 className="">1000 TL</h5>
                 </div>
               </div>
-              <div>
+              <div className="text-center text-sm-start">
                 <p>Ekstra servis ve fiyatlar</p>
               </div>
               <hr className="bakici-info-first-hr" />
@@ -61,7 +61,7 @@ function BakiciInfo() {
             </div>
             <hr className="bakici-info-first-hr" />
             <div>
-              <h5>İPTAL POLİTİKASI</h5>
+              <h5 className="text-center text-sm-left">İPTAL POLİTİKASI</h5>
               <p>
                 Rezervasyondan 7 gün önce saat 12:00'ye kadar yapılan iptallerde
                 tam iade, sonrasında %50 iade.
@@ -78,10 +78,10 @@ function BakiciInfo() {
             </div>
             <hr className="bakici-info-first-hr" />
             <div>
-              <div className="w-100 d-flex justify-content-around align-items-center">
-                <img src={Visa} alt="" />
-                <img src={Vector} alt="" />
-                <img src={Group} alt="" className="klarna-icon" />
+              <div className="bakici-info-icons w-25 mx-auto d-flex justify-content-around align-items-center">
+                <img src={Visa} alt="" className="mw-100 mx-1"/>
+                <img src={Vector} alt="" className="mw-100 mx-1"/>
+                <img src={Group} alt="" className="klarna-icon mw-100 mx-1" />
               </div>
             </div>
           </div>

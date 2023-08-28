@@ -179,6 +179,16 @@
     /* padding-top: 97px; */
 }
 
+.bakici-kayit__form-button {
+    color: white;
+    border: none;
+    width: 200px;
+    height: 42px;
+    border-radius: 19px;
+    background-color: #E88585;
+
+}
+
 .bakici-kayit__mesai-div {
     width: fit-content
 }
@@ -215,4 +225,24 @@
     width: 180px;
     height: 40px;
     border-radius: 24px;
+}
+
+.bakici-kayit__belge-container {
+    background-color: rgba(245, 245, 245, 0.5);
+}
+
+.bakici-kayit__belge-ekle-container {
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+    border: 3px dashed #467888;
+    border-radius: 10px;
+}
+
+.bakici-kayit__belge-ekle {
+    cursor: pointer;
+}
+
+.bakici-kayit__belge-desc {
+    font-size: 20px;
 }

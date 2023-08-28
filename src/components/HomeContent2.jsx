@@ -43,8 +43,7 @@ function HomeContent2() {
                                 alt="group52"
                             />
                             <p className="Bakici-Box-Card-Text">
-                                Istediginiz bakiciyi websitemizden secin
-                                
+                                İstediğiniz bakıcıyı websitemizden seçin.           
                             </p>
                             <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
@@ -58,7 +57,7 @@ function HomeContent2() {
                                 src={group48}
                                 alt="group48"
                             />
-                            <p className="Bakici-Box-Card-Text">Gorusme icin randevu alin</p>
+                            <p className="Bakici-Box-Card-Text">Görüşme için randevu alın.</p>
                             <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
                     </Col>
@@ -71,7 +70,7 @@ function HomeContent2() {
                                 alt="group49"
                             />
                             <p className="Bakici-Box-Card-Text">
-                                Bakiciniz ile gerekli gorusmelerinizi yapin
+                                Bakıcınız ile gerekli görüşmelerinizi yapın.
                             </p>
                             <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
@@ -85,7 +84,7 @@ function HomeContent2() {
                                 alt="group50"
                             />
                             <p className="Bakici-Box-Card-Text">
-                                Anlasmanizi ekibimize bildirin
+                                Anlaşmanızı ekibimize bildirin.
                             </p>
                             <hr className="Bakici-Box-Card-Hr position-absolute" /> 
                         </div>
@@ -99,7 +98,7 @@ function HomeContent2() {
                                 alt="group51"
                             />
                             <p className="Bakici-Box-Card-Text">
-                                Guvenli sekilde bakim servisimizin tadini cikarin.
+                                Güvenli şekilde bakım servisimizin tadını çıkarın.
                             </p>
                         </div>
                     </Col>
