@@ -83,7 +83,7 @@ const NavbarBakici = () => {
                   <img className="" src={Profile} alt="Profile" />
                 </Link>
 
-                <Link className="navbar-bakici__yardim ">Yardım</Link>
+                <Link className="navbar-bakici__yardim " to={"/BakYardim"}>Yardım</Link>
               </div>
               <DropdownButton
                 id="dropdown-basic-button"

@@ -5,6 +5,7 @@ import "./../styles/OfflineYardim.css"
 import reservation_date from "./../assets/reservation_date.svg"
 import soruIsareti from "./../assets/soru-isareti.svg"
 import { Link } from 'react-router-dom'
+import NavbarBakici from '../components/NavbarBakici'
 
 const OfflineYardim = () => {
 const accordion = {backgroundColor: "#EFEFEF",
@@ -39,6 +40,7 @@ fontWeight: "300",};
         // <Navbar />
     }
     
+    <NavbarBakici/>
     <div className='yardim text-center'>
         <h3 className='yardim-h3 text-center'>SIKÇA SORULAN SORULAR</h3>
         <hr className='yardim-hr'/>
@@ -97,7 +99,7 @@ fontWeight: "300",};
                     <div id="collapseThree" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div  className="accordion-body">
                         <p>
-                        Elbette! Rezervasyon için tarih seçerken takvimde ardisik gun secme tusunu aktif etmeniz yeterli. Ardindan istediginiz tarihe iki kere tiklayabilirsiniz. Bu şekilde, rezervasyonun başlangıç ​​ve bitişiyle aynı tarihi alırsınız.
+                        Elbette! Rezervasyon için tarih seçerken takvimde ardışık gün seçme tuşunu aktif etmeniz yeterli. Ardından istediğiniz tarihe iki kere tıklayabilirsiniz. Bu şekilde, rezervasyonun başlangıç ​​ve bitişiyle aynı tarihi alırsınız.
                        
                         </p>
                          <img src={reservation_date} alt="" />
@@ -132,7 +134,7 @@ fontWeight: "300",};
                         Rezervasyon başladıktan sonra ücret iadesi mümkün değildir.
                         <br />
                         <br />
-                        <span style={{color:"red",fontWeight:'bold'}}>DIP NOT:</span> Ebeveynler ve Bakicilar Hizmet kismindan “ IPTAL ET” secenegine basarak ucretli reservasyonlarini kendileri iptal edebilirler</div>
+                        <span style={{color:"red",fontWeight:'bold'}}>DİP NOT:</span> Ebeveynler ve Bakicilar Hizmet kismindan “ IPTAL ET” secenegine basarak ucretli reservasyonlarini kendileri iptal edebilirler.</div>
                     </div>
                 </div>
             </div>
@@ -146,7 +148,7 @@ fontWeight: "300",};
                     </h2>
                     <div id="collapseFive" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div  className="accordion-body">
-                        Sizinle ilgili bazı kişisel bilgilere ihtiyacımız olsa da, gizliliğinizi korumak için elimizden gelen her şeyi yapıyoruz. Tanımlama ve sicil kaydi kontrolu nedenleriyle adınıza ve soyadınıza, yeni mesajları size bildirmek için cep telefonu numaranıza ihtiyacımız var. Ancak, ebeveyn tarafından görülebilen tek şeyin ilk adınız olduğunu vurgulamak önemlidir. Aranızdaki mesajlarda yoldan geçen kişiye tam adınızı, cep telefonu numaranızı veya adresinizi vermek isteyip istemediğiniz size kalmış.
+                        Sizinle ilgili bazı kişisel bilgilere ihtiyacımız olsa da, gizliliğinizi korumak için elimizden gelen her şeyi yapıyoruz. Tanımlama ve sicil kaydı kontrolü nedenleriyle adınıza ve soyadınıza, yeni mesajları size bildirmek için cep telefonu numaranıza ihtiyacımız var. Ancak, ebeveyn tarafından görülebilen tek şeyin ilk adınız olduğunu vurgulamak önemlidir. Aranızdaki mesajlarda yoldan geçen kişiye tam adınızı, cep telefonu numaranızı veya adresinizi vermek isteyip istemediğiniz size kalmış.
                         </div>
                     </div>
                 </div>

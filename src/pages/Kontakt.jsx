@@ -62,8 +62,24 @@ const Kontakt = () => {
         console.log("Start Date:", formData.start_date);
         console.log("End Date:", formData.end_date);
         console.log("Message", formData.message);
+               
+        event.preventDefault();
+        if(formData.message.length >=20){
+   
         nav("/kontaktbas");
+        }
+        
       };
+
+      const clickedButton = (e) =>{
+        e.preventDefault();
+      }
+
+      const changeTextArea = (event) =>{
+        const newText = event.target.value;
+      setformData({...formData,message:newText})
+      }
+
       const age_options = [
         {
           label: (
@@ -74,7 +90,7 @@ const Kontakt = () => {
                 width="30.72px"
                 style={{ marginRight: "20px" }}
               />
-              0-12 yas arası{" "}
+              0-12 yaş arası{" "}
             </div>
           ),
           value: "0-12 yas arasi",
@@ -88,7 +104,7 @@ const Kontakt = () => {
                 width="30.72px"
                 style={{ marginRight: "20px" }}
               />
-              1 ve 2 yas arası{" "}
+              1 ve 2 yaş arası{" "}
             </div>
           ),
           value: "1 ve 2 yas arasi",
@@ -161,7 +177,7 @@ const Kontakt = () => {
               />
               <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
                 {" "}
-                Sadece hafta içi yatili bakıcılık
+                Sadece hafta içi yatılı bakıcılık
               </p>
             </div>
           ),
@@ -179,7 +195,7 @@ const Kontakt = () => {
                 />
                 <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
                   {" "}
-                  Sadece hafta sonu yatili bakıcılık
+                  Sadece hafta sonu yatılı bakıcılık
                 </p>
               </div>
             ),
@@ -197,7 +213,7 @@ const Kontakt = () => {
                 />
                 <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
                   {" "}
-                  Pazar dahil tüm günler yatili bakıcılık
+                  Pazar dahil tüm günler yatılı bakıcılık
                 </p>
               </div>
             ),
@@ -311,7 +327,7 @@ const Kontakt = () => {
           onFocus={onFocus}
           onBlur={changeColorDefault3}
           /* style={{background:url()}}*/
-          placeholder="Tarih Secin"
+          placeholder="Tarih Seçin"
         />
         )
       }
@@ -319,13 +335,13 @@ const Kontakt = () => {
     <>
     <NavbarBakici/>
     <div className='kontakt'>
-    <h1 className='text-center kontakt-h1'>KONTAKT TUGBA AKSOY</h1>
+    <h1 className='text-center kontakt-h1'>KONTAKT TUĞBA AKSOY</h1>
     <img src={Kontakt_Tuba_Photo} alt="" className='kontakt-photo'/>
     <hr className='kontakt-hr'/>
-    <form action="" id='external-form' onSubmit={handleSubmit(onSubmit)} >
+    <form action="" id='external-form' onSubmit={(e) => handleSubmit(onSubmit(e))} >
 
   <label className="Kontakt-Form-Label" id='option-servis'>
-    SERVIS
+    SERVİS
     <Select
       id="first-select"
       className='Form-Select'
@@ -342,7 +358,7 @@ const Kontakt = () => {
         (option) => option.value === formData.selectedOption
       )}
       onChange={(event) => setformData({...formData,selectedOption:event.value})}
-      placeholder="Gunduz Tarife"
+      placeholder="Gündüz Tarife"
     />
 
     <img
@@ -354,7 +370,7 @@ const Kontakt = () => {
   </label>
   
   <label className="Kontakt-Form-Label" id='option-age'>
-  YAS GRUBU
+  YAŞ GRUBU
   <Select
     id="second-select"
     className='Form-Select'
@@ -372,7 +388,7 @@ const Kontakt = () => {
     )}
     
     onChange={(event) => setformData({...formData,age:event.value})}
-    placeholder="Yas Grubunu Seciniz"
+    placeholder="Yaş Grubunu Seçiniz"
   />
   {
     changeChildImg &&
@@ -393,7 +409,7 @@ const Kontakt = () => {
 
 <label className="Kontakt-Form-Label"  id='option-date'>
 
-                TARIH SECINIZ
+                TARİH SEÇİNİZ
     
       
                 <DatePicker
@@ -452,12 +468,15 @@ const Kontakt = () => {
 
               <label className="Kontakt-Form-Label"  id='option-date'>
               MESAJINIZ
-              <textarea className="Kontakt-TextArea" name="w3review" rows="10" value={formData.message} onChange={(event) => setformData({...formData,message:event.target.value})} placeholder='Bakiciya bildirmek istediginiz bilgileri giriniz. Ornegin cocugunuz ve ihtiyaclariniz.....' required>
+              <textarea className="Kontakt-TextArea" name="w3review" rows="10" minlength={20}   value={formData.message} onChange={changeTextArea} placeholder='Bakıcıya bildirmek istediğiniz bilgileri giriniz. Örnegin çocuğunuz ve ihtiyaçlarınız.....' required />
              
-              </textarea>
+              {formData.message.length > 0 && formData.message.length < 20 && (
+                <p>Lütfen bu metni 20 karakter veya daha fazla olacak şekilde uzatın.(şu anda {formData.message.length} karakter kullanıyorsunuz)</p>
+              
+                )}
               </label>
              
-              <button type="submit" className="Kontakt-Form-Button" >
+              <button type="submit" className="Kontakt-Form-Button" onSubmit={(e) => clickedButton(e)}>
              
                       Gönder
               </button>

@@ -20,11 +20,11 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
         value: "Onaylanan",
       },
       {
-        label: "Tamamlanmis gorevleriniz",
+        label: "Tamamlanmış görevleriniz",
         value: "Tamamlanmis gorevleriniz",
       },
       {
-        label: "Iptal edilen",
+        label: "İptal edilen",
         value: "Iptal edilen",
       },
       {
@@ -106,31 +106,27 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
       const changePage = (e) => {
         if(e.value === "Onay Bekleyen"){
           selectedNumber(1);
-            setSelectedNav(selectedNav[1])
         }else  if(e.value === "Onaylanan"){
           selectedNumber(2);
-            setSelectedNav(selectedNav[2])
         }else  if(e.value === "Tamamlanmis gorevleriniz"){
           selectedNumber(3);
-            setSelectedNav(selectedNav[3])
         }else  if(e.value === "Iptal edilen"){
           selectedNumber(4);
-            setSelectedNav(selectedNav[4])
         }else  if(e.value === "Red edilen"){
           selectedNumber(5);
-            setSelectedNav(selectedNav[5])
         }
+        
         visibility(false);
       }
 
       const arsivlenenMesajlar = () =>{
-        setSelectedNav(selectedNav[6]);
+        selectedNumber(6);
         visibility(false);
       }
   return (
     <div className='Bakici-Mesajlar-Anasayfa'>
     <div className='Bakici-Mesajlar-Anasayfa-Top'>
-    <h3 className='Bakici-Mesajlar-Anasayfa-Top-H3'>Calisma Raporlariniz</h3>
+    <h3 className='Bakici-Mesajlar-Anasayfa-Top-H3'>Çalışma Raporlarınız</h3>
     <div className='Bakici-Mesajlar-Anasayfa-Top-Select'>
     <label className="Kontakt-Form-Label" id='option-servis'>
     <Select
@@ -149,7 +145,7 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
         (option) => option.value === selectData
       )}
       onChange={changePage}
-      placeholder="Seciniz"
+      placeholder="Seçiniz"
     />
 
     <img
@@ -161,7 +157,7 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
   </label>
     </div>
   
-  <p className='Bakici-Mesajlar-Anasayfa-Top-Paragraph' onClick={arsivlenenMesajlar}>Arsivlenen Mesajlar</p>
+  <p className='Bakici-Mesajlar-Anasayfa-Top-Paragraph' onClick={arsivlenenMesajlar}>Arşivlenen Mesajlar</p>
     </div>
    
     <div className='Bakici-Mesajlar-Anasayfa-Middle'>
@@ -174,7 +170,7 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
 
     <div className='Bakici-Mesajlar-Anasayfa-Bottom'>
 
-            <p className='Bakici-Mesajlar-Anasayfa-Bottom-Paragraph'>1 okunmamis mesajiniz var</p>
+            <p className='Bakici-Mesajlar-Anasayfa-Bottom-Paragraph'>1 okunmamış mesajınız var</p>
             <p className='Bakici-Mesajlar-Anasayfa-Bottom-Number'>1</p>
  
     </div>
