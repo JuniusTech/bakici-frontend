@@ -10,6 +10,7 @@ import date2 from "./../assets/date2.svg"
 import date3 from "./../assets/date3.svg"
 import date4 from "./../assets/date4.svg"
 import leftArrow from "./../assets/leftArrow.svg"
+import NavbarBakici from '../components/NavbarBakici'
 
 const OfflineEbeveynYardim = () => {
 const accordion = {backgroundColor: "#EFEFEF",
@@ -43,7 +44,7 @@ fontWeight: "300",};
     {
         // <Navbar />
     }
-    
+    <NavbarBakici />
     <div className='yardim text-center'>
         <h3 className='yardim-h3'>SIKÇA SORULAN SORULAR</h3>
         <hr className='yardim-hr'/>
@@ -102,7 +103,7 @@ fontWeight: "300",};
                     <div id="collapseThree" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div div className="accordion-body">
                         <p>
-                        Elbette! Rezervasyon için tarih seçerken takvimde ardisik gun secme tusunu aktif etmeniz yeterli. Ardindan istediginiz tarihe iki kere tiklayabilirsiniz. Bu şekilde, rezervasyonun başlangıç ​​ve bitişiyle aynı tarihi alırsınız.
+                        Elbette! Rezervasyon için tarih seçerken takvimde ardışık gün seçme tuşunu aktif etmeniz yeterli. Ardından istediğiniz tarihe iki kere tıklayabilirsiniz. Bu şekilde, rezervasyonun başlangıç ​​ve bitişiyle aynı tarihi alırsınız.
                        
                         </p>
                          <img src={reservation_date} alt="" />
@@ -137,7 +138,7 @@ fontWeight: "300",};
                         Rezervasyon başladıktan sonra ücret iadesi mümkün değildir.
                         <br />
                         <br />
-                        <span style={{color:"red",fontWeight:'bold'}}>DIP NOT:</span> Ebeveynler ve Bakicilar Hizmet kismindan “ IPTAL ET” secenegine basarak ucretli reservasyonlarini kendileri iptal edebilirler</div>
+                        <span style={{color:"red",fontWeight:'bold'}}>DİP NOT:</span> Ebeveynler ve Bakicilar Hizmet kismindan “ IPTAL ET” secenegine basarak ucretli reservasyonlarini kendileri iptal edebilirler.</div>
                     </div>
                 </div>
             </div>
@@ -151,7 +152,8 @@ fontWeight: "300",};
                     </h2>
                     <div id="collapseFive" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div div className="accordion-body">
-                        Sizinle ilgili bazı kişisel bilgilere ihtiyacımız olsa da, gizliliğinizi korumak için elimizden gelen her şeyi yapıyoruz. Tanımlama ve sicil kaydi kontrolu nedenleriyle adınıza ve soyadınıza, yeni mesajları size bildirmek için cep telefonu numaranıza ihtiyacımız var. Ancak, ebeveyn tarafından görülebilen tek şeyin ilk adınız olduğunu vurgulamak önemlidir. Aranızdaki mesajlarda yoldan geçen kişiye tam adınızı, cep telefonu numaranızı veya adresinizi vermek isteyip istemediğiniz size kalmış.
+                        Sizinle ilgili bazı kişisel bilgilere ihtiyacımız olsa da, gizliliğinizi korumak için elimizden gelen her şeyi yapıyoruz. Tanımlama ve sicil kaydı kontrolü nedenleriyle adınıza ve soyadınıza, yeni mesajları size bildirmek için cep telefonu numaranıza ihtiyacımız var. Ancak, ebeveyn tarafından görülebilen tek şeyin ilk adınız olduğunu vurgulamak önemlidir. Aranızdaki mesajlarda yoldan geçen kişiye tam adınızı, cep telefonu numaranızı veya adresinizi vermek isteyip istemediğiniz size kalmış.
+                      
                         </div>
                     </div>
                 </div>
@@ -166,9 +168,9 @@ fontWeight: "300",};
                     </h2>
                     <div id="collapseSix" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div div className="accordion-body">
-                        Evet, fiyatlarınızı istediğiniz zaman değiştirebilirsiniz. Bu değişikliğin elbette bir etkisi olmayacak zaten onaylanmış rezervasyonlar, ancak tüm yeni istekleri etkileyecek 
+                        Evet, fiyatlarınızı istediğiniz zaman değiştirebilirsiniz. Bu değişikliğin elbette bir etkisi olmayacak zaten onaylanmış rezervasyonlar, ancak tüm yeni istekleri etkileyecek. 
                         <br />
-                        <span  style={{color:"red",fontWeight:'bold'}}>Lütfen fiyatlarınızın belirli bir seviyede olması gerektiğini unutmayın. Fiyatiniz belli bi seviye icerisinde olmasinda fayda bulunmaktadir. </span></div>
+                        <span  style={{color:"red",fontWeight:'bold'}}>Lütfen fiyatlarınızın belirli bir seviyede olması gerektiğini unutmayın. Fiyatınız belli bir seviye içerisinde olmasında fayda bulunmaktadır. </span></div>
                     </div>
                 </div>
             </div>
@@ -177,23 +179,23 @@ fontWeight: "300",};
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed"  onClick={handleClick} type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    CareZone da kaliteli bir profil nasıl oluşturulur?
+                    CareZone'da kaliteli bir profil nasıl oluşturulur?
                     </button>
                     </h2>
                     <div id="collapseSeven" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div div className="accordion-body">
-                        Ebeveynler güvenilir ve erişilebilir bakıcılar arıyor.Onlar icin cocuklari ile mukkemmel uyumu saglayan bakici bulmaktan daha onemli birsey yoktur. Bu nedenle profilinizde dogru bilgileri vermeniz onemlidir. Diger detaylari daha sonra ebeveyn ile mesajlarda gorusebilirsiniz. CareZone a oturum actiktan sonra Profilinize girerek butun adimlari takip ederek guzel bir profil olusturunuz. 
+                        Ebeveynler güvenilir ve erişilebilir bakıcılar arıyor.Onlar icin çocukları ile mükemmel uyumu sağlayan bakıcı bulmaktan daha önemli bir şey yoktur. Bu nedenle profilinizde doğru bilgileri vermeniz onemlidir. Diger detayları daha sonra ebeveyn ile mesajlarda gorüşebilirsiniz. CareZone'a oturum açtıktan sonra Profilinize girerek bütün adımlari takip ederek güzel bir profil oluşturunuz. 
                         <br />
                         <br />
-                        <h4 className='profil'>PROFIL </h4>
-                        Profil resminiz, bir Ebeveynin arama sonuçlarında gezinirken gördüğü ilk şeylerden biridir, bu nedenle iyi bir izlenim bıraktığınızdan emin olun! Profilde yuzunuzun net olarak gozuktugunden emin olun. Uzakta olan resimler yerine daha yakin profilden cekildiginiz resimlerinizi koymanizi tavsiye ediyoruz. 
+                        <h4 className='profil'>PROFİL </h4>
+                        Profil resminiz, bir Ebeveynin arama sonuçlarında gezinirken gördüğü ilk şeylerden biridir, bu nedenle iyi bir izlenim bıraktığınızdan emin olun! Profilde yüzünüzün net olarak gözüktüğünden emin olun. Uzakta olan resimler yerine daha yakın profilden çekildiğiniz resimlerinizi koymanızı tavsiye ediyoruz. 
                         <br />
                         <br />
-                        <h4 className='profil'>PROFIL ACIKLAMASI </h4>
+                        <h4 className='profil'>PROFİL ACIKLAMASI </h4>
                         Bu gösteriş yapma şansın! Bir Ebeveyn neden sizi seçmeli? Bize tercihlerinizden, özelliklerinizden ve kapasitenizden bahsedin. Açıklamanızda en az 220 kelime bulunmalıdır. 
                         <br />
                         <br />
-                        <h4 className='profil'>RESIM GALERISI </h4>
+                        <h4 className='profil'>RESİM GALERİSİ </h4>
                         Harika bir fotoğraf galerisi, açıklamanızı detaylandırır. Açıklamanızı tamamlayan resimler seçmeye çalışın ve unutmayın; daha sonra istediğiniz zaman daha fazla fotoğraf yükleyebilirsiniz. Ancak 5 fotoğraf bir başlangıç ​​şartıdır. </div>
                     </div>
                 </div>
@@ -203,21 +205,21 @@ fontWeight: "300",};
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed"  onClick={handleClick} type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                    Takvimi nasil kullanabilirim?
+                    Takvimi nasıl kullanabilirim?
                     </button>
                     </h2>
                     <div id="collapseEight" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div div className="accordion-body">
-                        <h4 className='profil'>ADIM 1: ARDISIK GUN SECME  </h4>
-                        <p> Takvimde baslamak istediginiz tarihe bir kere tiklayiniz. ardindan bitirmek istediginiz tarihe bir kere tiklayiniz. Boylelikle baslangic ve bitis tarihiniz takvim uzerinde belirecektir.
+                        <h4 className='profil'>ADIM 1: ARDIŞIK GÜN SEÇME  </h4>
+                        <p> Takvimde başlamak istediğiniz tarihe bir kere tıklayınız. Ardından bitirmek istediğiniz tarihe bir kere tıklayınız. Böylelikle baslangıç ve bitiş tarihiniz takvim üzerinde belirecektir.
                         </p>
                         <div className="date-arrow-cls">
                         <img src={date1} alt="" className="dateImg"/>
                         <img src={leftArrow} alt="" className="leftArrowClass"/>
                         </div>
                         
-                        <h4 className='profil'>ADIM 2 : ARDISIK OLMAYAN GUNLER SECMEK   </h4>
-                        Takvimin alt kisminda bulunan ardisik gun secme sekmesini aktif hale getiriniz. Bu sekme aktif olduktan sonra secmek istediginiz tarihe 2 kere tiklayiniz ve ayni durumu birden fazla farkli gunler icin de yapip sec tusu ile onaylayiniz.
+                        <h4 className='profil'>ADIM 2 : ARDIŞIK OLMAYAN GÜNLER SEÇMEK   </h4>
+                        Takvimin alt kısmında bulunan ardışık gün seçme sekmesini aktif hale getiriniz. Bu sekme aktif olduktan sonra seçmek istediğiniz tarihe 2 kere tiklayınız ve aynı durumu birden fazla farklı günler için de yapıp seç tuşu ile onaylayınız.
                         <div className="date-arrow-cls">
                         <img src={date2} alt="" className="dateImg"/>
                         <img src={leftArrow} alt="" className="leftArrowClass"/>
@@ -232,17 +234,17 @@ fontWeight: "300",};
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed"  onClick={handleClick} type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                    Takvim de musait gunlerimi nasil ayarlayabilirim?
+                    Takvimde müsait günlerimi nasıl ayarlayabilirim?
                     </button>
                     </h2>
                     <div id="collapseNine" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
                         <div div className="accordion-body">
-                        <p><span className='profil'>ADIM 1:</span> Profil sayfanizdan takvim sayfasina gidin. Takviminizde musait oldugunuz gune 1 kere tiklayiniz.
+                        <p><span className='profil'>ADIM 1:</span> Profil sayfanızdan takvim sayfasına gidin. Takviminizde müsait olduğunuz güne 1 kere tiklayınız.
                         </p>
                         <br />
                         <img src={date3} alt="" className="bottomDateImg"/>
                         <br />
-                        <p><span className='profil'>ADIM 2:</span> Tikladiginizda karsinizacikan sayfa da musait oldugunuzu belirtebilirsiniz. Musait degilseniz sectiginiz gunu <span style={{ textDecoration: 'underline' }}>"SECILI GUNLERI MUSAIT DEGIL OLARAK KAYDET"</span> sekmesini kullanabilirsiniz
+                        <p><span className='profil'>ADIM 2:</span> Tıkladığınızda karşınıza çıkan sayfada müsait olduğunuzu belirtebilirsiniz. Müsait değilseniz seçtiğiniz günü <span style={{ textDecoration: 'underline' }}>"SEÇİLİ GÜNLERI MÜSAIT DEĞİL OLARAK KAYDET"</span> sekmesini kullanabilirsiniz.
                         </p>
                         <br />
                          <img src={date4} alt="" className="bottomDateImg"/>

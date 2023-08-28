@@ -1,12 +1,12 @@
 .Bakici-Mesajlar-Anasayfa{
-    margin: 100px auto 400px;
+    margin: 50px auto 400px;
 }
 
 
 .Bakici-Mesajlar-Anasayfa-Top{
     display: flex;
     width: 80vw;
-    margin: 0px auto 300px;
+    margin: 0px auto 100px;
     align-items: center;
     gap: 50px;
     
@@ -15,7 +15,8 @@
 .Bakici-Mesajlar-Anasayfa-Top-H3{
     color: #455A64;
 font-family: Georama;
-font-size: 32px;
+font-size: calc(1em + 1vw);
+white-space: nowrap;
 font-style: normal;
 font-weight: 500;
 line-height: 24px; /* 75% */
@@ -29,11 +30,12 @@ margin-top: 25px;
 .Bakici-Mesajlar-Anasayfa-Top-Paragraph{
     color: #E88485;
 font-family: Georama;
-font-size: 32px;
+font-size: calc(1em + 1vw);
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 75% */
 text-decoration-line: underline;
+white-space: nowrap;
 margin-top: 25px;
 cursor: pointer;
 }
@@ -55,7 +57,7 @@ position: relative;
   .Bakici-Mesajlar-Anasayfa-Bottom-Paragraph{
     color: #000;
 font-family: Georama;
-font-size: 32px;
+font-size: calc(1em + 1vw);
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 75% */
@@ -79,7 +81,20 @@ margin: 0;
     height: 16px;
     position: absolute;
     top: 35px;
-    right: 3%;
+    right: 5%;
+  }
+
+  .BakiciMesajlarGelenKutusuGeri{
+    margin: 100px auto;
+    text-align: right;
+    color: #E88485;
+font-family: Georama;
+font-size: calc(1em + 1vw);;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 75% */
+text-decoration-line: underline;
+cursor: pointer;
   }
 
   @media only screen and (max-width: 1200px){

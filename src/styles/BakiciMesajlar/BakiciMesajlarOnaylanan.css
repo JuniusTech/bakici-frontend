@@ -1,0 +1,81 @@
+.BakiciMesajlarOnaylanan{
+    width: 80vw;
+}
+
+.BakiciMesajlarOnaylanan-Title{
+    color: #455A64;
+font-family: Georama;
+font-size: calc(1em + 1vw);;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.BakiciMesajlarOnaylanan-Item{
+    display: flex;
+    border-radius: 17px 17px 0px 0px;
+    background: #FFF;
+    stroke-width: 0.5px;
+    stroke: #455A64;
+    justify-content: space-between;
+    padding: 40px 50px;
+    border-radius: 17px;
+border: 1px solid rgba(69, 90, 100, 0.80);
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+margin: 50px auto;
+
+}
+
+.BakiciMesajlarOnaylanan-Iptal{
+    color: #F64D4D;
+font-family: Georama;
+font-size: calc(.8em + 1vw);;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration-line: underline;
+text-align: right;
+margin: 30px 40px 10px 30px;
+cursor: pointer;
+}
+
+.BakiciMesajlarOnaylandı-Right-TalepEdilen-Div-Top-Left{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.BakiciMesajlarOnaylandı-Right-TalepEdilen-Div-Top-Left-Onaylama{
+    color: #467888;
+text-align: center;
+font-family: Georama;
+font-size: calc(.8em + 1vw);;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+
+}
+
+@media screen and (max-width:768px) {
+
+    .BakiciMesajlarOnaylanan-Item,.BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Left{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Left,.BakiciMesajlarOnaylandı-Right-TalepEdilen-Div-Top-Left,.BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Right,.BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Right-Time{
+        justify-content: center;
+    }
+    .BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Right,.BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Right-Time,.BakiciMesajlarOnaylanan-Iptal,.BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Left-Name,.BakiciMesajlarOnaylanan-Title{
+        text-align: center;
+        
+    }
+    .BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Lef{
+        margin: 750px;
+    }
+}

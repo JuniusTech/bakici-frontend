@@ -1,0 +1,65 @@
+.BakiciMesajlarIptal{
+    width: 80vw;
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Name,.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Right-h2,.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Right-Date,.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Right-Time-P,.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Onaylama-List{
+    color: #C7C7C7;
+    font-family: Georama;
+    font-size: calc(1em + 1vw);;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 10px;
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Name{
+    margin: 10px 0;
+    text-align: center;
+}
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left{
+ display: flex;
+ align-items: center;
+ margin-top: 20px;
+ gap: 10px;
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Onaylama{
+    color: #F64D4D;
+font-family: Georama;
+font-size: calc(.7em + 1vw);;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Right-h2{
+    color: #C7C7C7;
+    white-space: nowrap;
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Right-Date{
+    color: #C7C7C7;
+    font-size:calc(.7em + 1vw);;
+    white-space: nowrap;
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Right-Time-P{
+    color: #C7C7C7;
+    font-size: calc(.7em + 1vw);;
+       white-space: nowrap;
+}
+
+.BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Onaylama-List{
+    color: #263238;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width:900px) {
+
+    .BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Onaylama-List{
+        text-align: center;
+    }
+}

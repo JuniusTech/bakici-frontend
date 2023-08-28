@@ -1,0 +1,23 @@
+.BakiciMesajlarRed{
+    width: 80vw;
+}
+
+.BakiciMesajlarRed-Right-TalepEdilen-Div-Top-Left-Onaylama{
+    color: #F64D4D;
+font-family: Georama;
+font-size: 24px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin-top: 15px;
+}
+
+@media screen and (max-width:900px) {
+
+    .BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left{
+        justify-content: center;
+    }
+    .BakiciMesajlarRed-Right-TalepEdilen-Div-Top-Left-Onaylama{
+        text-align: center;
+    }
+}
