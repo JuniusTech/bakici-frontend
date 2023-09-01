@@ -4,6 +4,7 @@ import Logo from '../assets/logo.svg'
 import googleicon from '../assets/google-icon.svg'
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import AnaUyelik from '../components/AnaUyelik';
 
 const Login = () => {
 
@@ -15,14 +16,28 @@ const Login = () => {
     console.log(email)
     console.log(password);;
   }
+    const [expanded, setExpanded] = useState(false);
+
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
+
+  const handleClick = () => {
+    setExpanded(false);
+    setOpenAnaUyelik(true);
+  };
+
   return (
-    <div className='login'>
+    <>
+    <AnaUyelik
+    openAnaUyelik={openAnaUyelik}
+    setOpenAnaUyelik={setOpenAnaUyelik}
+  />
+  <div className='login'>
       <div className='login-form-container'>
       <img src={Logo} alt="" className='login-logo' />
 
       <div className='login-form'>
       
-        <h1 className='login-form-title'>OTURUM AC</h1>
+        <h1 className='login-form-title'>OTURUM AÇ</h1>
         <button className='login-form-btn'>
           <img src={googleicon} alt= "Vgoogle-icon"
           className='login-form-btn-icon' />
@@ -52,6 +67,7 @@ const Login = () => {
           </div>
           <div className='login-form-password-div'>
           <label htmlFor="password" className='login-form-label-password'>Şifre</label>
+          <p className='login-form-label-sifremiunuttum'>Şifremi unuttum?</p>
           <br />
           <input 
           type="password"
@@ -64,7 +80,7 @@ const Login = () => {
 
           </div>
          
-          <button className='login-form-submit-btn' type='submit' >Oturum Ac</button>
+          <button className='login-form-submit-btn' type='submit' >Oturum Aç</button>
           </form>
           
             <p className='login-form-text-span-dot'>
@@ -72,7 +88,7 @@ const Login = () => {
             </p>
             <div className='login-form-text-link-container'>
               <p className='login-form-text-link'>Hesabınız yok mu?</p>
-              <NavLink to="/register" className='login-form-link'>Kayıt Ol</NavLink>
+              <NavLink className='login-form-link' onClick={handleClick}>Kayıt Ol</NavLink>
             </div>
             
 
@@ -85,6 +101,8 @@ const Login = () => {
 
       </div>
     </div>
+    </>
+    
   )
 }
 

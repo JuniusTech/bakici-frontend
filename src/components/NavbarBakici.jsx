@@ -27,11 +27,14 @@ const NavbarBakici = () => {
 
       <nav className="navbar-bakici row border-bottom border-2 m-0">
         <div className="col-2">
-          <img
+        <Link to="/">
+        <img
             src={MusteriKayitLogo}
             alt="MusteriKayitLogo"
             className="MusteriKayit-Logo"
           />
+        </Link>
+          
         </div>
         <div className="col-10 d-flex gap-4 justify-content-end align-items-center pe-4">
           <Link className="navbar-bakici__button" to="/bakiciara">
