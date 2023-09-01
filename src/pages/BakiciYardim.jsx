@@ -138,7 +138,11 @@ fontWeight: "300",};
                         Rezervasyon başladıktan sonra ücret iadesi mümkün değildir.
                         <br />
                         <br />
+
                         Ebeveynler ve Bakıcılar Hizmet kısmından “ IPTAL ET” seçeneğine basarak ücretli reservasyonlarını kendileri iptal edebilirler.</div>
+
+                        <span style={{color:"red",fontWeight:'bold'}}>DİP NOT:</span> Ebeveynler ve Bakicilar Hizmet kismindan “ IPTAL ET” secenegine basarak ucretli reservasyonlarini kendileri iptal edebilirler.</div>
+
                     </div>
                 </div>
             </div>
