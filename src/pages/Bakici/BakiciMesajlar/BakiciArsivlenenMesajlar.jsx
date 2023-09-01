@@ -141,7 +141,6 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
 
     setselectedUser(selectedUser);
     setfirst(first);
-    console.log(first);
     setMessa("");
     
   }
@@ -157,12 +156,12 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
 
 
 
+
   return (
     <div>
     <div className='BakiciMesajlarGelenKutusu'>
     <p className='BakiciMesajlarGelenKutusuGeri' onClick={clickedp}>Gelen Kutusuna geri dönün</p>
     </div>
-
     <div className='BakiciMesajlarArsivlenen'>
     <div className='BakiciMesajlarOnayBekleyen-Left-Div'>
     <h3 className='BakiciMesajlarArsivlenen-Left-Div-h3'>Arşivlenen Mesajlar</h3>
@@ -262,7 +261,6 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
       </div>
     }
     </div>
-
     </div>
   )
 }

@@ -141,11 +141,11 @@ fontWeight: "300",};
 
                         Ebeveynler ve Bakıcılar Hizmet kısmından “ IPTAL ET” seçeneğine basarak ücretli reservasyonlarını kendileri iptal edebilirler.</div>
 
-                       </div>
+                        </div>
 
                     </div>
                 </div>
-
+            
                 <div className="accordion" id="accordionExample2">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
@@ -257,8 +257,14 @@ fontWeight: "300",};
             </div>
             </div>
 
+                   
+
+             
+
+
            
         </div>
+
     <Footer className="footer"/>
     
     </>
