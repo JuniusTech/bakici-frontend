@@ -140,6 +140,7 @@ fontWeight: "300",};
                         <br />
 
                         Ebeveynler ve Bakıcılar Hizmet kısmından “ IPTAL ET” seçeneğine basarak ücretli reservasyonlarını kendileri iptal edebilirler.</div>
+
                         </div>
 
                     </div>
@@ -254,10 +255,16 @@ fontWeight: "300",};
                     </div>
                 </div>
             </div>
-                </div>
+            </div>
 
-        
-    </div>
+                   
+
+             
+
+
+           
+        </div>
+
     <Footer className="footer"/>
     
     </>

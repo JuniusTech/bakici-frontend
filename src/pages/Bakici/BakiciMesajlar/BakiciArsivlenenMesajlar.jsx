@@ -87,8 +87,10 @@ const data = [{
 }
 ]
 
-const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
 
+
+
+const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
   const [first, setfirst] = useState(data)
   const [selectedUser, setselectedUser] = useState(data[0]);
   const [selectedComp, setselectedComp] = useState(0);
@@ -151,6 +153,9 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
     }
     
   });
+
+
+
 
   return (
     <div>
@@ -260,4 +265,4 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
   )
 }
 
-export default BakiciArsivlenenMesajlar
+export default BakiciArsivlenenMesajlar;
