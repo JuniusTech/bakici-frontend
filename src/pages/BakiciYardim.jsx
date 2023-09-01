@@ -141,13 +141,12 @@ fontWeight: "300",};
 
                         Ebeveynler ve Bakıcılar Hizmet kısmından “ IPTAL ET” seçeneğine basarak ücretli reservasyonlarını kendileri iptal edebilirler.</div>
 
-                        <span style={{color:"red",fontWeight:'bold'}}>DİP NOT:</span> Ebeveynler ve Bakicilar Hizmet kismindan “ IPTAL ET” secenegine basarak ucretli reservasyonlarini kendileri iptal edebilirler.</div>
+                       </div>
 
                     </div>
                 </div>
-            </div>
 
-            <div className="accordion" id="accordionExample2">
+                <div className="accordion" id="accordionExample2">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed"  onClick={handleClick} type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -256,8 +255,10 @@ fontWeight: "300",};
                     </div>
                 </div>
             </div>
+            </div>
+
+           
         </div>
-    </div>
     <Footer className="footer"/>
     
     </>
