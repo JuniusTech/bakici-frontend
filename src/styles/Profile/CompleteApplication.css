@@ -127,3 +127,39 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1200px) {
+  .complete_application_container {
+    max-width: 90%;
+    margin-right: 430px;
+  }
+}
+
+@media (max-width: 768px) {
+  .complete_application_container {
+    max-width: 55%;
+    margin-right: 50px;
+  }
+  .number {
+    margin-left: 50px;
+  }
+  .number_line {
+    margin-left: 50px;
+  }
+  .number_tick {
+    margin-left: 50px;
+  }
+  .complete_application_content {
+    left: 30px;
+  }
+  .complete_application_text {
+    font-size: 22px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .complete_application_container {
+    max-width: 55%;
+  }
+}

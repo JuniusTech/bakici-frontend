@@ -41,7 +41,7 @@
   position: relative;
 }
 .profile_content {
-  width: 800px;
+  width: 80%;
   height: 951px;
   top: 100px;
   left: 100px;
@@ -69,19 +69,22 @@
   text-align: left;
   color: #455a64;
 }
-.profile_header p {
+.profile_header_p {
   font-family: Georama;
   font-size: 20px;
   font-weight: 300;
   line-height: 50px;
   letter-spacing: 0em;
   text-align: left;
+  word-wrap: break-word;
+  width: 100%;
 }
 .profile_header_text {
   width: 100%;
   height: 51px;
   border: 1px solid #455a64cc;
   border-radius: 5px;
+  position: absolute;
 }
 
 .comment {
@@ -99,18 +102,19 @@
   letter-spacing: 0em;
   text-align: left;
   color: #455a64;
-  
 }
-.comment p {
+.comment_p {
   font-family: Georama;
   font-size: 20px;
   font-weight: 300;
   line-height: 40px;
   letter-spacing: 0em;
   text-align: left;
+  word-wrap: break-word;
+  width: 100%;
 }
 .comment_text {
-  width: 40rem;
+  width: 100%;
   height: 12rem;
   position: absolute;
   border: 1px solid #455a64cc;
@@ -140,4 +144,55 @@
   color: #ffffff;
   text-align: center;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .profile_comment_container,
+  .profile_content {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .profile_content {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile_comment_container,
+  .profile_content {
+    max-width: 100%;
+    height: 1200px;
+    left: 0;
+    right: 0;
+  }
+  .comment_p {
+    width: 60%;
+  }
+  .profile_header_p {
+    width: 60%;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .profile_content {
+    margin-left: 50px;
+  }
+  .kaydet_btn {
+    left: 5px;
+    top: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .profile_comment_container,
+  .profile_content {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .comment_p {
+    width: 60%;
+  }
+  .profile_header_p {
+    width: 60%;
+  }
 }

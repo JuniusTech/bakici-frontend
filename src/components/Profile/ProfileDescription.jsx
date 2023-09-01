@@ -16,10 +16,10 @@ const ProfileDescription = () => {
           <div className="profile_header_container">
             <div className="profile_header">
               <span>Profil Başlığı</span>
-               <p>
+               <div className="profile_header_p">
                 Kısa, açıklayıcı ve kendinizi ifade eden dikkat çekici bir
                 başlık yazın.
-              </p>
+              </div>
               
               <input
               type="text"
@@ -42,7 +42,7 @@ const ProfileDescription = () => {
           </div>
           <div className="comment">
             <span>Profil Açıklaması</span>
-            <p>
+            <div className="comment_p">
               Kendiniz, bakıcılık hizmetleriniz ve motivasyonunuz hakkında en az
               150 kelime olacak şekilde bir açıklama yazınız. Ebeveynler sizinle
               iletişime geçmeden önce hakkınızda bilgi edinmek istemektedirler,
@@ -53,7 +53,7 @@ const ProfileDescription = () => {
               verilmez. <br />
               Bakıcılık mesleğindeki temel motivasyonunuz nedir?<br />
               Önceki deneyimleriniz nelerdir?
-            </p>
+            </div>
           
             <input
               type="text"

@@ -134,23 +134,78 @@
   margin-top: 0.8rem;
 }
 
-
-
-.select-option{
+.select-option {
   opacity: 0.5;
   border: 1.5px solid #467888;
   width: 500px;
-height: 56px;
-border-radius: 41px;
-font-size: 22px;
-margin-right: 50px;
-margin-left: 30px;
-margin-top:30px;
-
-
+  height: 56px;
+  border-radius: 41px;
+  font-size: 22px;
+  margin-right: 50px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 
 
+@media (max-width: 1200px) {
+  .my_experiences_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+
+ 
+
+  .experience_container
+  
+   {
+    width:90%;
+    
+  }
+  
+
+}
 
 
+@media (max-width: 768px) {
+  .my_experiences_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+  .experience_container
+  
+   {
+    width:100%;
+    left:0
+  }
+  .kaydet_experience_btn{
+    left: 40px;
+  }
+  .select-option{
+    width: 70%;
+  }
+.experience_content{
+  width: 95%;
+}
+}
+
+@media (max-width: 480px) {
+  .my_experiences_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+
+  .experience_container
+  
+  {
+   width:90%;
+   left: 0;
+ }
+ .select-option{
+  width: 10%;
+}
+ 
+}

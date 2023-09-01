@@ -600,3 +600,111 @@
   margin-right: 40px;
 }
 
+@media (max-width: 1200px) {
+  .pay_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 30rem;
+    
+  }
+
+ 
+
+  .pay_detail_container,
+  .owertime_container,
+  .work_routine_container
+  
+   {
+    width:90%;
+    
+    
+  }
+  
+
+}
+
+
+@media (max-width: 768px) {
+  .services_container {
+    max-width: 100%; 
+   height: 1800px;
+    left: 0; 
+    right: 0;
+    
+  }
+  .pay_detail_container,
+  .work_routine_container{
+    width: 100%;
+    left: 0;
+  
+  }
+  .owertime_container{
+    width: 100%;
+    left: 0;
+    height: 700px;
+  }
+.pay_daily_text,
+.pay_weekly_text
+ {
+  width: 20%;
+  left: 370px;
+ 
+ 
+}
+.owertime_day_text{
+  width:13%;
+  left: 350px;
+}
+ .owertime_night_text{
+  width: 27%;
+  left: 345px;
+ }
+.daily_time,
+.weekly_time{
+  left: 370px;
+}
+.daily_line,
+.weekly_line{
+  width: 80%;
+}
+.owertime_day_time{
+  left: 360px;
+  top: 130px;
+}
+.owertime_night_time{
+  left: 345px;
+  top: 130px;
+}
+.import_text{
+  width: 70%;
+}
+.daily_routine_container,
+.weekly_routine_container{
+  width: 50%;
+}
+.form-check-label{
+  left: 50px;
+}
+.weekly_routine_line{
+  width: 80%;
+  top: 700px;
+}
+.routine_import_text{
+  width: 70%;
+  top: 730px;
+}
+}
+@media (max-width: 480px) {
+  .services_container {
+    max-width: 100%; 
+    height: 1800px;
+    left: 0; 
+    right: 0;
+   
+  }
+
+  .pay_detail_container,
+  .owertime_container{
+    width: 90%;
+  }
+}

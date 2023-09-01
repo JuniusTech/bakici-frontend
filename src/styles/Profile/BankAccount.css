@@ -115,3 +115,67 @@
 .iban_kaydet_btn:hover {
   background: #fda9a9;
 }
+
+
+@media (max-width: 1200px) {
+  .bank_account_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 50rem;
+  }
+
+ 
+
+  .iban_container
+  
+   {
+    width:90%;
+    right: 0;
+    left: 40px;
+    
+  }
+  
+
+}
+
+
+@media (max-width: 768px) {
+  .bank_account_container {
+    max-width: 100%; 
+    height: 1850px;
+    left: 0; 
+    right: 0;
+    
+  }
+  .iban_container{
+    width:100%;
+    left:0;
+  }
+
+  
+  .iban_kaydet_btn{
+    left: 250px;
+    
+  }
+  .iban_text{
+    width: 45%;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .bank_account_container {
+    max-width: 100%; 
+    height: 1800px;
+    left: 0; 
+    right: 0;
+   
+  }
+
+  .iban_container{
+    width:90%;
+    left:0;
+  }
+
+ 
+}

@@ -9,6 +9,8 @@
   position: relative;
   top: 84px;
   left: 200px;
+  box-sizing: border-box;
+  
   
 }
 .about_me {
@@ -202,7 +204,7 @@
 .password_text,
 .email_text,
 .again_email_text {
-  width: 400px;
+  width: 60%;
   height: 52px;
   top: 456px;
   left: 316px;
@@ -225,7 +227,6 @@
   margin-top: 2rem;
 }
 .email_kaydet_btn {
-  border-radius: 26px;
   background-color: #e88585;
   position: absolute;
   margin-top: 1rem;
@@ -233,7 +234,7 @@
   width: 184px;
   height: 52px;
   top: 320px;
-  left: 445px;
+  left: 430px;
   border-radius: 26px;
 }
 .email_kaydet_btn:hover {
@@ -330,3 +331,131 @@
   position: relative;
 }
 
+
+
+ 
+
+@media (max-width: 1200px) {
+  .about_me_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 30rem;
+  }
+
+  .about_photo,
+  .change_btn,
+  .personal_information
+  {
+    left: 0;
+    right: 0;
+  }
+
+  .new_mail_container,
+  .change_password_container
+  
+   {
+    width:160%;
+    right:120px;
+  }
+  .delete_operations
+  {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  .delete,
+  .profile_delete{
+    width: 100%;
+    right:0;
+    left: 0;
+  }
+  .hakkimda_line{
+    right: 14rem;
+   
+  }
+  .email_kaydet_btn{
+    left: 380px;
+    right: 0;
+  }
+  .hakkimda_mail_recompose {
+    right: 0;
+    left: 80px;
+    top: 340px;
+    
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .about_me_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+
+  .about_photo,
+  .change_btn,
+  .personal_information
+  {
+    left: 0;
+    right: 0;
+  }
+
+  .new_mail_container,
+  .change_password_container
+  {
+   width: 130%;
+    right: 80px;
+  }
+  .delete_operations
+  {
+    width: 100%;
+    right: 80px;
+  }
+  .delete,
+  .profile_delete{
+    width:100%;
+    right: 0;
+    left:0;
+   
+  }
+  .email_kaydet_btn{
+    left: 310px;
+    right: 0;
+  }
+ 
+  .hakkimda_line{
+    width: 166%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .about_me_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+
+  .about_photo,
+  .change_btn,
+  .personal_information
+  {
+    left: 0;
+    right: 0;
+  }
+  .hakkimda_line{
+    left: 0;
+    right: 0;
+  }
+  .new_mail_container,
+  .change_password_container
+  {
+    width: 50%;
+    left: 0;
+    right: 0;
+  }
+  
+ 
+}

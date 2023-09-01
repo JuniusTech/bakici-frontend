@@ -185,3 +185,86 @@
   height: 400px;
   margin-top: 20px;
 }
+
+
+
+
+@media (max-width: 1200px) {
+  .services_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 30rem;
+  }
+
+ 
+
+  .work_container,
+  .other_services_container
+  
+   {
+    width:90%;
+    
+  }
+  
+
+}
+
+
+@media (max-width: 768px) {
+  .services_container {
+    max-width: 100%; 
+    height: 1850px;
+    left: 0; 
+    right: 0;
+    
+  }
+  .work_container{
+    width:100%;
+    left:0;
+  }
+
+  .other_services_container{
+    width:100%;
+    height: 1050px;
+    left:0;
+    
+   
+  }
+ 
+  .kaydet_work_btn{
+    left: 40px;
+    
+  }
+  .kaydet_services_btn{
+    left: 40px;
+    top: 1020px;
+  }
+  .other_services_content{
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .services_container {
+    max-width: 100%; 
+    height: 1800px;
+    left: 0; 
+    right: 0;
+   
+  }
+
+  .work_container{
+    width:90%;
+    left:0;
+  }
+
+  .other_services_container{
+    width:90%;
+    height: 1000px;
+    left:0;
+    
+   
+  }
+}
