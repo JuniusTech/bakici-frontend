@@ -424,7 +424,7 @@ function BakiciDetail() {
         </div>
         <div className="yorumlar-container">
           <h5>YORUMLAR</h5>
-          <div className="yorumlar-box d-flex flex-column py-4">
+          <div className="yorumlar-box d-flex flex-column py-4 bg-white">
             <div className="name-star-info-container d-flex justify-content-between">
               <div className="">
                 <p>Ahmet Firtina, 08-05-2023 </p>
@@ -446,7 +446,7 @@ function BakiciDetail() {
             </div>
             <img src={Yorumcu1} alt="" className="yorumcu-image" />
           </div>
-          <div className="yorumlar-box d-flex flex-column py-4">
+          <div className="yorumlar-box d-flex flex-column py-4 bg-white">
             <div className="name-star-info-container d-flex justify-content-between">
               <div className="">
                 <p>Ahmet Firtina, 08-05-2023 </p>
