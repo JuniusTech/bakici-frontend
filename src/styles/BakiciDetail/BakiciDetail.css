@@ -244,79 +244,8 @@
 
 /*  */
 
-.yorumlar-box {
-  border: 1px solid rgba(69, 90, 100, 0.5);
-  margin: 4rem 0;
-  position: relative;
-}
-
-.rating_wrap {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  float: right;
-  margin-top: 7px;
-  padding: 0 10%;
-}
-
-.rating_wrap .rating {
-  overflow: hidden;
-  position: relative;
-  height: 25px;
-  font-size: 18px;
-  width: 101.25px;
-  font-family: "Font Awesome 5 Free";
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.rating::before {
-  font-size: 18px;
-  content: "\f005\f005\f005\f005\f005";
-  top: 0;
-  position: absolute;
-  left: 0;
-  float: left;
-  color: #f6bc3e;
-}
-
-.product_rate {
-  overflow: hidden;
-  float: left;
-  top: 0;
-  left: 0;
-  position: absolute;
-  padding-top: 1.5em;
-  color: #f6bc3e;
-  width: 60%;
-}
-
-.product_rate::before {
-  font-size: 18px;
-  content: "\f005\f005\f005\f005\f005";
-  top: 0;
-  position: absolute;
-  left: 0;
-  font-weight: 900;
-}
-
 @media (max-width: 768px) {
-  .rating_wrap .rating {
-    height: 25px;
-    font-size: 16px;
-    width: 90px;
-  }
 
-  .rating::before {
-    font-size: 16px;
-  }
-
-  .product_rate::before {
-    font-size: 16px;
-  }
   .bakici-detail-favorilenme {
     font-size: 1rem;
   }
@@ -350,22 +279,6 @@
   }
 }
 
-.yorumcu-image {
-  /* align-self: flex-start; */
-  align-self: center;
-  position: absolute;
-  /* top: 266%; */
-  top: -75px;
-  left: 5%;
-  max-width: 50%;
-}
-
-.name-star-info-container {
-  display: flex;
-  width: 80%;
-  margin-left: auto;
-  margin-top: 2rem;
-}
 
 .page-link {
   margin: 0 20%;
