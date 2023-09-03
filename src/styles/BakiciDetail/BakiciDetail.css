@@ -211,6 +211,39 @@
   padding: 0 5%;
 }
 
+/*  */
+
+.bakici-detail-yorumlar-data {
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 118px;
+  border: 1px solid #455a64;
+  /* min-width: 80vw; */
+  background: #fff;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.11),
+    1px 2px 2px 0px rgba(0, 0, 0, 0.15), 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bakici-detail-yorumlar-data-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 55px;
+}
+
+.bakici-detail-yorumlar-data-bottom {
+  display: flex;
+  color: rgba(69, 90, 100, 1);
+  font-family: Georama;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding: 10px 55px;
+}
+
+/*  */
+
 .yorumlar-box {
   border: 1px solid rgba(69, 90, 100, 0.5);
   margin: 4rem 0;

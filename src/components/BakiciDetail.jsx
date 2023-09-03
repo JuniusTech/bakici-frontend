@@ -272,6 +272,32 @@ function BakiciDetail() {
     setItemOffset(newOffset);
   };
 
+  ////////////////////
+  let datas = [
+    {
+      name: "Ahmet Firtina",
+      date: "08-05-2023",
+      comment:
+        "Memnun kaldık, oğlum ile kaliteli vakit geçirdiler. Montesori aktiviteleri hoşumuza gitti.",
+      point: "⭐⭐⭐⭐⭐",
+      work_type: "Part-time",
+      baby_type: "Gunduz mesai 1 ve 2 yaş arası",
+      image: Yorumcu1,
+    },
+    {
+      name: "Fatma Betul",
+      date: "10-04-2023",
+      comment:
+        "Harika bir deneyimdi. Tavsiye ediyorum. Guvenilir ve kaliteli birisi",
+      point: "⭐⭐⭐⭐⭐",
+      work_type: "Part-time",
+      baby_type: "3 yas uzeri",
+      image: Yorumcu2,
+    },
+  ];
+
+  ////////////////////
+
   return (
     <div className="bakici-detail-container">
       <div className="bakici-detail-name-container">
@@ -324,7 +350,9 @@ function BakiciDetail() {
           <div className="d-flex flex-column justify-content-between my-4 flex-sm-row">
             <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={LanguageIcon} alt="" className="px-2" />
-              <p className="text-center">İyi seviye İngilizce konuşabiliyorum</p>
+              <p className="text-center">
+                İyi seviye İngilizce konuşabiliyorum
+              </p>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={DeneyimIcon} alt="" className="px-2" />
@@ -359,7 +387,9 @@ function BakiciDetail() {
                 <img src={GeceIcon} alt="" className="float-start px-2" />
                 <div className="tarife-container">
                   <h6 className="text-center text-sm-start">Gece Tarife</h6>
-                  <p className="text-center text-sm-start">Gece yatılı çocuk bakımı tarifesi</p>
+                  <p className="text-center text-sm-start">
+                    Gece yatılı çocuk bakımı tarifesi
+                  </p>
                 </div>
               </div>
               <div className="tarife-ücret my-2">
@@ -389,41 +419,72 @@ function BakiciDetail() {
         </div>
 
         {/* <div className="gündüz-tarife-container"> */}
-          <label className="Kontakt-Form-Label-1" id="option-servis">
-            SERVIS
-            <Select
-              id="first-select"
-              className="Form-Select"
-              styles={customStyles}
-              options={service_options}
-              isSearchable={false}
-              components={{
-                DropdownIndicator: () => null,
-                IndicatorSeparator: () => null,
-              }}
-              openMenuOnFocus={true}
-              required
-              value={service_options.find(
-                (option) => option.value === formData.selectedOption
-              )}
-              onChange={(event) =>
-                setformData({ ...formData, selectedOption: event.value })
-              }
-              placeholder="Gunduz Tarife"
-            />
-            <img
-              style={{ filter: imgColor }}
-              src={kontakt_arrow}
-              alt="Arrow"
-              className="Kontakt-Arrow"
-            />
-          </label>
-  
+        <label className="Kontakt-Form-Label-1" id="option-servis">
+          SERVIS
+          <Select
+            id="first-select"
+            className="Form-Select"
+            styles={customStyles}
+            options={service_options}
+            isSearchable={false}
+            components={{
+              DropdownIndicator: () => null,
+              IndicatorSeparator: () => null,
+            }}
+            openMenuOnFocus={true}
+            required
+            value={service_options.find(
+              (option) => option.value === formData.selectedOption
+            )}
+            onChange={(event) =>
+              setformData({ ...formData, selectedOption: event.value })
+            }
+            placeholder="Gunduz Tarife"
+          />
+          <img
+            style={{ filter: imgColor }}
+            src={kontakt_arrow}
+            alt="Arrow"
+            className="Kontakt-Arrow"
+          />
+        </label>
+
         <div className="tarih-container">
           <TarihSecimi onDatesSelected={handleDatesSelected} />
         </div>
         <div className="yorumlar-container">
           <h5>YORUMLAR</h5>
+
+          {datas.map((data) => (
+            <div className="bakici-detail-yorumlar-data">
+              <div className="bakici-detail-yorumlar-data-top flex-column flex-md-row justify-content-center align-items-center">
+                <div className="bakici-yorumlar-data-top-left flex-column flex-md-row">
+                  <img
+                    src={data.image}
+                    className="bakici-yorumlar-data-top-left-img mt-5 mt-md-0"
+                    alt=""
+                  />
+                  <div className="d-flex align-items-end justify-content-center">
+                    <p className="bakici-yorumlar-data-top-left-p m-0">
+                      {data.name}, {data.date}
+                    </p>
+                  </div>
+                </div>
+                <div className="bakici-yorumlar-data-top-right m-2">
+                  <p className="bakici-yorumlar-data-top-right-point">
+                    {data.point}
+                  </p>
+                  <p className="bakici-yorumlar-data-top-right-type">
+                    {data.work_type} - {data.baby_type}
+                  </p>
+                </div>
+              </div>
+              <div>
+                <p className="bakici-detail-yorumlar-data-bottom">{data.comment}</p>
+              </div>
+            </div>
+          ))}
+{/* 
           <div className="yorumlar-box d-flex flex-column py-4 bg-white">
             <div className="name-star-info-container d-flex justify-content-between">
               <div className="">
@@ -467,7 +528,7 @@ function BakiciDetail() {
               </p>
             </div>
             <img src={Yorumcu1} alt="" className="yorumcu-image" />
-          </div>
+          </div> */}
         </div>
       </div>
       <ReactPaginate
