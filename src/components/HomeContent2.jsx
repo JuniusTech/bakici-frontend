@@ -12,8 +12,13 @@ import kaydolİcon from "../assets/kaydol-icon.svg";
 import testİcon from "../assets/test-icon.svg";
 import kurdelaİcon from "../assets/kurdela-icon.svg";
 import teamİcon from "../assets/team-icon.svg";
+import { useNavigate } from 'react-router-dom';
 
 function HomeContent2() {
+
+const navigate = useNavigate();
+
+
     return (
         <div className='HomeContent2-main-container'>
             <Container className="Description">
@@ -103,7 +108,7 @@ function HomeContent2() {
                         </div>
                     </Col>
                     <Col xs={12} md={6} className='d-flex justify-content-center align-self-center'>
-                        <button className="Bakici-Button">BAKICI ARA</button>
+                        <button onClick={()=>navigate("bakiciara")} className="Bakici-Button">BAKICI ARA</button>
                     </Col>
                 </Row>
             </Container>
@@ -120,7 +125,7 @@ function HomeContent2() {
                                 alt="Kaydolİcon"
                             />
                             <p className="BakiciOlma-Box-Card-Text">
-                                Sisteme Kaydinizi yapin
+                                Sisteme Kaydınızı yapın
                             </p>
                             <hr className="BakiciOlma-Box-Card-Hr position-absolute" />
                         </div>
@@ -161,11 +166,11 @@ function HomeContent2() {
                                 src={teamİcon}
                                 alt="teamİcon"
                             />
-                            <p className="BakiciOlma-Box-Card-Text">Ekibe hosgeldiniz</p>
+                            <p className="BakiciOlma-Box-Card-Text">Ekibe hoşgeldiniz</p>
                         </div>
                     </Col>
                     <Col xs={12} md={6} className='d-flex justify-content-center align-self-center'>
-                        <button className="BakiciOlma-Button">İŞE BAŞVUR</button>
+                        <button onClick={()=>navigate("isebasvur")} className="BakiciOlma-Button">İŞE BAŞVUR</button>
                     </Col>
                 </Row>
             </Container>
