@@ -6,6 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import homeicon from "../assets/homeicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../components/Footer";
 
 function SingleBakici() {
   return (
@@ -27,6 +28,7 @@ function SingleBakici() {
           <BakiciDetail />
         </Col>
       </div>
+      <Footer />
     </div>
   );
 }

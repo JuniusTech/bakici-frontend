@@ -242,10 +242,16 @@
   padding: 10px 55px;
 }
 
+.bakici-detail-yorumlar-data-top-left-img {
+  /* max-width: 100%; */
+  position: relative;
+  top: -50px;
+}
+
+
 /*  */
 
 @media (max-width: 768px) {
-
   .bakici-detail-favorilenme {
     font-size: 1rem;
   }
@@ -278,7 +284,6 @@
     font-size: 1.25rem;
   }
 }
-
 
 .page-link {
   margin: 0 20%;
