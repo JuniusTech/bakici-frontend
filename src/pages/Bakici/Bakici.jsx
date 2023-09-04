@@ -4,6 +4,7 @@ import BakiciHome from "./BakiciHome";
 import BakiciYorumlar from "./BakiciYorumlar";
 import NavbarBakici from '../../components/NavbarBakici';
 import Footer from '../../components/Footer';
+import BakiciProfile from "./BakiciProfile";
 import BakiciTakvim from "./BakiciTakvim";
 import BakiciMesajlar from "./BakiciMesajlar/BakiciMesajlar";
 
@@ -20,13 +21,13 @@ const secondNavLinks = [
   },
   {
     id: 3,
-    title: "TAKVIM",
+    title: "TAKVİM",
     Component: () => <BakiciTakvim/>,
   },
   {
     id: 4,
-    title: "PROFIL",
-    Component: () => <div>Profil</div>,
+    title: "PROFİL",
+    Component: () => <BakiciProfile />,
   },
   {
     id: 5,

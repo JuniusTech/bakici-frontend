@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+.about_me_container {
+  width: 53rem;
+  height: 2370px;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: relative;
+  top: 84px;
+  left: 200px;
+  box-sizing: border-box;
+  
+  
+}
+.about_me {
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  text-align: center;
+}
+.about_me_text {
+  width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  justify-content: center;
+}
+.about_me_text img {
+  width: 32px;
+  height: 32px;
+}
+
+.about_photo {
+  width: 154px;
+  height: 157px;
+  bottom: 2150px;
+  left: 200px;
+  border: 1px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.change_btn {
+  width: 179px;
+  height: 42px;
+  border-radius: 26px;
+  background-color: #e88585;
+  position: relative;
+  bottom: 2100px;
+  left: 200px;
+  padding: 6px 23px 6px 23px;
+  border-radius: 19px;
+  gap: 10px;
+  border-radius: 19px;
+  border: none;
+  text-align: center;
+  justify-content: center;
+}
+.change_btn:hover {
+  background: #fda9a9;
+}
+.change_btn span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.change_btn img {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.personal_information {
+  width: 25rem;
+  height: 377px;
+  position: relative;
+  left: 200px;
+  bottom: 2000px;
+}
+
+.name_surname {
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+}
+
+.name_surname_text,
+.e_mail_text,
+.phone_text {
+  width: 400px;
+  height: 51px;
+  top: 456px;
+  left: 316px;
+  border-radius: 25.5px;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+  margin-top: 1rem;
+}
+
+.e_mail {
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  padding-top: 10px;
+}
+
+.phone_number {
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  padding-top: 10px;
+}
+
+.kaydet_hakkimda_btn {
+  width: 400px;
+  height: 51px;
+  top: 740px;
+  left: 316px;
+  border-radius: 26px;
+  background: #e88585;
+  border: none;
+  margin-top: 2rem;
+}
+.kaydet_hakkimda_btn:hover {
+  background: #fda9a9;
+}
+.kaydet_hakkimda_btn span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+}
+
+.hakkimda_line {
+  width: 53rem;
+  border: 1px solid #455a64;
+  opacity: 50%;
+  position: relative;
+  right: 224px;
+  top: 100px;
+}
+
+.new_mail_container {
+  width: 45rem;
+  height: 445px;
+  position: relative;
+  background: #f5f5f5;
+  top: 160px;
+  right: 160px;
+  border-radius: 7px;
+}
+.new_mail_header,
+.change_password_header {
+  width: 100%;
+  height: 52px;
+  background: #455a64;
+}
+
+.new_mail_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 10px;
+}
+
+.password_text,
+.email_text,
+.again_email_text {
+  width: 60%;
+  height: 52px;
+  top: 456px;
+  left: 316px;
+  border-radius: 25.5px;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+
+.password_header,
+.email_header,
+.again_email_header {
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  padding-left: 5rem;
+  margin-top: 2rem;
+}
+.email_kaydet_btn {
+  background-color: #e88585;
+  position: absolute;
+  margin-top: 1rem;
+  border: none;
+  width: 184px;
+  height: 52px;
+  top: 320px;
+  left: 430px;
+  border-radius: 26px;
+}
+.email_kaydet_btn:hover {
+  background: #fda9a9;
+}
+.email_kaydet_btn span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.hakkimda_mail_recompose {
+  color: #467888;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  font-size: 20px;
+  position: absolute;
+  width: 184px;
+  height: 24px;
+  top: 330px;
+  left: 150px;
+}
+.change_password_container {
+  width: 45rem;
+  height: 445px;
+  position: relative;
+  background: #f5f5f5;
+  top: 230px;
+  right: 160px;
+  border-radius: 7px;
+}
+.change_password_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 10px;
+}
+
+.delete_operations {
+  width: 45rem;
+  height: 237px;
+  position: absolute;
+  background: #f5f5f5;
+  top: 520px;
+  padding: 0px 0px 61px 0px;
+  border-radius: 7px;
+}
+.delete {
+  background: #e3e3e3;
+  width: 45rem;
+  height: 52px;
+  border: none;
+}
+.delete span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+}
+.profile_delete {
+  background: #f64d4d;
+  width: 45rem;
+  height: 66px;
+  border-radius: 26px;
+  border: none;
+  position: relative;
+  top: 60px;
+  padding: 14px 162px 14px 162px;
+  gap: 10px;
+}
+.profile_delete span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+}
+
+
+
+ 
+
+@media (max-width: 1200px) {
+  .about_me_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 30rem;
+  }
+
+  .about_photo,
+  .change_btn,
+  .personal_information
+  {
+    left: 0;
+    right: 0;
+  }
+
+  .new_mail_container,
+  .change_password_container
+  
+   {
+    width:160%;
+    right:120px;
+  }
+  .delete_operations
+  {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  .delete,
+  .profile_delete{
+    width: 100%;
+    right:0;
+    left: 0;
+  }
+  .hakkimda_line{
+    right: 14rem;
+   
+  }
+  .email_kaydet_btn{
+    left: 380px;
+    right: 0;
+  }
+  .hakkimda_mail_recompose {
+    right: 0;
+    left: 80px;
+    top: 340px;
+    
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .about_me_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+
+  .about_photo,
+  .change_btn,
+  .personal_information
+  {
+    left: 0;
+    right: 0;
+  }
+
+  .new_mail_container,
+  .change_password_container
+  {
+   width: 130%;
+    right: 80px;
+  }
+  .delete_operations
+  {
+    width: 100%;
+    right: 80px;
+  }
+  .delete,
+  .profile_delete{
+    width:100%;
+    right: 0;
+    left:0;
+   
+  }
+  .email_kaydet_btn{
+    left: 310px;
+    right: 0;
+  }
+ 
+  .hakkimda_line{
+    width: 166%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .about_me_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+  }
+
+  .about_photo,
+  .change_btn,
+  .personal_information
+  {
+    left: 0;
+    right: 0;
+  }
+  .hakkimda_line{
+    left: 0;
+    right: 0;
+  }
+  .new_mail_container,
+  .change_password_container
+  {
+    width: 50%;
+    left: 0;
+    right: 0;
+  }
+  
+ 
+}
