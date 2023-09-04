@@ -38,7 +38,7 @@ const AnaUyelik = ({ openAnaUyelik, setOpenAnaUyelik }) => {
                 src={MusteriButton}
                 alt="MusteriButton"
               />
-              <p className="AnaUyelik-main-left-p">Musteri olarak</p>
+              <p className="AnaUyelik-main-left-p">EBEVEYN OLARAK</p>
             </div>
             <div
               role="button"
@@ -50,7 +50,7 @@ const AnaUyelik = ({ openAnaUyelik, setOpenAnaUyelik }) => {
                 src={BakiciButton}
                 alt="BakiciButton"
               />
-              <p className="AnaUyelik-main-right-p">BAKICI olarak</p>
+              <p className="AnaUyelik-main-right-p">BAKICI OLARAK</p>
             </div>
           </div>
         </div>
