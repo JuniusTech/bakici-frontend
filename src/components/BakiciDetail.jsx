@@ -5,7 +5,6 @@ import Bakici2 from "../images/Bakıcı2.png";
 import Slider from "react-slick";
 import "../styles/BakiciDetail/Slick.css";
 import "../styles/BakiciDetail/Slick-theme.css";
-import Star from "../images/Star.png";
 import RedHeart from "../images/RedHeart.png";
 import LanguageIcon from "../images/LanguageIcon.png";
 import DeneyimIcon from "../images/DeneyimIcon.png";
@@ -25,6 +24,7 @@ import kontakt_arrow from "../assets/Kontakt_Arrow.svg";
 import Time1 from "../assets/Time1.svg";
 import Time2 from "../assets/Time2.svg";
 import Time3 from "../assets/Time3.svg";
+import Footer from "../components/Footer";
 // import { baseUrl } from "./config";
 
 function BakiciDetail() {
@@ -275,23 +275,23 @@ function BakiciDetail() {
   ////////////////////
   let datas = [
     {
-      name: "Ahmet Firtina",
+      name: "Ahmet Fırtına",
       date: "08-05-2023",
       comment:
         "Memnun kaldık, oğlum ile kaliteli vakit geçirdiler. Montesori aktiviteleri hoşumuza gitti.",
       point: "⭐⭐⭐⭐⭐",
       work_type: "Part-time",
-      baby_type: "Gunduz mesai 1 ve 2 yaş arası",
+      baby_type: "Gündüz mesai 1 ve 2 yaş arası",
       image: Yorumcu1,
     },
     {
-      name: "Fatma Betul",
+      name: "Fatma Betül",
       date: "10-04-2023",
       comment:
-        "Harika bir deneyimdi. Tavsiye ediyorum. Guvenilir ve kaliteli birisi",
+        "Harika bir deneyimdi. Tavsiye ediyorum. Güvenilir ve kaliteli birisi",
       point: "⭐⭐⭐⭐⭐",
       work_type: "Part-time",
-      baby_type: "3 yas uzeri",
+      baby_type: "3 yaş üzeri",
       image: Yorumcu2,
     },
   ];
@@ -338,10 +338,10 @@ function BakiciDetail() {
           <h5>HAKKINDA</h5>
           <p>
             Merhaba ben Tuğba Aksoy. 23 Yaşındayım. 3 yıllık bakıcılık deneyimim
-            var. Çoğunlukla okul öncesi çocuklar ile çalıştım. çocukları çok
-            seviyorum. Montessori eğitimi aldım bu sebeble çocuklarla birlikte
+            var. Çoğunlukla okul öncesi çocuklar ile çalıştım. Çocukları çok
+            seviyorum. Montessori eğitimi aldım bu sebeple çocuklarla birlikte
             kaliteli vakit geçirmek en büyük hedefim. Ankara'da ailemle ile
-            beraber yaşıyorum. Üniversite öğrencisiyim, ek gelir kazanmak ve
+            beraber yaşıyorum. Üniversite öğrencisiyim, ek gelir kazanmak istiyorum ve
             çocuklarla vakit geçirmeyi seviyorum.
           </p>
         </div>
@@ -455,17 +455,17 @@ function BakiciDetail() {
         <div className="yorumlar-container">
           <h5>YORUMLAR</h5>
 
-          {datas.map((data) => (
-            <div className="bakici-detail-yorumlar-data">
-              <div className="bakici-detail-yorumlar-data-top flex-column flex-md-row justify-content-center align-items-center">
-                <div className="bakici-yorumlar-data-top-left flex-column flex-md-row">
+          {datas.map((data, index) => (
+            <div key={index} className="bakici-detail-yorumlar-data">
+              <div className="bakici-detail-yorumlar-data-top flex-column flex-md-row ">
+                <div className="bakici-detail-yorumlar-data-top-left d-flex flex-column flex-md-row">
                   <img
                     src={data.image}
-                    className="bakici-yorumlar-data-top-left-img mt-5 mt-md-0"
+                    className="bakici-detail-yorumlar-data-top-left-img mt-5 mt-md-0"
                     alt=""
                   />
-                  <div className="d-flex align-items-end justify-content-center">
-                    <p className="bakici-yorumlar-data-top-left-p m-0">
+                  <div className="d-flex align-items-center justify-content-center">
+                    <p className="bakici-detail-yorumlar-data-top-left-p m-0">
                       {data.name}, {data.date}
                     </p>
                   </div>
@@ -480,55 +480,12 @@ function BakiciDetail() {
                 </div>
               </div>
               <div>
-                <p className="bakici-detail-yorumlar-data-bottom">{data.comment}</p>
+                <p className="bakici-detail-yorumlar-data-bottom">
+                  {data.comment}
+                </p>
               </div>
             </div>
           ))}
-{/* 
-          <div className="yorumlar-box d-flex flex-column py-4 bg-white">
-            <div className="name-star-info-container d-flex justify-content-between">
-              <div className="">
-                <p>Ahmet Firtina, 08-05-2023 </p>
-              </div>
-              <div className="d-flex flex-column">
-                <div class="rating_wrap align-self-end">
-                  <div class="rating">
-                    <div class="product_rate w-75"></div>
-                  </div>
-                </div>
-                <p>Gunduz mesai part-time- 1 ve 2 yas arasi</p>
-              </div>
-            </div>
-            <div>
-              <p>
-                Memnun kaldik, oglum ile kaliteli vakit gecirdiler. Montesori
-                aktiviteleri hosumuza gitti.
-              </p>
-            </div>
-            <img src={Yorumcu1} alt="" className="yorumcu-image" />
-          </div>
-          <div className="yorumlar-box d-flex flex-column py-4 bg-white">
-            <div className="name-star-info-container d-flex justify-content-between">
-              <div className="">
-                <p>Ahmet Firtina, 08-05-2023 </p>
-              </div>
-              <div className="d-flex flex-column">
-                <div class="rating_wrap align-self-end">
-                  <div class="rating">
-                    <div class="product_rate w-75"></div>
-                  </div>
-                </div>
-                <p>Gunduz mesai part-time- 1 ve 2 yas arasi</p>
-              </div>
-            </div>
-            <div>
-              <p>
-                Memnun kaldik, oglum ile kaliteli vakit gecirdiler. Montesori
-                aktiviteleri hosumuza gitti.
-              </p>
-            </div>
-            <img src={Yorumcu1} alt="" className="yorumcu-image" />
-          </div> */}
         </div>
       </div>
       <ReactPaginate
@@ -553,7 +510,9 @@ function BakiciDetail() {
         activeClassName="active"
         renderOnZeroPageCount={null}
       />
+      
     </div>
+    
   );
 }
 
