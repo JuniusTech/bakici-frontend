@@ -12,6 +12,7 @@
   /* background: #00000033; */
 }
 
+
 .heart_container {
   position: absolute;
   width: 28px;
@@ -48,16 +49,13 @@
 }
 
 .bakici_name_container img {
-  /* width: 16px;
-    height: 16px; */
-  /* top: 206px;
-    left: 282px;
-    margin-left: 5px; */
+
   margin-left: 5px; /**/
 }
 
 .bakicikart-info-text-container {
     background-color: white;
+    border-radius: 8px;
 }
 
 
