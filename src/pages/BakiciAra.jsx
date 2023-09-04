@@ -86,7 +86,7 @@ const BakiciAra = () => {
         />
         <hr className="my-5" />
         <div className="bakiciara-önecikan-bakici-container py-2 m-auto">
-          <div className="bakiciara-önecikan-bakici-header d-flex my-5">
+          <div className="bakiciara-önecikan-bakici-header d-flex my-5 justify-content-center">
             <hr className="w-25 mx-2 mx-lg-4 my-auto" />
             <h1 className="d-flex justify-content-center ">
               ÖNE ÇIKAN BAKICILAR
