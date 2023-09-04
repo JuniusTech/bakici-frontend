@@ -26,7 +26,7 @@ const AnaUyelik = ({ openAnaUyelik, setOpenAnaUyelik }) => {
         </div>
 
         <div className="AnaUyelik-main">
-          <h1 className=" AnaUyelik-nav-logo-h1">UYE OLMAK ICIN TIKLAYIN</h1>
+          <h1 className=" AnaUyelik-nav-logo-h1">ÜYE OLMAK İÇİN TIKLAYIN</h1>
           <div className="AnaUyelik-buttons">
             <div
               role="button"
