@@ -139,7 +139,7 @@ const navigate = useNavigate();
                                 alt="Testİcon"
                             />
                             <p className="BakiciOlma-Box-Card-Text">
-                                Online bakici yeterlilik testini yapin
+                                Online bakıcı yeterlilik testini yapın
                             </p>
                             <hr className="BakiciOlma-Box-Card-Hr position-absolute" />
                         </div>
