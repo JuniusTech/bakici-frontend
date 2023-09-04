@@ -1,0 +1,232 @@
+.EbeveynMesajlarArsivlenen{
+    display: flex;
+    width: 80vw;
+    margin: 100px auto;
+    gap: 150px;
+
+}
+
+.EbeveynMesajlarOnayBekleyen-Left-Div{
+    flex-basis: 15%;
+}
+
+.EbeveynMesajlarArsivlenen-Right{
+    flex-basis: 85%;
+}
+.EbeveynMesajlarArsivlenen-Left-Div-h3,.EbeveynMesajlarArsivlenen-Right-Top-Remove,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Left-Desc,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Right-Desc,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date{
+    color: var(--ternary, #455A64);
+font-family: Georama;
+font-size: calc(1em + 1vw);
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Top{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Top-Remove{
+    font-size: calc(1em + 1vw);
+    margin: 0;
+    font-weight: 400;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px solid var(--deep-blue, #457888);
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Left-Desc,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Right-Desc{
+    margin: 0;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Right-Desc{
+    cursor: pointer;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-HR{
+    stroke-width: 1px;
+    stroke: #000;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date{
+    color: #7C7C7C;
+    font-size: 24px;
+    text-align: center;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Messages{
+    height: 1000px;
+    overflow-y:scroll;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender{
+    border-radius: 18px;
+background: #DADADA;
+width: 45%;
+padding: 10px;
+margin: 20px 10px 20px auto;
+}
+
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender-Message,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Receiver-Message{
+    color: #000;
+    text-align: justify;
+    font-family: Georama;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    width: 100%;
+    white-space:normal;
+    word-break:break-all;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender-MessageDate,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Receiver-MessageDate{
+    color: #A6A6A6;
+font-family: Georama;
+font-size: 24px;
+line-height: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Receiver{
+    border-radius: 18px;
+    background: #FAC3C0;
+width: 45%;
+padding: 10px;
+margin: 20px 10px 20px ;
+}
+
+.EbeveynMesajlarArsivlenen-Right-Bottom{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+}
+.EbeveynMesajlarArsivlenen-Right-Bottom-Inputs{
+    height: 46px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 36px;
+    border: 2px solid #457888;
+    box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .EbeveynMesajlarArsivlenen-Right-Bottom-Input{
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .EbeveynMesajlarArsivlenen-Right-Bottom-Input:focus{
+    border: none;
+    outline: none;
+  }
+  .EbeveynMesajlarArsivlenen-Right-Bottom-Input-Location,.EbeveynMesajlarArsivlenen-Right-Bottom-Input-Media{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 32.834px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.EbeveynMesajlarArsivlenen-Right-Bottom-Input-Location{
+    right: 60px;
+}
+.EbeveynMesajlarArsivlenen-Right-Bottom-Input-Media{
+    right: 20px;
+    width: 30px;
+    height: 38.834px;
+}
+.EbeveynMesajlarArsivlenen-Right-Bottom-Button{
+    color: #FFF;
+    text-align: center;
+    font-family: Georama;
+    font-size: calc(.8em + 1vw);;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 36px;
+background: #E88585;
+border: none;
+padding: 5px 50px;
+}
+
+.EbeveynMesajlarArsivlenen-Left-Div-h3{
+    white-space: nowrap;
+}
+
+@media screen and (max-width:768px) {
+
+    .EbeveynMesajlarArsivlenen{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .EbeveynMesajlarOnayBekleyen-Left-Div-Data{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .EbeveynMesajlarArsivlenen-Left-Div-h3{
+        text-align: center;
+        margin-bottom: 20px;
+      
+    }
+
+    .EbeveynMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top{
+        flex-direction: column;
+    }
+
+    .EbeveynMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Onaylama{
+        flex-direction: column;
+    }
+
+    .EbeveynMesajlarOnayBekleyen-Right-TalepEdilen-Div-Top-Left-Onaylama,.EbeveynMesajlarOnayBekleyen-Reddet-Third-h3{
+        text-align: center;
+    }
+
+    .EbeveynMesajlarOnayBekleyen-Reddet-Third-h3{
+        white-space: nowrap;
+    }
+
+    .EbeveynMesajlarOnayBekleyen-Right-TalepEdilen-Div-Bottom-Onaylama{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    align-items: center;
+    }
+
+    .EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Receiver{
+        width: 60%;
+    }
+    .EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender-Message,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Receiver-Message,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender-MessageDate,.EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Receiver-MessageDate{
+        font-size: 16px;
+    }
+}

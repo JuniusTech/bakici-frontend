@@ -485,7 +485,7 @@ const Kontakt = () => {
     </form>
 
       <p className='kontakt-bottom-info'>
-      Tugba ile hiçbir yükümlülük altına girmeden tamamen ücretsiz olarak iletişime geçin. Carezone araciligi ile odeme yaparak rezervasyonu tamamlamak isteyip istemediğinize ve ne zaman tamamlayacağınıza siz karar verirsiniz. Site aracılığıyla yapılan tüm rezervasyonlar, Memnuniyet Garantisi ve Rezervasyon Garantisini içeren Kalite Sözü kapsamındadır.
+      Tuğba ile hiçbir yükümlülük altına girmeden tamamen ücretsiz olarak iletişime geçin. Carezone aracılığı ile ödeme yaparak rezervasyonu tamamlamak isteyip istemediğinize ve ne zaman tamamlayacağınıza siz karar verirsiniz. Site aracılığıyla yapılan tüm rezervasyonlar, Memnuniyet Garantisi ve Rezervasyon Garantisini içeren Kalite Sözü kapsamındadır.
       </p>
     </div>
     {

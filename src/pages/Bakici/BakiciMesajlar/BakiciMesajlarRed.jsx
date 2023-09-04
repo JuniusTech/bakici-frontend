@@ -12,7 +12,7 @@ const BakiciMesajlarRed = ({selectedNumber,rejectedMission} ) => {
     <div className='BakiciMesajlarRed'>
     <div className='BakiciMesajlarGelenKutusu'>
     <p className='BakiciMesajlarGelenKutusuGeri' onClick={clickedp}>Gelen Kutusuna geri dönün</p>
-    <h3 className='BakiciMesajlarOnaylanan-Title'>RED EDİLEN GÖREVLER</h3>
+    <h3 className='BakiciMesajlarOnaylanan-Title'>REDDEDİLEN GÖREVLER</h3>
     {
       rejectedMission.map((selectedUser) =>{
         return (
@@ -30,7 +30,7 @@ const BakiciMesajlarRed = ({selectedNumber,rejectedMission} ) => {
                 </div>
                 </div>
                 <div className='BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left'>
-                  <p className='BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Onaylama'>RED EDİLDİ</p>
+                  <p className='BakiciMesajlarIptal-Right-TalepEdilen-Div-Top-Left-Onaylama'>REDDEDİLDİ</p>
                   <img src={iptal} alt="" />
                 </div>
                 <div>

@@ -1,9 +1,9 @@
-.Bakici-Mesajlar-Anasayfa{
+.Ebeveyn-Mesajlar-Anasayfa{
     margin: 50px auto 400px;
 }
 
 
-.Bakici-Mesajlar-Anasayfa-Top{
+.Ebeveyn-Mesajlar-Anasayfa-Top{
     display: flex;
     width: 80vw;
     margin: 0px auto 100px;
@@ -12,7 +12,7 @@
     
 }
 
-.Bakici-Mesajlar-Anasayfa-Top-H3{
+.Ebeveyn-Mesajlar-Anasayfa-Top-H3{
     color: #455A64;
 font-family: Georama;
 font-size: calc(1em + 1vw);
@@ -23,11 +23,11 @@ line-height: 24px; /* 75% */
 margin-top: 25px;
 }
 
-.Bakici-Mesajlar-Anasayfa-Top-Select{
+.Ebeveyn-Mesajlar-Anasayfa-Top-Select{
     width: 50%;
 }
 
-.Bakici-Mesajlar-Anasayfa-Top-Paragraph{
+.Ebeveyn-Mesajlar-Anasayfa-Top-Paragraph{
     color: #E88485;
 font-family: Georama;
 font-size: calc(1em + 1vw);
@@ -40,7 +40,7 @@ margin-top: 25px;
 cursor: pointer;
 }
 
-  .Bakici-Mesajlar-Anasayfa-Bottom{
+  .Ebeveyn-Mesajlar-Anasayfa-Bottom{
     cursor: pointer;
     width: 415px;
 height: 110px;
@@ -55,7 +55,7 @@ align-items: center;
 position: relative;
   }
 
-  .Bakici-Mesajlar-Anasayfa-Bottom-Paragraph{
+  .Ebeveyn-Mesajlar-Anasayfa-Bottom-Paragraph{
     color: #000;
 font-family: Georama;
 font-size: calc(1em + 1vw);
@@ -63,11 +63,10 @@ font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 75% */
 margin: 0;
-cursor: pointer;
 
   }
 
-  .Bakici-Mesajlar-Anasayfa-Bottom-Number{
+  .Ebeveyn-Mesajlar-Anasayfa-Bottom-Number{
     position: absolute;
     right: 20px;
     bottom: 0;
@@ -78,7 +77,7 @@ cursor: pointer;
     padding: 7px 13px;
   }
 
-  .Bakici-Mesajlar-Anasayfa-Top-Select-Arrow{
+  .Ebeveyn-Mesajlar-Anasayfa-Top-Select-Arrow{
     width: 17px;
     height: 16px;
     position: absolute;
@@ -86,7 +85,7 @@ cursor: pointer;
     right: 5%;
   }
 
-  .BakiciMesajlarGelenKutusuGeri{
+  .EbeveynMesajlarGelenKutusuGeri{
     margin: 100px auto;
     text-align: right;
     color: #E88485;
@@ -100,14 +99,14 @@ cursor: pointer;
   }
 
   @media only screen and (max-width: 1200px){
-    .Bakici-Mesajlar-Anasayfa-Top{
+    .Ebeveyn-Mesajlar-Anasayfa-Top{
         flex-direction: column;
         gap: 50px;
         width: 80vw;
         margin: 0px auto 50px;
         text-align: center;
     }
-    .Bakici-Mesajlar-Anasayfa-Top-Select{
+    .Ebeveyn-Mesajlar-Anasayfa-Top-Select{
         width: 100%;
     }
   }
