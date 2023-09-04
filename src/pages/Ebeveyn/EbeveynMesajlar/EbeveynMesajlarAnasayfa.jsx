@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Select from 'react-select';
 import kontakt_arrow from "../../../assets/Kontakt_Arrow.svg"
-import "./../../../styles/BakiciMesajlar/BakiciMesajlarAnasayfa.css"
+import "./../../../styles/Ebeveyn/EbeveynMesajlar/EbeveynMesajlarAnasayfa.css"
 
-const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedNumber}) => {
+const EbeveynMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedNumber}) => {
     const [selectData, setSelectData] = useState();
     const [imgColor, setImgColor] = useState("");
     const filterColor =
@@ -12,15 +12,11 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
      
     const service_options = [
       {
-        label: "Onay Bekleyen",
-        value: "Onay Bekleyen",
-      },
-      {
         label: "Onaylanan",
         value: "Onaylanan",
       },
       {
-        label: "Tamamlanmış görevleriniz",
+        label: "Hizmet Alınan Bakıcı Geçmişi",
         value: "Tamamlanmis gorevleriniz",
       },
       {
@@ -124,10 +120,10 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
         visibility(false);
       }
   return (
-    <div className='Bakici-Mesajlar-Anasayfa'>
-    <div className='Bakici-Mesajlar-Anasayfa-Top'>
-    <h3 className='Bakici-Mesajlar-Anasayfa-Top-H3'>Çalışma Raporlarınız</h3>
-    <div className='Bakici-Mesajlar-Anasayfa-Top-Select'>
+    <div className='Ebeveyn-Mesajlar-Anasayfa'>
+    <div className='Ebeveyn-Mesajlar-Anasayfa-Top'>
+    <h3 className='Ebeveyn-Mesajlar-Anasayfa-Top-H3'>Hizmet Raporlarınız</h3>
+    <div className='Ebeveyn-Mesajlar-Anasayfa-Top-Select'>
     <label className="Kontakt-Form-Label" id='option-servis'>
     <Select
       id="first-select"
@@ -152,26 +148,26 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
       style={{ filter: imgColor}}
       src={kontakt_arrow}
       alt="Arrow"
-      className="Bakici-Mesajlar-Anasayfa-Top-Select-Arrow"
+      className="Ebeveyn-Mesajlar-Anasayfa-Top-Select-Arrow"
     />
   </label>
     </div>
   
-  <p className='Bakici-Mesajlar-Anasayfa-Top-Paragraph' onClick={arsivlenenMesajlar}>Arşivlenen Mesajlar</p>
+  <p className='Ebeveyn-Mesajlar-Anasayfa-Top-Paragraph' onClick={arsivlenenMesajlar}>Arşivlenen Mesajlar</p>
     </div>
    
-    <div className='Bakici-Mesajlar-Anasayfa-Middle'>
+    <div className='Ebeveyn-Mesajlar-Anasayfa-Middle'>
 
-    <svg className='Bakici-Mesajlar-Anasayfa-Middle-HR' xmlns="http://www.w3.org/2000/svg" width="80vw" height="2" viewBox="0 0 1532 2" fill="none">
+    <svg className='Ebeveyn-Mesajlar-Anasayfa-Middle-HR' xmlns="http://www.w3.org/2000/svg" width="80vw" height="2" viewBox="0 0 1532 2" fill="none">
 <path d="M1 1H1531" stroke="#455A64" stroke-width="0.5" stroke-linecap="round"/>
 </svg>
     </div>
 
 
-    <div className='Bakici-Mesajlar-Anasayfa-Bottom' onClick={arsivlenenMesajlar}>
+    <div className='Ebeveyn-Mesajlar-Anasayfa-Bottom' onClick={arsivlenenMesajlar}>
 
-            <p className='Bakici-Mesajlar-Anasayfa-Bottom-Paragraph' >1 okunmamış mesajınız var</p>
-            <p className='Bakici-Mesajlar-Anasayfa-Bottom-Number'>1</p>
+            <p className='Ebeveyn-Mesajlar-Anasayfa-Bottom-Paragraph'>1 okunmamış mesajınız var</p>
+            <p className='Ebeveyn-Mesajlar-Anasayfa-Bottom-Number'>1</p>
  
     </div>
 
@@ -180,4 +176,4 @@ const BakiciMesajlarAnasayfa = ({selectedNav,setSelectedNav,visibility,selectedN
   )
 }
 
-export default BakiciMesajlarAnasayfa
+export default EbeveynMesajlarAnasayfa
