@@ -36,7 +36,7 @@ const Pay = () => {
             <input
         type="text"
         className='pay_daily_text'
-        placeholder=" | TL"
+        placeholder="  |                                 TL"
         style={{ opacity:"50%"}}
 
       /></div>
@@ -48,8 +48,8 @@ const Pay = () => {
         <div>
             <input
         type="text"
-        className='pay_weekly_text'
-        placeholder="  | TL"
+        className='pay_weekly_text' 
+        placeholder="   |                                  TL"
         style={{ opacity:"50%"}}
 
       /></div>
@@ -69,7 +69,7 @@ const Pay = () => {
             <input
         type="text"
         className='owertime_day_text'
-        placeholder="  |  TL"
+        placeholder="   |                                   TL"
         style={{ opacity:"50%"}}
 
       />
@@ -84,7 +84,7 @@ const Pay = () => {
             <input
         type="text"
         className='owertime_night_text'
-        placeholder="  | TL"
+        placeholder="   |                                  TL"
         style={{ paddingLeft:"10px", opacity:"50%"}}
 
       />

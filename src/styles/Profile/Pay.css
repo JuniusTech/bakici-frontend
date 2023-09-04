@@ -99,7 +99,6 @@
   line-height: 50px;
   letter-spacing: 0em;
   text-align: left;
- 
 }
 .pay_daily_text {
   width: 210px;
@@ -602,109 +601,143 @@
 
 @media (max-width: 1200px) {
   .pay_container {
-    max-width: 100%; 
-    left: 0; 
+    max-width: 100%;
+    left: 0;
     right: 30rem;
-    
   }
-
- 
 
   .pay_detail_container,
   .owertime_container,
-  .work_routine_container
-  
-   {
-    width:90%;
-    
-    
+  .work_routine_container {
+    width: 90%;
+    right: 0;
   }
-  
 
+  .owertime_day_time {
+    top: 130px;
+    left: 370px;
+  }
+  .owertime_night_time {
+    top: 130px;
+    left: 370px;
+  }
+  .daily_routine_container,
+  .weekly_routine_container {
+    width: 90%;
+  }
+  .weekly_routine_line {
+    width: 80%;
+    top: 500px;
+  }
+  .routine_import_text {
+    width: 80%;
+    top: 550px;
+  }
 }
-
 
 @media (max-width: 768px) {
   .services_container {
-    max-width: 100%; 
-   height: 1800px;
-    left: 0; 
+    max-width: 100%;
+    height: 1800px;
+    left: 0;
     right: 0;
-    
   }
   .pay_detail_container,
-  .work_routine_container{
+  .work_routine_container {
     width: 100%;
     left: 0;
-  
   }
-  .owertime_container{
+  .owertime_container {
     width: 100%;
     left: 0;
-    height: 700px;
   }
-.pay_daily_text,
-.pay_weekly_text
- {
-  width: 20%;
-  left: 370px;
- 
- 
-}
-.owertime_day_text{
-  width:13%;
-  left: 350px;
-}
- .owertime_night_text{
-  width: 27%;
-  left: 345px;
- }
-.daily_time,
-.weekly_time{
-  left: 370px;
-}
-.daily_line,
-.weekly_line{
-  width: 80%;
-}
-.owertime_day_time{
-  left: 360px;
-  top: 130px;
-}
-.owertime_night_time{
-  left: 345px;
-  top: 130px;
-}
-.import_text{
-  width: 70%;
-}
-.daily_routine_container,
-.weekly_routine_container{
-  width: 50%;
-}
-.form-check-label{
-  left: 50px;
-}
-.weekly_routine_line{
-  width: 80%;
-  top: 700px;
-}
-.routine_import_text{
-  width: 70%;
-  top: 730px;
-}
+  .pay_daily_text,
+  .pay_weekly_text {
+    width: 20%;
+    left: 370px;
+  }
+  .owertime_day_text {
+    width: 13%;
+    left: 350px;
+  }
+  .owertime_night_text {
+    width: 28%;
+    left: 345px;
+  }
+  .daily_time,
+  .weekly_time {
+    left: 370px;
+  }
+  .daily_line,
+  .weekly_line {
+    width: 80%;
+  }
+  .owertime_day_time {
+    left: 360px;
+    top: 130px;
+  }
+  .owertime_night_time {
+    left: 345px;
+    top: 130px;
+  }
+  .import_text {
+    width: 70%;
+  }
+  .daily_routine_container,
+  .weekly_routine_container {
+    width: 90%;
+  }
+  .form-check-label {
+    left: 50px;
+  }
+  .weekly_routine_line {
+    width: 80%;
+    top: 470px;
+    left: 50px;
+  }
+  .routine_import_text {
+    width: 70%;
+    top: 500px;
+  }
+  .form-check-input {
+    position: absolute;
+    right: 50px;
+  }
+  .radio_1_text {
+    top: 65px;
+    left: 210px;
+  }
+  .radio_2_text {
+    top: 115px;
+    left: 210px;
+  }
+  .form-check-label {
+    position: absolute;
+    left: 5px;
+  }
+  .pay_kaydet_btn {
+    left: 150px;
+    width: 50%;
+  }
+  .pay_kaydet_btn span {
+    position: absolute;
+    right: 90px;
+    bottom: 15px;
+  }
+  .pay_recompose {
+    font-size: 18px;
+  }
 }
 @media (max-width: 480px) {
   .services_container {
-    max-width: 100%; 
+    max-width: 100%;
     height: 1800px;
-    left: 0; 
+    left: 0;
     right: 0;
-   
   }
 
   .pay_detail_container,
-  .owertime_container{
+  .owertime_container {
     width: 90%;
   }
 }
