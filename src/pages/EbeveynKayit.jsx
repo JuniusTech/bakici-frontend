@@ -168,7 +168,7 @@ const EbeveynKayit = () => {
             </button>
             <div className="d-flex justify-content-around">
               <p className="MusteriKayit-Form-TextLink-Text fw-medium text-black-50">
-                Hesabınız varmı?
+                Hesabınız var mı?
               </p>
               <NavLink to="/login" className="MusteriKayit-Form-TextLink-Link">
                 Oturum Açın
