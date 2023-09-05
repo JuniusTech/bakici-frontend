@@ -7,7 +7,7 @@ const belgeler = [
     id: "kimlikon",
     desc: (
       <p>
-        Nufus cuzdaninizin <b>ön</b> sayfasinin resmini kutunun icine tiklayarak
+        Nüfus cüzdanınızın <b>ön</b> sayfasının resmini kutunun içine tıklayarak
         ekleyin
       </p>
     ),
@@ -16,8 +16,8 @@ const belgeler = [
     id: "kimlikarka",
     desc: (
       <p>
-        Nufus kagidinizin <b>arka</b> sayfasinin resmini kutunun icine
-        tiklayarak ekleyin
+        Nüfus kağıdınızın <b>arka</b> sayfasının resmini kutunun içine
+        tıklayarak ekleyin
       </p>
     ),
   },
@@ -25,7 +25,7 @@ const belgeler = [
     id: "adlisicil",
     desc: (
       <p className="">
-        <b>Adli sicil kayit</b> dokumaninizi kutunun icine tiklayarak ekleyin
+        <b>Adli sicil kayıt</b> dokumanınızı kutunun icine tıklayarak ekleyin
       </p>
     ),
   },

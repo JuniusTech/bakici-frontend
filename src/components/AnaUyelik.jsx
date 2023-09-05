@@ -31,7 +31,7 @@ const AnaUyelik = ({ openAnaUyelik, setOpenAnaUyelik }) => {
             <div
               role="button"
               className="AnaUyelik-main-left"
-              onClick={() => navigate("/musterikayit")}
+              onClick={() => navigate("/ebeveynkayit")}
             >
               <img
                 className="AnaUyelik-main-left-img"
