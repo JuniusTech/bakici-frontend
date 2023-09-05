@@ -43,7 +43,7 @@ const BakiciAra = () => {
         <div className="d-flex flex-column flex-lg-row">
           <BakiciFiltre />
 
-          <div className="row mt-5 p-2">
+          <div className="row mt-1 mt-lg-5 p-2">
             <div className="bakiciara-bakicilar-head">
               <h1>BAKICILAR</h1>
               <p>

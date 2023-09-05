@@ -74,7 +74,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             </div>
             <div className="bakici-kayit__description">
               <label className="bakici-kayit__desc-label" htmlFor="">
-                Kendinizi kısaca müşterilerimize tanıtın
+                Kendinizi kısaca ebeveynlerimize tanıtın
               </label>
               <textarea
                 className="bakici-kayit__textarea"
@@ -110,7 +110,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
 
           <div className="bakici-kayit__input-div">
             <label className="bakici-kayit__input-label" htmlFor="">
-              Telefon numaraniz
+              Telefon numaranız
             </label>
             <input className="bakici-kayit__input" type="tel" />
           </div>
@@ -124,15 +124,15 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
           </div>
 
           <p className="bakici-kayit__sifre-bilgi">
-            Sifreniz en az 8 karakterden olusmalidir
+            Sifreniz en az 8 karakterden oluşmalıdır
           </p>
           <p className="bakici-kayit__sifre-bilgi">
-            Sifrenizde en az bir sembol bulunmalidir. ornegin: @, !
+            Şifrenizde en az bir sembol bulunmalıdır. Örneğin: @, !
           </p>
 
           <div className="bakici-kayit__input-div">
             <label className="bakici-kayit__input-label" htmlFor="">
-              Sifrenizi tekrarlayin <img src={sifreIcon} alt="" />
+              Şifrenizi tekrarlayın <img src={sifreIcon} alt="" />
             </label>
             <input className="bakici-kayit__input" type={PasswordInputType2} />
             <div className="bakici-kayit__sifre-icon">{ToggleIcon2}</div>
@@ -245,7 +245,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               style={{ width: "20px", height: "20px" }}
             />
             <label className="text-body-secondary" htmlFor="gizlilik">
-              Carezone gizlilik haklarini okudum ve onayliyorum
+              Carezone gizlilik haklarını okudum ve onaylıyorum
             </label>
           </div>
 
@@ -257,7 +257,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               style={{ width: "20px", height: "20px" }}
             />
             <label className="text-body-secondary" htmlFor="haklar">
-              Bakicilik haklariyla ilgili kurallari okudum onayliyorum
+              Bakıcılık haklarıyla ilgili kuralları okudum, onaylıyorum
             </label>
           </div>
         </div>
