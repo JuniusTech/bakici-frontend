@@ -27,7 +27,9 @@ const secondNavLinks = [
   {
     id: 4,
     title: "PROFİL",
+
     Component: () => <BakiciProfile />,
+
   },
   {
     id: 5,

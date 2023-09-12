@@ -96,7 +96,8 @@ const EbeveynArsivlenenMesajlar = ({selectedNumber} ) => {
   const [selectedComp, setselectedComp] = useState(0);
   const [messa, setMessa] = useState("");
   const inputFile = useRef(null) ;
-
+  const [boxOpen, setboxOpen] = useState(false);
+  const [key, setKey] = useState(0)
   const clickedp = () =>{
     selectedNumber(7);
   }
@@ -110,10 +111,23 @@ const EbeveynArsivlenenMesajlar = ({selectedNumber} ) => {
         first.splice(i, 1);
       }
     })
+    
     setselectedUser(first[0]);
     setselectedComp(0);
     setfirst(first);
     e.preventDefault();
+  }
+
+  const removeDialog2 = () =>{
+  first.map((dat,i) =>{
+      if(dat.id==selectedUser.id){
+        first.splice(i, 1);
+      }
+    })
+    
+    console.log(first);
+    setfirst(first);
+    setKey(key+1)
   }
 
   const mediaOnclick = () =>{
@@ -145,6 +159,9 @@ const EbeveynArsivlenenMesajlar = ({selectedNumber} ) => {
     
   }
 
+  const openBox = () => {
+    setboxOpen(true);
+  }
  
   useEffect(() => {
     const scrollingElement = document.getElementById("scrolling_element");
@@ -154,7 +171,10 @@ const EbeveynArsivlenenMesajlar = ({selectedNumber} ) => {
     
   });
 
-
+  useEffect(() => {
+    // setPosts Here
+    setselectedUser(first[0])
+    }, [key]);
 
 
   return (
@@ -172,9 +192,33 @@ const EbeveynArsivlenenMesajlar = ({selectedNumber} ) => {
           <>
           <hr />
           <div className='EbeveynMesajlarOnayBekleyen-Left-Div-Data' onClick={() => changeUse(dat)}>
+         
             <img src={dat.image} alt="" />
             <p className='EbeveynMesajlarOnayBekleyen-Left-Div-Name'>{dat.name}</p>
-          
+            {(() => {
+              if (dat.name == selectedUser.name) {
+                return (
+                  <>
+                  <p className='EbeveynMesajlarOnayBekleyen-Left-Div-Name-ThreeDot' onClick={() => openBox()}>...</p>
+                  {
+                    boxOpen &&  <div className='EbeveynMesajlarOnayBekleyen-Left-Div-Box'>
+                      
+                      <p className='EbeveynMesajlarOnayBekleyen-Left-Div-Box-Sil' onClick={removeDialog2}>Sil</p>
+                     
+                    
+
+                      <p>Okunmadı olarak işaretle</p>
+                      <p>Okundu olarak işaretle</p>
+                    </div>
+                  }
+                  </>
+                )
+              }else {
+                return (
+                  <div></div>
+                )
+              }
+            })()}
           </div>
           </>
         
@@ -209,6 +253,7 @@ const EbeveynArsivlenenMesajlar = ({selectedNumber} ) => {
             selectedUser?.messages?.map((mes) =>{
               return (
                 <>
+                
                   {
                     mes.whoSend == "sender" ? <div className='EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender'>
                     <p className='EbeveynMesajlarArsivlenen-Right-Middle-Top-Date-Sender-Message'> {

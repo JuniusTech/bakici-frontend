@@ -4,7 +4,7 @@ import kullanıcı1 from "./../../assets/bakici_yorum_kullanıcı1.svg";
 import kullanıcı2 from "./../../assets/bakici_yorum_kullanıcı2.svg";
 import kullanıcı3 from "./../../assets/bakici_yorum_kullanıcı3.svg";
 
-
+import "../../styles/bakiciara.css";
 import { useEffect, useState } from "react";
 import ReactPaginate from 'react-paginate';
 
@@ -45,29 +45,29 @@ const BakiciYorumlar = () => {
         {
         name:"Fulya Karabulut",
         date:"11-08-2023",
-        comment:"Memnun kaldik, oglum ile kaliteli vakit gecirdiler. Montesori aktiviteleri hosumuza gitti.",
+        comment:"Memnun kaldık, oğlum ile kaliteli vakit geçirdiler. Montessori aktiviteleri hoşumuza gitti.",
         point:"⭐⭐⭐⭐⭐",
         work_type:"Part-time",
-        baby_type:"3 yas uzeri",
+        baby_type:"3 yaş üzeri",
         image:kullanıcı1,
     },
     {
         name:"Ahmet Bulur",
         date:"07-02-2023",
-        comment:"Memnun kaldik, oglum ile kaliteli vakit gecirdiler. Montesori aktiviteleri hosumuza gitti.",
+        comment:"Memnun kaldık, oğlum ile kaliteli vakit geçirdiler. Montessori aktiviteleri hoşumuza gitti.",
         point:"⭐⭐⭐⭐⭐",
         work_type:"Fulltime",
-        baby_type:"0-12 aylik",
+        baby_type:"0-12 aylık",
         image:kullanıcı3,
     }
     ,
     {
-        name:"Fatma Betul",
+        name:"Fatma Betül",
         date:"10-04-2023",
-        comment:"Harika bir deneyimdi. Tavsiye ediyorum. Guvenilir ve kaliteli birisi",
+        comment:"Harika bir deneyimdi. Tavsiye ediyorum. Güvenilir ve kaliteli birisi",
         point:"⭐⭐⭐⭐⭐",
         work_type:"Part-time",
-        baby_type:"3 yas uzeri",
+        baby_type:"3 yaş üzeri",
         image:kullanıcı2,
     }
 ]
@@ -107,7 +107,7 @@ data.sort((a,b) => new Date(b.date) - new Date(a.date))
   return (
     <div className='bakici-yorumlar container'>
         <p className='bakici-yorumlar-p text-center'>
-        Toplamda {count} Ebeveyn sizin hakkinizda yorum yapti
+        Toplamda {count} Ebeveyn sizin hakkınızda yorum yaptı
         </p>
 
         {
@@ -152,21 +152,22 @@ data.sort((a,b) => new Date(b.date) - new Date(a.date))
            
            
         }
+        <div className='pagination-container'>
         <ReactPaginate
         className="pagination"
         forcePage={itemOffset / itemsPerPage}
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         marginPagesDisplayed={2}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"
         previousLinkClassName="page-link"
         nextClassName="page-item"
-        nextLinkClassName="page-link"
+        nextLinkClassName="page-link next-item"
         breakLabel="..."
         breakClassName="page-item"
         breakLinkClassName="page-link"
@@ -174,6 +175,8 @@ data.sort((a,b) => new Date(b.date) - new Date(a.date))
         activeClassName="active"
         renderOnZeroPageCount={null}
       />
+        </div>
+        
     </div>
   )
 }

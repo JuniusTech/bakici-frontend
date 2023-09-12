@@ -18,7 +18,7 @@ const secondNavLinks = [
   },
   {
     id: 3,
-    title: "PROFIL",
+    title: "PROFİL",
     Component: () => <div>Profil</div>,
   }
 ];

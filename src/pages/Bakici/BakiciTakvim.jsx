@@ -36,7 +36,7 @@ const BakiciTakvim = () => {
       // (event) => setformData({...formData,date:event.target.value})
       onFocus={onFocus}
       /* style={{background:url()}}*/
-      placeholder="Tarih Secin"
+      placeholder="Tarih Seçin"
     />
     )
   }
@@ -172,13 +172,13 @@ const BakiciTakvim = () => {
   return (
     <div className='bakici-takvim'>
 
-    <h3 className='bakici-takvim-hello'>Merhaba, Tugba</h3>
+    <h3 className='bakici-takvim-hello'>Merhaba, Tuğba</h3>
     <p className='bakici-takvim-profil-durumu'>Profil durumu : Aktif</p>
-    <p className='bakici-takvim-profil-bilgi'>Profilinizin aktif olmasi icin musait oldugunuz gunleri takvimi kullanarak guncelleyebilirsiniz.</p>
+    <p className='bakici-takvim-profil-bilgi'>Profilinizin aktif olmasi için müsait olduğunuz günleri takvimi kullanarak güncelleyebilirsiniz.</p>
 
     <div className='bakici-takvim-bottom '>
       <div  className='bakici-takvim-bottom-left'>
-            <h1 className='bakici-takvim-bottom-left-h1'>HIZLI TAKVIM GUNCELLEMESI</h1>
+            <h1 className='bakici-takvim-bottom-left-h1'>HIZLI TAKVİM GÜNCELLEMESİ</h1>
             <p className='bakici-takvim-bottom-left-p'>Hızlı takvim güncellemesi</p>
             <p className='bakici-takvim-bottom-left-p'>
             
@@ -186,7 +186,7 @@ const BakiciTakvim = () => {
       
             <label className="Kontakt-Form-Label"  id='option-date'>
 
-            TARIH SECINIZ
+            TARİH SEÇİNİZ
         
         
             <DatePicker
@@ -230,7 +230,7 @@ const BakiciTakvim = () => {
         />
         
         <p className=' d-inline ms-2'>
-        ARDISIK GUN SECME
+        ARDIŞIK GÜN SEÇME
         </p>
         
         </label>
@@ -244,10 +244,10 @@ const BakiciTakvim = () => {
           </label>
 
             <button className='bakici-takvim-bottom-left-button1' onClick={availableSave}>
-              Secili tarihleri müsait olarak kaydet
+              Seçili tarihleri müsait olarak kaydet
             </button>
             <button className='bakici-takvim-bottom-left-button2' onClick={notavailableSave}>
-            Secili tarihleri müsait değil olarak kaydet
+            Seçili tarihleri müsait değil olarak kaydet
             </button>
 
 
@@ -265,7 +265,7 @@ const BakiciTakvim = () => {
             </div>
             </div>
         <div className='bakici-takvim-bottom-right'>
-            <h3 className='bakici-takvim-bottom-right-h3'>CALISMA MUSAIT SAATLERINIZI GUNCELLEYIN</h3>
+            <h3 className='bakici-takvim-bottom-right-h3'>ÇALIŞMA MÜSAİT SAATLERİNİZİ GÜNCELLEYİN</h3>
             <div className="bakici-takvim-date-range-picker-calendar">
 
             {
@@ -294,7 +294,7 @@ const BakiciTakvim = () => {
             <div className='bakici-takvim-bottom-right-kutucuklar-musait'>
             <div className='bakici-takvim-bottom-right-kutucuklar-ilk'>
               </div>
-            <p className='bakici-takvim-bottom-right-kutucuklar-text' >Musait</p>
+            <p className='bakici-takvim-bottom-right-kutucuklar-text' >Müsait</p>
               
               
             </div>
@@ -302,7 +302,7 @@ const BakiciTakvim = () => {
             <div className='bakici-takvim-bottom-right-kutucuklar-degil'>
             <div className='bakici-takvim-bottom-right-kutucuklar-ikinci'>
             </div>
-            <p className='bakici-takvim-bottom-right-kutucuklar-text'>Musait degil</p>
+            <p className='bakici-takvim-bottom-right-kutucuklar-text'>Müsait değil</p>
             
             
           </div>
