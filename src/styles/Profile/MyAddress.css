@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+.my_address_container {
+  width: 53rem;
+  height: 450px;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: relative;
+  top: 84px;
+  left: 200px;
+  margin-bottom: 20rem;
+}
+.my_address {
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  text-align: center;
+}
+.my_address_text {
+  width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  justify-content: center;
+}
+.my_address_text img {
+  width: 40px;
+  height: 40px;
+  left: 4px;
+  bottom: 5px;
+  position: relative;
+}
+
+.address_header_container {
+  width: 800px;
+  height: 101px;
+  left: 61px;
+  top: 80px;
+  gap: 13px;
+  position: absolute;
+}
+.address_header {
+  width: 81px;
+  height: 38px;
+}
+.address_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+.address_text {
+  width: 750px;
+  height: 50px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 52px;
+  gap: 10px;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+.town_header_container {
+  width: 400px;
+  height: 101px;
+  top: 100px;
+  gap: 13px;
+  position: absolute;
+}
+.town_header {
+  width: 49px;
+  height: 38px;
+}
+.town_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+.town_text {
+  width: 300px;
+  height: 50px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 52px;
+  gap: 10px;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+.city_header {
+  width: 74px;
+  height: 38px;
+}
+.city_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #455a64;
+}
+.city_text {
+  width: 300px;
+  height: 50px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 52px;
+  gap: 10px;
+  border: 1px solid #455a64cc;
+  border-radius: 52px;
+}
+.city_header_container {
+  width: 400px;
+  height: 101px;
+  top: 100px;
+  left: 450px;
+  gap: 13px;
+  position: absolute;
+}
+.recompose {
+  color: #467888;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  width: 179px;
+  height: 24px;
+  top: 120px;
+  right: 300px;
+  position: relative;
+  font-size: 22px;
+}
+
+.kaydet_address_btn {
+  width: 300px;
+  height: 52px;
+  border-radius: 26px;
+  background-color: #e88585;
+  position: relative;
+  border: none;
+  top: 70px;
+  gap: 10px;
+}
+.kaydet_address_btn span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.kaydet_address_btn:hover {
+  background: #fda9a9;
+}
+
+@media (max-width: 1200px) {
+  .my_address_container {
+    max-width: 95%;
+    left: 0;
+    right: 0;
+  }
+  .address_text {
+    width: 650px;
+  }
+  .city_text {
+    width: 200px;
+  }
+  .town_text {
+    width: 200px;
+  }
+  .kaydet_address_btn {
+    right: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my_address_container {
+    max-width: 100%;
+    height: 600px;
+    left: 0;
+    right: 0;
+  }
+
+  .address_header_container,
+  .city_header_container {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 100px;
+  }
+  .town_header_container {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .address_text {
+    width: 450px;
+  }
+  .city_text {
+    width: 150px;
+  }
+  .town_text {
+    width: 150px;
+    bottom: 300px;
+  }
+  .kaydet_address_btn {
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my_address_container {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+}

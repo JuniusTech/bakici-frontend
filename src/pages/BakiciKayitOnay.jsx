@@ -6,7 +6,7 @@ import ILUSTRASYON from "../assets/ILUSTRASYON-2.svg";
 const BakiciKayitOnay = () => {
   return (
     <div className="BakiciKayitOnay text-center">
-      <h1 className="BakiciKayitOnay_h1">Tesekkurler! TAKIMA HOSGELDIN</h1>
+      <h1 className="BakiciKayitOnay_h1">Teşekkürler! TAKIMA HOŞGELDİN</h1>
       <div>
         <img src={ILUSTRASYON} alt="ILUSTRASYON-2" className=" ILUSTRASYON-2" />
       </div>

@@ -2,9 +2,9 @@ import usePasswordToggle1, {
   usePasswordToggle2,
 } from "../components/usePasswordToggle";
 
-import "../styles/MusteriKayit.css";
+import "../styles/EbeveynKayit.css";
 import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logoBeyaz2 from "../assets/logoBeyaz2.svg";
 import logoBeyaz1 from "../assets/logoBeyaz1.svg";
 
@@ -19,15 +19,22 @@ import {
 
 library.add(faUser, faEnvelope, faLock, faEye, faEyeSlash);
 
-const MusteriKayit = () => {
+const EbeveynKayit = () => {
   const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1();
   const [PasswordInputType2, ToggleIcon2] = usePasswordToggle2();
+
+  const navigate = useNavigate();
 
   // const [isOpen, setisOpen] = useState(true);
 
   // const handleClick = () => {
   //   setisOpen(false);
   // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/ebeveynkayitonay");
+  };
 
   return (
     <div className="MusteriKayit">
@@ -42,7 +49,7 @@ const MusteriKayit = () => {
           alt="logoBeyaz2 "
           className="MusteriKayit-Logo2"
         />
-        <NavLink to="/" className="MusteriKayit-Link fs-4 z-3">
+        <NavLink to="/" className="MusteriKayit-Link fs-4">
           Anasayfa
         </NavLink>
       </nav>
@@ -156,10 +163,12 @@ const MusteriKayit = () => {
                 <option value="Ağrı">Ağrı</option>
               </select>
             </div>
-            <button className="MusteriKayit-Form-Submit">Kayıt Ol</button>
+            <button className="MusteriKayit-Form-Submit" onClick={handleSubmit}>
+              Kayıt Ol
+            </button>
             <div className="d-flex justify-content-around">
               <p className="MusteriKayit-Form-TextLink-Text fw-medium text-black-50">
-                Hesabınız varmı?
+                Hesabınız var mı?
               </p>
               <NavLink to="/login" className="MusteriKayit-Form-TextLink-Link">
                 Oturum Açın
@@ -175,7 +184,7 @@ const MusteriKayit = () => {
             className="MusteriKayit-İmg w-100 px-4"
           />
           <p className="MusteriKayit-İmg-Title">
-            “ Bebekleriniz için en iyi bakımı bizimle bulun ”
+            “ BEBEKLERİNİZ İÇİN EN İYİ BAKIMI BİZİMLE BULUN ”
           </p>
         </div>
       </div>
@@ -183,4 +192,4 @@ const MusteriKayit = () => {
   );
 };
 
-export default MusteriKayit;
+export default EbeveynKayit;

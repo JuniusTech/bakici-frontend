@@ -2,9 +2,7 @@ const BakiciKayitMesai = ({ bakiciInfo, setKayitRoute }) => {
   console.log(bakiciInfo);
   return (
     <div className="bakici-kayit__mesai text-center my-5">
-      <h1 className="text-uppercase ">
-        Calismak istediginiz Mesai SEKLINIZI SECINIZ
-      </h1>
+      <h1 className="">ÇALIŞMAK İSTEDİĞİNİZ MESAİ ŞEKLİNİ SEÇİNİZ</h1>
 
       <div className="bakici-kayit__mesai-div d-flex flex-column m-auto  my-5">
         <div className="d-flex gap-3 align-items-center ">
@@ -27,7 +25,7 @@ const BakiciKayitMesai = ({ bakiciInfo, setKayitRoute }) => {
             style={{ width: "20px", height: "20px" }}
           />
           <label className="bakici-kayit__mesai-label" htmlFor="hsonugündüz">
-            Sadece haftasonu gunduz bakıcılığı
+            Sadece haftasonu gündüz bakıcılığı
           </label>
         </div>
         <div className="d-flex gap-3 align-items-center">

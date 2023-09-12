@@ -17,12 +17,12 @@ const BakiciHome = () => {
     
     <div className="bakici_content">
       
-        <p className="bakici_hello">Merhaba, Tugba</p>
+        <p className="bakici_hello">Merhaba, Tuğba</p>
 
         {/* TODO: Sonradan component haline getirilecek backend bağlandığında şimdilik böyle kalacak */}
         <div className="bakici_current_work">
           <div className="bakici_current_work_header">
-            <h3>Devam etmekte olan gorevin</h3>
+            <h3>Devam etmekte olan görevin</h3>
             <span>
               <Konum />
               Ankara, Demetevler
@@ -32,7 +32,7 @@ const BakiciHome = () => {
           <div className="bakici_current_work_sub_info">
             <span>
               <Profile />
-              Ebeveyn, John Bagcilar
+              Ebeveyn, John Bağcılar
             </span>
             <span>
               <Calendar />
@@ -40,18 +40,18 @@ const BakiciHome = () => {
             </span>
             <span>
               <Clock />
-              Sadece hafta ici gunduz
+              Sadece hafta içi gündüz
             </span>
           </div>
 
-          <p className="current_work_cancel">IPTAL ET</p>
+          <p className="current_work_cancel">İPTAL ET</p>
         </div>
 
         <div className="bakici_kullanmaya_basla">
        
-          <h3 className="title">Care Zone kullanmaya baslayin</h3>
+          <h3 className="title">Care Zone kullanmaya başlayın.</h3>
           <p>
-            Platform genelinde güven ve güvenliği sağlamak için lütfen profilinizi tamamlamak üzere aşağıdaki bilgileri girmis oldugunuzdan emin olunuz.
+            Platform genelinde güven ve güvenliği sağlamak için lütfen profilinizi tamamlamak üzere aşağıdaki bilgileri girmiş olduğunuzdan emin olunuz.
           </p>
 
           <div className="tasks">
@@ -116,7 +116,7 @@ const BakiciHome = () => {
                   </filter>
                 </defs>
               </svg>
-              Telefon numaranizi dogrulayin
+              Telefon numaranızı doğrulayın.
             </span>
 
             <span>
@@ -184,7 +184,7 @@ const BakiciHome = () => {
                   </filter>
                 </defs>
               </svg>
-              Profil resminizi yukleyin
+              Profil resminizi yükleyin.
             </span>
 
             <span>
@@ -225,7 +225,7 @@ const BakiciHome = () => {
                   fill="white"
                 />
               </svg>
-              Adresinizi kaydediniz
+              Adresinizi kaydediniz.
             </span>
           </div>
 
@@ -238,9 +238,9 @@ const BakiciHome = () => {
               </div>
 
               <div className="side1_section2">
-                <h2>TAKVIM</h2>
-                <span>Takviminizi en son 2 hafta önce güncellediniz</span>
-                <p>Takvimi Guncelle</p>
+                <h2>TAKVİM</h2>
+                <span>Takviminizi en son 2 hafta önce güncellediniz.</span>
+                <p>Takvimi Güncelle</p>
               </div>
             </div>
 
@@ -248,9 +248,9 @@ const BakiciHome = () => {
 
             <div className="side">
               <div className="section1 side2_section1">
-                <h2>FAVORI LISTE KAYDINIZ</h2>
+                <h2>FAVORİ LİSTE KAYDINIZ</h2>
                 <span>
-                  <Hearth />7 kisi tarafindan favori listesine eklendiniz
+                  <Hearth />7 kişi tarafından favori listesine eklendiniz.
                 </span>
               </div>
 
@@ -265,16 +265,16 @@ const BakiciHome = () => {
                   <div className="warning">
                     <Calendar />
                     <div className="divider" />
-                    <span>Takviminizi guncelleyiniz</span>
+                    <span>Takviminizi güncelleyiniz.</span>
                   </div>
 
                   <div className="warning">
                     <HomeMap />
                     <div className="divider" />
-                    <span>Adresinizi kaydediniz</span>
+                    <span>Adresinizi kaydediniz.</span>
                   </div>
 
-                  <h3>Baska uyariniz bulunmamaktadir</h3>
+                  <h3>Başka uyarınız bulunmamaktadır.</h3>
                   
                 </div>
               </div>

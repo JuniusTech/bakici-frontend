@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+.my_photos_container {
+  width: 53rem;
+  height: 1140px;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: relative;
+  top: 84px;
+  left: 200px;
+  margin-bottom: 10rem;
+}
+.my_photos {
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  text-align: center;
+}
+.my_photos_text {
+  width: 100%;
+  height: 48px;
+  gap: 19px;
+  color: #ffffff;
+  display: flex;
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  justify-content: center;
+}
+.my_photos_text img {
+  width: 32px;
+  height: 32px;
+}
+
+.photos {
+  width: 154px;
+  height: 157px;
+  top: 160px;
+  left: 350px;
+  border: 1px;
+  position: absolute;
+}
+.photos_btn {
+  width: 179px;
+  height: 42px;
+  top: 357px;
+  left: 330px;
+  border-radius: 19px;
+  background: #e88585;
+  border: none;
+  position: absolute;
+}
+.photos_btn:hover {
+  background: #fda9a9;
+}
+.photos_btn span {
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 40px;
+}
+.photos_btn img {
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  right: 20px;
+  position: absolute;
+}
+
+.my_all_photos {
+  width: 20rem;
+  height: 140px;
+  top: 480px;
+  left: 15px;
+  /* gap: 50px; */
+  position: absolute;
+}
+.my_all_photos {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.horizontal_photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-right: 20px;
+}
+
+.horizontal_photos img {
+  width: 147px;
+  height: 145px;
+  border-radius: 5px;
+}
+
+.horizontal_photos button {
+  width: 146px;
+  height: 35px;
+  top: 678px;
+  left: 247px;
+  border-radius: 19px;
+  background: #e88585;
+  border: none;
+  margin-top: 8px;
+}
+.horizontal_photos button:hover {
+  background: #fda9a9;
+}
+.horizontal_photos button span {
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.trash {
+  width: 25px;
+  height: 20px;
+  left: 2.5px;
+  bottom: 4px;
+  position: relative;
+  color: #ffffff;
+}
+
+.add_photo {
+  width: 468px;
+  height: 52px;
+  top: 1000px;
+  left: 200px;
+  padding: 14px 162px 14px 162px;
+  border-radius: 26px;
+  gap: 10px;
+  background: #e88585;
+  border: none;
+  position: absolute;
+}
+
+.add_photo:hover {
+  background: #fda9a9;
+}
+
+.add_photo span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .my_photos_container
+   {
+    max-width: 100%; 
+    left: 0; 
+    right: 0;
+
+   }
+}
+
+
+@media (max-width: 768px) {
+  .my_photos_container
+   {
+    max-width: 100%; 
+    height: 1600px;
+    left: 0; 
+    right: 0;
+    margin-bottom: 200px;
+  
+ 
+  }
+  .photos{
+    left: 150px;
+  }
+ 
+  .my_all_photos{
+   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ left: 80px;
+ 
+
+  }
+  .photos_btn{
+    left: 130px;
+  }
+  .add_photo{
+    left: 10px;
+    top: 1500px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .my_photos_container
+   {
+   max-width: 90%; 
+    left: 0; 
+    right: 0;
+    
+  }
+ 
+}

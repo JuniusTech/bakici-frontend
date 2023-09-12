@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+.bank_account_container {
+  width: 53rem;
+  height: 1000px;
+  padding: 0px 0px 71px 0px;
+  border-radius: 7px;
+  border: 2px solid #457888;
+  position: relative;
+  top: 84px;
+  left: 200px;
+  margin-bottom: 10rem;
+}
+
+.bank_account {
+  width: 100%;
+  height: 64px;
+  padding: 20px 30px 20px 30px;
+  gap: 10px;
+  background-color: #e88585;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+}
+.bank_account_text {
+  width: 100%;
+  height: 64px;
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bank_account_text img {
+  width: 35px;
+  height: 35px;
+  padding-left: 5px;
+  margin-bottom: 2px;
+}
+.iban_container {
+  width: 45rem;
+  height: 438px;
+  position: relative;
+  top: 4rem;
+  left: 60px;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+.iban_header {
+  width: 100%;
+  height: 51px;
+  background: #455a64;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.iban_header span {
+  font-family: Georama;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 2rem;
+  justify-content: left;
+  display: flex;
+  padding-top: 8px;
+}
+.iban_label {
+  font-family: Georama;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #467888;
+  top: 108px;
+  left: 43px;
+  position: absolute;
+}
+.iban_text {
+  width: 450px;
+  height: 52px;
+  top: 94px;
+  left: 250px;
+  border-radius: 26px;
+  position: absolute;
+  border: 1px solid #455a64cc;
+}
+.iban_kaydet_btn {
+  width: 184px;
+  height: 52px;
+  top: 450px;
+  left: 570px;
+  border-radius: 26px;
+  background: #e88585;
+  border: none;
+  position: absolute;
+}
+.iban_kaydet_btn span {
+  font-family: Georama;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.iban_kaydet_btn:hover {
+  background: #fda9a9;
+}
+
+
+@media (max-width: 1200px) {
+  .bank_account_container {
+    max-width: 100%; 
+    left: 0; 
+    right: 50rem;
+  }
+
+ 
+
+  .iban_container
+  
+   {
+    width:90%;
+    right: 0;
+    left: 40px;
+    
+  }
+  
+
+}
+
+
+@media (max-width: 768px) {
+  .bank_account_container {
+    max-width: 100%; 
+    height: 1850px;
+    left: 0; 
+    right: 0;
+    
+  }
+  .iban_container{
+    width:100%;
+    left:0;
+  }
+
+  
+  .iban_kaydet_btn{
+    left: 250px;
+    
+  }
+  .iban_text{
+    width: 45%;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .bank_account_container {
+    max-width: 100%; 
+    height: 1800px;
+    left: 0; 
+    right: 0;
+   
+  }
+
+  .iban_container{
+    width:90%;
+    left:0;
+  }
+
+ 
+}

@@ -34,6 +34,7 @@
         opacity: 0;
         height: 0;
         margin-bottom: -5rem;
+        visibility: hidden;
     }
 
     .bakici-filtre__form.active {

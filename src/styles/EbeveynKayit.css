@@ -8,6 +8,7 @@
 .MusteriKayit-Link {
   text-decoration: underline;
   color: black;
+  z-index: 2;
 }
 
 @media screen and (min-width: 1200px) {
@@ -48,6 +49,14 @@
 
 .MusteriKayit-select-div {
   position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(69, 90, 100, 0.8);
+  border-radius: 25.5px;
+  /* width: 90%; */
+}
+
+.MusteriKayit-select-div:focus-within {
+  outline: 1px solid black;
 }
 
 .MusteriKayit-select-div::after {
@@ -59,10 +68,17 @@
   pointer-events: none;
 }
 
+
 .input-sehir {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  background: transparent;
+  width: 104%;
+  outline: none;
+  border: none;
 }
+
 
 .MusteriKayit-Form-Label {
   font-style: normal;
