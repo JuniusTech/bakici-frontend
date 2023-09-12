@@ -96,6 +96,8 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
   const [selectedComp, setselectedComp] = useState(0);
   const [messa, setMessa] = useState("");
   const inputFile = useRef(null) ;
+  const [boxOpen, setboxOpen] = useState(false);
+  const [key, setKey] = useState(0)
 
   const clickedp = () =>{
     selectedNumber(7);
@@ -105,17 +107,33 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
     setselectedUser(data);
   }
   const removeDialog = (e) =>{
+    
+    setboxOpen(false);
+    first.map((dat,i) =>{
+      if(dat.id==selectedUser.id){
+        first.splice(i, 1);
+      }
+    })
+    console.log(selectedUser);
+    setselectedUser(first[0]);
+    setselectedComp(0);
+    setfirst(first);
+    // e.preventDefault();
+  }
+
+  const removeDialog2 = () =>{
+    
+    setboxOpen(false);
     first.map((dat,i) =>{
       if(dat.id==selectedUser.id){
         first.splice(i, 1);
       }
     })
     setselectedUser(first[0]);
-    setselectedComp(0);
     setfirst(first);
-    e.preventDefault();
+    setKey(key+1)
+    // e.preventDefault();
   }
-
   const mediaOnclick = () =>{
     inputFile.current.click();
   }
@@ -146,6 +164,14 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
   }
 
  
+  const openBox = () => {
+    setboxOpen(true);
+  }
+
+  const closeBox = (event) =>{
+    setboxOpen(false);
+  }
+
   useEffect(() => {
     const scrollingElement = document.getElementById("scrolling_element");
     if(scrollingElement){
@@ -154,17 +180,24 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
     
   });
 
+  useEffect(() => {
+    // setPosts Here
+    setselectedUser(first[0])
+    }, [key]);
+
+
+   
 
 
 
   return (
-    <div>
-    <div className='BakiciMesajlarGelenKutusu'>
+    <div >
+    <div className='BakiciMesajlarGelenKutusu' >
     <p className='BakiciMesajlarGelenKutusuGeri' onClick={clickedp}>Gelen Kutusuna geri dönün</p>
     </div>
     <div className='BakiciMesajlarArsivlenen'>
     <div className='BakiciMesajlarOnayBekleyen-Left-Div'>
-    <h3 className='BakiciMesajlarArsivlenen-Left-Div-h3'>Arşivlenen Mesajlar</h3>
+    <h3 className='BakiciMesajlarArsivlenen-Left-Div-h3'  onClick={() => closeBox()}>Arşivlenen Mesajlar</h3>
   
     {
       first.map((dat) =>{
@@ -173,8 +206,32 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
           <hr />
           <div className='BakiciMesajlarOnayBekleyen-Left-Div-Data' onClick={() => changeUse(dat)}>
             <img src={dat.image} alt="" />
-            <p className='BakiciMesajlarOnayBekleyen-Left-Div-Name'>{dat.name}</p>
-          
+            <p className='BakiciMesajlarOnayBekleyen-Left-Div-Name' onClick={() => closeBox()}>{dat.name}</p>
+            {(() => {
+              if (dat.name == selectedUser.name) {
+                return (
+                  <>
+                  <p className='BakiciMesajlarOnayBekleyen-Left-Div-Name-ThreeDot' onClick={() => openBox()}>...</p>
+                  {
+                    boxOpen &&  <div className='BakiciMesajlarOnayBekleyen-Left-Div-Box'>
+                      <div onClick={removeDialog2}>
+                      <p className='BakiciMesajlarOnayBekleyen-Left-Div-Box-Sil' >Sil</p>
+                     
+                      </div>
+
+                      <p>Okunmadı olarak işaretle</p>
+                      <p>Okundu olarak işaretle</p>
+                    </div>
+                  }
+                  </>
+                )
+              }else {
+                return (
+                  <div></div>
+                )
+              }
+            })()}
+            
           </div>
           </>
         
@@ -185,7 +242,7 @@ const BakiciArsivlenenMesajlar = ({selectedNumber} ) => {
     </div>
     {
       selectedUser && 
-      <div className='BakiciMesajlarArsivlenen-Right'>
+      <div className='BakiciMesajlarArsivlenen-Right' onClick={() => closeBox()}>
         <div className='BakiciMesajlarArsivlenen-Right-Top' onClick={removeDialog}>
           <img src={garbage} alt="" className='BakiciMesajlarArsivlenen-Right-Top-TrashImg'/>
           <p className='BakiciMesajlarArsivlenen-Right-Top-Remove'>Dialoğu sil</p>
