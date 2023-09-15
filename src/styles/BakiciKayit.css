@@ -145,7 +145,6 @@
 
 
 .bakici-kayit__sifre-bilgi {
-    font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     color: #CCCCCC;
@@ -214,7 +213,9 @@
 }
 
 .bakici-kayit__deneyim {
-    line-height: 12px;
+    line-height: 10px;
+    height: 14rem;
+    overflow: auto;
 }
 
 .bakici-kayit__buttons button {
@@ -245,4 +246,24 @@
 
 .bakici-kayit__belge-desc {
     font-size: 20px;
+}
+
+.bakici-kayit__belge-delete-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(69, 90, 100, 0.5);
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.397);
+
+}
+
+.bakici-kayit__belge-kaydet-btn {
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #E88585;
+    color: white;
+    margin-left: 20px;
 }

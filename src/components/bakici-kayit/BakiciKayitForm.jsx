@@ -186,7 +186,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               controlShouldRenderValue={false}
               options={yabanciDil}
               isSearchable={false}
-              placeholder="Yabancı Dil Seviyesi"
+              placeholder="Yabancı Dil"
               components={{
                 Option: CheckboxOption,
                 ClearIndicator: null,

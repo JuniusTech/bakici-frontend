@@ -1,4 +1,5 @@
 import dosyaekle from "../../assets/dosyaekle.svg";
+import trash from "../../assets/trash.svg";
 
 const BakiciKayitFilePicker = ({ id, desc }) => {
   return (
@@ -19,7 +20,19 @@ const BakiciKayitFilePicker = ({ id, desc }) => {
           <p>Maximum dosya boyutu 50 MB</p>
         </div>
       </div>
-      <div className="bakici-kayit__belge-desc mt-4">{desc}</div>
+      <div
+        className="d-flex align-items-center mx-auto "
+        style={{ width: "90%" }}
+      >
+        <div className="position-absolute">
+          <button className="bakici-kayit__belge-delete-btn">
+            <img src={trash} alt="" />
+          </button>
+          <button className="bakici-kayit__belge-kaydet-btn">Kaydet</button>
+        </div>
+
+        <div className="bakici-kayit__belge-desc mt-4 mx-auto">{desc}</div>
+      </div>
     </div>
   );
 };
