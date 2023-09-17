@@ -83,6 +83,7 @@
   top: 108px;
   left: 43px;
   position: absolute;
+ 
 }
 .iban_text {
   width: 450px;
@@ -92,6 +93,7 @@
   border-radius: 26px;
   position: absolute;
   border: 1px solid #455a64cc;
+  padding-left: 2rem;
 }
 .iban_kaydet_btn {
   width: 184px;

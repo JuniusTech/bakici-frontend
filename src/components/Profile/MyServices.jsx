@@ -107,19 +107,19 @@ const MyServices = () => {
               <Form.Check
                 aria-label="option 1"
                 type="checkbox"
-              />Isaret dili biliyorum
+              />İşaret dili biliyorum
             </label>
             <label className="custom-checkbox">
               <Form.Check
                 aria-label="option 1"
                 type="checkbox"
-              />Montesori egitim /aktivite biliyorum
+              />Montesori eğitim /aktivite biliyorum
             </label>
             <label className="custom-checkbox">
               <Form.Check
                 aria-label="option 1"
                 type="checkbox"
-              />Ebeveyn isyerinden cocugu almak / birakmak
+              />Ebeveyn işyerinden çocuğu almak / bırakmak
             </label>
             </div>
       <button className="kaydet_services_btn"><span>Kaydet</span></button>

@@ -24,7 +24,7 @@ const ProfileDescription = () => {
               <input
               type="text"
               placeholder="Profil Başlığınız..."
-              className="profile_header_text"
+              className="profile_headers_text"
               style={{
                    
                 fontFamily: "Georama",
@@ -33,8 +33,11 @@ const ProfileDescription = () => {
                 letterSpacing: "0em",
                 textAlign: "left",
                 paddingLeft:"1rem",
-                color: "#7C7C7C66",
-                opacity:"0.5"
+                color: "#00000"
+               
+
+               
+               
 
               }}
             />
@@ -66,10 +69,12 @@ const ProfileDescription = () => {
                 lineHeight: "50px",
                 letterSpacing: "0em",
                 textAlign: "left",
-                color: "#7C7C7C66",
+                color: "#00000",
                 paddingBottom:"10rem",
-                paddingLeft:"1rem",
-                opacity:"0.5"
+                paddingLeft:"1rem"
+              
+                
+              
               
 
                 

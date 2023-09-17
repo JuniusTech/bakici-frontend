@@ -499,6 +499,36 @@
   letter-spacing: 0em;
   text-align: left;
 }
+.radio-3{
+  
+    width: 24px;
+    height: 24px;
+    top: 30px;
+    left: 300px;
+    position: absolute;
+    font-family: Georama;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+  
+}
+.radio-4{
+  
+  width: 24px;
+  height: 24px;
+  top: 90px;
+  left: 300px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
 
 .radio_1_text {
   width: 300px;
@@ -515,6 +545,34 @@
   color: #c7c7c7;
 }
 .radio_2_text {
+  width: 300px;
+  height: 24px;
+  top: 90px;
+  left: 420px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #c7c7c7;
+}
+.radio_3_text {
+  width: 300px;
+  height: 24px;
+  top: 30px;
+  left: 420px;
+  position: absolute;
+  font-family: Georama;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #c7c7c7;
+}
+.radio_4_text {
   width: 300px;
   height: 24px;
   top: 90px;
@@ -571,6 +629,7 @@
   left: 10px;
   position: absolute;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .pay_kaydet_btn {
@@ -597,6 +656,9 @@
   color: #ffffff;
   text-align: center;
   margin-right: 40px;
+}
+.profile_header_text::placeholder {
+  color: #7C7C7C66; 
 }
 
 @media (max-width: 1200px) {

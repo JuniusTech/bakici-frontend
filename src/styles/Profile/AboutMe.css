@@ -331,7 +331,10 @@
   position: relative;
 }
 
-
+.profile_header_text::placeholder {
+  color: #7C7C7C66; 
+  opacity: 0.5;
+}
 
  
 
