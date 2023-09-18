@@ -16,8 +16,9 @@ const BankAccount = () => {
         <div className='iban_header'><span>IBAN NUMARANIZ</span></div>
         <p className='iban_label'>Mevcut IBAN Numaranız:</p>
         <input
-        type="text"
+        type="number"
         className='iban_text'
+        
 
       />
         </div>

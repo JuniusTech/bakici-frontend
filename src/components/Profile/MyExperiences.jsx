@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 const MyExperiences = () => {
   const [selectedOption, setSelectedOption] = useState("");
 
-  // Seçenek değiştikçe bu fonksiyon çağrılır
+
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };

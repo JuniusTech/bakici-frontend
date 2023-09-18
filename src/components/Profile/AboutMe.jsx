@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "../../styles/Profile/AboutMe.css";
 import about_img from "../../assets/about_img.svg";
 import hakkimda_img from "../../assets/hakkimda_img.svg";
@@ -33,6 +33,15 @@ const AboutMe = () => {
   //     setIsValid(false);
   //   }
   // };
+  const [password, setPassword] = useState("");
+  const [againpassword, setAgainpassword] = useState("");
+  const [againpassword2, setAgainpassword2] = useState("");
+
+  const handleReset = () => {
+    setPassword(''); 
+    setAgainpassword(''); 
+    setAgainpassword2(''); 
+  };
 
   return (
     <>
@@ -56,7 +65,7 @@ const AboutMe = () => {
               className="name_surname_text"
               style={{
                 paddingLeft:"1rem",
-                opacity: "0.5"
+                color:"#00000"
                 
               }}
             />
@@ -71,7 +80,7 @@ const AboutMe = () => {
         placeholder='isim@email.com'
         style={{
           paddingLeft:"1rem",
-          opacity: "0.5"
+          color:"#00000"
          
         }}
         
@@ -84,11 +93,12 @@ const AboutMe = () => {
         type="tel"
         // value={phoneNumber}
         // onChange={handlePhoneChange}
+        defaultValue='+90&nbsp;'
         className='phone_text'
         placeholder='800 2738 9700'
         style={{
           paddingLeft:"1rem",
-          opacity: "0.5"
+          color:"#00000"
          
         }}
 
@@ -109,7 +119,7 @@ const AboutMe = () => {
               style={{
                 paddingLeft:"1rem",
                 marginLeft: "2.7rem",
-                opacity: "0.5",
+                color:"#00000"
                 
               }}
             />
@@ -124,7 +134,7 @@ const AboutMe = () => {
               style={{
                 paddingLeft:"1rem",
                 marginLeft:"4.5rem",
-                opacity: "0.5"
+                color:"#00000"
                
               }}
             />
@@ -138,7 +148,7 @@ const AboutMe = () => {
               style={{
                 paddingLeft:"1rem",
                 marginLeft:"0.5rem",
-                opacity: "0.5"
+                color:"#00000"
                 
               }}
             />
@@ -159,9 +169,11 @@ const AboutMe = () => {
               style={{
                 paddingLeft:"1rem",
                 marginLeft: "2.5rem",
-                opacity: "0.5"
+                 color:"#00000"
                 
               }}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             </div>
         
@@ -174,8 +186,10 @@ const AboutMe = () => {
               style={{
                 paddingLeft:"1rem",
                 marginLeft:"1rem",
-                opacity: "0.5"
+                 color:"#00000"
               }}
+              value={againpassword}
+              onChange={(e) => setAgainpassword(e.target.value)}
             />
             </div>
            
@@ -187,12 +201,14 @@ const AboutMe = () => {
               style={{
                 paddingLeft:"1rem",
                 marginLeft:"2rem",
-                opacity: "0.5"
+                 color:"#00000"
               }}
+              value={againpassword2}
+              onChange={(e) => setAgainpassword2(e.target.value)}
             />
             </div>
             </div>
-            <p className="hakkimda_mail_recompose">Tekrar düzenle <FontAwesomeIcon icon={faPencil }/></p>
+           <a href='##'> <p className="hakkimda_mail_recompose"  onClick={handleReset}>Tekrar düzenle <FontAwesomeIcon icon={faPencil} /></p></a>
             <button className="email_kaydet_btn"><span>Kaydet</span></button>
             <div className='delete_operations'>
               <button className='delete'><span>Hesabımı Sil</span></button>

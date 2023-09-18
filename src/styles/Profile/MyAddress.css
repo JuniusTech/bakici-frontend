@@ -140,6 +140,7 @@
   right: 300px;
   position: relative;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .kaydet_address_btn {
@@ -165,6 +166,9 @@
 }
 .kaydet_address_btn:hover {
   background: #fda9a9;
+}
+.profile_header_text::placeholder {
+  color: #7C7C7C66; 
 }
 
 @media (max-width: 1200px) {
