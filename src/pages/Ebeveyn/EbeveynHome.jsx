@@ -40,7 +40,9 @@ const BakiciHome = () => {
           </span>
         </div>
 
-        <p className="current_work_cancel">İPTAL ET</p>
+        <button className="current_work_cancel border-0 bg-transparent">
+          İPTAL ET
+        </button>
       </div>
 
       <div className="bakici_kullanmaya_basla">
@@ -96,7 +98,7 @@ const BakiciHome = () => {
                 <div className="warning">
                   <HomeMap />
                   <div className="divider" />
-                  <span>Adresinizi kaydediniz.</span>
+                  <span>Adresinizi kaydedin.</span>
                 </div>
 
                 <h3>Başka uyarınız bulunmamaktadır.</h3>
