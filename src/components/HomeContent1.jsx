@@ -1,54 +1,54 @@
-import React from "react";
-import { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
-import Select from "react-select";
-import "../styles/HomeContent1.css";
-import HomeBackground from "../assets/HomeBackground.svg";
-import homepageicon from "../assets/homepageicon.svg";
-import Arrow from "../assets/Arrow.svg";
-import BottomArrow from "../assets/bottom-vector.svg";
-import Child from "../assets/Child.svg";
-import Location from "../assets/Location.svg";
-import Search from "../assets/Search.svg";
-import BabyCar from "../assets/baby_car.svg";
-import Baby from "../assets/Baby.svg";
-import AdultAndBaby from "../assets/adult_and_baby.svg";
-import cities from "./Cities";
+import React from "react"
+import { useState } from "react"
+import { Form, Button, Container } from "react-bootstrap"
+import Select from "react-select"
+import "../styles/HomeContent1.css"
+import HomeBackground from "../assets/HomeBackground.svg"
+import homepageicon from "../assets/homepageicon.svg"
+import Arrow from "../assets/Arrow.svg"
+import BottomArrow from "../assets/bottom-vector.svg"
+import Child from "../assets/Child.svg"
+import Location from "../assets/Location.svg"
+import Search from "../assets/Search.svg"
+import BabyCar from "../assets/baby_car.svg"
+import Baby from "../assets/Baby.svg"
+import AdultAndBaby from "../assets/adult_and_baby.svg"
+import cities from "./Cities"
 
 function HomeContent1() {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [location, setLocation] = useState("");
-  const [date, setDate] = useState("");
-  const [imgColor, setImgColor] = useState("");
-  const [imgColor2, setImgColor2] = useState("");
-  const [imgColor3, setImgColor3] = useState("");
-  const [arrow, setArrow] = useState(Arrow);
-  const [arrow2, setArrow2] = useState(Arrow);
-  const [childImageSource, setChildImageSource] = useState("");
-  const [changeBottom, setChangeBottom] = useState("46px");
+  const [selectedOption, setSelectedOption] = useState("")
+  const [location, setLocation] = useState("")
+  const [date, setDate] = useState("")
+  const [imgColor, setImgColor] = useState("")
+  const [imgColor2, setImgColor2] = useState("")
+  const [imgColor3, setImgColor3] = useState("")
+  const [arrow, setArrow] = useState(Arrow)
+  const [arrow2, setArrow2] = useState(Arrow)
+  const [childImageSource, setChildImageSource] = useState("")
+  const [changeBottom, setChangeBottom] = useState("46px")
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Selected Option:", selectedOption);
-    console.log("Location:", location);
-    console.log("Date:", date);
-  };
+    event.preventDefault()
+    console.log("Selected Option:", selectedOption)
+    console.log("Location:", location)
+    console.log("Date:", date)
+  }
 
   const filterColor =
-    "  invert(48%) sepia(31%) saturate(841%) hue-rotate(155deg) brightness(90%) contrast(103%)";
-  let test = "";
+    "  invert(48%) sepia(31%) saturate(841%) hue-rotate(155deg) brightness(90%) contrast(103%)"
+  let test = ""
 
   const customStyles = {
     control: (provided, state) => {
       if (state.selectProps.id === "first-select") {
-        test = state.hasValue ? setChildImageSource("none") : "10px 50px";
-        test = state.hasValue ? setChangeBottom("20px") : "10px 50px";
-        test = state.isFocused ? setImgColor(filterColor) : setImgColor("");
-        test = state.menuIsOpen ? setArrow(BottomArrow) : setArrow(Arrow);
+        test = state.hasValue ? setChildImageSource("none") : "10px 50px"
+        test = state.hasValue ? setChangeBottom("20px") : "10px 50px"
+        test = state.isFocused ? setImgColor(filterColor) : setImgColor("")
+        test = state.menuIsOpen ? setArrow(BottomArrow) : setArrow(Arrow)
       }
       if (state.selectProps.id === "second-select") {
-        test = state.isFocused ? setImgColor2(filterColor) : setImgColor2("");
-        test = state.menuIsOpen ? setArrow2(BottomArrow) : setArrow2(Arrow);
+        test = state.isFocused ? setImgColor2(filterColor) : setImgColor2("")
+        test = state.menuIsOpen ? setArrow2(BottomArrow) : setArrow2(Arrow)
       }
 
       return {
@@ -70,7 +70,7 @@ function HomeContent1() {
         "&:hover": {
           border: "1px solid #2D83AC",
         },
-      };
+      }
     },
     singleValue: (provided, state) => ({
       ...provided,
@@ -107,19 +107,19 @@ function HomeContent1() {
         color: isSelected ? "#EBEBEB" : "",
         color: "#455A64;",
         cursor: "pointer",
-      };
+      }
     },
-  };
+  }
 
   const changeColor3 = (e) => {
-    setImgColor3(filterColor);
+    setImgColor3(filterColor)
 
-    return (e.target.type = "date");
-  };
+    return (e.target.type = "date")
+  }
 
   const changeColorDefault3 = () => {
-    setImgColor3("");
-  };
+    setImgColor3("")
+  }
 
   const options = [
     {
@@ -174,7 +174,7 @@ function HomeContent1() {
       ),
       imageSrc: "path/to/image1.jpg",
     },
-  ];
+  ]
   return (
     <div className="home-container">
       <img className="HomeBackground1" src={HomeBackground} alt="#" />
@@ -223,7 +223,7 @@ function HomeContent1() {
                 />
               </Form.Group>
               <Form.Group controlId="formNeredeYasiyorsunuz">
-                <Form.Label>Nerede Yaşıyorsunuz?</Form.Label>
+                <Form.Label>Konum</Form.Label>
                 <Select
                   id="second-select"
                   styles={customStyles}
@@ -280,7 +280,7 @@ function HomeContent1() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default HomeContent1;
+export default HomeContent1
