@@ -1,15 +1,16 @@
-import profileImg from "../../assets/Ellipse54.svg";
-import sifreIcon from "../../assets/sifre-icon.svg";
-import docIcon from "../../assets/doc.svg";
-import homeIcon from "../../assets/home-icon.svg";
-import usePasswordToggle1 from "../../components/usePasswordToggle";
-import Select from "react-select";
-import useSelectOptions from "../select/useSelectOptions";
+import profileImg from "../../assets/Ellipse54.svg"
+import sifreIcon from "../../assets/sifre-icon.svg"
+import docIcon from "../../assets/doc.svg"
+import homeIcon from "../../assets/home-icon.svg"
+import usePasswordToggle1 from "../../components/usePasswordToggle"
+import Select from "react-select"
+import useSelectOptions from "../select/useSelectOptions"
+import { useState } from "react"
 
 const cinsiyet = [
   { value: "kadın", label: "Kadın" },
   { value: "erkek", label: "Erkek" },
-];
+]
 
 const sehirler = [
   { value: "istanbul", label: "İstanbul" },
@@ -20,7 +21,7 @@ const sehirler = [
   { value: "adıyaman", label: "Adıyaman" },
   { value: "afyonkarahisar", label: "Afyonkarahisar" },
   { value: "ağrı", label: "Ağrı" },
-];
+]
 
 const ilceler = [
   { value: "beyoglu", label: "Beyoğlu" },
@@ -29,12 +30,12 @@ const ilceler = [
   { value: "nilufer", label: "Nilüfer" },
   { value: "ceyhan", label: "Ceyhan" },
   { value: "besni", label: "Besni" },
-];
+]
 
 const medeniDurum = [
   { value: "bekar", label: "Bekar" },
   { value: "evli", label: "Evli" },
-];
+]
 
 const yabanciDil = [
   { value: "ingilizce", label: "İngilizce" },
@@ -42,18 +43,18 @@ const yabanciDil = [
   { value: "fransizca", label: "Fransızca" },
   { value: "rusca", label: "Rusça" },
   { value: "arapca", label: "Arapça" },
-];
+]
 
 const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
-  const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1();
-  const [PasswordInputType2, ToggleIcon2] = usePasswordToggle1();
-  const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions();
+  const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1()
+  const [PasswordInputType2, ToggleIcon2] = usePasswordToggle1()
+  const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
 
   const handleChanges = (e) => {
-    setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value });
-  };
+    setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value })
+  }
 
-  console.log(bakiciInfo);
+  console.log(bakiciInfo)
 
   return (
     <div className="bakici-kayit__profile">
@@ -78,13 +79,11 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               </label>
               <textarea
                 className="bakici-kayit__textarea"
-                name=""
+                name="description"
+                onChange={handleChanges}
+                value={bakiciInfo.description || ""}
                 id=""
               ></textarea>
-              {/* <div className="bakici-kayit__desc-edit">
-                  <span>Tekrar düzenle</span>
-                  <button>Kaydet</button>
-                </div> */}
             </div>
           </div>
 
@@ -105,21 +104,39 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             <label className="bakici-kayit__input-label" htmlFor="">
               Email adresiniz
             </label>
-            <input className="bakici-kayit__input" type="email" />
+            <input
+              className="bakici-kayit__input"
+              type="email"
+              name="email"
+              value={bakiciInfo.email || ""}
+              onChange={handleChanges}
+            />
           </div>
 
           <div className="bakici-kayit__input-div">
             <label className="bakici-kayit__input-label" htmlFor="">
               Telefon numaranız
             </label>
-            <input className="bakici-kayit__input" type="tel" />
+            <input
+              onChange={handleChanges}
+              value={bakiciInfo.phone || ""}
+              name="phone"
+              className="bakici-kayit__input"
+              type="tel"
+            />
           </div>
 
           <div className="bakici-kayit__input-div">
             <label className="bakici-kayit__input-label" htmlFor="">
               Sifrenizi girin <img src={sifreIcon} alt="" />
             </label>
-            <input className="bakici-kayit__input" type={PasswordInputType1} />
+            <input
+              onChange={handleChanges}
+              value={bakiciInfo.password || ""}
+              name="password"
+              className="bakici-kayit__input"
+              type={PasswordInputType1}
+            />
             <div className="bakici-kayit__sifre-icon">{ToggleIcon1}</div>
           </div>
 
@@ -134,7 +151,13 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             <label className="bakici-kayit__input-label" htmlFor="">
               Şifrenizi tekrarlayın <img src={sifreIcon} alt="" />
             </label>
-            <input className="bakici-kayit__input" type={PasswordInputType2} />
+            <input
+              onChange={handleChanges}
+              value={bakiciInfo.password2 || ""}
+              name="password2"
+              className="bakici-kayit__input"
+              type={PasswordInputType2}
+            />
             <div className="bakici-kayit__sifre-icon">{ToggleIcon2}</div>
           </div>
         </div>
@@ -149,7 +172,14 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             <label className="bakici-kayit__input-label" htmlFor="date">
               Doğum tarihiniz
             </label>
-            <input id="date" className="bakici-kayit__input" type="date" />
+            <input
+              onChange={handleChanges}
+              value={bakiciInfo.birthDate || ""}
+              name="birthDate"
+              id="date"
+              className="bakici-kayit__input"
+              type="date"
+            />
           </div>
 
           <p className="bakici-kayit__input-label">Cinsiyetiniz</p>
@@ -158,6 +188,11 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               className="bakici-kayit__select"
               options={cinsiyet}
               placeholder="Cinsiyet"
+              name="gender"
+              onChange={(selectedOption) =>
+                setBakiciInfo({ ...bakiciInfo, gender: selectedOption.value })
+              }
+              value={{ value: bakiciInfo.gender, label: bakiciInfo.gender }}
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
@@ -170,6 +205,17 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               className="bakici-kayit__select"
               options={medeniDurum}
               placeholder="Medeni Durum"
+              name="maritalStatus"
+              onChange={(selectedOption) =>
+                setBakiciInfo({
+                  ...bakiciInfo,
+                  maritalStatus: selectedOption.value,
+                })
+              }
+              value={{
+                value: bakiciInfo.maritalStatus,
+                label: bakiciInfo.maritalStatus,
+              }}
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
@@ -186,6 +232,16 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               controlShouldRenderValue={false}
               options={yabanciDil}
               isSearchable={false}
+              name="languages"
+              onChange={(selectedOptions) => {
+                const selectedLanguages = selectedOptions.map(
+                  (option) => option.value
+                )
+                setBakiciInfo({ ...bakiciInfo, languages: selectedLanguages })
+              }}
+              value={yabanciDil.filter((dil) =>
+                bakiciInfo.languages.includes(dil.value)
+              )}
               placeholder="Yabancı Dil"
               components={{
                 Option: CheckboxOption,
@@ -203,6 +259,20 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               className="bakici-kayit__select"
               options={sehirler}
               placeholder="Şehir"
+              name="sehir"
+              onChange={(selectedOption) =>
+                setBakiciInfo({
+                  ...bakiciInfo,
+                  address: {
+                    ...bakiciInfo.address,
+                    sehir: selectedOption.value,
+                  },
+                })
+              }
+              value={{
+                value: bakiciInfo.address.sehir,
+                label: bakiciInfo.address.sehir,
+              }}
               styles={selectStyles}
             />
           </div>
@@ -213,6 +283,20 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               className="bakici-kayit__select"
               options={ilceler}
               placeholder="İlçe"
+              name="ilce"
+              onChange={(selectedOption) =>
+                setBakiciInfo({
+                  ...bakiciInfo,
+                  address: {
+                    ...bakiciInfo.address,
+                    ilce: selectedOption.value,
+                  },
+                })
+              }
+              value={{
+                value: bakiciInfo.address.ilce,
+                label: bakiciInfo.address.ilce,
+              }}
               styles={selectStyles}
             />
           </div>
@@ -221,7 +305,21 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             <label className="bakici-kayit__input-label" htmlFor="">
               Ev Adresiniz
             </label>
-            <input className="bakici-kayit__input" type="text" />
+            <input
+              name="evAdresi"
+              value={bakiciInfo.address.evAdresi}
+              onChange={(e) =>
+                setBakiciInfo({
+                  ...bakiciInfo,
+                  address: {
+                    ...bakiciInfo.address,
+                    evAdresi: e.target.value,
+                  },
+                })
+              }
+              className="bakici-kayit__input"
+              type="text"
+            />
             <img
               className="bakici-kayit__sifre-icon mb-1 me-2"
               src={homeIcon}
@@ -271,7 +369,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BakiciKayitForm;
+export default BakiciKayitForm
