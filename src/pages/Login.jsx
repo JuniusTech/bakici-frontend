@@ -23,7 +23,7 @@ const Login = () => {
       const BASE_URL = "https://carezone.onrender.com" //! Duruma Göre global değişken tanımlanabilir
       const res = await axios.post(`${BASE_URL}/user/signin`, ebeveynLogin)
       console.log("Başarıyla giriş yapıldı", res)
-      navigate("/")
+      navigate("/bakiciara")
     } catch (err) {
       console.log(err)
     }
