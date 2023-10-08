@@ -2,18 +2,31 @@ import React from "react"
 import "../styles/Login.css"
 import Logo from "../assets/logo.svg"
 import googleicon from "../assets/google-icon.svg"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import AnaUyelik from "../components/AnaUyelik"
+import axios from "axios"
 
 const Login = () => {
-  const [email, setemail] = useState("")
-  const [password, setpassword] = useState("")
+  const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
+  console.log(ebeveynLogin)
 
-  const onsubmit = (e) => {
+  const navigate = useNavigate()
+
+  const handleChange = (e) => {
+    setEbeveynLogin({ ...ebeveynLogin, [e.target.name]: e.target.value })
+  }
+
+  const onSubmit = async (e) => {
     e.preventDefault()
-    console.log(email)
-    console.log(password)
+    try {
+      const BASE_URL = "https://carezone.onrender.com"
+      const res = await axios.post(`${BASE_URL}/user/signin`, ebeveynLogin)
+      console.log("Başarıyla giriş yapıldı", res)
+      navigate("/")
+    } catch (err) {
+      console.log(err)
+    }
   }
   const [expanded, setExpanded] = useState(false)
 
@@ -50,7 +63,7 @@ const Login = () => {
               &nbsp;&nbsp; Ya da e-posta adresiniz ile &nbsp;&nbsp;
               <span className="login-form-text-span">•••••</span>
             </p>
-            <form action="" onSubmit={onsubmit}>
+            <form action="" onSubmit={onSubmit}>
               <div className="login-form-email-div">
                 <label htmlFor="email" className="login-form-label-email">
                   Email
@@ -61,8 +74,9 @@ const Login = () => {
                   placeholder="mail@gmail.com"
                   className="login-form-input-email"
                   required
-                  value={email}
-                  onChange={(e) => setemail(e.target.value)}
+                  name="email"
+                  value={ebeveynLogin.email || ""}
+                  onChange={handleChange}
                 />
                 <br />
               </div>
@@ -76,11 +90,12 @@ const Login = () => {
                 <br />
                 <input
                   type="password"
+                  name="password"
                   placeholder="Min. 6 karakter"
                   className="login-form-input-password"
                   required
-                  value={password}
-                  onChange={(e) => setpassword(e.target.value)}
+                  value={ebeveynLogin.password}
+                  onChange={handleChange}
                 />
                 <br />
               </div>

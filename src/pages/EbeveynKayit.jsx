@@ -1,29 +1,38 @@
 import usePasswordToggle1, {
   usePasswordToggle2,
-} from "../components/usePasswordToggle";
-
-import "../styles/EbeveynKayit.css";
-import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg";
-import { NavLink, useNavigate } from "react-router-dom";
-import logoBeyaz2 from "../assets/logoBeyaz2.svg";
-import logoBeyaz1 from "../assets/logoBeyaz1.svg";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
+} from "../components/usePasswordToggle"
+import "../styles/EbeveynKayit.css"
+import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg"
+import { NavLink, useNavigate } from "react-router-dom"
+import logoBeyaz2 from "../assets/logoBeyaz2.svg"
+import logoBeyaz1 from "../assets/logoBeyaz1.svg"
+import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faUser,
   faEnvelope,
   faLock,
   faEye,
   faEyeSlash,
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
+import axios from "axios"
 
-library.add(faUser, faEnvelope, faLock, faEye, faEyeSlash);
+library.add(faUser, faEnvelope, faLock, faEye, faEyeSlash)
 
 const EbeveynKayit = () => {
-  const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1();
-  const [PasswordInputType2, ToggleIcon2] = usePasswordToggle2();
+  const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1()
+  const [PasswordInputType2, ToggleIcon2] = usePasswordToggle2()
+  const [ebeveynInfo, setEbeveynInfo] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phoneNumber: "",
+    city: "",
+  })
+  console.log(ebeveynInfo)
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   // const [isOpen, setisOpen] = useState(true);
 
@@ -31,10 +40,21 @@ const EbeveynKayit = () => {
   //   setisOpen(false);
   // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/ebeveynkayitonay");
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const BASE_URL = "https://carezone.onrender.com" //! Duruma Göre global değişken tanımlanabilir
+    try {
+      const res = await axios.post(`${BASE_URL}/user/signup`, ebeveynInfo)
+      console.log("Kullanıcı Başarıyla Kayıt Edildi", res)
+      navigate("/ebeveynkayitonay")
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleChange = (e) => {
+    setEbeveynInfo({ ...ebeveynInfo, [e.target.name]: e.target.value })
+  }
 
   return (
     <div className="MusteriKayit">
@@ -77,6 +97,9 @@ const EbeveynKayit = () => {
               type="text"
               placeholder="İsim ve soyisim"
               className="MusteriKayit-Form-Input input-isim"
+              name="name"
+              onChange={handleChange}
+              value={ebeveynInfo.name || ""}
             />
             <br />
             <label
@@ -90,6 +113,9 @@ const EbeveynKayit = () => {
               type="email"
               placeholder="mail@gmail.com"
               className="MusteriKayit-Form-Input input-mail"
+              name="email"
+              onChange={handleChange}
+              value={ebeveynInfo.email || ""}
             />
             <br />
             <label htmlFor="tel" className="MusteriKayit-Form-Label label-tel">
@@ -100,6 +126,9 @@ const EbeveynKayit = () => {
               type="tel"
               placeholder="5XX XXX XX XX"
               className="MusteriKayit-Form-Input input-tel"
+              name="phoneNumber"
+              onChange={handleChange}
+              value={ebeveynInfo.phoneNumber || ""}
             />
             <br />
             <label
@@ -115,6 +144,9 @@ const EbeveynKayit = () => {
                 type={PasswordInputType1}
                 placeholder="Min. 6 karakter"
                 className="MusteriKayit-Form-Input input-sifre position-relative"
+                name="password"
+                onChange={handleChange}
+                value={ebeveynInfo.password || ""}
               />
               <div className="password-toogle-icon1">{ToggleIcon1}</div>
             </div>
@@ -137,6 +169,9 @@ const EbeveynKayit = () => {
                 type={PasswordInputType2}
                 placeholder="Min. 6 karakter"
                 className="MusteriKayit-Form-Input input-sifreTekrar"
+                name="confirmPassword"
+                onChange={handleChange}
+                value={ebeveynInfo.confirmPassword || ""}
               />
               <div className="password-toogle-icon2">{ToggleIcon2}</div>
             </div>
@@ -150,9 +185,11 @@ const EbeveynKayit = () => {
             <br />
             <div className="MusteriKayit-select-div">
               <select
-                name="select"
+                name="city"
                 id="select"
                 className="MusteriKayit-Form-Input input-sehir"
+                onChange={handleChange}
+                value={ebeveynInfo.city || ""}
               >
                 <option value="İstanbul">İstanbul</option>
                 <option value="Ankara">Ankara</option>
@@ -189,7 +226,7 @@ const EbeveynKayit = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EbeveynKayit;
+export default EbeveynKayit
