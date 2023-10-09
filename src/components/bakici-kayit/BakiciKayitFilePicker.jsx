@@ -1,5 +1,5 @@
-import dosyaekle from "../../assets/dosyaekle.svg";
-import trash from "../../assets/trash.svg";
+import dosyaekle from "../../assets/dosyaekle.svg"
+import trash from "../../assets/trash.svg"
 
 const BakiciKayitFilePicker = ({ id, desc }) => {
   return (
@@ -34,7 +34,7 @@ const BakiciKayitFilePicker = ({ id, desc }) => {
         <div className="bakici-kayit__belge-desc mt-4 mx-auto">{desc}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BakiciKayitFilePicker;
+export default BakiciKayitFilePicker

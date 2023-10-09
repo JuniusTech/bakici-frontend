@@ -5,45 +5,14 @@ import homeIcon from "../../assets/home-icon.svg"
 import usePasswordToggle1 from "../../components/usePasswordToggle"
 import Select from "react-select"
 import useSelectOptions from "../select/useSelectOptions"
-import { useState } from "react"
-
-const cinsiyet = [
-  { value: "kadın", label: "Kadın" },
-  { value: "erkek", label: "Erkek" },
-]
-
-const sehirler = [
-  { value: "istanbul", label: "İstanbul" },
-  { value: "ankara", label: "Ankara" },
-  { value: "izmir", label: "İzmir" },
-  { value: "bursa", label: "Bursa" },
-  { value: "adana", label: "Adana" },
-  { value: "adıyaman", label: "Adıyaman" },
-  { value: "afyonkarahisar", label: "Afyonkarahisar" },
-  { value: "ağrı", label: "Ağrı" },
-]
-
-const ilceler = [
-  { value: "beyoglu", label: "Beyoğlu" },
-  { value: "cubuk", label: "Çubuk" },
-  { value: "urla", label: "Urla" },
-  { value: "nilufer", label: "Nilüfer" },
-  { value: "ceyhan", label: "Ceyhan" },
-  { value: "besni", label: "Besni" },
-]
-
-const medeniDurum = [
-  { value: "bekar", label: "Bekar" },
-  { value: "evli", label: "Evli" },
-]
-
-const yabanciDil = [
-  { value: "ingilizce", label: "İngilizce" },
-  { value: "almanca", label: "Almanca" },
-  { value: "fransizca", label: "Fransızca" },
-  { value: "rusca", label: "Rusça" },
-  { value: "arapca", label: "Arapça" },
-]
+// import bakiciSignup from "../../helper/dummyData" //! Mock Data
+import {
+  cinsiyet,
+  sehirler,
+  ilceler,
+  medeniDurum,
+  yabanciDil,
+} from "../../helper/options"
 
 const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
   const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1()
@@ -52,6 +21,14 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
 
   const handleChanges = (e) => {
     setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value })
+  }
+  const handleSubmit = (e) => {
+    // ! Api Bağlanacak
+    // e.preventDefault()
+    console.log("meraba")
+    // const newBakiciInfo = { ...bakiciInfo }
+    // bakiciSignup.push(newBakiciInfo)
+    // console.log(bakiciInfo)
   }
 
   console.log(bakiciInfo)
@@ -62,6 +39,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
       <form
         className="bakici-kayit__profile-form d-flex align-items-center align-items-xl-start flex-column flex-xl-row"
         action=""
+        onSubmit={handleSubmit}
       >
         <div className="bakici-kayit__profile-form-sol ms-0 ms-xl-5 ps-xl-5">
           <h3 className="bakici-kayit__profile-baslik">Profil Bilgileri</h3>
