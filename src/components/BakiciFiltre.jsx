@@ -1,155 +1,43 @@
-import "../styles/BakiciFiltre.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import homeicon from "../assets/homeicon.svg";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import right from "../assets/right.svg";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
-import { useState } from "react";
-import Select, { components } from "react-select";
-import useSelectOptions from "./select/useSelectOptions";
-
-const sehirler = [
-  { value: "istanbul", label: "İstanbul" },
-  { value: "ankara", label: "Ankara" },
-  { value: "izmir", label: "İzmir" },
-  { value: "bursa", label: "Bursa" },
-  { value: "adana", label: "Adana" },
-  { value: "adıyaman", label: "Adıyaman" },
-  { value: "afyonkarahisar", label: "Afyonkarahisar" },
-  { value: "ağrı", label: "Ağrı" },
-];
-
-const ilceler = [
-  { value: "beyoglu", label: "Beyoğlu" },
-  { value: "cubuk", label: "Çubuk" },
-  { value: "urla", label: "Urla" },
-  { value: "nilufer", label: "Nilüfer" },
-  { value: "ceyhan", label: "Ceyhan" },
-  { value: "besni", label: "Besni" },
-];
-const calismaSekli = [
-  { value: "gunduz", label: "Sadece gündüz bakıcılığı" },
-  { value: "hsoGunduz", label: "Sadece haftasonu gündüz" },
-  { value: "hici", label: "Sadece hafta içi yatılı" },
-  { value: "hso", label: "Sadece hafta sonu yatılı" },
-  { value: "tum", label: "Pazar dahil tüm günler" },
-];
-
-const cinsiyet = [
-  { value: "kadın", label: "Kadın" },
-  { value: "erkek", label: "Erkek" },
-  { value: "tümü", label: "Tümü" },
-];
-
-const deneyim = [
-  { value: "deneyim0", label: "0-12 Ay Deneyimli" },
-  { value: "deneyim1", label: "1 yıl" },
-  { value: "deneyim2", label: "2 yıl" },
-  { value: "deneyim3", label: "3 yıl" },
-  { value: "deneyim4", label: "4 yıl" },
-  { value: "deneyim5", label: "+5 yıl" },
-];
-
-const egitimSev = [
-  { value: "doktora", label: "Doktora" },
-  { value: "yuksekLi", label: "Yüksek Lisans" },
-  { value: "lisans", label: "Lisans" },
-  { value: "uni", label: "Universite" },
-  { value: "lise", label: "Lise" },
-];
-
-const medeniDurum = [
-  { value: "bekar", label: "Bekar" },
-  { value: "evli", label: "Evli" },
-  { value: "tümü", label: "Tümü" },
-];
-
-const yabanciDil = [
-  { value: "ingilizce", label: "İngilizce" },
-  { value: "almanca", label: "Almanca" },
-  { value: "fransizca", label: "Fransızca" },
-  { value: "rusca", label: "Rusça" },
-  { value: "arapca", label: "Arapça" },
-];
+import "../styles/BakiciFiltre.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import homeicon from "../assets/homeicon.svg"
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import right from "../assets/right.svg"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
+import Select from "react-select"
+import useSelectOptions from "./select/useSelectOptions"
+import {
+  sehirler,
+  ilceler,
+  calismaSekli,
+  cinsiyet,
+  deneyim,
+  egitimSev,
+  medeniDurum,
+  yabanciDil,
+} from "../helper/options"
 
 const Filtre = () => {
-  const [calisma, setCalisma] = useState([]);
-  const [yasOpen, setYasOpen] = useState(false);
-  const [ucretOpen, setUcretOpen] = useState(false);
-  const [filterOpen, setFilterOpen] = useState(false);
-  const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions();
+  const [calisma, setCalisma] = useState([])
+  const [yasOpen, setYasOpen] = useState(false)
+  const [ucretOpen, setUcretOpen] = useState(false)
+  const [filterOpen, setFilterOpen] = useState(false)
+  const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
 
   const handleChange = (e) => {
-    setCalisma(e);
-  };
+    setCalisma(e)
+  }
 
   window.onclick = function (e) {
     if (!e.target.matches(".ucretclose")) {
-      setUcretOpen(false);
+      setUcretOpen(false)
     }
 
     if (!e.target.matches(".yasclose")) {
-      setYasOpen(false);
+      setYasOpen(false)
     }
-  };
-
-  // const NumInputDiv = ({ open, setOpen, label }) => {
-  //   return (
-  // <div className="w-100 position-relative">
-  //   <div
-  //     className="bakici-filtre__selectdiv d-flex justify-content-between align-items-center px-4 pb-2"
-  //     onClick={() => setOpen(!open)}
-  //   >
-  //     <p className="">{label}</p>
-  //     <img
-  //       src={right}
-  //       className="bakici-filtre__arrow"
-  //       alt="arrow"
-  //       style={{ rotate: open ? "90deg" : "0deg", transition: "all .2s" }}
-  //     />
-  //   </div>
-
-  //   {open && (
-  //     <div className="bakici-filtre__yas d-flex gap-5 p-3 border border-1 rounded-3 mt-2 position-absolute z-2 bg-white">
-  //       <div>
-  //         <p className="fs-6">En az</p>
-  //         <input
-  //           type="number"
-  //           name=""
-  //           id=""
-  //           className="w-100 border-1 rounded-1 "
-  //         />
-  //       </div>
-  //       <div>
-  //         <p className="fs-6">En fazla</p>
-  //         <input
-  //           type="number"
-  //           name=""
-  //           id=""
-  //           className="w-100 border-1 rounded-1 "
-  //         />
-  //       </div>
-  //     </div>
-  //   )}
-  // </div>
-  //   );
-  // };
-
-  // const SelectComp = ({ options, placeholder }) => {
-  //   return (
-  //     <div className="bakici-filtre__selectdiv">
-  //       <Select
-  //         className="bakici-filtre__select"
-  //         options={options}
-  //         placeholder={placeholder}
-  //         components={{ Option: RadioOption, ClearIndicator: null }}
-  //         styles={selectStyles}
-  //         isSearchable={false}
-  //       />
-  //     </div>
-  //   );
-  // };
+  }
 
   return (
     <div className="m-4">
@@ -375,7 +263,7 @@ const Filtre = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Filtre;
+export default Filtre

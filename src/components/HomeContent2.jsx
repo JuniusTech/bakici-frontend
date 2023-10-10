@@ -125,7 +125,7 @@ const navigate = useNavigate();
                                 alt="Kaydolİcon"
                             />
                             <p className="BakiciOlma-Box-Card-Text">
-                                Sisteme Kaydınızı yapın
+                                Sisteme kaydınızı yapın
                             </p>
                             <hr className="BakiciOlma-Box-Card-Hr position-absolute" />
                         </div>

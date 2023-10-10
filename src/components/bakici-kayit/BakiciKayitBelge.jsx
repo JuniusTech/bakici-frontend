@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import belge from "../../assets/doküman.svg";
-import BakiciKayitFilePicker from "./BakiciKayitFilePicker";
+import { Link } from "react-router-dom"
+import belge from "../../assets/doküman.svg"
+import BakiciKayitFilePicker from "./BakiciKayitFilePicker"
 
 const belgeler = [
   {
@@ -29,7 +29,7 @@ const belgeler = [
       </p>
     ),
   },
-];
+]
 
 const BakiciKayitBelge = ({ setKayitRoute }) => {
   return (
@@ -57,7 +57,7 @@ const BakiciKayitBelge = ({ setKayitRoute }) => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BakiciKayitBelge;
+export default BakiciKayitBelge

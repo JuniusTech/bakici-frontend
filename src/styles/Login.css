@@ -16,11 +16,10 @@
   width: 211px;
   height: 174px;
   margin: 55px auto;
-
 }
 .login-form {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   align-items: center;
 }
 .login-form-title {
@@ -47,7 +46,7 @@
   line-height: 16px;
   color: #455a64;
   margin: 20px 0;
-  padding: 10px 0 ;
+  padding: 10px 0;
 }
 .login-form-btn-icon {
   width: 30px;
@@ -67,13 +66,13 @@
 }
 .login-form-text-span {
   color: rgba(69, 90, 100, 0.5);
-  
+  letter-spacing: 0.2rem;
 }
-.login-form-email-div{
+.login-form-email-div {
   position: relative;
   margin: 20px 0;
 }
-.login-form-label-email{
+.login-form-label-email {
   position: absolute;
   left: 10px;
   text-align: left;
@@ -86,11 +85,11 @@
   line-height: 24px;
   color: #467888;
 }
-.login-form-password-div{
+.login-form-password-div {
   position: relative;
   margin: 20px 0;
 }
-.login-form-label-password{
+.login-form-label-password {
   position: absolute;
   left: 10px;
   width: 59px;
@@ -104,7 +103,7 @@
   color: #467888;
 }
 
-.login-form-label-sifremiunuttum{
+.login-form-label-sifremiunuttum {
   position: absolute;
   cursor: pointer;
   right: 10px;
@@ -170,14 +169,17 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
+  letter-spacing: 0.3rem;
   line-height: 16px;
+  padding: 2rem 0 1rem 0;
   color: rgba(69, 90, 100, 0.4);
 }
-.login-form-text-link-container{
+.login-form-text-link-container {
   width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-bottom: 2rem;
 }
 .login-form-text-link {
   font-family: "Georama";
@@ -186,7 +188,6 @@
   font-size: 20px;
   line-height: 24px;
   color: #c4c4c4;
-
 }
 .login-form-link {
   font-family: "Georama";
@@ -199,54 +200,60 @@
 }
 .login-img-container {
   width: 50%;
-  height: 100%;
+  height: 170%;
   background-size: cover;
   background-position: center;
   object-fit: cover;
   background-image: url("../assets/Loginİmg.svg");
   background-repeat: no-repeat;
- 
+  box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1600px)  {
+@media only screen and (max-width: 1600px) {
   .login-logo {
     width: 100px;
     height: 75px;
     margin: 20px auto;
   }
-  .login-form-title{
+  .login-form-title {
     margin: 20px auto;
     font-size: 24px;
   }
-  .login-form-input-email,.login-form-input-password,.login-form-submit-btn{
+  .login-form-input-email,
+  .login-form-input-password,
+  .login-form-submit-btn {
     height: 60px;
     font-size: 20px;
     margin: 20px auto;
   }
-  .login-form-submit-btn{
+  .login-form-submit-btn {
     margin: -7px auto 7px;
   }
-  .login-form-btn{
+  .login-form-btn {
     height: 60px;
     font-size: 20px;
-     margin: 20px ;
+    margin: 20px;
   }
-  .login-form-text{
+  .login-form-text {
     font-size: 20px;
   }
-  .login-form-btn-icon{
+  .login-form-btn-icon {
     width: 25px;
     height: 25px;
     left: -15px;
   }
-  .login-form-text-link-container,.login-form-text-link,.login-form-link{
+  .login-form-text-link-container,
+  .login-form-text-link,
+  .login-form-link {
     margin: 0;
   }
 }
 
-@media only screen and (max-width: 450px)  {
-
-  .login-form-input-email,.login-form-input-password,.login-form-submit-btn,.login-form-btn{
+@media only screen and (max-width: 450px) {
+  .login-form-input-email,
+  .login-form-input-password,
+  .login-form-submit-btn,
+  .login-form-btn {
     width: 80vw;
   }
 }
