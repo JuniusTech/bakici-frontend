@@ -6,10 +6,13 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import AnaUyelik from "../components/AnaUyelik"
 import axios from "axios"
+import { useLoginContext } from "../context/LoginProvider"
 
 const Login = () => {
   const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
-  console.log(ebeveynLogin)
+  const [isSubmiting, setIsSubmiting] = useState(false)
+
+  const { user, setUser } = useLoginContext()
 
   const navigate = useNavigate()
 
@@ -20,12 +23,17 @@ const Login = () => {
   const onSubmit = async (e) => {
     e.preventDefault()
     try {
+      setIsSubmiting(true)
       const BASE_URL = "https://carezone.onrender.com" //! Duruma Göre global değişken tanımlanabilir
       const res = await axios.post(`${BASE_URL}/user/signin`, ebeveynLogin)
-      console.log("Başarıyla giriş yapıldı", res)
+      console.log(res)
+      setUser(res?.data)
+      localStorage.setItem("user", JSON.stringify(res?.data?.responseValue))
+      console.log(user)
       navigate("/bakiciara")
     } catch (err) {
       console.log(err)
+      setIsSubmiting(false)
     }
   }
   const [expanded, setExpanded] = useState(false)
@@ -100,8 +108,12 @@ const Login = () => {
                 <br />
               </div>
 
-              <button className="login-form-submit-btn" type="submit">
-                Oturum Aç
+              <button
+                className="login-form-submit-btn"
+                disabled={isSubmiting}
+                type="submit"
+              >
+                {isSubmiting ? "Giriş Yapılıyor..." : "Oturum Aç"}
               </button>
             </form>
 
