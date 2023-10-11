@@ -1,22 +1,23 @@
-import { Link } from "react-router-dom";
-import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg";
-import "../styles/NavbarBakici.css";
-import bakiciara from "../assets/bakiciara.svg";
-import isebasvur from "../assets/isebasvur.svg";
-import Profile from "../assets/Profile.svg";
-import bildirim from "../assets/bildirim.svg";
-import mesaj from "../assets/mesaj.svg";
-import bakiciavatar from "../assets/bakiciavatar.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import AnaUyelik from "./AnaUyelik";
+import { Link } from "react-router-dom"
+import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg"
+import "../styles/NavbarBakici.css"
+import bakiciara from "../assets/bakiciara.svg"
+import isebasvur from "../assets/isebasvur.svg"
+import Profile from "../assets/Profile.svg"
+import bildirim from "../assets/bildirim.svg"
+import mesaj from "../assets/mesaj.svg"
+import bakiciavatar from "../assets/bakiciavatar.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
+import Dropdown from "react-bootstrap/Dropdown"
+import DropdownButton from "react-bootstrap/DropdownButton"
+import AnaUyelik from "./AnaUyelik"
+import { useLoginContext } from "../context/LoginProvider"
 
 const NavbarBakici = () => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
+  const { user } = useLoginContext()
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
 
   return (
     <>
@@ -27,21 +28,20 @@ const NavbarBakici = () => {
 
       <nav className="navbar-bakici row border-bottom border-2 m-0">
         <div className="col-2">
-        <Link to="/">
-        <img
-            src={MusteriKayitLogo}
-            alt="MusteriKayitLogo"
-            className="MusteriKayit-Logo"
-          />
-        </Link>
-          
+          <Link to="/">
+            <img
+              src={MusteriKayitLogo}
+              alt="MusteriKayitLogo"
+              className="MusteriKayit-Logo"
+            />
+          </Link>
         </div>
         <div className="col-10 d-flex gap-4 justify-content-end align-items-center pe-4">
           <Link className="navbar-bakici__button" to="/bakiciara">
             <p className="mb-0">Bakıcı Ara</p>
             <img className="" src={bakiciara} alt="bakiciara" />
           </Link>
-          {isLogin && (
+          {user && (
             <div className="d-flex align-items-center gap-5 ps-4">
               <Link className="navbar-bakici__bildirim position-relative">
                 <img src={bildirim} alt="bildirim" />
@@ -57,15 +57,16 @@ const NavbarBakici = () => {
 
               <div className="d-flex align-items-center gap-3">
                 <p className="m-0 border-start ps-4 py-2 border-dark text-nowrap">
-                  Tuğba Aksoy
+                  {user?.responseValue?.name}
                 </p>
                 <img src={bakiciavatar} alt="bakiciavatar" />
+                {/* Bakıcı Avatarı eklenecek */}
                 <FontAwesomeIcon icon={faChevronDown} />
               </div>
             </div>
           )}
 
-          {!isLogin && (
+          {!user && (
             <div>
               <div className="d-none d-lg-flex align-items-center gap-4">
                 <Link className="navbar-bakici__button " to="/isebasvur">
@@ -86,7 +87,9 @@ const NavbarBakici = () => {
                   <img className="" src={Profile} alt="Profile" />
                 </Link>
 
-                <Link className="navbar-bakici__yardim " to={"/BakYardim"}>Yardım</Link>
+                <Link className="navbar-bakici__yardim " to={"/BakYardim"}>
+                  Yardım
+                </Link>
               </div>
               <DropdownButton
                 id="dropdown-basic-button"
@@ -110,7 +113,7 @@ const NavbarBakici = () => {
         </div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default NavbarBakici;
+export default NavbarBakici
