@@ -12,7 +12,7 @@ const Login = () => {
   const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
   const [isSubmiting, setIsSubmiting] = useState(false)
 
-  const { user, setUser } = useLoginContext()
+  const { currentUser, setCurrentUser } = useLoginContext()
 
   const navigate = useNavigate()
 
@@ -24,12 +24,12 @@ const Login = () => {
     e.preventDefault()
     try {
       setIsSubmiting(true)
-      const BASE_URL = "https://carezone.onrender.com" //! Duruma Göre global değişken tanımlanabilir
-      const res = await axios.post(`${BASE_URL}/user/signin`, ebeveynLogin)
+      // const baseURL = process.env.REACT_APP_BASE_URL
+      const baseURL = "http://localhost:8080"
+      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
       console.log(res)
-      setUser(res?.data)
-      localStorage.setItem("user", JSON.stringify(res?.data?.responseValue))
-      console.log(user)
+      setCurrentUser(res?.data)
+      console.log(res?.data?.responseValue?.token)
       navigate("/bakiciara")
     } catch (err) {
       console.log(err)

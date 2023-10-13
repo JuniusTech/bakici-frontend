@@ -16,7 +16,7 @@ import AnaUyelik from "./AnaUyelik"
 import { useLoginContext } from "../context/LoginProvider"
 
 const NavbarBakici = () => {
-  const { user } = useLoginContext()
+  const { currentUser } = useLoginContext()
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
 
   return (
@@ -41,7 +41,7 @@ const NavbarBakici = () => {
             <p className="mb-0">Bakıcı Ara</p>
             <img className="" src={bakiciara} alt="bakiciara" />
           </Link>
-          {user && (
+          {currentUser && (
             <div className="d-flex align-items-center gap-5 ps-4">
               <Link className="navbar-bakici__bildirim position-relative">
                 <img src={bildirim} alt="bildirim" />
@@ -57,7 +57,7 @@ const NavbarBakici = () => {
 
               <div className="d-flex align-items-center gap-3">
                 <p className="m-0 border-start ps-4 py-2 border-dark text-nowrap">
-                  {user?.responseValue?.name}
+                  {currentUser?.responseValue?.name}
                 </p>
                 <img src={bakiciavatar} alt="bakiciavatar" />
                 {/* Bakıcı Avatarı eklenecek */}
@@ -66,7 +66,7 @@ const NavbarBakici = () => {
             </div>
           )}
 
-          {!user && (
+          {!currentUser && (
             <div>
               <div className="d-none d-lg-flex align-items-center gap-4">
                 <Link className="navbar-bakici__button " to="/isebasvur">

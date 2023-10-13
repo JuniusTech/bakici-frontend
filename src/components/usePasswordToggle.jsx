@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import eyeclosed from "../assets/eyeclosed.svg";
+import React, { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import eyeclosed from "../assets/eyeclosed.svg"
 
 const usePasswordToggle1 = () => {
-  const [visible, setVisiblity] = useState(false);
+  const [visible, setVisiblity] = useState(false)
 
   const Icon = (
     <>
@@ -20,17 +20,17 @@ const usePasswordToggle1 = () => {
         />
       )}
     </>
-  );
+  )
 
-  const InputType = visible ? "text" : "password";
+  const InputType = visible ? "text" : "password"
 
-  return [InputType, Icon];
-};
+  return [InputType, Icon]
+}
 
-export default usePasswordToggle1;
+export default usePasswordToggle1
 
 export const usePasswordToggle2 = () => {
-  const [visible, setVisiblity] = useState(false);
+  const [visible, setVisiblity] = useState(false)
 
   const Icon = (
     <>
@@ -47,9 +47,9 @@ export const usePasswordToggle2 = () => {
         />
       )}
     </>
-  );
+  )
 
-  const InputType = visible ? "text" : "password";
+  const InputType = visible ? "text" : "password"
 
-  return [InputType, Icon];
-};
+  return [InputType, Icon]
+}

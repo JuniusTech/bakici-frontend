@@ -11,6 +11,14 @@
   z-index: 2;
 }
 
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  color: red;
+}
+
 @media screen and (min-width: 1200px) {
   .MusteriKayit-Link {
     color: white;
@@ -26,7 +34,7 @@
 }
 
 .MusteriKayit-Form-Form {
-  width: 400px
+  width: 400px;
 }
 
 .MusteriKayit-Form-Title {
@@ -68,7 +76,6 @@
   pointer-events: none;
 }
 
-
 .input-sehir {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -78,7 +85,6 @@
   outline: none;
   border: none;
 }
-
 
 .MusteriKayit-Form-Label {
   font-style: normal;
@@ -151,7 +157,7 @@
 .MusteriKayit-İmgContainer {
   transform: translateX(-10px);
   position: relative;
-  background-image: linear-gradient(to bottom, #455A64, #2D83AC);
+  background-image: linear-gradient(to bottom, #455a64, #2d83ac);
 }
 
 .MusteriKayit-İmgContainer::after {
@@ -168,7 +174,6 @@
   background-clip: border-box;
   filter: blur(5px);
 }
-
 
 /* 
 
