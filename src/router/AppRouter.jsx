@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../pages/Home"
 import Register from "../pages/Register"
 import Login from "../pages/Login"
-import Yardim from "../pages/Yardim"
 import BakiciAra from "../pages/BakiciAra"
 import IseBasvur from "../pages/IseBasvur"
 import EbeveynKayit from "../pages/EbeveynKayit"
@@ -20,6 +19,7 @@ import Misafir from "../pages/Misafir"
 import SingleBakici from "../pages/SingleBakici"
 import Ebeveyn from "../pages/Ebeveyn/Ebeveyn"
 import PrivateRouter from "./PrivateRouter"
+
 const AppRouter = () => {
   return (
     <BrowserRouter>

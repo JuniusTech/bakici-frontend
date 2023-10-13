@@ -1,0 +1,75 @@
+.favorite-babysitter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  border: 0.1px solid rgb(194, 194, 194);
+  width: 90%;
+  height: 15rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
+}
+.favorite-babysitter-card {
+  display: flex;
+  align-items: center;
+  width: 95%;
+}
+.favorite-babysitter-info {
+  width: 100%;
+  margin-left: 1.3rem;
+}
+.babysitter-name-rate-status {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0.7rem;
+}
+.name-text {
+  color: #455a64;
+  list-style: none;
+  font-family: Georama;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: left;
+}
+.status-text {
+  color: rgb(0, 212, 0);
+  font-weight: 600;
+  font-size: 14px;
+}
+.experience-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Georama;
+  font-size: 16px;
+  width: 100%;
+}
+.working-status-container {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.working-status {
+  margin-left: 0.5rem;
+}
+.price-info {
+  font-size: 21px;
+  color: rgb(0, 212, 0);
+  text-decoration: underline;
+  font-family: Georama;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 38px;
+  margin-left: 1rem;
+}
+.working-conditions-container {
+  display: flex;
+  align-items: center;
+}
+.like {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

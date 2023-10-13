@@ -1,10 +1,8 @@
 import React from "react"
 import Footer from "../components/Footer"
-import { useState } from "react"
 import "./../styles/OfflineYardim.css"
 import reservation_date from "./../assets/reservation_date.svg"
 import soruIsareti from "./../assets/soru-isareti.svg"
-import { Link } from "react-router-dom"
 import NavbarBakici from "../components/NavbarBakici"
 
 const OfflineYardim = () => {
@@ -35,10 +33,6 @@ const OfflineYardim = () => {
   }
   return (
     <>
-      {
-        // <Navbar />
-      }
-
       <NavbarBakici />
       <div className="yardim text-center">
         <h3 className="yardim-h3 text-center">SIKÇA SORULAN SORULAR</h3>
