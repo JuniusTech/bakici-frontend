@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Hearth = () => {
   return (
@@ -35,7 +35,7 @@ const Hearth = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Hearth;
+export default Hearth

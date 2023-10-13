@@ -12,7 +12,7 @@ const Login = () => {
   const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
   const [isSubmiting, setIsSubmiting] = useState(false)
 
-  const { currentUser, setCurrentUser } = useLoginContext()
+  const { setCurrentUser } = useLoginContext()
 
   const navigate = useNavigate()
 
@@ -24,8 +24,8 @@ const Login = () => {
     e.preventDefault()
     try {
       setIsSubmiting(true)
-      // const baseURL = process.env.REACT_APP_BASE_URL
-      const baseURL = "http://localhost:8080"
+      const baseURL = process.env.REACT_APP_BASE_URL
+      // const baseURL = "http://localhost:8080"
       const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
       console.log(res)
       setCurrentUser(res?.data)
@@ -36,12 +36,12 @@ const Login = () => {
       setIsSubmiting(false)
     }
   }
-  const [expanded, setExpanded] = useState(false)
+  // const [expanded, setExpanded] = useState(false)
 
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
 
   const handleClick = () => {
-    setExpanded(false)
+    // setExpanded(false)
     setOpenAnaUyelik(true)
   }
 

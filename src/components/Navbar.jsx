@@ -1,11 +1,11 @@
 import Button from "react-bootstrap/Button"
 import { useEffect, useState } from "react"
-import { Link, NavLink, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import MagnifyingGlass from "../assets/MagnifyingGlass.svg"
 import Profile from "../assets/Profile.svg"
 import ProfilePlus from "../assets/ProfilePlus.svg"
 import "../styles/Navbar.css"
-import * as ReactBootStrap from "react-bootstrap"
+// import * as ReactBootStrap from "react-bootstrap"
 
 import CareZone from "../assets/CareZone.svg"
 import AnaUyelik from "./AnaUyelik"

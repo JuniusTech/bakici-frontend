@@ -1,3 +1,5 @@
+import hakkimda_img from "../assets/hakkimda_img.svg"
+
 export const cinsiyet = [
   { value: "kadın", label: "Kadın" },
   { value: "erkek", label: "Erkek" },
@@ -132,4 +134,55 @@ export const egitimSev = [
   { value: "lisans", label: "Lisans" },
   { value: "uni", label: "Universite" },
   { value: "lise", label: "Lise" },
+]
+
+export const babySitterInfo = [
+  {
+    id: 1,
+    image: hakkimda_img,
+    name: "TUĞBA AKSOY",
+    rate: 4.7,
+    status: "Güvenilir Bakıcı",
+    languge: "İngilizce Konuşabiliyor",
+    experience: "2 yıl deneyim",
+    info: "İlkyardım Bilgisi",
+    workingStatus: "Gündüz Bakıcılığı",
+    workingStatus2: "Gece Bakıcılığı",
+    price: 1000,
+    runtime: "Haftalık",
+    workingDays: "(6 gün/24 saat bakım)",
+    likes: 7,
+  },
+  {
+    id: 2,
+    image: hakkimda_img,
+    name: "TUĞBA AKSOY",
+    rate: 4.7,
+    status: "Güvenilir Bakıcı",
+    languge: "İngilizce Konuşabiliyor",
+    experience: "2 yıl deneyim",
+    info: "İlkyardım Bilgisi",
+    workingStatus: "Gündüz Bakıcılığı",
+    workingStatus2: "Gece Bakıcılığı",
+    price: 1000,
+    runtime: "Haftalık",
+    workingDays: "(6 gün/24 saat bakım)",
+    likes: 7,
+  },
+  {
+    id: 3,
+    image: hakkimda_img,
+    name: "TUĞBA AKSOY",
+    rate: 4.7,
+    status: "Güvenilir Bakıcı",
+    languge: "İngilizce Konuşabiliyor",
+    experience: "2 yıl deneyim",
+    info: "İlkyardım Bilgisi",
+    workingStatus: "Gündüz Bakıcılığı",
+    workingStatus2: "Gece Bakıcılığı",
+    price: 1000,
+    runtime: "Haftalık",
+    workingDays: "(6 gün/24 saat bakım)",
+    likes: 7,
+  },
 ]

@@ -1,12 +1,12 @@
-import React from "react";
-import NavbarBakici from "../components/NavbarBakici";
-import BakiciInfo from "../components/BakiciInfo";
-import BakiciDetail from "../components/BakiciDetail";
-import { Col, Container, Row } from "react-bootstrap";
-import homeicon from "../assets/homeicon.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import Footer from "../components/Footer";
+import React from "react"
+import NavbarBakici from "../components/NavbarBakici"
+import BakiciInfo from "../components/BakiciInfo"
+import BakiciDetail from "../components/BakiciDetail"
+import { Col } from "react-bootstrap"
+import homeicon from "../assets/homeicon.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import Footer from "../components/Footer"
 
 function SingleBakici() {
   return (
@@ -30,7 +30,7 @@ function SingleBakici() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default SingleBakici;
+export default SingleBakici

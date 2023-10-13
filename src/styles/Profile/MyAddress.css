@@ -32,6 +32,7 @@
   line-height: 38px;
   letter-spacing: 0em;
   justify-content: center;
+  align-items: center;
 }
 .my_address_text img {
   width: 40px;
@@ -168,7 +169,7 @@
   background: #fda9a9;
 }
 .profile_header_text::placeholder {
-  color: #7C7C7C66; 
+  color: #7c7c7c66;
 }
 
 @media (max-width: 1200px) {
