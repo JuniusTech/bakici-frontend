@@ -152,6 +152,7 @@ export const babySitterInfo = [
     runtime: "Haftalık",
     workingDays: "(6 gün/24 saat bakım)",
     likes: 7,
+    evaluationStatus: true,
   },
   {
     id: 2,
@@ -168,6 +169,7 @@ export const babySitterInfo = [
     runtime: "Haftalık",
     workingDays: "(6 gün/24 saat bakım)",
     likes: 7,
+    evaluationStatus: false,
   },
   {
     id: 3,
@@ -184,5 +186,6 @@ export const babySitterInfo = [
     runtime: "Haftalık",
     workingDays: "(6 gün/24 saat bakım)",
     likes: 7,
+    evaluationStatus: false,
   },
 ]

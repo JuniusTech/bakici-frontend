@@ -4,12 +4,12 @@ import "../../styles/Profile/FavoriteBabysitter.css"
 import { babySitterInfo } from "../../helper/options"
 import timeOne from "../../assets/Time1.svg"
 import timeTwo from "../../assets/Time2.svg"
-import Heart from "../../assets/Hearth"
+import heart from "../../assets/Vector.png"
 import languageIcon from "../../assets/LANGUAGE.png"
 import layer from "../../assets/Layer_1.png"
 import ilkyardim from "../../assets/Group8242.png"
 import stars from "../../assets/stars.png"
-import carbonPausePast from "../../assets/carbon_pause-past.png"
+import VectorHeader from "../../assets/Vector-head.png"
 
 const FavoriteBabysitter = () => {
   return (
@@ -22,14 +22,14 @@ const FavoriteBabysitter = () => {
           flexDirection: "column",
           paddingBottom: "1rem",
           height: "fit-content",
-          width: "58%",
+          width: "60%",
         }}
         className="my_address_container"
       >
         <div className="my_address">
           <div className="my_address_text">
             <span>FAVORİ BAKICILARIM</span>
-            <img src={carbonPausePast} alt="carbon-Pause-Past" />
+            <img src={VectorHeader} alt="carbon-Pause-Past" />
           </div>
         </div>
         {babySitterInfo.map((e) => {
@@ -51,7 +51,7 @@ const FavoriteBabysitter = () => {
                     >
                       <img src={stars} alt="stars" />
                       <span
-                        style={{ marginLeft: "1rem" }}
+                        style={{ marginLeft: ".6rem" }}
                         className="name-text"
                       >
                         {e.rate}
@@ -102,10 +102,8 @@ const FavoriteBabysitter = () => {
                   </section>
                 </div>
                 <div className="like">
-                  <Heart />
-                  <p style={{ marginRight: "8px", color: "#F74D4D" }}>
-                    {e.likes}
-                  </p>
+                  <img src={heart} alt="heart" />
+                  <p style={{ color: "#E88585" }}>{e.likes}</p>
                 </div>
               </div>
             </div>

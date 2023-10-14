@@ -1,0 +1,112 @@
+.rate-service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f3f3f3;
+  width: 90%;
+  margin: 2rem 0;
+  font-family: Georama;
+  color: #455a64;
+}
+.rate-service-babysitter {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rate-service-babysitter-name {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.04px;
+  margin-top: 1.5rem;
+}
+.rate-service-babysitter-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+.rate-service-babysitter-star p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23.88px;
+  display: flex;
+  margin-top: 1rem;
+}
+.rate-service-babysitter-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.rate-service-babysitter-status p {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 50px;
+}
+.comment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  height: 406px;
+  margin-top: 3rem;
+}
+.comment-container p {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 50px;
+}
+#evaluation-text-area {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 1px solid #c4c4c4;
+}
+.detailed-assessment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  margin: 3rem 0;
+}
+.option-evaluation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.option-evaluation > p {
+  width: 75%;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+.option-evaluation input {
+  margin-left: 1.5rem;
+}
+.rate-service-button-container {
+  margin: 2rem 0;
+}
+.rate-service-button-container button {
+  background-color: #e88585;
+  width: 402px;
+  height: 52px;
+  border: 0;
+  border-radius: 26px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.detailed-assessment-header {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 50px;
+}

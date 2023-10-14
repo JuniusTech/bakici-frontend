@@ -5,18 +5,17 @@ import AboutMe from "../../components/Profile/AboutMe"
 import MyAddress from "../../components/Profile/MyAddress"
 import FavoriteBabysitter from "../../components/Profile/FavoriteBabysitter"
 import ServiceProviders from "../../components/Profile/ServiceProviders"
+import RateService from "../../components/Profile/RateService"
 
 const EbeveynProfile = () => {
   const [activeTab, setActiveTab] = useState("Profilim")
+  console.log(activeTab)
 
-  const handleContentClick = (tab) => {
-    setActiveTab(tab)
-  }
   return (
     <>
       <div
         className="information_profile_container"
-        style={{ height: "16rem" }}
+        style={{ width: "23rem", height: "16rem" }}
       >
         <div className="information_profile">
           <div className="information_profile_text">
@@ -33,7 +32,7 @@ const EbeveynProfile = () => {
               <li
                 key={tab}
                 className={`content_text ${activeTab === tab ? "active" : ""}`}
-                onClick={() => handleContentClick(tab)}
+                onClick={() => setActiveTab(tab)}
               >
                 {tab}
               </li>
@@ -44,7 +43,10 @@ const EbeveynProfile = () => {
       {activeTab === "Profilim" && <AboutMe />}
       {activeTab === "Adresim" && <MyAddress />}
       {activeTab === "Favori Bakıcılarım" && <FavoriteBabysitter />}
-      {activeTab === "Hizmet Aldığım Bakıcılar" && <ServiceProviders />}
+      {activeTab === "Hizmet Aldığım Bakıcılar" && (
+        <ServiceProviders key={activeTab} setActiveTab={setActiveTab} />
+      )}
+      {activeTab === "Babysitter Rate" && <RateService />}
     </>
   )
 }
