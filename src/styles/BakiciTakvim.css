@@ -1,132 +1,137 @@
-.bakici-takvim{
+.bakici-takvim {
   width: 100%;
   padding: 50px;
 }
 
-.bakici-takvim-hello, .bakici-takvim-profil-durumu,.bakici-takvim-profil-bilgi, .bakici-takvim-bottom-left-h1,.bakici-takvim-bottom-left-p, .bakici-takvim-bottom-right-h3, .bakici-takvim-bottom-uzaktamodu-label{
+.bakici-takvim-hello,
+.bakici-takvim-profil-durumu,
+.bakici-takvim-profil-bilgi,
+.bakici-takvim-bottom-left-h1,
+.bakici-takvim-bottom-left-p,
+.bakici-takvim-bottom-right-h3,
+.bakici-takvim-bottom-uzaktamodu-label {
   color: #467888;
-font-family: Georama;
-font-size: calc(1em + 1.5vw);
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-text-align: center;
-
+  font-family: Georama;
+  font-size: calc(1em + 1.5vw);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
 }
 
-.bakici-takvim-profil-durumu{
+.bakici-takvim-profil-durumu {
   font-size: 16px;
   margin-top: 10px;
 }
 
-.bakici-takvim-profil-bilgi{
+.bakici-takvim-profil-bilgi {
   font-size: 24px;
   margin-top: 50px;
 }
 
-.bakici-takvim-bottom{
+.bakici-takvim-bottom {
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-background: rgba(245, 245, 245, 0.30);
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
+  background: rgba(245, 245, 245, 0.3);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
 }
 
-.bakici-takvim-bottom-left{
+.bakici-takvim-bottom-left {
   flex-basis: 12%;
 }
 
-.bakici-takvim-bottom-left-h1{
+.bakici-takvim-bottom-left-h1 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: left;
 }
 
-.bakici-takvim-bottom-left-p{
+.bakici-takvim-bottom-left-p {
   font-size: 16px;
   width: 434px;
   text-align: left;
   margin: 0;
 }
 
-.bakici-takvim-bottom-left-button1{
+.bakici-takvim-bottom-left-button1 {
   border-radius: 26px;
-background: #455A64;
-box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.10);
-width: 100%;
-margin-top: 50px;
-color: white;
-padding: 10px;
+  background: #455a64;
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  width: 100%;
+  margin-top: 50px;
+  color: white;
+  padding: 10px;
 }
 
-.bakici-takvim-bottom-left-button2{
+.bakici-takvim-bottom-left-button2 {
   border-radius: 26px;
-  border: 2px solid #E88485;
-  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.10);
+  border: 2px solid #e88485;
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
   background: white;
-width: 100%;
-color: #E88485;
-margin-top: 50px;
-padding: 10px;
+  width: 100%;
+  color: #e88485;
+  margin-top: 50px;
+  padding: 10px;
 }
 
-.bakici-takvim-bottom-uzaktamodu{
+.bakici-takvim-bottom-uzaktamodu {
   border-radius: 7px;
-border: 0.5px solid #467888;
-background: rgba(255, 232, 172, 0.30);
-padding: 10px;
-margin-top: 120px;
+  border: 0.5px solid #467888;
+  background: rgba(255, 232, 172, 0.3);
+  padding: 10px;
+  margin-top: 120px;
 }
 
-.bakici-takvim-bottom-uzaktamodu-h3{
-  color: #455A64;
+.bakici-takvim-bottom-uzaktamodu-h3 {
+  color: #455a64;
 }
 
-
-.bakici-takvim-bottom-uzaktamodu-bilgi{
-  color: #455A64;
-font-family: Georama;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 35px; 
-
+.bakici-takvim-bottom-uzaktamodu-bilgi {
+  color: #455a64;
+  font-family: Georama;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
 }
 
-.bakici-takvim-bottom-uzaktamodu-checkbox{
+.bakici-takvim-bottom-uzaktamodu-checkbox {
   width: 40px;
   height: 40px;
 }
 
-.bakici-takvim-bottom-uzaktamodu-label{
+.bakici-takvim-bottom-uzaktamodu-label {
   font-size: 20px;
 }
 
-.bakici-takvim-bottom-right{
+.bakici-takvim-bottom-right {
   flex-basis: 88%;
-  
 }
 
-.bakici-takvim-bottom-right-h3{
-  text-align: left;
-  padding-left: 100px;
+.bakici-takvim-bottom-right-h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
 }
 
-.bakici-takvim-date-range-picker-calendar{
+.bakici-takvim-date-range-picker-calendar {
   width: 80%;
   margin: auto;
 }
 
-.bakici-takvim-bottom-right-kutucuklar{
+.bakici-takvim-bottom-right-kutucuklar {
   display: flex;
   margin: 40px auto;
   align-items: center;
   gap: 50px;
 }
 
-.bakici-takvim-bottom-right-kutucuklar-musait, .bakici-takvim-bottom-right-kutucuklar-degil, .bakici-takvim-bottom-right-kutucuklar-dolu{
+.bakici-takvim-bottom-right-kutucuklar-musait,
+.bakici-takvim-bottom-right-kutucuklar-degil,
+.bakici-takvim-bottom-right-kutucuklar-dolu {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -134,135 +139,131 @@ line-height: 35px;
   justify-content: center;
 }
 
-
-.bakici-takvim-bottom-right-kutucuklar-ilk, .bakici-takvim-bottom-right-kutucuklar-ikinci,.bakici-takvim-bottom-right-kutucuklar-üçüncü {
+.bakici-takvim-bottom-right-kutucuklar-ilk,
+.bakici-takvim-bottom-right-kutucuklar-ikinci,
+.bakici-takvim-bottom-right-kutucuklar-üçüncü {
   width: 20px;
-height: 20px;
-flex-shrink: 0;
+  height: 20px;
+  flex-shrink: 0;
   border-radius: 3px;
-background: #CDE49C;
+  background: #cde49c;
 }
 
-.bakici-takvim-bottom-right-kutucuklar-ikinci{
+.bakici-takvim-bottom-right-kutucuklar-ikinci {
   background: rgba(246, 77, 77, 0.25);
-
 }
 
-.bakici-takvim-bottom-right-kutucuklar-üçüncü{
-  background: #FFE8AC;
+.bakici-takvim-bottom-right-kutucuklar-üçüncü {
+  background: #ffe8ac;
 }
 
-.bakici-takvim-bottom-right-kutucuklar-text{
+.bakici-takvim-bottom-right-kutucuklar-text {
   display: flex;
   align-items: center;
   color: #000;
-font-family: Georama;
-font-size: calc(.5em + 1.5vw);
-font-style: normal;
-font-weight: 400;
-margin: 0;
-align-items: center;
+  font-family: Georama;
+  font-size: calc(0.5em + 1.5vw);
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  align-items: center;
 
-justify-content: center;
-line-height: normal;
+  justify-content: center;
+  line-height: normal;
 }
 
-
-
 /*! DATE STYLES */
-  .nice-dates-day {
-    color: #467888;
+.nice-dates-day {
+  color: #467888;
   font-family: Prompt;
   font-size: 2.5vw;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  border: 0.1px solid rgba(69, 90, 100, 0.50);
+  border: 0.1px solid rgba(69, 90, 100, 0.5);
   background: white;
   height: 138.037px;
   flex-shrink: 0;
-    }
-      .nice-dates-day:before {
-        background-color: lightcoral;
-      }
-      .nice-dates-day:after {
-        background-color: white;
-      }
-      .nice-dates-month::before {
-        color: red;
-        background-color: white;
-      }
-      .nice-dates-day_month{
-        opacity: 0;
-      }
-      .nice-dates-weekday_format {
-        color: red;
-        background-color: white;
-      }
-      .nice-dates-navigation_current {
-        color: #455A64;
+}
+.nice-dates-day:before {
+  background-color: lightcoral;
+}
+.nice-dates-day:after {
+  background-color: white;
+}
+.nice-dates-month::before {
+  color: red;
+  background-color: white;
+}
+.nice-dates-day_month {
+  opacity: 0;
+}
+.nice-dates-weekday_format {
+  color: red;
+  background-color: white;
+}
+.nice-dates-navigation_current {
+  color: #455a64;
   font-family: Georama;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-      }
-    .nice-dates-navigation:before{
-      color: #455A64;
+}
+.nice-dates-navigation:before {
+  color: #455a64;
   font-family: Georama;
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-    }
-  
-  
-    .nice-dates-popover {
-      border: 10px solid red;
-      width: 350px;
-      transition: none;
-    }
-  
-    .nice-dates-week-header{
-      padding: 0;
-    }
-  
-  
-    .nice-dates-week-header_day{
-      
-      border: 0.1px solid rgba(69, 90, 100, 0.50);
-      padding: 10px;
-      margin: 0;
-      color: #455A64;
+}
+
+.nice-dates-popover {
+  border: 10px solid red;
+  width: 350px;
+  transition: none;
+}
+
+.nice-dates-week-header {
+  padding: 0;
+}
+
+.nice-dates-week-header_day {
+  border: 0.1px solid rgba(69, 90, 100, 0.5);
+  padding: 10px;
+  margin: 0;
+  color: #455a64;
   font-family: Georama;
   font-size: 12px;
-    }
-  
-    .nice-dates-day.-customBackground{
-      background: #CDE49C;
-      color: #467888;
-      font-weight: bold;
-    }
-
-    .nice-dates-day.-customBackground2{
-      background: rgba(246, 77, 77, 0.25);
-      color: #E88485;
-      font-weight: bold;
-    }
-
-
-    @media only screen and (min-width: 1200px){
-      .bakici-takvim-bottom{
-        display: flex;
-        flex-direction: row;
-      }
-
-      .bakici-takvim-bottom-right{
-        margin-top: 0;
-      }
-      
-      .bakici-takvim-bottom-right-kutucuklar-ilk, .bakici-takvim-bottom-right-kutucuklar-ikinci,.bakici-takvim-bottom-right-kutucuklar-üçüncü {
-        width: 81px;
-height: 77px;
 }
-    }
+
+.nice-dates-day.-customBackground {
+  background: #cde49c;
+  color: #467888;
+  font-weight: bold;
+}
+
+.nice-dates-day.-customBackground2 {
+  background: rgba(246, 77, 77, 0.25);
+  color: #e88485;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1200px) {
+  .bakici-takvim-bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bakici-takvim-bottom-right {
+    margin-top: 0;
+  }
+
+  .bakici-takvim-bottom-right-kutucuklar-ilk,
+  .bakici-takvim-bottom-right-kutucuklar-ikinci,
+  .bakici-takvim-bottom-right-kutucuklar-üçüncü {
+    width: 81px;
+    height: 77px;
+  }
+}
