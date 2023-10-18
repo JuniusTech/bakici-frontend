@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100;200&family=Berkshire+Swash&family=Calligraffitti&family=Crimson+Pro:ital,wght@1,200;1,600&family=Georama:wght@500&family=Julee&family=Lato:wght@300&family=Lobster&family=Montserrat:wght@500&family=Noto+Serif+JP:wght@200;300&family=Open+Sans:wght@300;400&family=Pacifico&family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@1,700&family=Rubik:wght@300;400;500;600;700;800&family=Russo+One&family=Urbanist:wght@100&display=swap");
+
+.reservation_container {
+  width: 100%;
+  padding: 0px 0px 71px 0px;
+  top: 84px;
+  left: 200px;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgba(69, 90, 100, 1);
+}
+
+.reservation_photo_container {
+  background-color: red;
+  margin: 50px 0;
+}
+.reservation_photo {
+  width: 154px;
+  height: 157px;
+  border: 1px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+.line {
+  width: 540px;
+  height: 0.5px;
+  background-color: rgba(69, 90, 100, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  border: 1px solid rgba(69, 90, 100, 1);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(69, 90, 100, 1);
+  margin-top: -2px;
+}
+
+.input_container {
+  margin: 1rem 0rem;
+}
+.input_title {
+  font-size: 36px;
+  font-weight: 500;
+  color: rgba(69, 90, 100, 1);
+}
+.input_item {
+  width: 995px;
+  height: 70px;
+  padding-left: 50px;
+  font-size: 32px;
+  border-color: rgba(69, 90, 100, 0.2);
+  border-radius: 50px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.select_title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(69, 90, 100, 1);
+}
+
+.bakici-kayit__select-div {
+  display: flex;
+  flex-direction: column;
+  width: 995px;
+  height: 51px;
+  position: relative;
+  border-color: rgba(69, 90, 100, 0.5);
+  background-color: white;
+}
+
+.bakici-kayit__datecontainer {
+  width: 995px;
+
+}
+.bakici-kayit__date {
+  font-size: x-large;
+  width: 995px;
+  border-radius: 50px 50px;
+  padding: 10px 10px;
+}
+
+.bakici-kayit__select {
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.2);
+  border-radius: 100px 100px;
+  border: none;
+}
+
+.textarea_container {
+}
+
+.reservation_textarea {
+  width: 995px;
+  border-radius: 10px 10px;
+  padding: 10px;
+}
+
+.reservation_button {
+  width: 995px;
+  height: 50px;
+  border-radius: 100px 100px;
+  margin: 2rem 0;
+  border: none;
+  background-color: rgba(255, 144, 144, 1);
+  color: white;
+}
+
+.reservation_bottom_text {
+  width: 995px;
+  color: rgba(69, 90, 100, 1);
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 300;
+}
