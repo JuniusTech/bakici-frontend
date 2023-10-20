@@ -1,9 +1,9 @@
-import hakkimda_img from "../assets/hakkimda_img.svg"
+import hakkimda_img from "../assets/hakkimda_img.svg";
 
 export const cinsiyet = [
   { value: "kadın", label: "Kadın" },
   { value: "erkek", label: "Erkek" },
-]
+];
 
 export const sehirler = [
   { value: "adana", label: "Adana" },
@@ -87,7 +87,7 @@ export const sehirler = [
   { value: "kilis", label: "Kilis" },
   { value: "osmaniye", label: "Osmaniye" },
   { value: "duzce", label: "Düzce" },
-]
+];
 
 export const ilceler = [
   { value: "beyoglu", label: "Beyoğlu" },
@@ -96,12 +96,12 @@ export const ilceler = [
   { value: "nilufer", label: "Nilüfer" },
   { value: "ceyhan", label: "Ceyhan" },
   { value: "besni", label: "Besni" },
-]
+];
 
 export const medeniDurum = [
   { value: "bekar", label: "Bekar" },
   { value: "evli", label: "Evli" },
-]
+];
 
 export const yabanciDil = [
   { value: "ingilizce", label: "İngilizce" },
@@ -109,7 +109,7 @@ export const yabanciDil = [
   { value: "fransizca", label: "Fransızca" },
   { value: "rusca", label: "Rusça" },
   { value: "arapca", label: "Arapça" },
-]
+];
 
 export const calismaSekli = [
   { value: "gunduz", label: "Sadece gündüz bakıcılığı" },
@@ -117,7 +117,7 @@ export const calismaSekli = [
   { value: "hici", label: "Sadece hafta içi yatılı" },
   { value: "hso", label: "Sadece hafta sonu yatılı" },
   { value: "tum", label: "Pazar dahil tüm günler" },
-]
+];
 
 export const deneyim = [
   { value: "deneyim0", label: "0-12 Ay Deneyimli" },
@@ -126,7 +126,7 @@ export const deneyim = [
   { value: "deneyim3", label: "3 yıl" },
   { value: "deneyim4", label: "4 yıl" },
   { value: "deneyim5", label: "+5 yıl" },
-]
+];
 
 export const egitimSev = [
   { value: "doktora", label: "Doktora" },
@@ -134,7 +134,7 @@ export const egitimSev = [
   { value: "lisans", label: "Lisans" },
   { value: "uni", label: "Universite" },
   { value: "lise", label: "Lise" },
-]
+];
 
 export const babySitterInfo = [
   {
@@ -188,4 +188,17 @@ export const babySitterInfo = [
     likes: 7,
     evaluationStatus: false,
   },
-]
+];
+
+export const servis = [
+  { value: "servis0", label: "Sadece gündüz bakıcılığı" },
+  { value: "servis1", label: "Sadece haftasonu gündüz bakıcılığı" },
+  { value: "servis2", label: "Sadece haftaiçi yatılı bakıcılık" },
+  { value: "servis3", label: "Sadece haftsonu yatılı bakıcılık" },
+  { value: "servis4", label: "Pazar dahil tüm günler yatılı bakıcılık" },
+];
+export const ages = [
+  { value: "ages0", label: "0 - 12 ay arası" },
+  { value: "ages1", label: "1 - 2 yaş arası" },
+  { value: "ages2", label: "3 yaş ve üzeri" },
+];
