@@ -10,21 +10,37 @@ import BakiciKayitBelge from "../components/bakici-kayit/BakiciKayitBelge"
 const BakiciKayit = () => {
   const [kayitRoute, setKayitRoute] = useState("form")
   const [bakiciInfo, setBakiciInfo] = useState({
-    description: "",
     name: "",
     email: "",
     phone: "",
-    password: "",
-    birthDate: "",
+    avatar: "",
+    description: "",
+    city: "",
+    district: "",
+    address: "",
     gender: "",
+    birthDate: "",
+    educationLevel: "",
     maritalStatus: "",
-    languages: "",
-    address: {
-      sehir: "",
-      ilce: "",
-      evAdresi: "",
-    },
+    languages: [],
+    employmentType: [],
+    price_range: "",
+    nufus_on: "",
+    nufus_arka: "",
+    adli_sicil: "",
+    experience: [
+      {
+        role: "",
+        company: "",
+        startYear: 0,
+        endYear: 0,
+      },
+    ],
+    password: "",
+    confirmPassword: "",
   })
+
+  console.log(bakiciInfo)
 
   return (
     <div className="bakici-kayit">
@@ -48,14 +64,23 @@ const BakiciKayit = () => {
         <BakiciKayitMesai
           setKayitRoute={setKayitRoute}
           bakiciInfo={bakiciInfo}
+          setBakiciInfo={setBakiciInfo}
         />
       )}
       {kayitRoute === "deneyim" && (
-        <BakiciKayitDeneyim setKayitRoute={setKayitRoute} />
+        <BakiciKayitDeneyim
+          setBakiciInfo={setBakiciInfo}
+          setKayitRoute={setKayitRoute}
+          bakiciInfo={bakiciInfo}
+        />
       )}
 
       {kayitRoute === "belge" && (
-        <BakiciKayitBelge setKayitRoute={setKayitRoute} />
+        <BakiciKayitBelge
+          setBakiciInfo={setBakiciInfo}
+          setKayitRoute={setKayitRoute}
+          bakiciInfo={bakiciInfo}
+        />
       )}
     </div>
   )

@@ -95,11 +95,16 @@ const FavoriteBabysitter = () => {
                       <span className="working-status">{e.workingStatus2}</span>
                     </section>
                   </section>
-                  <section className="working-conditions-container">
-                    <span className="name-text">{e.runtime}</span>
-                    <span style={{ marginLeft: "5px" }}>{e.workingDays}</span>
-                    <span className="price-info">₺{e.price}</span>
-                  </section>
+                  <div className="working-conditions-container">
+                    <section>
+                      <span className="name-text">{e.runtime}</span>
+                      <span style={{ marginLeft: "5px" }}>{e.workingDays}</span>
+                      <span className="price-info">₺{e.price}</span>
+                    </section>
+                    <section>
+                      <span className="profile-detail">Profile git</span>
+                    </section>
+                  </div>
                 </div>
                 <div className="like">
                   <img src={heart} alt="heart" />

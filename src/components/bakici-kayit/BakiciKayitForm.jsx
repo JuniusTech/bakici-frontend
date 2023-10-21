@@ -5,7 +5,6 @@ import homeIcon from "../../assets/home-icon.svg"
 import usePasswordToggle1 from "../../components/usePasswordToggle"
 import Select from "react-select"
 import useSelectOptions from "../select/useSelectOptions"
-// import bakiciSignup from "../../helper/dummyData" //! Mock Data
 import {
   cinsiyet,
   sehirler,
@@ -131,8 +130,8 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             </label>
             <input
               onChange={handleChanges}
-              value={bakiciInfo.password2 || ""}
-              name="password2"
+              value={bakiciInfo.confirmPassword || ""}
+              name="confirmPassword"
               className="bakici-kayit__input"
               type={PasswordInputType2}
             />
@@ -239,17 +238,11 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               placeholder="Şehir"
               name="sehir"
               onChange={(selectedOption) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  address: {
-                    ...bakiciInfo.address,
-                    sehir: selectedOption.value,
-                  },
-                })
+                setBakiciInfo({ ...bakiciInfo, city: selectedOption.value })
               }
               value={{
-                value: bakiciInfo.address.sehir,
-                label: bakiciInfo.address.sehir,
+                value: bakiciInfo.city,
+                label: bakiciInfo.city,
               }}
               styles={selectStyles}
             />
@@ -263,17 +256,11 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               placeholder="İlçe"
               name="ilce"
               onChange={(selectedOption) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  address: {
-                    ...bakiciInfo.address,
-                    ilce: selectedOption.value,
-                  },
-                })
+                setBakiciInfo({ ...bakiciInfo, district: selectedOption.value })
               }
               value={{
-                value: bakiciInfo.address.ilce,
-                label: bakiciInfo.address.ilce,
+                value: bakiciInfo.district,
+                label: bakiciInfo.district,
               }}
               styles={selectStyles}
             />
@@ -285,15 +272,9 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             </label>
             <input
               name="evAdresi"
-              value={bakiciInfo.address.evAdresi}
+              value={bakiciInfo.address}
               onChange={(e) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  address: {
-                    ...bakiciInfo.address,
-                    evAdresi: e.target.value,
-                  },
-                })
+                setBakiciInfo({ ...bakiciInfo, address: e.target.value })
               }
               className="bakici-kayit__input"
               type="text"

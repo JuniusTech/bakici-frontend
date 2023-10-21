@@ -1,54 +1,57 @@
 .navbar-bakici {
-    font-size: 18px;
-    padding: 16px 30px;
+  font-size: 18px;
+  padding: 16px 30px;
 }
 
 .navbar-bakici__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: none;
-    width: 178px;
-    height: 42px;
-    border-radius: 19px;
-    background-color: #E88585;
-    gap: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  width: 178px;
+  height: 42px;
+  border-radius: 19px;
+  background-color: #e88585;
+  gap: 14px;
 }
 
 .navbar-bakici__button img {
-    color: white;
-
+  color: white;
 }
 
 .navbar-bakici__bildirim img,
 .navbar-bakici__mesaj img {
-    width: 36px;
+  width: 36px;
 }
 
 .navbar-bakici__bildirim-sayi,
 .navbar-bakici__mesaj-sayi {
-    bottom: 11px;
-    right: -5px;
-    background-color: rgba(246, 77, 77, 1);
-    color: white;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
+  bottom: 11px;
+  right: -5px;
+  background-color: rgba(246, 77, 77, 1);
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 
 .navbar-bakici__üyeol {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .navbar-bakici__oturumac img {
-    width: 18px;
+  width: 18px;
 }
 
 .navbar-bakici__yardim {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+.profile-drop-down {
+  background-color: white !important;
+  border: none;
 }

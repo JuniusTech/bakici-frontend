@@ -189,3 +189,74 @@ export const babySitterInfo = [
     evaluationStatus: false,
   },
 ]
+
+export const rateServiceQuestions = [
+  {
+    id: 1,
+    questions: "Bakıcı bebeğimle-çocuğumla oldukça ilgiliydi.",
+    trueRadioID: "option1-1",
+    falseRadioID: "option1-2",
+  },
+  {
+    id: 2,
+    questions: "Bakıcının profilindeki yetkinlikler gerçeği yansıtıyor.",
+    trueRadioID: "option2-1",
+    falseRadioID: "option2-2",
+  },
+  {
+    id: 3,
+    questions:
+      "Bakıcıyla istediğim zaman iletişim kurabiliyor, bebeğimin durumu hakkında bilgi alabiliyorum.",
+    trueRadioID: "option3-1",
+    falseRadioID: "option3-2",
+  },
+  {
+    id: 4,
+    questions:
+      "Bebeğimin-çocuğumun öz bakımı bakıcı tarafından iyi derecede karşılanıyor.",
+    trueRadioID: "option4-1",
+    falseRadioID: "option4-2",
+  },
+  {
+    id: 5,
+    questions: "Bakıcı iş saatlerine riayet ediyor.",
+    trueRadioID: "option5-1",
+    falseRadioID: "option5-2",
+  },
+  {
+    id: 5,
+    questions: "Bakım ücreti gerçeği yansıtıyor ve bütçem için uygun.",
+    trueRadioID: "option6-1",
+    falseRadioID: "option6-2",
+  },
+]
+
+export const employmentOptions = [
+  {
+    label: "Sadece gündüz bakıcılığı",
+    value: "sgündüz",
+  },
+  {
+    label: "Sadece haftasonu gündüz bakıcılığı",
+    value: "hsonugündüz",
+  },
+  {
+    label: "Sadece haftaiçi yatılı bakıcılık",
+    value: "haiciyatil",
+  },
+  {
+    label: "Sadece haftasonu yatılı bakıcılık",
+    value: "hsonuyatili",
+  },
+  {
+    label: "Pazar dahil tüm günler yatılı bakıcılık",
+    value: "tümyatili",
+  },
+]
+
+export const priceRange = [
+  { value: "15.000-20.000", label: "15.000 - 20.000 TL" },
+  { value: "20.000-25.000", label: "20.000 - 25.000 TL" },
+  { value: "25.000-30.000", label: "25.000 - 30.000 TL" },
+  { value: "30.000+", label: "30.000 TL üzeri" },
+]
