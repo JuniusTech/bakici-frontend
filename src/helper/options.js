@@ -1,9 +1,9 @@
-import hakkimda_img from "../assets/hakkimda_img.svg"
+import hakkimda_img from "../assets/hakkimda_img.svg";
 
 export const cinsiyet = [
   { value: "kadın", label: "Kadın" },
   { value: "erkek", label: "Erkek" },
-]
+];
 
 export const sehirler = [
   { value: "adana", label: "Adana" },
@@ -87,7 +87,7 @@ export const sehirler = [
   { value: "kilis", label: "Kilis" },
   { value: "osmaniye", label: "Osmaniye" },
   { value: "duzce", label: "Düzce" },
-]
+];
 
 export const ilceler = [
   { value: "beyoglu", label: "Beyoğlu" },
@@ -96,12 +96,12 @@ export const ilceler = [
   { value: "nilufer", label: "Nilüfer" },
   { value: "ceyhan", label: "Ceyhan" },
   { value: "besni", label: "Besni" },
-]
+];
 
 export const medeniDurum = [
   { value: "bekar", label: "Bekar" },
   { value: "evli", label: "Evli" },
-]
+];
 
 export const yabanciDil = [
   { value: "ingilizce", label: "İngilizce" },
@@ -109,7 +109,7 @@ export const yabanciDil = [
   { value: "fransizca", label: "Fransızca" },
   { value: "rusca", label: "Rusça" },
   { value: "arapca", label: "Arapça" },
-]
+];
 
 export const calismaSekli = [
   { value: "gunduz", label: "Sadece gündüz bakıcılığı" },
@@ -117,7 +117,7 @@ export const calismaSekli = [
   { value: "hici", label: "Sadece hafta içi yatılı" },
   { value: "hso", label: "Sadece hafta sonu yatılı" },
   { value: "tum", label: "Pazar dahil tüm günler" },
-]
+];
 
 export const deneyim = [
   { value: "deneyim0", label: "0-12 Ay Deneyimli" },
@@ -126,7 +126,7 @@ export const deneyim = [
   { value: "deneyim3", label: "3 yıl" },
   { value: "deneyim4", label: "4 yıl" },
   { value: "deneyim5", label: "+5 yıl" },
-]
+];
 
 export const egitimSev = [
   { value: "doktora", label: "Doktora" },
@@ -134,7 +134,7 @@ export const egitimSev = [
   { value: "lisans", label: "Lisans" },
   { value: "uni", label: "Universite" },
   { value: "lise", label: "Lise" },
-]
+];
 
 export const babySitterInfo = [
   {
@@ -188,75 +188,4 @@ export const babySitterInfo = [
     likes: 7,
     evaluationStatus: false,
   },
-]
-
-export const rateServiceQuestions = [
-  {
-    id: 1,
-    questions: "Bakıcı bebeğimle-çocuğumla oldukça ilgiliydi.",
-    trueRadioID: "option1-1",
-    falseRadioID: "option1-2",
-  },
-  {
-    id: 2,
-    questions: "Bakıcının profilindeki yetkinlikler gerçeği yansıtıyor.",
-    trueRadioID: "option2-1",
-    falseRadioID: "option2-2",
-  },
-  {
-    id: 3,
-    questions:
-      "Bakıcıyla istediğim zaman iletişim kurabiliyor, bebeğimin durumu hakkında bilgi alabiliyorum.",
-    trueRadioID: "option3-1",
-    falseRadioID: "option3-2",
-  },
-  {
-    id: 4,
-    questions:
-      "Bebeğimin-çocuğumun öz bakımı bakıcı tarafından iyi derecede karşılanıyor.",
-    trueRadioID: "option4-1",
-    falseRadioID: "option4-2",
-  },
-  {
-    id: 5,
-    questions: "Bakıcı iş saatlerine riayet ediyor.",
-    trueRadioID: "option5-1",
-    falseRadioID: "option5-2",
-  },
-  {
-    id: 5,
-    questions: "Bakım ücreti gerçeği yansıtıyor ve bütçem için uygun.",
-    trueRadioID: "option6-1",
-    falseRadioID: "option6-2",
-  },
-]
-
-export const employmentOptions = [
-  {
-    label: "Sadece gündüz bakıcılığı",
-    value: "sgündüz",
-  },
-  {
-    label: "Sadece haftasonu gündüz bakıcılığı",
-    value: "hsonugündüz",
-  },
-  {
-    label: "Sadece haftaiçi yatılı bakıcılık",
-    value: "haiciyatil",
-  },
-  {
-    label: "Sadece haftasonu yatılı bakıcılık",
-    value: "hsonuyatili",
-  },
-  {
-    label: "Pazar dahil tüm günler yatılı bakıcılık",
-    value: "tümyatili",
-  },
-]
-
-export const priceRange = [
-  { value: "15.000-20.000", label: "15.000 - 20.000 TL" },
-  { value: "20.000-25.000", label: "20.000 - 25.000 TL" },
-  { value: "25.000-30.000", label: "25.000 - 30.000 TL" },
-  { value: "30.000+", label: "30.000 TL üzeri" },
 ]
