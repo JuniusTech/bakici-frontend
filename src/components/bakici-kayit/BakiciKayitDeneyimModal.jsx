@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap/Modal";
+import { useState } from "react"
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
+import Modal from "react-bootstrap/Modal"
 
 function BakiciKayitDeneyimModal({
   show,
@@ -12,21 +12,19 @@ function BakiciKayitDeneyimModal({
   deneyimInfo,
   setDeneyimInfo,
 }) {
-  console.log(deneyim);
-
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setDeneyim({ ...deneyim, [name]: value });
-  };
+    const { name, value } = e.target
+    setDeneyim({ ...deneyim, [name]: value })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(deneyim);
-    const newDeneyimInfo = [...deneyimInfo];
-    newDeneyimInfo[deneyimIndex] = deneyim;
-    setDeneyimInfo(newDeneyimInfo);
-    setShow(false);
-  };
+    e.preventDefault()
+
+    const newDeneyimInfo = [...deneyimInfo]
+    newDeneyimInfo[deneyimIndex] = deneyim
+    setDeneyimInfo(newDeneyimInfo)
+    setShow(false)
+  }
   return (
     <Modal show={show} onHide={() => setShow(false)}>
       <Modal.Header closeButton>
@@ -75,7 +73,7 @@ function BakiciKayitDeneyimModal({
         </Button>
       </Modal.Footer>
     </Modal>
-  );
+  )
 }
 
-export default BakiciKayitDeneyimModal;
+export default BakiciKayitDeneyimModal

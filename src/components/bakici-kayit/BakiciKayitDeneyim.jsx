@@ -1,61 +1,58 @@
-import Select from "react-select";
-import plus from "../../assets/plus.svg";
-import pen from "../../assets/pen.svg";
-import trash from "../../assets/trash.svg";
-import useSelectOptions from "../select/useSelectOptions";
-import BakiciKayitDeneyimModal from "./BakiciKayitDeneyimModal";
-import { useState } from "react";
+import React, { useState } from "react"
+import Select from "react-select"
+import plus from "../../assets/plus.svg"
+import pen from "../../assets/pen.svg"
+import trash from "../../assets/trash.svg"
+import useSelectOptions from "../select/useSelectOptions"
+import BakiciKayitDeneyimModal from "./BakiciKayitDeneyimModal"
+import { priceRange } from "../../helper/options"
 
-const ilceler = [
-  { value: "1520", label: "15.000 - 20.000 TL" },
-  { value: "2025", label: "20.000 - 25.000 TL" },
-  { value: "2530", label: "25.000 - 30.000 TL" },
-  { value: "30üstü", label: "30.000 TL üzeri" },
-];
-
-const BakiciKayitDeneyim = ({ setKayitRoute }) => {
-  const [show, setShow] = useState(false);
-  const [deneyim, setDeneyim] = useState({});
-  const [deneyimIndex, setDeneyimIndex] = useState(0);
+const BakiciKayitDeneyim = ({ setKayitRoute, setBakiciInfo, bakiciInfo }) => {
+  const [show, setShow] = useState(false)
+  const [deneyim, setDeneyim] = useState({})
+  const [deneyimIndex, setDeneyimIndex] = useState(0)
   const [deneyimInfo, setDeneyimInfo] = useState([
     {
-      yapilanIs: "Bakici",
-      isyeri: "Abc Kreşi",
-      süre: "Oca 2022 - Oca 2023 - 1 yıl",
+      role: "Bakici",
+      company: "Abc Kreşi",
+      startYear: 2022,
+      endYear: 2023,
     },
     {
-      yapilanIs: "Bakici",
-      isyeri: "ef Kreşi",
-      süre: "Oca 2022 - Oca 2023 - 1 yıl",
+      role: "Bakici",
+      company: "ef Kreşi",
+      startYear: 2019,
+      endYear: 2020,
     },
     {
-      yapilanIs: "Bakici",
-      isyeri: "gh Kreşi",
-      süre: "Oca 2022 - Oca 2023 - 1 yıl",
+      role: "Bakici",
+      company: "gh Kreşi",
+      startYear: 2021,
+      endYear: 2022,
     },
-  ]);
+  ])
+
+  // setBakiciInfo((experience = deneyimInfo))
 
   const handleModal = (deneyim, index) => {
-    setDeneyim(deneyim);
-    setShow(true);
-    setDeneyimIndex(index);
-  };
+    setDeneyim(deneyim)
+    setShow(true)
+    setDeneyimIndex(index)
+  }
 
   const handleAddModal = () => {
-    setDeneyim({});
-    setShow(true);
-    setDeneyimIndex(deneyimInfo.length);
-  };
+    setDeneyim({})
+    setShow(true)
+    setDeneyimIndex(deneyimInfo.length)
+  }
 
   const handleDelete = (index) => {
-    const newDeneyimInfo = [...deneyimInfo];
-    newDeneyimInfo.splice(index, 1);
-    setDeneyimInfo(newDeneyimInfo);
-  };
+    const newDeneyimInfo = [...deneyimInfo]
+    newDeneyimInfo.splice(index, 1)
+    setDeneyimInfo(newDeneyimInfo)
+  }
 
-  console.log(deneyimInfo);
-
-  const { selectStyles } = useSelectOptions();
+  const { selectStyles } = useSelectOptions()
 
   return (
     <>
@@ -69,9 +66,15 @@ const BakiciKayitDeneyim = ({ setKayitRoute }) => {
             <div className="bakici-kayit__select-div">
               <Select
                 className="bakici-kayit__select"
-                options={ilceler}
+                options={priceRange}
                 placeholder="0 - 30.000 TL..."
                 styles={selectStyles}
+                onChange={(selectedOption) =>
+                  setBakiciInfo({
+                    ...bakiciInfo,
+                    price_range: selectedOption.value,
+                  })
+                }
               />
             </div>
           </div>
@@ -83,11 +86,13 @@ const BakiciKayitDeneyim = ({ setKayitRoute }) => {
               {deneyimInfo.map((deneyim, index) => (
                 <div key={index} className="mb-4">
                   <div>
-                    <h6 className="" style={{ textDecoration: "underline" }}>
-                      {deneyim.yapilanIs}
+                    <h6 style={{ textDecoration: "underline" }}>
+                      {deneyim.role}
                     </h6>
-                    <h6>{deneyim.isyeri}</h6>
-                    <p className="">{deneyim.süre}</p>
+                    <h6>{deneyim.company}</h6>
+                    <p className="d-flex gap-4">
+                      {deneyim.startYear}-{deneyim.endYear}
+                    </p>
                   </div>
                   <div className="d-flex gap-4">
                     <button
@@ -95,8 +100,8 @@ const BakiciKayitDeneyim = ({ setKayitRoute }) => {
                       style={{ textDecoration: "underline" }}
                       onClick={() => handleModal(deneyim, index)}
                     >
-                      Tekrar Düzenle{" "}
-                      <img className="" src={pen} alt="pen" width={14} />
+                      Tekrar Düzenle
+                      <img src={pen} alt="pen" width={14} />
                     </button>
                     <button
                       className="border-0 bg-transparent"
@@ -118,8 +123,7 @@ const BakiciKayitDeneyim = ({ setKayitRoute }) => {
               setShow={setShow}
             />
             <div className="bakici-kayit__buttons d-flex justify-content-around align-items-center mt-4">
-              <button className="" onClick={handleAddModal}>
-                {" "}
+              <button onClick={handleAddModal}>
                 <img src={plus} alt="plus" width={24} /> Deneyim Ekle
               </button>
             </div>
@@ -141,7 +145,7 @@ const BakiciKayitDeneyim = ({ setKayitRoute }) => {
         </button>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default BakiciKayitDeneyim;
+export default BakiciKayitDeneyim

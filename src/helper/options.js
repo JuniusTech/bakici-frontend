@@ -188,17 +188,4 @@ export const babySitterInfo = [
     likes: 7,
     evaluationStatus: false,
   },
-];
-
-export const servis = [
-  { value: "servis0", label: "Sadece gündüz bakıcılığı" },
-  { value: "servis1", label: "Sadece haftasonu gündüz bakıcılığı" },
-  { value: "servis2", label: "Sadece haftaiçi yatılı bakıcılık" },
-  { value: "servis3", label: "Sadece haftsonu yatılı bakıcılık" },
-  { value: "servis4", label: "Pazar dahil tüm günler yatılı bakıcılık" },
-];
-export const ages = [
-  { value: "ages0", label: "0 - 12 ay arası" },
-  { value: "ages1", label: "1 - 2 yaş arası" },
-  { value: "ages2", label: "3 yaş ve üzeri" },
-];
+]

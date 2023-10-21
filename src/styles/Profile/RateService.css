@@ -110,3 +110,30 @@
   font-size: 27px;
   line-height: 50px;
 }
+
+.custom-radio-true {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  border: 1px solid green;
+}
+.custom-radio-true:checked {
+  border: 6px solid green;
+}
+
+.custom-radio-false {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  border: 1px solid red;
+}
+
+.custom-radio-false:checked {
+  border: 6px solid red;
+}

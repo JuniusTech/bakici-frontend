@@ -33,6 +33,14 @@
   line-height: 38px;
   text-align: left;
 }
+.profile-detail {
+  color: #455a64;
+  font-family: Georama;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23.88px;
+  text-decoration: underline;
+}
 .status-text {
   color: #10cc00;
   font-weight: 600;
@@ -67,6 +75,7 @@
 .working-conditions-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .like {
   display: flex;

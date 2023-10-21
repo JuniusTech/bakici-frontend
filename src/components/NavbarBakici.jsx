@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import MusteriKayitLogo from "../assets/MusteriKayitLogo.svg"
 import "../styles/NavbarBakici.css"
 import bakiciara from "../assets/bakiciara.svg"
@@ -18,6 +18,8 @@ import { useLoginContext } from "../context/LoginProvider"
 const NavbarBakici = () => {
   const { currentUser } = useLoginContext()
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -54,14 +56,35 @@ const NavbarBakici = () => {
                 <img src={mesaj} alt="mesaj" />
                 <p className="navbar-bakici__mesaj-sayi position-absolute">1</p>
               </Link>
-
               <div className="d-flex align-items-center gap-3">
                 <p className="m-0 border-start ps-4 py-2 border-dark text-nowrap">
                   {currentUser?.responseValue?.name}
                 </p>
-                <img src={bakiciavatar} alt="bakiciavatar" />
-                {/* Bakıcı Avatarı eklenecek */}
-                <FontAwesomeIcon icon={faChevronDown} />
+                <Dropdown>
+                  <Dropdown.Toggle className="profile-drop-down">
+                    <img src={bakiciavatar} alt="bakiciavatar" />
+                    {/* Bakıcı Avatarı eklenecek */}
+                    <FontAwesomeIcon
+                      style={{ marginLeft: "1rem" }}
+                      color="black"
+                      icon={faChevronDown}
+                    />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu className="text-center">
+                    <Dropdown.Item href="#/action-1">Ana Sayfa</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Mesajlar</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Profil</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Yardım</Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => {
+                        localStorage.removeItem("currentUser")
+                        navigate("/login")
+                      }}
+                    >
+                      Oturumu Kapat
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
             </div>
           )}
