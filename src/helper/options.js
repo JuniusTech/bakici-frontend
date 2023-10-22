@@ -190,6 +190,9 @@ export const babySitterInfo = [
   },
 ]
 
+export const servis = [{}]
+export const ages = [{}]
+
 export const rateServiceQuestions = [
   {
     id: 1,

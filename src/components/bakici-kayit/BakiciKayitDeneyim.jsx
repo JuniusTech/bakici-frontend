@@ -58,12 +58,12 @@ const BakiciKayitDeneyim = ({ setKayitRoute, setBakiciInfo, bakiciInfo }) => {
     <>
       <div className="bakici-kayit__calisma-deneyim position-relative py-4 mt-5">
         <div className="d-flex w-75 m-auto">
-          <div className="flex-grow-1">
+          <div className="flex-grow-1 ">
             <h1>Çalışma Detayları</h1>
             <p className="bakici-kayit__input-label mt-5">
               Ücret beklentinizi belirtin
             </p>
-            <div className="bakici-kayit__select-div">
+            <div className="bakici-kayit__select-div w-75">
               <Select
                 className="bakici-kayit__select"
                 options={priceRange}
