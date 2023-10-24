@@ -1,269 +1,255 @@
 .bakici-kayit {
-    color: #467888;
-    font-family: 'Georama';
+  color: #467888;
+  font-family: "Georama";
 }
 
-.bakici-kayit__profile {}
+.bakici-kayit__profile {
+}
 
 .bakici-kayit__profile-form {
-
-    padding: 45px 0;
-    position: relative;
-    margin-top: 26px;
-    background-color: rgba(245, 245, 245, 0.5);
+  padding: 45px 0;
+  position: relative;
+  margin-top: 26px;
+  background-color: rgba(245, 245, 245, 0.5);
 }
 
-
 .bakici-kayit__profile-form-sol {
-    width: 50%;
-    flex-shrink: 1;
+  width: 50%;
+  flex-shrink: 1;
 }
 
 .bakici-kayit__profile-baslik {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .bakici-kayit__profile-info {
-    display: flex;
-    margin-top: 85px;
-    margin-bottom: 60px;
-    gap: 2rem;
+  display: flex;
+  margin-top: 85px;
+  margin-bottom: 60px;
+  gap: 2rem;
 }
 
 .bakici-kayit__avatar {
-    height: fit-content;
-    position: relative;
-
+  height: fit-content;
+  position: relative;
 }
 
 .bakici-kayit__avatar .img {
-    /* position: relative; */
+  /* position: relative; */
 }
 
 .bakici-kayit__avatar .add-img {
-    position: absolute;
-    background-color: #467888;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    bottom: 22px;
-    right: 18px;
+  position: absolute;
+  background-color: #467888;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  bottom: 22px;
+  right: 18px;
 }
 
 .bakici-kayit__avatar .plus1 {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 14px;
-    height: 0;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 14px;
+  height: 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .bakici-kayit__avatar .plus2 {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 0;
-    height: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 0;
+  height: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .bakici-kayit__description {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 .bakici-kayit__desc-label {
-    margin-bottom: 17px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
-    max-width: 300px;
+  margin-bottom: 17px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  max-width: 300px;
 }
 
 .bakici-kayit__textarea {
-    resize: none;
-    width: 100%;
-    /* max-width: 300px; */
-    min-width: 240px;
-    height: 100%;
-    border-radius: 10px;
-    border: 1px solid #455A64;
-    padding-left: 10px;
-    padding-top: 10px;
+  resize: none;
+  width: 100%;
+  /* max-width: 300px; */
+  min-width: 240px;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #455a64;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .bakici-kayit__input-div {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: relative;
 }
 
 .bakici-kayit__input {
-    height: 51px;
-    border: 1px solid rgba(69, 90, 100, 0.8);
-    box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
-    border-radius: 25.5px;
-    margin-bottom: 18px;
-    padding-left: 30px;
+  height: 51px;
+  border: 1px solid rgba(69, 90, 100, 0.8);
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  border-radius: 25.5px;
+  margin-bottom: 18px;
+  padding-left: 30px;
 }
 
 .bakici-kayit__select-div {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    position: relative;
-    height: 51px;
-    border: 1px solid rgba(69, 90, 100, 0.8);
-    box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
-    border-radius: 25.5px;
-    margin-bottom: 18px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(69, 90, 100, 0.8);
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  border-radius: 25.5px;
+  margin-bottom: 18px;
+  background-color: white;
+  width: 400px !important;
 }
 
 .bakici-kayit__select {
-    /* height: 51px;
-    border: 1px solid rgba(69, 90, 100, 0.8);
-    box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
-    border-radius: 25.5px;
-    margin-bottom: 18px; */
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .bakici-kayit__input-label {
-    margin-bottom: 12px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
-
-
 .bakici-kayit__sifre-bilgi {
-    font-weight: 400;
-    line-height: 16px;
-    color: #CCCCCC;
+  font-weight: 400;
+  line-height: 16px;
+  color: #cccccc;
 }
 
 .bakici-kayit__sifre-icon {
-    position: absolute;
-    right: 20px;
-    bottom: 30px;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
 }
 
 .bakici-kayit__divider {
-    /* position: absolute; */
-    height: 920px;
+  /* position: absolute; */
+  height: 920px;
 
-    /* width: 5rem; */
-    border: 1px solid rgba(69, 90, 100, 0.8);
-    margin-right: 8rem;
-    margin-left: 2rem;
-    /* top: 0; */
-    /* left: 50%; */
-    margin-top: 52px;
+  /* width: 5rem; */
+  border: 1px solid rgba(69, 90, 100, 0.8);
+  margin-right: 8rem;
+  margin-left: 2rem;
+  /* top: 0; */
+  /* left: 50%; */
+  margin-top: 52px;
 }
 
 .bakici-kayit__profile-form-sağ {
-    width: 50%;
-    flex-shrink: 3;
-    /* margin-left: 2rem; */
-    /* flex: 1; */
-    text-align: left;
-    /* padding-top: 97px; */
+  width: 50%;
+  flex-shrink: 3;
+  /* margin-left: 2rem; */
+  /* flex: 1; */
+  text-align: left;
+  /* padding-top: 97px; */
 }
 
 .bakici-kayit__form-button {
-    color: white;
-    border: none;
-    width: 200px;
-    height: 42px;
-    border-radius: 19px;
-    background-color: #E88585;
-
+  color: white;
+  border: none;
+  width: 200px;
+  height: 42px;
+  border-radius: 19px;
+  background-color: #e88585;
 }
 
 .bakici-kayit__mesai-div {
-    width: fit-content
+  width: fit-content;
 }
 
 .bakici-kayit__mesai-label {
-    color: black;
-    font-size: 20px;
-    line-height: 50px;
+  color: black;
+  font-size: 20px;
+  line-height: 50px;
 }
 
 .bakici-kayit__calisma-deneyim {
-    background-color: rgba(245, 245, 245, 0.5);
+  background-color: rgba(245, 245, 245, 0.5);
 }
 
 .bakici-kayit__calisma-deneyim .divider {
-    width: 2px;
-    height: 250px;
-    background-color: #9aaeb8;
-    position: absolute;
-    transform: translate(50%, -50%);
-    left: 50%;
-    top: 50%;
+  width: 2px;
+  height: 250px;
+  background-color: #9aaeb8;
+  position: absolute;
+  transform: translate(50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
 .bakici-kayit__deneyim {
-    line-height: 10px;
-    height: 14rem;
-    overflow: auto;
+  line-height: 10px;
+  height: 14rem;
+  overflow: auto;
 }
 
 .bakici-kayit__buttons button {
-
-    background-color: rgba(232, 132, 133, 1);
-    color: white;
-    border: none;
-    width: 180px;
-    height: 40px;
-    border-radius: 24px;
+  background-color: rgba(232, 132, 133, 1);
+  color: white;
+  border: none;
+  width: 180px;
+  height: 40px;
+  border-radius: 24px;
 }
 
 .bakici-kayit__belge-container {
-    background-color: rgba(245, 245, 245, 0.5);
+  background-color: rgba(245, 245, 245, 0.5);
 }
 
 .bakici-kayit__belge-ekle-container {
-    margin: auto;
-    width: 90%;
-    padding: 20px;
-    border: 3px dashed #467888;
-    border-radius: 10px;
+  margin: auto;
+  width: 90%;
+  padding: 20px;
+  border: 3px dashed #467888;
+  border-radius: 10px;
 }
 
 .bakici-kayit__belge-ekle {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .bakici-kayit__belge-desc {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .bakici-kayit__belge-delete-btn {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(69, 90, 100, 0.5);
-    border-radius: 100%;
-    background-color: white;
-    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.397);
-
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(69, 90, 100, 0.5);
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.397);
 }
 
 .bakici-kayit__belge-kaydet-btn {
-    width: 120px;
-    height: 30px;
-    border-radius: 20px;
-    border: none;
-    background-color: #E88585;
-    color: white;
-    margin-left: 20px;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e88585;
+  color: white;
+  margin-left: 20px;
 }
