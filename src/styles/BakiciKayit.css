@@ -3,9 +3,6 @@
   font-family: "Georama";
 }
 
-.bakici-kayit__profile {
-}
-
 .bakici-kayit__profile-form {
   padding: 45px 0;
   position: relative;
@@ -32,10 +29,7 @@
 .bakici-kayit__avatar {
   height: fit-content;
   position: relative;
-}
-
-.bakici-kayit__avatar .img {
-  /* position: relative; */
+  object-fit: cover;
 }
 
 .bakici-kayit__avatar .add-img {

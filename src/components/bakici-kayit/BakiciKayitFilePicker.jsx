@@ -14,7 +14,7 @@ const BakiciKayitFilePicker = ({ id, desc }) => {
             />
           </label>
 
-          <input type="file" name={id} id={id} className="d-none" />
+          <input type="file" name="file" id={id} className="d-none" />
 
           <p>Dosyalarınızı buraya tıklayarak yükleyin</p>
           <p>Maximum dosya boyutu 50 MB</p>
