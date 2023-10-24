@@ -263,3 +263,32 @@ export const priceRange = [
   { value: "25.000-30.000", label: "25.000 - 30.000 TL" },
   { value: "30.000+", label: "30.000 TL üzeri" },
 ]
+
+export const belgeler = [
+  {
+    id: "kimlikon",
+    desc: (
+      <p>
+        Nüfus cüzdanınızın <b>ön</b> sayfasının resmini kutunun içine tıklayarak
+        ekleyin
+      </p>
+    ),
+  },
+  {
+    id: "kimlikarka",
+    desc: (
+      <p>
+        Nüfus kağıdınızın <b>arka</b> sayfasının resmini kutunun içine
+        tıklayarak ekleyin
+      </p>
+    ),
+  },
+  {
+    id: "adlisicil",
+    desc: (
+      <p className="">
+        <b>Adli sicil kayıt</b> dokumanınızı kutunun icine tıklayarak ekleyin
+      </p>
+    ),
+  },
+]

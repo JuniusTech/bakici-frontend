@@ -1,37 +1,9 @@
 import { Link } from "react-router-dom"
 import belge from "../../assets/doküman.svg"
 import BakiciKayitFilePicker from "./BakiciKayitFilePicker"
+import { belgeler } from "../../helper/options"
 
-const belgeler = [
-  {
-    id: "kimlikon",
-    desc: (
-      <p>
-        Nüfus cüzdanınızın <b>ön</b> sayfasının resmini kutunun içine tıklayarak
-        ekleyin
-      </p>
-    ),
-  },
-  {
-    id: "kimlikarka",
-    desc: (
-      <p>
-        Nüfus kağıdınızın <b>arka</b> sayfasının resmini kutunun içine
-        tıklayarak ekleyin
-      </p>
-    ),
-  },
-  {
-    id: "adlisicil",
-    desc: (
-      <p className="">
-        <b>Adli sicil kayıt</b> dokumanınızı kutunun icine tıklayarak ekleyin
-      </p>
-    ),
-  },
-]
-
-const BakiciKayitBelge = ({ setKayitRoute }) => {
+const BakiciKayitBelge = ({ setKayitRoute, setBakiciInfo, bakiciInfo }) => {
   return (
     <div className="text-center">
       <h2>
@@ -39,7 +11,12 @@ const BakiciKayitBelge = ({ setKayitRoute }) => {
       </h2>
       <div>
         {belgeler.map((belge) => (
-          <BakiciKayitFilePicker id={belge.id} desc={belge.desc} />
+          <BakiciKayitFilePicker
+            key={belge.id}
+            setBakiciInfo={setBakiciInfo}
+            bakiciInfo={bakiciInfo}
+            desc={belge.desc}
+          />
         ))}
       </div>
 
