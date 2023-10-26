@@ -29,12 +29,12 @@ const BakiciKayit = () => {
     nufus_arka: "",
     adli_sicil: "",
     experience: [
-      {
-        role: "",
-        company: "",
-        startYear: 0,
-        endYear: 0,
-      },
+      // {
+      //   role: "",
+      //   company: "",
+      //   startYear: 0,
+      //   endYear: 0,
+      // },
     ],
     password: "",
     confirmPassword: "",

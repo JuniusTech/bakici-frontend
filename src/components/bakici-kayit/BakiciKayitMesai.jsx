@@ -1,22 +1,28 @@
 import React from "react"
 import { employmentOptions } from "../../helper/options"
 
-const BakiciKayitMesai = ({ setBakiciInfo, setKayitRoute }) => {
+const BakiciKayitMesai = ({ setBakiciInfo, setKayitRoute, bakiciInfo }) => {
   const handleCheckboxChange = (e, value) => {
     const checked = e.target.checked
+
+    // Mevcut seçili değerlerin bir kopyasını oluşturun.
+    const updatedEmploymentType = [...(bakiciInfo?.employmentType || [])]
+
+    // Seçim yapıldıysa ekleyin, aksi takdirde çıkarın.
     if (checked) {
-      setBakiciInfo((prevInfo) => ({
-        ...prevInfo,
-        employmentType: [...prevInfo.employmentType, value],
-      }))
+      updatedEmploymentType.push(value)
     } else {
-      setBakiciInfo((prevInfo) => ({
-        ...prevInfo,
-        employmentType: prevInfo.employmentType.filter(
-          (item) => item !== value
-        ),
-      }))
+      const index = updatedEmploymentType.indexOf(value)
+      if (index !== -1) {
+        updatedEmploymentType.splice(index, 1)
+      }
     }
+
+    // Bakıcı bilgilerini güncelleyin.
+    setBakiciInfo((prevInfo) => ({
+      ...prevInfo,
+      employmentType: updatedEmploymentType,
+    }))
   }
 
   return (
@@ -30,8 +36,10 @@ const BakiciKayitMesai = ({ setBakiciInfo, setKayitRoute }) => {
               name={option.label}
               id={option.value}
               style={{ width: "20px", height: "20px" }}
-              value={option.value}
               onChange={(e) => handleCheckboxChange(e, option.value)}
+              checked={
+                bakiciInfo?.employmentType?.includes(option.value) || false
+              }
             />
             <label className="bakici-kayit__mesai-label" htmlFor={option.value}>
               {option.label}
