@@ -1,8 +1,8 @@
 import hakkimda_img from "../assets/hakkimda_img.svg"
 
 export const cinsiyet = [
-  { value: "kadın", label: "Kadın" },
-  { value: "erkek", label: "Erkek" },
+  { value: "female", label: "Kadın" },
+  { value: "male", label: "Erkek" },
 ]
 
 export const sehirler = [
@@ -99,24 +99,38 @@ export const ilceler = [
 ]
 
 export const medeniDurum = [
-  { value: "bekar", label: "Bekar" },
-  { value: "evli", label: "Evli" },
+  { value: "single", label: "Bekar" },
+  { value: "married", label: "Evli" },
 ]
 
 export const yabanciDil = [
-  { value: "ingilizce", label: "İngilizce" },
-  { value: "almanca", label: "Almanca" },
-  { value: "fransizca", label: "Fransızca" },
-  { value: "rusca", label: "Rusça" },
-  { value: "arapca", label: "Arapça" },
+  { label: "Çince", value: "Chinese" },
+  { label: "İngilizce", value: "English" },
+  { label: "İspanyolca", value: "Spanish" },
+  { label: "Arapca", value: "Arabic" },
+  { label: "Rusca", value: "Russian" },
+  { label: "Fransızca", value: "French" },
+  { label: "Almanca", value: "German" },
+  { label: "Japonca", value: "Japanese" },
+  { label: "Korece", value: "Korean" },
+  { label: "İtalyanca", value: "Italian" },
+  { label: "Türkce", value: "Turkish" },
 ]
 
 export const calismaSekli = [
-  { value: "gunduz", label: "Sadece gündüz bakıcılığı" },
-  { value: "hsoGunduz", label: "Sadece haftasonu gündüz" },
-  { value: "hici", label: "Sadece hafta içi yatılı" },
-  { value: "hso", label: "Sadece hafta sonu yatılı" },
-  { value: "tum", label: "Pazar dahil tüm günler" },
+  { value: "dayTime", label: "Sadece gündüz bakıcılığı" },
+  { value: "weekend-dayTime", label: "Sadece haftasonu gündüz" },
+  { value: "weekday-liveIn", label: "Sadece hafta içi yatılı" },
+  { value: "weekend-liveIn", label: "Sadece hafta sonu yatılı" },
+  { value: "fullTime-liveIn", label: "Pazar dahil tüm günler" },
+]
+
+export const educationLevel = [
+  { value: "high school", label: "Lise" },
+  { value: "bachelor", label: "Önlisans" },
+  { value: "master", label: "Lisans" },
+  { value: "doctorate", label: "Yüksek Lisans" },
+  { value: "university", label: "Üniversite" },
 ]
 
 export const deneyim = [

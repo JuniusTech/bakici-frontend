@@ -1,5 +1,5 @@
 import React from "react"
-import { employmentOptions } from "../../helper/options"
+import { calismaSekli } from "../../helper/options"
 
 const BakiciKayitMesai = ({ setBakiciInfo, setKayitRoute, bakiciInfo }) => {
   const handleCheckboxChange = (e, value) => {
@@ -29,7 +29,7 @@ const BakiciKayitMesai = ({ setBakiciInfo, setKayitRoute, bakiciInfo }) => {
     <div className="bakici-kayit__mesai text-center my-5">
       <h1>ÇALIŞMAK İSTEDİĞİNİZ MESAİ ŞEKLİNİ SEÇİNİZ</h1>
       <div className="bakici-kayit__mesai-div d-flex flex-column m-auto my-5">
-        {employmentOptions.map((option) => (
+        {calismaSekli.map((option) => (
           <div key={option.value} className="d-flex gap-3 align-items-center">
             <input
               type="checkbox"

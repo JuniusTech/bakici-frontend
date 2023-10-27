@@ -12,6 +12,7 @@ import {
   ilceler,
   medeniDurum,
   yabanciDil,
+  educationLevel,
 } from "../../helper/options"
 
 const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
@@ -238,6 +239,29 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               value={{
                 value: bakiciInfo.maritalStatus,
                 label: bakiciInfo.maritalStatus,
+              }}
+              components={{ Option: RadioOption, ClearIndicator: null }}
+              styles={selectStyles}
+              isSearchable={false}
+            />
+          </div>
+
+          <p className="bakici-kayit__input-label">Eğitim Durumu</p>
+          <div className="bakici-kayit__select-div">
+            <Select
+              className="bakici-kayit__select"
+              options={educationLevel}
+              placeholder="Eğitim Durumu"
+              name="gender"
+              onChange={(selectedOption) =>
+                setBakiciInfo({
+                  ...bakiciInfo,
+                  educationLevel: selectedOption.value,
+                })
+              }
+              value={{
+                value: bakiciInfo.educationLevel,
+                label: bakiciInfo.educationLevel,
               }}
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}

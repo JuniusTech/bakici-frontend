@@ -40,14 +40,14 @@ function BakiciKayitBelge({ setBakiciInfo, setKayitRoute, handleSubmit }) {
         >
           Geri
         </button>
-        <Link to="/bakicikayitonay">
-          <button
-            onClick={handleSubmit}
-            className="bakici-kayit__form-button ms-3"
-          >
-            Kaydı Tamamla
-          </button>
-        </Link>
+        {/* <Link to="/bakicikayitonay"> */}
+        <button
+          onClick={handleSubmit}
+          className="bakici-kayit__form-button ms-3"
+        >
+          Kaydı Tamamla
+        </button>
+        {/* </Link> */}
       </div>
     </div>
   )
