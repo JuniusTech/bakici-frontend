@@ -266,7 +266,7 @@ export const priceRange = [
 
 export const belgeler = [
   {
-    id: "kimlikon",
+    id: "nufus_on",
     desc: (
       <p>
         Nüfus cüzdanınızın <b>ön</b> sayfasının resmini kutunun içine tıklayarak
@@ -275,7 +275,7 @@ export const belgeler = [
     ),
   },
   {
-    id: "kimlikarka",
+    id: "nufus_arka",
     desc: (
       <p>
         Nüfus kağıdınızın <b>arka</b> sayfasının resmini kutunun içine
@@ -284,7 +284,7 @@ export const belgeler = [
     ),
   },
   {
-    id: "adlisicil",
+    id: "adli_sicil",
     desc: (
       <p className="">
         <b>Adli sicil kayıt</b> dokumanınızı kutunun icine tıklayarak ekleyin

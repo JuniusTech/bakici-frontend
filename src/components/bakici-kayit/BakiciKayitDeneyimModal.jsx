@@ -19,7 +19,6 @@ function BakiciKayitDeneyimModal({ show, setShow, setBakiciInfo, bakiciInfo }) {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // Yeni deneyimi mevcut deneyimlerin üzerine ekleyin
     setBakiciInfo({
       ...bakiciInfo,
       experience: [...bakiciInfo.experience, deneyimInfo],

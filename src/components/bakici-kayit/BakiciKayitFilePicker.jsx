@@ -1,23 +1,18 @@
-import { useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import dosyaekle from "../../assets/dosyaekle.svg"
 import trash from "../../assets/trash.svg"
 
-const BakiciKayitFilePicker = ({ id, desc, setBakiciInfo, bakiciInfo }) => {
-  const [kimlik, setKimlik] = useState("")
-  console.log(kimlik)
-
+const BakiciKayitFilePicker = ({ id, desc, onBelgeChange }) => {
+  const [selectedBelge, setSelectedBelge] = useState(null)
   const fileInputRef = useRef(null)
 
-  const handleKimlikChange = (e) => {
+  const handleBelgeChange = (e) => {
     const selectedFile = e?.target?.files[0]
 
     if (selectedFile) {
-      const kimlikName = selectedFile.name
-      setKimlik(kimlikName)
-      setBakiciInfo({
-        ...bakiciInfo,
-        kimlik: kimlikName,
-      })
+      const belgeName = selectedFile.name
+      setSelectedBelge(belgeName)
+      onBelgeChange(id, belgeName)
     }
   }
 
@@ -31,14 +26,18 @@ const BakiciKayitFilePicker = ({ id, desc, setBakiciInfo, bakiciInfo }) => {
         <div onClick={triggerFileInput}>
           <label className="bakici-kayit__belge-ekle" htmlFor={id}>
             <img
-              src={dosyaekle}
+              src={
+                selectedBelge
+                  ? URL.createObjectURL(fileInputRef.current.files[0])
+                  : dosyaekle
+              }
               alt=""
-              className="bakici-kayit__belge-ekle-image"
+              className="bakici-kayit__belge-ekle-image w-100"
             />
           </label>
 
           <input
-            onChange={handleKimlikChange}
+            onChange={handleBelgeChange}
             type="file"
             name={id}
             id={id}
@@ -60,8 +59,13 @@ const BakiciKayitFilePicker = ({ id, desc, setBakiciInfo, bakiciInfo }) => {
           </button>
           <button className="bakici-kayit__belge-kaydet-btn">Kaydet</button>
         </div>
-
-        <div className="bakici-kayit__belge-desc mt-4 mx-auto">{desc}</div>
+      </div>
+      <div className="bakici-kayit__belge-desc mt-4 mx-auto">
+        {selectedBelge ? (
+          <p>Seçilen Belge: {selectedBelge}</p>
+        ) : (
+          <div>{desc}</div>
+        )}
       </div>
     </div>
   )

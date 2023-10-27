@@ -1,25 +1,38 @@
-import { Link } from "react-router-dom"
-import belge from "../../assets/doküman.svg"
+import React, { useState } from "react"
 import BakiciKayitFilePicker from "./BakiciKayitFilePicker"
 import { belgeler } from "../../helper/options"
+import { Link } from "react-router-dom"
 
-const BakiciKayitBelge = ({ setKayitRoute, setBakiciInfo, bakiciInfo }) => {
+function BakiciKayitBelge({ setBakiciInfo, setKayitRoute, handleSubmit }) {
+  const [belgelerState, setBelgelerState] = useState({})
+
+  const handleBelgeChange = (belgeId, belgeName) => {
+    // Sadece ilgili belgeyi güncelle
+    setBakiciInfo((prevInfo) => ({
+      ...prevInfo,
+      [belgeId]: belgeName,
+    }))
+
+    setBelgelerState((prevState) => ({
+      ...prevState,
+      [belgeId]: belgeName,
+    }))
+  }
+
   return (
     <div className="text-center">
-      <h2>
-        RESMİ DÖKÜMALARINIZI EKLEYİN <img src={belge} alt="" width={30} />
-      </h2>
+      <h2>RESMİ DÖKÜMALARINIZI EKLEYIN</h2>
       <div>
         {belgeler.map((belge) => (
           <BakiciKayitFilePicker
             key={belge.id}
-            setBakiciInfo={setBakiciInfo}
-            bakiciInfo={bakiciInfo}
+            id={belge.id}
             desc={belge.desc}
+            belgeData={belgelerState[belge.id]}
+            onBelgeChange={handleBelgeChange}
           />
         ))}
       </div>
-
       <div className="text-center py-5">
         <button
           className="bakici-kayit__form-button me-3"
@@ -28,7 +41,10 @@ const BakiciKayitBelge = ({ setKayitRoute, setBakiciInfo, bakiciInfo }) => {
           Geri
         </button>
         <Link to="/bakicikayitonay">
-          <button className="bakici-kayit__form-button ms-3">
+          <button
+            onClick={handleSubmit}
+            className="bakici-kayit__form-button ms-3"
+          >
             Kaydı Tamamla
           </button>
         </Link>
