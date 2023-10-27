@@ -6,6 +6,7 @@ import BakiciKayitDeneyim from "../components/bakici-kayit/BakiciKayitDeneyim"
 import BakiciKayitForm from "../components/bakici-kayit/BakiciKayitForm"
 import { useState } from "react"
 import BakiciKayitBelge from "../components/bakici-kayit/BakiciKayitBelge"
+import axios from "axios"
 
 const BakiciKayit = () => {
   const [kayitRoute, setKayitRoute] = useState("form")
@@ -28,19 +29,22 @@ const BakiciKayit = () => {
     nufus_on: "",
     nufus_arka: "",
     adli_sicil: "",
-    experience: [
-      {
-        role: "",
-        company: "",
-        startYear: 0,
-        endYear: 0,
-      },
-    ],
+    experience: [],
     password: "",
     confirmPassword: "",
   })
 
   console.log(bakiciInfo)
+
+  const handleSubmit = async () => {
+    const baseURL = process.env.REACT_APP_BASE_URL
+    try {
+      const res = await axios.post(`${baseURL}/babysitter/signup`, bakiciInfo)
+      console.log("Kullanıcı Başarıyla Kayıt Edildi", res)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <div className="bakici-kayit">
@@ -80,6 +84,7 @@ const BakiciKayit = () => {
           setBakiciInfo={setBakiciInfo}
           setKayitRoute={setKayitRoute}
           bakiciInfo={bakiciInfo}
+          handleSubmit={handleSubmit}
         />
       )}
     </div>

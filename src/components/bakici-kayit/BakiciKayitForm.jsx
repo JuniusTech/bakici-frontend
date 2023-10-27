@@ -1,3 +1,4 @@
+import React, { useRef, useState } from "react"
 import profileImg from "../../assets/Ellipse54.svg"
 import sifreIcon from "../../assets/sifre-icon.svg"
 import docIcon from "../../assets/doc.svg"
@@ -18,16 +19,32 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
   const [PasswordInputType2, ToggleIcon2] = usePasswordToggle1()
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
 
+  const [selectedAvatar, setSelectedAvatar] = useState("")
+  console.log(selectedAvatar)
+
   const handleChanges = (e) => {
     setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value })
   }
-  const handleSubmit = (e) => {
-    // ! Api Bağlanacak
-    // e.preventDefault()
-    console.log("meraba")
-    // const newBakiciInfo = { ...bakiciInfo }
-    // bakiciSignup.push(newBakiciInfo)
-    // console.log(bakiciInfo)
+
+  const fileInputRef = useRef(null)
+
+  const openFileInput = () => {
+    fileInputRef.current.click()
+  }
+
+  const handleAvatarChange = (e) => {
+    const selectedAvatar = e?.target?.files[0]
+
+    console.log(selectedAvatar)
+
+    if (selectedAvatar) {
+      const avatarName = selectedAvatar.name
+      setSelectedAvatar(selectedAvatar)
+      setBakiciInfo({
+        ...bakiciInfo,
+        avatar: avatarName,
+      })
+    }
   }
 
   console.log(bakiciInfo)
@@ -38,17 +55,46 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
       <form
         className="bakici-kayit__profile-form d-flex align-items-center align-items-xl-start flex-column flex-xl-row"
         action=""
-        onSubmit={handleSubmit}
       >
         <div className="bakici-kayit__profile-form-sol ms-0 ms-xl-5 ps-xl-5">
           <h3 className="bakici-kayit__profile-baslik">Profil Bilgileri</h3>
           <div className="bakici-kayit__profile-info">
-            <div className="bakici-kayit__avatar">
-              <img className="img" src={profileImg} alt="" />
-              <div className="add-img">
-                <span className="plus1"></span>
-                <span className="plus2"></span>
-              </div>
+            <div className="bakici-kayit__avatar" onClick={openFileInput}>
+              {selectedAvatar ? (
+                <>
+                  <img
+                    style={{
+                      width: "212px",
+                      height: "212px",
+                      borderRadius: "50%",
+                    }}
+                    className="img"
+                    src={URL.createObjectURL(selectedAvatar)}
+                    onChange={handleChanges}
+                    alt=""
+                  />
+                  <div className="add-img">
+                    <span className="plus1"></span>
+                    <span className="plus2"></span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <img className="img" src={profileImg} alt="" />
+                  <div className="add-img">
+                    <span className="plus1"></span>
+                    <span className="plus2"></span>
+                  </div>
+                </>
+              )}
+              <input
+                type="file"
+                id="avatarInput"
+                accept="image/*"
+                style={{ display: "none" }}
+                onChange={handleAvatarChange}
+                ref={fileInputRef}
+              />
             </div>
             <div className="bakici-kayit__description">
               <label className="bakici-kayit__desc-label" htmlFor="">

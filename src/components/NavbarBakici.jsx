@@ -71,10 +71,6 @@ const NavbarBakici = () => {
                     />
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="text-center">
-                    <Dropdown.Item href="#/action-1">Ana Sayfa</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Mesajlar</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Profil</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Yardım</Dropdown.Item>
                     <Dropdown.Item
                       onClick={() => {
                         localStorage.removeItem("currentUser")
