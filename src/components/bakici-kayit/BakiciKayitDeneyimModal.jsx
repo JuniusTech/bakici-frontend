@@ -1,36 +1,17 @@
-import React, { useState } from "react"
-import Button from "react-bootstrap/Button"
-import Form from "react-bootstrap/Form"
+import React from "react"
+import { Formik, Form, Field } from "formik"
 import Modal from "react-bootstrap/Modal"
+import Button from "react-bootstrap/Button"
+import { deneyimModalSchema } from "../../validations/validations"
 
 function BakiciKayitDeneyimModal({ show, setShow, setBakiciInfo, bakiciInfo }) {
-  const [deneyimInfo, setDeneyimInfo] = useState({
-    role: "",
-    company: "",
-    startYear: "",
-    endYear: "",
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setDeneyimInfo({ ...deneyimInfo, [name]: value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
+  const handleSubmit = (values, { resetForm }) => {
     setBakiciInfo({
       ...bakiciInfo,
-      experience: [...bakiciInfo.experience, deneyimInfo],
+      experience: [...bakiciInfo.experience, values],
     })
-
     setShow(false)
-    setDeneyimInfo({
-      role: "",
-      company: "",
-      startYear: "",
-      endYear: "",
-    })
+    resetForm()
   }
 
   return (
@@ -39,52 +20,85 @@ function BakiciKayitDeneyimModal({ show, setShow, setBakiciInfo, bakiciInfo }) {
         <Modal.Title>Deneyim</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fs-5">Yapılan İş</Form.Label>
-            <Form.Control
-              type="text"
-              name="role"
-              value={deneyimInfo.role}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="fs-5">Çalışılan Yer</Form.Label>
-            <Form.Control
-              type="text"
-              name="company"
-              value={deneyimInfo.company}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="fs-5">Başlangıç Yılı</Form.Label>
-            <Form.Control
-              type="text"
-              name="startYear"
-              value={deneyimInfo.startYear}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="fs-5">Bitiş Yılı</Form.Label>
-            <Form.Control
-              type="text"
-              name="endYear"
-              value={deneyimInfo.endYear}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShow(false)}>
-              İptal
-            </Button>
-            <Button variant="primary" type="submit">
-              Kaydet
-            </Button>
-          </Modal.Footer>
-        </Form>
+        <Formik
+          initialValues={{
+            role: "",
+            company: "",
+            startYear: "",
+            endYear: "",
+          }}
+          validationSchema={deneyimModalSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ errors, touched }) => (
+            <Form>
+              <div className="mb-3">
+                <label htmlFor="role" className="form-label fs-5">
+                  Yapılan İş
+                </label>
+                <Field
+                  type="text"
+                  id="role"
+                  name="role"
+                  className="form-control"
+                />
+                {errors.role && touched.role && (
+                  <div className="text-danger">{errors.role}</div>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="company" className="form-label fs-5">
+                  Çalışılan Yer
+                </label>
+                <Field
+                  type="text"
+                  id="company"
+                  name="company"
+                  className="form-control"
+                />
+                {errors.company && touched.company && (
+                  <div className="text-danger">{errors.company}</div>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="startYear" className="form-label fs-5">
+                  Başlangıç Yılı
+                </label>
+                <Field
+                  type="text"
+                  id="startYear"
+                  name="startYear"
+                  className="form-control"
+                />
+                {errors.startYear && touched.startYear && (
+                  <div className="text-danger">{errors.startYear}</div>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="endYear" className="form-label fs-5">
+                  Bitiş Yılı
+                </label>
+                <Field
+                  type="text"
+                  id="endYear"
+                  name="endYear"
+                  className="form-control"
+                />
+                {errors.endYear && touched.endYear && (
+                  <div className="text-danger">{errors.endYear}</div>
+                )}
+              </div>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={() => setShow(false)}>
+                  İptal
+                </Button>
+                <Button variant="primary" type="submit">
+                  Kaydet
+                </Button>
+              </Modal.Footer>
+            </Form>
+          )}
+        </Formik>
       </Modal.Body>
     </Modal>
   )

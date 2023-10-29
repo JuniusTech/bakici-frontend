@@ -18,7 +18,6 @@ export const babySitterSchema = Yup.object().shape({
   gender: Yup.string().required("Cinsiyet alanı zorunludur."),
   maritalStatus: Yup.string().required("Medeni durum alanı zorunludur."),
   educationLevel: Yup.string().required("Eğitim durumu alanı zorunludur."),
-  languages: Yup.array().min(1, "En az bir dil seçiniz."),
   city: Yup.string().required("Şehir alanı zorunludur."),
   district: Yup.string().required("İlçe alanı zorunludur."),
   address: Yup.string().required("Ev adresi alanı zorunludur."),
@@ -27,6 +26,13 @@ export const babySitterSchema = Yup.object().shape({
     "Gizlilik politikasını kabul etmelisiniz."
   ),
   haklar: Yup.boolean().oneOf([true], "Bakıcılık haklarını kabul etmelisiniz."),
+})
+
+export const deneyimModalSchema = Yup.object().shape({
+  role: Yup.string().max(32).required("Yapılan iş zorunludur"),
+  company: Yup.string().max(32).required("Çalışılan yer zorunludur"),
+  startYear: Yup.string().max(4).required("Başlangıç yılı zorunludur"),
+  endYear: Yup.string().max(4).required("Bitiş yılı zorunludur"),
 })
 
 // babySitterSchema

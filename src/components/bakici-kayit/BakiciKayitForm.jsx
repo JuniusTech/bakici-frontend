@@ -23,7 +23,6 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
 
   const [selectedAvatar, setSelectedAvatar] = useState("")
-  console.log(selectedAvatar)
 
   const handleChanges = (e) => {
     setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value })
@@ -48,7 +47,6 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
       birthDate: bakiciInfo?.birthDate,
       educationLevel: bakiciInfo?.educationLevel,
       marialStatus: bakiciInfo?.marialStatus,
-      languages: bakiciInfo?.languages,
       employmentType: bakiciInfo?.employmentType,
       password: bakiciInfo?.password,
       confirmPassword: bakiciInfo?.confirmPassword,
@@ -61,7 +59,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
     setBakiciInfo({ ...bakiciInfo, ...values })
   }, [values])
 
-  console.log(values)
+  console.log(bakiciInfo)
 
   const fileInputRef = useRef(null)
 
@@ -84,10 +82,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
     }
   }
 
-  // console.log(bakiciInfo)
-
   return (
-    // <Formik initialValues={bakiciInfo} validationSchema={babySitterSchema}>
     <div className="bakici-kayit__profile">
       <h1 className="text-center">GENEL BİLGİLERİNİZİ GİRİN</h1>
       <form
@@ -108,7 +103,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
                     }}
                     className="img"
                     src={URL.createObjectURL(selectedAvatar)}
-                    onChange={handleChanges}
+                    onChange={handleAvatarChange}
                     alt=""
                   />
                   <div className="add-img">
@@ -333,7 +328,6 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               name="marialStatus"
               onChange={(selectedOption) => {
                 handleChange("marialStatus")(selectedOption?.value)
-                console.log(selectedOption.value)
               }}
               value={{
                 value: values?.marialStatus,
@@ -341,7 +335,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               }}
               className={
                 errors.marialStatus && touched.marialStatus
-                  ? "input-error bakici-kayit__select"
+                  ? "input-error-desc bakici-kayit__select"
                   : "bakici-kayit__select"
               }
               onBlur={handleBlur}
@@ -393,16 +387,16 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               options={yabanciDil}
               isSearchable={false}
               name="languages"
-              onChange={(selectedOption) => {
-                handleChange("languages")(selectedOption?.value)
-                console.log(selectedOption.value)
+              onChange={(selectedOptions) => {
+                const selectedLanguages = selectedOptions.map(
+                  (option) => option.value
+                )
+                setBakiciInfo({ ...bakiciInfo, languages: selectedLanguages })
               }}
-              className={
-                errors.languages && touched.languages
-                  ? "input-error bakici-kayit__select"
-                  : "bakici-kayit__select"
-              }
-              onBlur={handleBlur}
+              value={yabanciDil.filter((dil) =>
+                bakiciInfo.languages.includes(dil.value)
+              )}
+              className={"bakici-kayit__select"}
               placeholder="Yabancı Dil"
               components={{
                 Option: CheckboxOption,
@@ -410,9 +404,6 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               }}
               styles={selectStyles}
             />
-            {errors.languages && touched.languages && (
-              <p className="error">{errors.languages}</p>
-            )}
           </div>
 
           <h3 className="bakici-kayit__profile-baslik my-4">Adres Bilgileri</h3>
@@ -420,19 +411,24 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
           <p className="bakici-kayit__input-label">Şehir Giriniz</p>
           <div className="bakici-kayit__select-div">
             <Select
-              className="bakici-kayit__select"
               options={sehirler}
               placeholder="Şehir"
-              name="sehir"
-              onChange={(selectedOption) =>
-                setBakiciInfo({ ...bakiciInfo, city: selectedOption.value })
-              }
-              value={{
-                value: bakiciInfo.city,
-                label: bakiciInfo.city,
+              id="city"
+              name="city"
+              onChange={(selectedOption) => {
+                handleChange("city")(selectedOption?.value)
               }}
+              value={{ label: values?.city, value: values.city }}
+              className={
+                errors.city && touched.city
+                  ? "input-error bakici-kayit__select"
+                  : "bakici-kayit__select"
+              }
+              onBlur={handleBlur}
               styles={selectStyles}
             />
+
+            {errors.city && <p className="error">{console.log(errors)}</p>}
           </div>
 
           <p className="bakici-kayit__input-label">İlçe Giriniz</p>
@@ -508,18 +504,17 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             </label>
           </div>
         </div>
-        <div className="text-center py-5">
-          <button
-            className="bakici-kayit__form-button"
-            type="submit"
-            // onClick={() => setKayitRoute("mesai")}
-          >
-            Devam et
-          </button>
-        </div>
       </form>
+      <div className="text-center py-5">
+        <button
+          onClick={handleSubmit}
+          className="bakici-kayit__form-button"
+          type="submit"
+        >
+          Devam et
+        </button>
+      </div>
     </div>
-    // </Formik>
   )
 }
 
