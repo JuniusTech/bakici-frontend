@@ -79,7 +79,6 @@
 .bakici-kayit__textarea {
   resize: none;
   width: 100%;
-  /* max-width: 300px; */
   min-width: 240px;
   height: 100%;
   border-radius: 10px;
@@ -102,6 +101,25 @@
   border-radius: 25.5px;
   margin-bottom: 18px;
   padding-left: 30px;
+}
+.input-error {
+  height: 51px;
+  border: 2px solid rgba(230, 13, 13, 0.8);
+  box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.1);
+  border-radius: 25.5px;
+  margin-bottom: 18px;
+  padding-left: 30px;
+}
+
+.input-error-desc {
+  border: 2px solid rgba(230, 13, 13, 0.8);
+  resize: none;
+  width: 100%;
+  min-width: 240px;
+  height: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .bakici-kayit__select-div {
@@ -140,25 +158,17 @@
 }
 
 .bakici-kayit__divider {
-  /* position: absolute; */
   height: 920px;
-
-  /* width: 5rem; */
   border: 1px solid rgba(69, 90, 100, 0.8);
   margin-right: 8rem;
   margin-left: 2rem;
-  /* top: 0; */
-  /* left: 50%; */
   margin-top: 52px;
 }
 
 .bakici-kayit__profile-form-sağ {
   width: 50%;
   flex-shrink: 3;
-  /* margin-left: 2rem; */
-  /* flex: 1; */
   text-align: left;
-  /* padding-top: 97px; */
 }
 
 .bakici-kayit__form-button {

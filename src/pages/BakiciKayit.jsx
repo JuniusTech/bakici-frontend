@@ -34,7 +34,7 @@ const BakiciKayit = () => {
     confirmPassword: "",
   })
 
-  console.log(bakiciInfo)
+  // console.log(bakiciInfo)
 
   const handleSubmit = async () => {
     const baseURL = process.env.REACT_APP_BASE_URL
