@@ -110,17 +110,4 @@ const Reservation = () => {
   );
 };
 
-/*           <Select
-            className="bakici-kayit__select"
-            options={cinsiyet}
-            placeholder="Cinsiyet"
-            name="gender"
-            onChange={(selectedOption) =>
-              setBakiciInfo({ ...bakiciInfo, gender: selectedOption.value })
-            }
-            value={{ value: bakiciInfo.gender, label: bakiciInfo.gender }}
-            components={{ Option: RadioOption, ClearIndicator: null }}
-            styles={selectStyles}
-            isSearchable={false}
-          />; */
 export default Reservation;
