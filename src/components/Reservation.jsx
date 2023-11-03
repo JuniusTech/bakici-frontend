@@ -1,5 +1,5 @@
 import React from "react";
-import about_img from "../assets/about_img.svg";
+import about_img from "../images/Bakıcı1-single.png";
 import "../styles/Reservation.css";
 import Select from "react-select";
 import useSelectOptions from "./select/useSelectOptions";
