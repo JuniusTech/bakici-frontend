@@ -18,8 +18,14 @@
   color: rgba(69, 90, 100, 1);
 }
 
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
 .reservation_photo_container {
-  background-color: red;
   margin: 50px 0;
 }
 .reservation_photo {
@@ -36,6 +42,13 @@
   background-color: rgba(69, 90, 100, 1);
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 300px;
+  }
 }
 
 .line::before,
@@ -57,6 +70,7 @@
   font-weight: 500;
   color: rgba(69, 90, 100, 1);
 }
+
 .input_item {
   width: 995px;
   height: 70px;
@@ -80,18 +94,35 @@
   height: 51px;
   position: relative;
   border-color: rgba(69, 90, 100, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 
 .bakici-kayit__datecontainer {
   width: 995px;
-
-}
-.bakici-kayit__date {
-  font-size: x-large;
-  width: 995px;
+  height: 51px;
+  border: 1px solid rgba(69, 90, 100, 0.4);
+  background-color: white;
   border-radius: 50px 50px;
-  padding: 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  color: gray;
+  cursor: pointer;
+}
+
+.nice-dates-day {
+  border: none !important;
+}
+
+.bakici-kayit__date {
+  width: 995px;
+  border-radius: 30px 30px;
+
+  border: 1px solid rgba(69, 90, 100, 0.4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bakici-kayit__select {
@@ -106,6 +137,7 @@
 .reservation_textarea {
   width: 995px;
   border-radius: 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 
@@ -125,4 +157,39 @@
   font-size: 20px;
   line-height: 35px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 1100px) {
+  .bakici-kayit__select-div,
+  .bakici-kayit__datecontainer,
+  .bakici-kayit__date,
+  .reservation_button,
+  .reservation_textarea,
+  .reservation_bottom_text {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .bakici-kayit__select-div,
+  .bakici-kayit__datecontainer,
+  .bakici-kayit__date,
+  .reservation_button,
+  .reservation_textarea,
+  .reservation_bottom_text {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bakici-kayit__select-div,
+  .bakici-kayit__datecontainer,
+  .bakici-kayit__date,
+  .reservation_button,
+  .reservation_textarea,
+  .reservation_bottom_text {
+    width: 300px;
+  }
+
+  .reservation_bottom_text {
+    text-align: center;
+  }
 }

@@ -1,13 +1,41 @@
+<<<<<< yasin-reservation-api
+import React, { useState } from "react";
+import { format, isSameDay } from "date-fns";
+import { enGB, tr } from "date-fns/locale";
+import { getDay, getDate, getWeek, getDayOfYear, getMonth } from "date-fns";
+import DatePicker, { DateObject } from "react-datepicker";
+=======
 import React, { useState } from "react"
 import { format, isSameDay } from "date-fns"
 import { enGB, tr } from "date-fns/locale"
 import { getDay, getDate, getWeek, getDayOfYear, getMonth } from "date-fns"
 import DatePicker, { DateObject } from "react-datepicker"
+>>>>>> main
 import {
   Calendar,
   DatePickerCalendar,
   DateRangePickerCalendar,
   START_DATE,
+<<<<<< yasin-reservation-api
+} from "react-nice-dates";
+import "react-nice-dates/build/style.css";
+import "./../../styles/BakiciTakvim.css";
+
+const BakiciTakvim = () => {
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
+  const [checked, setChecked] = useState(false);
+  const [focus, setFocus] = useState(START_DATE);
+  const [dateRange, setDateRange] = useState(checked ? "" : [null, null]);
+  const [selectedDates, setSelectedDates] = useState([]);
+  const [available, setavailable] = useState(false);
+  const [specialDays, setspecialDays] = useState([]);
+  const [specialDays2, setspecialDays2] = useState([]);
+  const [formData, setformData] = useState({
+    start_date: new Date(),
+    end_date: "",
+  });
+=======
 } from "react-nice-dates"
 import "react-nice-dates/build/style.css"
 import "./../../styles/BakiciTakvim.css"
@@ -26,6 +54,7 @@ const BakiciTakvim = () => {
     start_date: new Date(),
     end_date: "",
   })
+>>>>>> main
   function CustomMultipleInput({ innerRef, onFocus, value, onChange }) {
     return (
       <input
@@ -42,11 +71,18 @@ const BakiciTakvim = () => {
         /* style={{background:url()}}*/
         placeholder="Tarih Seçin"
       />
+<<<<<< yasin-reservation-api
+    );
+=======
     )
   }
   const handleFocusChange = (newFocus) => {
     setFocus(newFocus || START_DATE)
+>>>>>> main
   }
+  const handleFocusChange = (newFocus) => {
+    setFocus(newFocus || START_DATE);
+  };
   const getDateColor = () => {
     return formData.date ? { color: "#2D83AC" } : null
   }
@@ -58,7 +94,11 @@ const BakiciTakvim = () => {
       }
       // Return true for the dates you want to change the background color of
       // For example, let's change the background color of August 15th
+<<<<<< yasin-reservation-api
+      return specialDays.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
+=======
       return specialDays.some((day) => day.getTime() === date.getTime()) // (months are 0-based)
+>>>>>> main
     },
     customBackground2: (date) => {
       if (available) {
@@ -66,22 +106,50 @@ const BakiciTakvim = () => {
       // Return true for the dates you want to change the background color of
       // For example, let's change the background color of August 15th
 
+<<<<<< yasin-reservation-api
+      return specialDays2.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
+    },
+    selected: (date) =>
+      selectedDates.some((selectedDate) => isSameDay(selectedDate, date)),
+  };
+=======
       return specialDays2.some((day) => day.getTime() === date.getTime()) // (months are 0-based)
     },
     selected: (date) =>
       selectedDates.some((selectedDate) => isSameDay(selectedDate, date)),
   }
+>>>>>> main
   const modifiersClassNames = {
     highlight: "-highlight",
     customBackground: "-customBackground",
     customBackground2: "-customBackground2",
+<<<<<< yasin-reservation-api
+  };
+=======
   }
+>>>>>> main
 
   // <p>Selected start date: {startDate ? format(startDate, 'dd MMM yyyy', { locale: tr }) : 'none'}.</p>
   // <p>Selected end date: {endDate ? format(endDate, 'dd MMM yyyy', { locale: tr }) : 'none'}.</p>
   // <p>Currently selecting: {focus}.</p>
 
   const handleDayClick = (date) => {
+<<<<<< yasin-reservation-api
+    setSelectedDates([...selectedDates, date]);
+  };
+
+  Date.prototype.addDays = function (days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+  };
+  const availableSave = () => {
+    setavailable(true);
+    var currentDate = startDate;
+    setStartDate(null);
+    setEndDate(null);
+
+=======
     setSelectedDates([...selectedDates, date])
   }
 
@@ -96,6 +164,7 @@ const BakiciTakvim = () => {
     setStartDate(null)
     setEndDate(null)
 
+>>>>>> main
     if (currentDate) {
       while (currentDate <= endDate) {
         for (let i = 0; i <= specialDays2.length; i++) {
@@ -103,11 +172,19 @@ const BakiciTakvim = () => {
             new Date(currentDate).toJSON().slice(0, 10) ==
             specialDays2[i]?.toJSON().slice(0, 10)
           ) {
+<<<<<< yasin-reservation-api
+            specialDays2.splice(i, 1);
+          }
+        }
+        specialDays.push(new Date(currentDate));
+        currentDate = currentDate.addDays(1);
+=======
             specialDays2.splice(i, 1)
           }
         }
         specialDays.push(new Date(currentDate))
         currentDate = currentDate.addDays(1)
+>>>>>> main
       }
     } else {
       for (let i = 0; i < selectedDates.length; i++) {
@@ -117,6 +194,18 @@ const BakiciTakvim = () => {
             element.toJSON().slice(0, 10) ==
             specialDays2[j]?.toJSON().slice(0, 10)
           ) {
+<<<<<< yasin-reservation-api
+            specialDays2.splice(j, 1);
+          }
+        }
+      }
+      console.log(selectedDates);
+      specialDays.push(...[...selectedDates]);
+    }
+
+    setSelectedDates([]);
+    setspecialDays(specialDays);
+=======
             specialDays2.splice(j, 1)
           }
         }
@@ -127,14 +216,22 @@ const BakiciTakvim = () => {
 
     setSelectedDates([])
     setspecialDays(specialDays)
+>>>>>> main
     //  setspecialDays2(specialDays)
-  }
+  };
 
   const notavailableSave = () => {
+<<<<<< yasin-reservation-api
+    setavailable(false);
+    var currentDate = startDate;
+    setStartDate(null);
+    setEndDate(null);
+=======
     setavailable(false)
     var currentDate = startDate
     setStartDate(null)
     setEndDate(null)
+>>>>>> main
     if (currentDate) {
       while (currentDate <= endDate) {
         for (let i = 0; i <= specialDays.length; i++) {
@@ -142,11 +239,19 @@ const BakiciTakvim = () => {
             new Date(currentDate).toJSON().slice(0, 10) ==
             specialDays[i]?.toJSON().slice(0, 10)
           ) {
+<<<<<< yasin-reservation-api
+            specialDays.splice(i, 1);
+          }
+        }
+        specialDays2.push(new Date(currentDate));
+        currentDate = currentDate.addDays(1);
+=======
             specialDays.splice(i, 1)
           }
         }
         specialDays2.push(new Date(currentDate))
         currentDate = currentDate.addDays(1)
+>>>>>> main
       }
     } else {
       for (let i = 0; i < selectedDates.length; i++) {
@@ -156,6 +261,21 @@ const BakiciTakvim = () => {
             element.toJSON().slice(0, 10) ==
             specialDays[j]?.toJSON().slice(0, 10)
           ) {
+<<<<<< yasin-reservation-api
+            specialDays.splice(j, 1);
+          }
+        }
+      }
+      console.log(selectedDates);
+
+      specialDays2.push(...[...selectedDates]);
+    }
+
+    // setspecialDays(specialDays)
+    setSelectedDates([]);
+    setspecialDays2(specialDays2);
+  };
+=======
             specialDays.splice(j, 1)
           }
         }
@@ -169,6 +289,7 @@ const BakiciTakvim = () => {
     setSelectedDates([])
     setspecialDays2(specialDays2)
   }
+>>>>>> main
   return (
     <div className="bakici-takvim">
       <h3 className="bakici-takvim-hello">Merhaba, Tuğba</h3>
@@ -204,6 +325,22 @@ const BakiciTakvim = () => {
               form="external-form"
               onChange={(update) => {
                 if (checked) {
+<<<<<< yasin-reservation-api
+                  const arr = [];
+                  arr.push(update);
+                  arr.push(null);
+                  setDateRange(arr);
+                  setStartDate(arr[0]);
+                  setEndDate(arr[0]);
+                  console.log(startDate);
+                  setEndDate("");
+                  handleDayClick(update);
+                  // setformData({start_date:arr[0],end_date:""})
+                } else {
+                  setDateRange(update);
+                  setStartDate(update[0]);
+                  setEndDate(update[1]);
+=======
                   const arr = []
                   arr.push(update)
                   arr.push(null)
@@ -218,6 +355,7 @@ const BakiciTakvim = () => {
                   setDateRange(update)
                   setStartDate(update[0])
                   setEndDate(update[1])
+>>>>>> main
                 }
               }}
             >
@@ -275,7 +413,11 @@ const BakiciTakvim = () => {
         </div>
         <div className="bakici-takvim-bottom-right">
           <h3 className="bakici-takvim-bottom-right-h3">
+<<<<<< yasin-reservation-api
+            ÇALIŞMA MÜSAİT SAATLERİNİZİ GÜNCELLEYİN
+=======
             MÜSAİT OLDUĞUNUZ TARİHLERİ GÜNCELLEYİNİZ
+>>>>>> main
           </h3>
           <div className="bakici-takvim-date-range-picker-calendar">
             {checked ? (
@@ -325,7 +467,11 @@ const BakiciTakvim = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
+<<<<<< yasin-reservation-api
+export default BakiciTakvim;
+=======
 export default BakiciTakvim
+>>>>>> main

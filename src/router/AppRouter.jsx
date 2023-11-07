@@ -19,7 +19,7 @@ import Misafir from "../pages/Misafir";
 import SingleBakici from "../pages/SingleBakici";
 import Ebeveyn from "../pages/Ebeveyn/Ebeveyn";
 import PrivateRouter from "./PrivateRouter";
-import Reservation from "../components/Reservation";
+import ReservationPage from "../pages/Reservation";
 
 const AppRouter = () => {
   return (
@@ -37,15 +37,18 @@ const AppRouter = () => {
           <Route path="/isebasvur" element={<IseBasvur />} />
           <Route path="/ebeveynkayit" element={<EbeveynKayit />} />
           <Route path="/ebeveynkayitonay" element={<EbeveynKayitOnay />} />
+<<<<<< yasin-reservation-api
+          <Route path="/reservation" element={<ReservationPage />} />
+=======
           <Route path="/profile" element={<Bakici />} />
           <Route path="/ebeveynprofil" element={<Ebeveyn />} />
           <Route path="/kontaktbas" element={<KontaktBasarili />} />
           <Route path="/singlebakici" element={<SingleBakici />} />
+>>>>>> main
         </Route>
         {/* <Route path="/anauyelik" element={<AnaUyelik />} /> */}
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
         <Route path="/bakicikayit" element={<BakiciKayit />} />
-        <Route path="/reservation" element={<Reservation />} />
         <Route
           path="/misafirloginyonlendirici"
           element={<MisafirLoginYonlendirici />}
