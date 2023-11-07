@@ -6,25 +6,45 @@ import BakiciKayitDeneyim from "../components/bakici-kayit/BakiciKayitDeneyim"
 import BakiciKayitForm from "../components/bakici-kayit/BakiciKayitForm"
 import { useState } from "react"
 import BakiciKayitBelge from "../components/bakici-kayit/BakiciKayitBelge"
+import axios from "axios"
 
 const BakiciKayit = () => {
   const [kayitRoute, setKayitRoute] = useState("form")
   const [bakiciInfo, setBakiciInfo] = useState({
-    description: "",
     name: "",
     email: "",
     phone: "",
-    password: "",
-    birthDate: "",
+    avatar: "",
+    description: "",
+    city: "",
+    district: "",
+    address: "",
     gender: "",
+    birthDate: "",
+    educationLevel: "",
     maritalStatus: "",
-    languages: "",
-    address: {
-      sehir: "",
-      ilce: "",
-      evAdresi: "",
-    },
+    languages: [],
+    employmentType: [],
+    price_range: "",
+    nufus_on: "",
+    nufus_arka: "",
+    adli_sicil: "",
+    experience: [],
+    password: "",
+    confirmPassword: "",
   })
+
+  // console.log(bakiciInfo)
+
+  const handleSubmit = async () => {
+    const baseURL = process.env.REACT_APP_BASE_URL
+    try {
+      const res = await axios.post(`${baseURL}/babysitter/signup`, bakiciInfo)
+      console.log("Kullanıcı Başarıyla Kayıt Edildi", res)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <div className="bakici-kayit">
@@ -48,14 +68,24 @@ const BakiciKayit = () => {
         <BakiciKayitMesai
           setKayitRoute={setKayitRoute}
           bakiciInfo={bakiciInfo}
+          setBakiciInfo={setBakiciInfo}
         />
       )}
       {kayitRoute === "deneyim" && (
-        <BakiciKayitDeneyim setKayitRoute={setKayitRoute} />
+        <BakiciKayitDeneyim
+          setBakiciInfo={setBakiciInfo}
+          setKayitRoute={setKayitRoute}
+          bakiciInfo={bakiciInfo}
+        />
       )}
 
       {kayitRoute === "belge" && (
-        <BakiciKayitBelge setKayitRoute={setKayitRoute} />
+        <BakiciKayitBelge
+          setBakiciInfo={setBakiciInfo}
+          setKayitRoute={setKayitRoute}
+          bakiciInfo={bakiciInfo}
+          handleSubmit={handleSubmit}
+        />
       )}
     </div>
   )

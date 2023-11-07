@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from "react"
 import profileImg from "../../assets/Ellipse54.svg"
 import sifreIcon from "../../assets/sifre-icon.svg"
 import docIcon from "../../assets/doc.svg"
@@ -5,63 +6,149 @@ import homeIcon from "../../assets/home-icon.svg"
 import usePasswordToggle1 from "../../components/usePasswordToggle"
 import Select from "react-select"
 import useSelectOptions from "../select/useSelectOptions"
-// import bakiciSignup from "../../helper/dummyData" //! Mock Data
 import {
   cinsiyet,
   sehirler,
   ilceler,
   medeniDurum,
   yabanciDil,
+  educationLevel,
 } from "../../helper/options"
+import { useFormik } from "formik"
+import { babySitterSchema } from "../../validations/validations"
 
 const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
   const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1()
   const [PasswordInputType2, ToggleIcon2] = usePasswordToggle1()
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
 
+  const [selectedAvatar, setSelectedAvatar] = useState("")
+
   const handleChanges = (e) => {
     setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value })
   }
-  const handleSubmit = (e) => {
-    // ! Api Bağlanacak
-    // e.preventDefault()
-    console.log("meraba")
-    // const newBakiciInfo = { ...bakiciInfo }
-    // bakiciSignup.push(newBakiciInfo)
-    // console.log(bakiciInfo)
+
+  let handleSubmit = (e) => {
+    e.preventDefault()
+    setKayitRoute("mesai")
   }
 
+  const { values, errors, handleBlur, touched, handleChange } = useFormik({
+    initialValues: {
+      name: bakiciInfo?.name,
+      email: bakiciInfo?.email,
+      phone: bakiciInfo?.phone,
+      avatar: bakiciInfo?.avatar,
+      description: bakiciInfo?.description,
+      city: bakiciInfo?.city,
+      district: bakiciInfo?.district,
+      address: bakiciInfo?.address,
+      gender: bakiciInfo?.gender,
+      birthDate: bakiciInfo?.birthDate,
+      educationLevel: bakiciInfo?.educationLevel,
+      marialStatus: bakiciInfo?.marialStatus,
+      employmentType: bakiciInfo?.employmentType,
+      password: bakiciInfo?.password,
+      confirmPassword: bakiciInfo?.confirmPassword,
+    },
+    validationSchema: babySitterSchema,
+    onSubmit: handleSubmit,
+  })
+
+  useEffect(() => {
+    setBakiciInfo({ ...bakiciInfo, ...values })
+  }, [values])
+
   console.log(bakiciInfo)
+
+  const fileInputRef = useRef(null)
+
+  const openFileInput = () => {
+    fileInputRef.current.click()
+  }
+
+  const handleAvatarChange = (e) => {
+    const selectedAvatar = e?.target?.files[0]
+
+    console.log(selectedAvatar)
+
+    if (selectedAvatar) {
+      const avatarName = selectedAvatar.name
+      setSelectedAvatar(selectedAvatar)
+      setBakiciInfo({
+        ...bakiciInfo,
+        avatar: avatarName,
+      })
+    }
+  }
 
   return (
     <div className="bakici-kayit__profile">
       <h1 className="text-center">GENEL BİLGİLERİNİZİ GİRİN</h1>
       <form
-        className="bakici-kayit__profile-form d-flex align-items-center align-items-xl-start flex-column flex-xl-row"
-        action=""
         onSubmit={handleSubmit}
+        className="bakici-kayit__profile-form d-flex align-items-center align-items-xl-start flex-column flex-xl-row"
       >
         <div className="bakici-kayit__profile-form-sol ms-0 ms-xl-5 ps-xl-5">
           <h3 className="bakici-kayit__profile-baslik">Profil Bilgileri</h3>
           <div className="bakici-kayit__profile-info">
-            <div className="bakici-kayit__avatar">
-              <img className="img" src={profileImg} alt="" />
-              <div className="add-img">
-                <span className="plus1"></span>
-                <span className="plus2"></span>
-              </div>
+            <div className="bakici-kayit__avatar" onClick={openFileInput}>
+              {selectedAvatar ? (
+                <>
+                  <img
+                    style={{
+                      width: "212px",
+                      height: "212px",
+                      borderRadius: "50%",
+                    }}
+                    className="img"
+                    src={URL.createObjectURL(selectedAvatar)}
+                    onChange={handleAvatarChange}
+                    alt=""
+                  />
+                  <div className="add-img">
+                    <span className="plus1"></span>
+                    <span className="plus2"></span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <img className="img" src={profileImg} alt="" />
+                  <div className="add-img">
+                    <span className="plus1"></span>
+                    <span className="plus2"></span>
+                  </div>
+                </>
+              )}
+              <input
+                type="file"
+                id="avatarInput"
+                accept="image/*"
+                style={{ display: "none" }}
+                onChange={handleAvatarChange}
+                ref={fileInputRef}
+              />
             </div>
             <div className="bakici-kayit__description">
               <label className="bakici-kayit__desc-label" htmlFor="">
                 Kendinizi kısaca ebeveynlerimize tanıtın
               </label>
               <textarea
-                className="bakici-kayit__textarea"
+                className={
+                  errors.description && touched.description
+                    ? "input-error-desc"
+                    : "bakici-kayit__textarea"
+                }
                 name="description"
-                onChange={handleChanges}
-                value={bakiciInfo.description || ""}
+                type="text"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.description || ""}
                 id=""
               ></textarea>
+              {errors.description && touched.description && (
+                <p className="error">{errors.description}</p>
+              )}
             </div>
           </div>
 
@@ -70,12 +157,20 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               İsim ve Soyisim
             </label>
             <input
-              className="bakici-kayit__input"
+              className={
+                errors.name && touched.name
+                  ? "input-error"
+                  : "bakici-kayit__input"
+              }
               type="text"
               name="name"
-              value={bakiciInfo.name || ""}
-              onChange={handleChanges}
+              value={values.name || ""}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
+            {errors.name && touched.name && (
+              <p className="error">{errors.name}</p>
+            )}
           </div>
 
           <div className="bakici-kayit__input-div">
@@ -83,12 +178,20 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               Email adresiniz
             </label>
             <input
-              className="bakici-kayit__input"
+              className={
+                errors.email && touched.email
+                  ? "input-error"
+                  : "bakici-kayit__input"
+              }
               type="email"
               name="email"
-              value={bakiciInfo.email || ""}
-              onChange={handleChanges}
+              value={values.email || ""}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
+            {errors.email && touched.email && (
+              <p className="error">{errors.email}</p>
+            )}
           </div>
 
           <div className="bakici-kayit__input-div">
@@ -96,12 +199,20 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               Telefon numaranız
             </label>
             <input
-              onChange={handleChanges}
-              value={bakiciInfo.phone || ""}
               name="phone"
-              className="bakici-kayit__input"
               type="tel"
+              className={
+                errors.phone && touched.phone
+                  ? "input-error"
+                  : "bakici-kayit__input"
+              }
+              value={values.phone || ""}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
+            {errors.phone && touched.phone && (
+              <p className="error">{errors.phone}</p>
+            )}
           </div>
 
           <div className="bakici-kayit__input-div">
@@ -109,14 +220,22 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               Sifrenizi girin <img src={sifreIcon} alt="" />
             </label>
             <input
-              onChange={handleChanges}
-              value={bakiciInfo.password || ""}
               name="password"
-              className="bakici-kayit__input"
               type={PasswordInputType1}
+              className={
+                errors.password && touched.password
+                  ? "input-error"
+                  : "bakici-kayit__input"
+              }
+              value={values.password || ""}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
             <div className="bakici-kayit__sifre-icon">{ToggleIcon1}</div>
           </div>
+          {errors.password && touched.password && (
+            <p className="error">{errors.password}</p>
+          )}
 
           <p className="bakici-kayit__sifre-bilgi">
             Sifreniz en az 8 karakterden oluşmalıdır
@@ -130,14 +249,22 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               Şifrenizi tekrarlayın <img src={sifreIcon} alt="" />
             </label>
             <input
-              onChange={handleChanges}
-              value={bakiciInfo.password2 || ""}
-              name="password2"
-              className="bakici-kayit__input"
+              name="confirmPassword"
               type={PasswordInputType2}
+              className={
+                errors.confirmPassword && touched.confirmPassword
+                  ? "input-error"
+                  : "bakici-kayit__input"
+              }
+              value={values.confirmPassword || ""}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
             <div className="bakici-kayit__sifre-icon">{ToggleIcon2}</div>
           </div>
+          {errors.confirmPassword && touched.confirmPassword && (
+            <p className="error">{errors.confirmPassword}</p>
+          )}
         </div>
         <div className="bakici-kayit__divider d-none d-xl-block"></div>
 
@@ -151,59 +278,108 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               Doğum tarihiniz
             </label>
             <input
-              onChange={handleChanges}
-              value={bakiciInfo.birthDate || ""}
               name="birthDate"
               id="date"
-              className="bakici-kayit__input"
               type="date"
+              className={
+                errors.birthDate && touched.birthDate
+                  ? "input-error"
+                  : "bakici-kayit__input"
+              }
+              value={values.birthDate || ""}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
+            {errors.birthDate && touched.birthDate && (
+              <p className="error">{errors.birthDate}</p>
+            )}
           </div>
 
           <p className="bakici-kayit__input-label">Cinsiyetiniz</p>
           <div className="bakici-kayit__select-div">
             <Select
-              className="bakici-kayit__select"
               options={cinsiyet}
               placeholder="Cinsiyet"
-              name="gender"
-              onChange={(selectedOption) =>
-                setBakiciInfo({ ...bakiciInfo, gender: selectedOption.value })
-              }
-              value={{ value: bakiciInfo.gender, label: bakiciInfo.gender }}
+              onChange={(selectedOption) => {
+                handleChange("gender")(selectedOption?.value)
+                console.log(selectedOption.value)
+              }}
+              value={{ value: values?.gender, label: values.gender }}
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
+              className={
+                errors.gender && touched.gender
+                  ? "input-error bakici-kayit__select"
+                  : "bakici-kayit__select"
+              }
+              onBlur={handleBlur}
             />
+            {errors.gender && touched.gender && (
+              <p className="error">{errors.gender}</p>
+            )}
           </div>
 
           <p className="bakici-kayit__input-label">Medeni Durum</p>
           <div className="bakici-kayit__select-div">
             <Select
-              className="bakici-kayit__select"
               options={medeniDurum}
               placeholder="Medeni Durum"
-              name="maritalStatus"
-              onChange={(selectedOption) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  maritalStatus: selectedOption.value,
-                })
-              }
-              value={{
-                value: bakiciInfo.maritalStatus,
-                label: bakiciInfo.maritalStatus,
+              name="marialStatus"
+              onChange={(selectedOption) => {
+                handleChange("marialStatus")(selectedOption?.value)
               }}
+              value={{
+                value: values?.marialStatus,
+                label: values?.marialStatus,
+              }}
+              className={
+                errors.marialStatus && touched.marialStatus
+                  ? "input-error-desc bakici-kayit__select"
+                  : "bakici-kayit__select"
+              }
+              onBlur={handleBlur}
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
             />
+            {errors.marialStatus && touched.marialStatus && (
+              <p className="error">{errors.marialStatus}</p>
+            )}
+          </div>
+
+          <p className="bakici-kayit__input-label">Eğitim Durumu</p>
+          <div className="bakici-kayit__select-div">
+            <Select
+              options={educationLevel}
+              placeholder="Eğitim Durumu"
+              name="gender"
+              onChange={(selectedOption) => {
+                handleChange("educationLevel")(selectedOption?.value)
+                console.log(selectedOption.value)
+              }}
+              value={{
+                value: values?.educationLevel,
+                label: values?.educationLevel,
+              }}
+              className={
+                errors.educationLevel && touched.educationLevel
+                  ? "input-error bakici-kayit__select"
+                  : "bakici-kayit__select"
+              }
+              onBlur={handleBlur}
+              components={{ Option: RadioOption, ClearIndicator: null }}
+              styles={selectStyles}
+              isSearchable={false}
+            />
+            {errors.educationLevel && touched.educationLevel && (
+              <p className="error">{errors.educationLevel}</p>
+            )}
           </div>
 
           <p className="bakici-kayit__input-label">Yabancı Dil</p>
           <div className="bakici-kayit__select-div">
             <Select
-              className="bakici-kayit__select"
               isMulti
               closeMenuOnSelect={false}
               hideSelectedOptions={false}
@@ -220,6 +396,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               value={yabanciDil.filter((dil) =>
                 bakiciInfo.languages.includes(dil.value)
               )}
+              className={"bakici-kayit__select"}
               placeholder="Yabancı Dil"
               components={{
                 Option: CheckboxOption,
@@ -234,25 +411,24 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
           <p className="bakici-kayit__input-label">Şehir Giriniz</p>
           <div className="bakici-kayit__select-div">
             <Select
-              className="bakici-kayit__select"
               options={sehirler}
               placeholder="Şehir"
-              name="sehir"
-              onChange={(selectedOption) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  address: {
-                    ...bakiciInfo.address,
-                    sehir: selectedOption.value,
-                  },
-                })
-              }
-              value={{
-                value: bakiciInfo.address.sehir,
-                label: bakiciInfo.address.sehir,
+              id="city"
+              name="city"
+              onChange={(selectedOption) => {
+                handleChange("city")(selectedOption?.value)
               }}
+              value={{ label: values?.city, value: values.city }}
+              className={
+                errors.city && touched.city
+                  ? "input-error bakici-kayit__select"
+                  : "bakici-kayit__select"
+              }
+              onBlur={handleBlur}
               styles={selectStyles}
             />
+
+            {errors.city && <p className="error">{console.log(errors)}</p>}
           </div>
 
           <p className="bakici-kayit__input-label">İlçe Giriniz</p>
@@ -265,15 +441,12 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               onChange={(selectedOption) =>
                 setBakiciInfo({
                   ...bakiciInfo,
-                  address: {
-                    ...bakiciInfo.address,
-                    ilce: selectedOption.value,
-                  },
+                  district: selectedOption.value,
                 })
               }
               value={{
-                value: bakiciInfo.address.ilce,
-                label: bakiciInfo.address.ilce,
+                value: bakiciInfo.district,
+                label: bakiciInfo.district,
               }}
               styles={selectStyles}
             />
@@ -285,15 +458,9 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             </label>
             <input
               name="evAdresi"
-              value={bakiciInfo.address.evAdresi}
+              value={bakiciInfo.address}
               onChange={(e) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  address: {
-                    ...bakiciInfo.address,
-                    evAdresi: e.target.value,
-                  },
-                })
+                setBakiciInfo({ ...bakiciInfo, address: e.target.value })
               }
               className="bakici-kayit__input"
               type="text"
@@ -340,8 +507,9 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
       </form>
       <div className="text-center py-5">
         <button
+          onClick={handleSubmit}
           className="bakici-kayit__form-button"
-          onClick={() => setKayitRoute("mesai")}
+          type="submit"
         >
           Devam et
         </button>

@@ -76,7 +76,7 @@ const CareZoneNavbar = () => {
                 className="Navbar-Button"
                 onClick={() => navigate("bakiciara")}
               >
-                Bakıcı Ara{" "}
+                Bakıcı Ara
                 <img
                   className="Navbar-Bakici-MagnifyingGlass"
                   src={MagnifyingGlass}

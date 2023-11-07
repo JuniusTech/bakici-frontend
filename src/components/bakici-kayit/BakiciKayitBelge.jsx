@@ -1,48 +1,38 @@
-import { Link } from "react-router-dom"
-import belge from "../../assets/doküman.svg"
+import React, { useState } from "react"
 import BakiciKayitFilePicker from "./BakiciKayitFilePicker"
+import { belgeler } from "../../helper/options"
+import { Link } from "react-router-dom"
 
-const belgeler = [
-  {
-    id: "kimlikon",
-    desc: (
-      <p>
-        Nüfus cüzdanınızın <b>ön</b> sayfasının resmini kutunun içine tıklayarak
-        ekleyin
-      </p>
-    ),
-  },
-  {
-    id: "kimlikarka",
-    desc: (
-      <p>
-        Nüfus kağıdınızın <b>arka</b> sayfasının resmini kutunun içine
-        tıklayarak ekleyin
-      </p>
-    ),
-  },
-  {
-    id: "adlisicil",
-    desc: (
-      <p className="">
-        <b>Adli sicil kayıt</b> dokumanınızı kutunun icine tıklayarak ekleyin
-      </p>
-    ),
-  },
-]
+function BakiciKayitBelge({ setBakiciInfo, setKayitRoute, handleSubmit }) {
+  const [belgelerState, setBelgelerState] = useState({})
 
-const BakiciKayitBelge = ({ setKayitRoute }) => {
+  const handleBelgeChange = (belgeId, belgeName) => {
+    // Sadece ilgili belgeyi güncelle
+    setBakiciInfo((prevInfo) => ({
+      ...prevInfo,
+      [belgeId]: belgeName,
+    }))
+
+    setBelgelerState((prevState) => ({
+      ...prevState,
+      [belgeId]: belgeName,
+    }))
+  }
+
   return (
     <div className="text-center">
-      <h2>
-        RESMİ DÖKÜMALARINIZI EKLEYİN <img src={belge} alt="" width={30} />
-      </h2>
+      <h2>RESMİ DÖKÜMALARINIZI EKLEYIN</h2>
       <div>
         {belgeler.map((belge) => (
-          <BakiciKayitFilePicker id={belge.id} desc={belge.desc} />
+          <BakiciKayitFilePicker
+            key={belge.id}
+            id={belge.id}
+            desc={belge.desc}
+            belgeData={belgelerState[belge.id]}
+            onBelgeChange={handleBelgeChange}
+          />
         ))}
       </div>
-
       <div className="text-center py-5">
         <button
           className="bakici-kayit__form-button me-3"
@@ -50,11 +40,14 @@ const BakiciKayitBelge = ({ setKayitRoute }) => {
         >
           Geri
         </button>
-        <Link to="/bakicikayitonay">
-          <button className="bakici-kayit__form-button ms-3">
-            Kaydı Tamamla
-          </button>
-        </Link>
+        {/* <Link to="/bakicikayitonay"> */}
+        <button
+          onClick={handleSubmit}
+          className="bakici-kayit__form-button ms-3"
+        >
+          Kaydı Tamamla
+        </button>
+        {/* </Link> */}
       </div>
     </div>
   )

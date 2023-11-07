@@ -37,7 +37,14 @@ const AppRouter = () => {
           <Route path="/isebasvur" element={<IseBasvur />} />
           <Route path="/ebeveynkayit" element={<EbeveynKayit />} />
           <Route path="/ebeveynkayitonay" element={<EbeveynKayitOnay />} />
+<<<<<< yasin-reservation-api
           <Route path="/reservation" element={<ReservationPage />} />
+=======
+          <Route path="/profile" element={<Bakici />} />
+          <Route path="/ebeveynprofil" element={<Ebeveyn />} />
+          <Route path="/kontaktbas" element={<KontaktBasarili />} />
+          <Route path="/singlebakici" element={<SingleBakici />} />
+>>>>>> main
         </Route>
         {/* <Route path="/anauyelik" element={<AnaUyelik />} /> */}
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
@@ -46,10 +53,6 @@ const AppRouter = () => {
           path="/misafirloginyonlendirici"
           element={<MisafirLoginYonlendirici />}
         />
-        <Route path="/profile" element={<Bakici />} />
-        <Route path="/ebeveynprofil" element={<Ebeveyn />} />
-        <Route path="/kontaktbas" element={<KontaktBasarili />} />
-        <Route path="/singlebakici" element={<SingleBakici />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
