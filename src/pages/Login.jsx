@@ -7,6 +7,7 @@ import { useState } from "react"
 import AnaUyelik from "../components/AnaUyelik"
 import axios from "axios"
 import { useLoginContext } from "../context/LoginProvider"
+import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
 
 const Login = () => {
   const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
@@ -25,23 +26,19 @@ const Login = () => {
     try {
       setIsSubmiting(true)
       const baseURL = process.env.REACT_APP_BASE_URL
-      // const baseURL = "http://localhost:8080"
       const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
-      console.log(res)
+      toastSuccessNotify("Başarıyla Giriş Yapıldı")
       setCurrentUser(res?.data)
-      console.log(res?.data?.responseValue?.token)
       navigate("/bakiciara")
     } catch (err) {
-      console.log(err)
+      toastErrorNotify(err.response.data.error)
       setIsSubmiting(false)
     }
   }
-  // const [expanded, setExpanded] = useState(false)
 
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
 
   const handleClick = () => {
-    // setExpanded(false)
     setOpenAnaUyelik(true)
   }
 

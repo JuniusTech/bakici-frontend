@@ -1,20 +1,17 @@
-import React, { useState } from "react"
+import React from "react"
 import BakiciKayitFilePicker from "./BakiciKayitFilePicker"
 import { belgeler } from "../../helper/options"
-import { Link } from "react-router-dom"
 
-function BakiciKayitBelge({ setBakiciInfo, setKayitRoute, handleSubmit }) {
-  const [belgelerState, setBelgelerState] = useState({})
-
+function BakiciKayitBelge({
+  setBakiciInfo,
+  setKayitRoute,
+  handleSubmit,
+  isLoading,
+}) {
   const handleBelgeChange = (belgeId, belgeName) => {
     // Sadece ilgili belgeyi güncelle
     setBakiciInfo((prevInfo) => ({
       ...prevInfo,
-      [belgeId]: belgeName,
-    }))
-
-    setBelgelerState((prevState) => ({
-      ...prevState,
       [belgeId]: belgeName,
     }))
   }
@@ -28,7 +25,6 @@ function BakiciKayitBelge({ setBakiciInfo, setKayitRoute, handleSubmit }) {
             key={belge.id}
             id={belge.id}
             desc={belge.desc}
-            belgeData={belgelerState[belge.id]}
             onBelgeChange={handleBelgeChange}
           />
         ))}
@@ -40,14 +36,13 @@ function BakiciKayitBelge({ setBakiciInfo, setKayitRoute, handleSubmit }) {
         >
           Geri
         </button>
-        {/* <Link to="/bakicikayitonay"> */}
         <button
           onClick={handleSubmit}
+          disabled={isLoading ? true : false}
           className="bakici-kayit__form-button ms-3"
         >
           Kaydı Tamamla
         </button>
-        {/* </Link> */}
       </div>
     </div>
   )

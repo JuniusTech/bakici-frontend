@@ -7,32 +7,28 @@ const BakiciKayitFilePicker = ({ id, desc, onBelgeChange }) => {
   const fileInputRef = useRef(null)
 
   const handleBelgeChange = (e) => {
-    const selectedFile = e?.target?.files[0]
+    const selectedFile = e.target.files[0]
 
     if (selectedFile) {
-      const belgeName = selectedFile.name
-      setSelectedBelge(belgeName)
+      const belgeName = selectedFile?.name
       onBelgeChange(id, belgeName)
+      setSelectedBelge(URL.createObjectURL(selectedFile)) // Dosyanın URL'sini burada ayarlanıyor
     }
-  }
-
-  const triggerFileInput = () => {
-    fileInputRef.current.click()
   }
 
   return (
     <div className="bakici-kayit__belge-container mt-5 pt-5 pb-4">
       <div className="bakici-kayit__belge-ekle-container">
-        <div onClick={triggerFileInput}>
+        <div onClick={() => fileInputRef.current.click()}>
           <label className="bakici-kayit__belge-ekle" htmlFor={id}>
             <img
-              src={
-                selectedBelge
-                  ? URL.createObjectURL(fileInputRef.current.files[0])
-                  : dosyaekle
-              }
+              src={selectedBelge ? selectedBelge : dosyaekle}
               alt=""
-              className="bakici-kayit__belge-ekle-image w-100"
+              className={
+                selectedBelge
+                  ? "bakici-kayit__belge-ekle-image w-25"
+                  : "bakici-kayit__belge-ekle-image w-100"
+              }
             />
           </label>
 
