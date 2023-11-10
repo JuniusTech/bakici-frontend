@@ -49,7 +49,7 @@ const Filtre = () => {
       </div>
 
       <div className="bakici-filtre__formcontainer ">
-        <p className="bakici-filtre__formbaslik">GELİŞTİRİLMİŞ ARAMA</p>
+        <p className="bakici-filtre__formbaslik">GELİŞTİRİLMİŞ ARAM</p>
 
         <div
           className={`bakici-filtre__form  ${filterOpen ? "active" : "close"} `}
