@@ -19,7 +19,7 @@ import Misafir from "../pages/Misafir"
 import SingleBakici from "../pages/SingleBakici"
 import Ebeveyn from "../pages/Ebeveyn/Ebeveyn"
 import PrivateRouter from "./PrivateRouter"
-import ReservationPage from "../components/Reservation"
+import ReservationPage from "../pages/Reservation"
 
 const AppRouter = () => {
   return (
