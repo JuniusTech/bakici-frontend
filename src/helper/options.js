@@ -1,4 +1,9 @@
 import hakkimda_img from "../assets/hakkimda_img.svg"
+import Yorumcu1 from "../images/yorumcu1.png"
+import Yorumcu2 from "../images/Yorumcu2.png"
+import Time1 from "../assets/Time1.svg"
+import Time2 from "../assets/Time2.svg"
+import Time3 from "../assets/Time3.svg"
 
 export const cinsiyet = [
   { value: "female", label: "Kadın" },
@@ -304,5 +309,110 @@ export const belgeler = [
         <b>Adli sicil kayıt</b> dokumanınızı kutunun icine tıklayarak ekleyin
       </p>
     ),
+  },
+]
+
+export const service_options = [
+  {
+    label: (
+      <div>
+        <img
+          src={Time1}
+          height="30px"
+          width="30.72px"
+          style={{ marginRight: "20px" }}
+        />
+        Sadece gündüz bakıcılığı
+      </div>
+    ),
+    value: " Sadece Gündüz Bakiciliği",
+  },
+  {
+    label: (
+      <div>
+        <img
+          src={Time1}
+          height="30px"
+          width="30.72px"
+          style={{ marginRight: "20px" }}
+        />
+        Sadece haftasonu gündüz bakıcılığı
+      </div>
+    ),
+    value: "Sadece Haftasonu Gündüz Bakiciligi",
+    imageSrc: "path/to/image1.jpg",
+  },
+  {
+    label: (
+      <div className="image-container">
+        <img
+          src={Time2}
+          height="30px"
+          width="30.72px"
+          style={{ marginRight: "20px" }}
+        />
+        <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
+          Sadece hafta içi yatili bakıcılık
+        </p>
+      </div>
+    ),
+    value: "Sadece hafta içi yatili bakicilik",
+    imageSrc: "path/to/image1.jpg",
+  },
+  {
+    label: (
+      <div className="image-container">
+        <img
+          src={Time2}
+          height="30px"
+          width="30.72px"
+          style={{ marginRight: "20px" }}
+        />
+        <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
+          Sadece hafta sonu yatili bakıcılık
+        </p>
+      </div>
+    ),
+    value: "Sadece hafta sonu yatili bakicilik",
+    imageSrc: "path/to/image1.jpg",
+  },
+  {
+    label: (
+      <div className="image-container">
+        <img
+          src={Time3}
+          height="30px"
+          width="30.72px"
+          style={{ marginRight: "20px" }}
+        />
+        <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
+          Pazar dahil tüm günler yatili bakıcılık
+        </p>
+      </div>
+    ),
+    imageSrc: "path/to/image1.jpg",
+  },
+]
+
+export const datas = [
+  {
+    name: "Ahmet Fırtına",
+    date: "08-05-2023",
+    comment:
+      "Memnun kaldık, oğlum ile kaliteli vakit geçirdiler. Montesori aktiviteleri hoşumuza gitti.",
+    point: "⭐⭐⭐⭐⭐",
+    work_type: "Part-time",
+    baby_type: "Gündüz mesai 1 ve 2 yaş arası",
+    image: Yorumcu1,
+  },
+  {
+    name: "Fatma Betül",
+    date: "10-04-2023",
+    comment:
+      "Harika bir deneyimdi. Tavsiye ediyorum. Güvenilir ve kaliteli birisi",
+    point: "⭐⭐⭐⭐⭐",
+    work_type: "Part-time",
+    baby_type: "3 yaş üzeri",
+    image: Yorumcu2,
   },
 ]

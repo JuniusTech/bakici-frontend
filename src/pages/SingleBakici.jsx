@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import NavbarBakici from "../components/NavbarBakici"
 import BakiciInfo from "../components/BakiciInfo"
 import BakiciDetail from "../components/BakiciDetail"
@@ -7,8 +7,30 @@ import homeicon from "../assets/homeicon.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import Footer from "../components/Footer"
+import { useParams } from "react-router-dom"
+import axios from "axios"
 
 function SingleBakici() {
+  const { babysitterId } = useParams()
+  const [babysitterInfo, setBabysitterInfo] = useState([])
+
+  useEffect(() => {
+    const babysitterDetail = async () => {
+      try {
+        const baseURL = process.env.REACT_APP_BASE_URL
+        const res = await axios.get(`${baseURL}/babysitter/${babysitterId}`, {
+          withCredentials: true,
+        })
+        setBabysitterInfo(res.data.babySitter)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    babysitterDetail()
+  }, [babysitterId])
+
+  console.log(babysitterInfo)
+  // console.log(bakici)
   return (
     <div className="w-100 px-3">
       <NavbarBakici />
@@ -22,10 +44,10 @@ function SingleBakici() {
       </div>
       <div className="d-flex flex-column flex-md-row">
         <Col md={3} className="px-0 px-md-3">
-          <BakiciInfo />
+          <BakiciInfo babysitterInfo={babysitterInfo} />
         </Col>
         <Col md={9} className="ms-2 px-0 px-md-3">
-          <BakiciDetail />
+          <BakiciDetail babysitterInfo={babysitterInfo} />
         </Col>
       </div>
       <Footer />
