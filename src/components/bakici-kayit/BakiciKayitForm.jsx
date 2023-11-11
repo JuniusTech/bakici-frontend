@@ -16,6 +16,7 @@ import {
 } from "../../helper/options"
 import { useFormik } from "formik"
 import { babySitterSchema } from "../../validations/validations"
+import { toastWarnNotify } from "../../helper/ToastNotify"
 
 const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
   const [PasswordInputType1, ToggleIcon1] = usePasswordToggle1()
@@ -24,13 +25,16 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
 
   const [selectedAvatar, setSelectedAvatar] = useState("")
 
-  const handleChanges = (e) => {
-    setBakiciInfo({ ...bakiciInfo, [e.target.name]: e.target.value })
-  }
-
   let handleSubmit = (e) => {
     e.preventDefault()
-    setKayitRoute("mesai")
+    if (Object.keys(errors).length === 0) {
+      setKayitRoute("mesai")
+    } else {
+      toastWarnNotify(
+        "Lütfen bilgilerinizi düzenleyin ve boş alanları doldurun",
+        errors
+      )
+    }
   }
 
   const { values, errors, handleBlur, touched, handleChange } = useFormik({
@@ -46,7 +50,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
       gender: bakiciInfo?.gender,
       birthDate: bakiciInfo?.birthDate,
       educationLevel: bakiciInfo?.educationLevel,
-      marialStatus: bakiciInfo?.marialStatus,
+      maritalStatus: bakiciInfo?.maritalStatus,
       employmentType: bakiciInfo?.employmentType,
       password: bakiciInfo?.password,
       confirmPassword: bakiciInfo?.confirmPassword,
@@ -59,8 +63,6 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
     setBakiciInfo({ ...bakiciInfo, ...values })
   }, [values])
 
-  console.log(bakiciInfo)
-
   const fileInputRef = useRef(null)
 
   const openFileInput = () => {
@@ -68,9 +70,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
   }
 
   const handleAvatarChange = (e) => {
-    const selectedAvatar = e?.target?.files[0]
-
-    console.log(selectedAvatar)
+    const selectedAvatar = e.target.files[0]
 
     if (selectedAvatar) {
       const avatarName = selectedAvatar.name
@@ -147,7 +147,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
                 id=""
               ></textarea>
               {errors.description && touched.description && (
-                <p className="error">{errors.description}</p>
+                <p className="error ">{errors.description}</p>
               )}
             </div>
           </div>
@@ -302,7 +302,6 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               placeholder="Cinsiyet"
               onChange={(selectedOption) => {
                 handleChange("gender")(selectedOption?.value)
-                console.log(selectedOption.value)
               }}
               value={{ value: values?.gender, label: values.gender }}
               components={{ Option: RadioOption, ClearIndicator: null }}
@@ -325,17 +324,17 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
             <Select
               options={medeniDurum}
               placeholder="Medeni Durum"
-              name="marialStatus"
+              name="maritalStatus"
               onChange={(selectedOption) => {
-                handleChange("marialStatus")(selectedOption?.value)
+                handleChange("maritalStatus")(selectedOption?.value)
               }}
               value={{
-                value: values?.marialStatus,
-                label: values?.marialStatus,
+                value: values?.maritalStatus,
+                label: values?.maritalStatus,
               }}
               className={
-                errors.marialStatus && touched.marialStatus
-                  ? "input-error-desc bakici-kayit__select"
+                errors.maritalStatus && touched.maritalStatus
+                  ? "input-error bakici-kayit__select"
                   : "bakici-kayit__select"
               }
               onBlur={handleBlur}
@@ -343,20 +342,19 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               styles={selectStyles}
               isSearchable={false}
             />
-            {errors.marialStatus && touched.marialStatus && (
-              <p className="error">{errors.marialStatus}</p>
-            )}
           </div>
+          {errors.maritalStatus && touched.maritalStatus && (
+            <p className="error">{errors.maritalStatus}</p>
+          )}
 
           <p className="bakici-kayit__input-label">Eğitim Durumu</p>
           <div className="bakici-kayit__select-div">
             <Select
               options={educationLevel}
               placeholder="Eğitim Durumu"
-              name="gender"
+              name="educationLevel"
               onChange={(selectedOption) => {
                 handleChange("educationLevel")(selectedOption?.value)
-                console.log(selectedOption.value)
               }}
               value={{
                 value: values?.educationLevel,
@@ -427,9 +425,8 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               onBlur={handleBlur}
               styles={selectStyles}
             />
-
-            {errors.city && <p className="error">{console.log(errors)}</p>}
           </div>
+          {errors.city && <p className="error">{errors.city}</p>}
 
           <p className="bakici-kayit__input-label">İlçe Giriniz</p>
           <div className="bakici-kayit__select-div">
@@ -437,13 +434,10 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               className="bakici-kayit__select"
               options={ilceler}
               placeholder="İlçe"
-              name="ilce"
-              onChange={(selectedOption) =>
-                setBakiciInfo({
-                  ...bakiciInfo,
-                  district: selectedOption.value,
-                })
-              }
+              name="district"
+              onChange={(selectedOption) => {
+                handleChange("district")(selectedOption?.value)
+              }}
               value={{
                 value: bakiciInfo.district,
                 label: bakiciInfo.district,
@@ -451,18 +445,22 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               styles={selectStyles}
             />
           </div>
+          {errors.district && <p className="error">{errors.district}</p>}
 
           <div className="bakici-kayit__input-div">
             <label className="bakici-kayit__input-label" htmlFor="">
               Ev Adresiniz
             </label>
             <input
-              name="evAdresi"
-              value={bakiciInfo.address}
-              onChange={(e) =>
-                setBakiciInfo({ ...bakiciInfo, address: e.target.value })
+              name="address"
+              value={values.address || ""}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.address && touched.address
+                  ? "input-error-desc"
+                  : "bakici-kayit__input"
               }
-              className="bakici-kayit__input"
               type="text"
             />
             <img
@@ -472,6 +470,7 @@ const BakiciKayitForm = ({ setKayitRoute, bakiciInfo, setBakiciInfo }) => {
               alt="home"
             />
           </div>
+          {errors.address && <p className="error">{errors.address}</p>}
 
           <div className="my-4 d-flex align-items-center gap-3">
             <a href="" className="" style={{ textDecoration: "underline" }}>

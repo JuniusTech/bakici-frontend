@@ -6,10 +6,12 @@ export const babySitterSchema = Yup.object().shape({
   email: Yup.string()
     .email("Geçerli bir e-posta adresi giriniz.")
     .required("E-posta alanı zorunludur."),
-  phone: Yup.string().required("Telefon numarası alanı zorunludur."),
+  phone: Yup.string()
+    .length(11, "Telefon numarası 11 haneden oluşmalıdır")
+    .required("Telefon numarası alanı zorunludur."),
   password: Yup.string()
     .min(8, "Şifre en az 8 karakterden oluşmalıdır.")
-    .matches(/[@!]/, "Şifrede en az bir sembol bulunmalıdır.")
+    .matches(/[.@!]/, "Şifrede en az bir sembol bulunmalıdır.")
     .required("Şifre alanı zorunludur."),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "Şifreler uyuşmuyor.")
@@ -34,12 +36,3 @@ export const deneyimModalSchema = Yup.object().shape({
   startYear: Yup.string().max(4).required("Başlangıç yılı zorunludur"),
   endYear: Yup.string().max(4).required("Bitiş yılı zorunludur"),
 })
-
-// babySitterSchema
-//   .validate(bakiciInfo, { abortEarly: false })
-//   .then(() => {
-//     // Başarılı doğrulama işlemleri
-//   })
-//   .catch((errors) => {
-//     // Doğrulama hatalarıyla başa çıkma
-//   })

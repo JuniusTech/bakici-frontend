@@ -1,12 +1,13 @@
-import React from "react";
-import "../styles/Login.css";
-import Logo from "../assets/logo.svg";
-import googleicon from "../assets/google-icon.svg";
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import AnaUyelik from "../components/AnaUyelik";
-import axios from "axios";
-import { useLoginContext } from "../context/LoginProvider";
+import React from "react"
+import "../styles/Login.css"
+import Logo from "../assets/logo.svg"
+import googleicon from "../assets/google-icon.svg"
+import { Link, useNavigate } from "react-router-dom"
+import { useState } from "react"
+import AnaUyelik from "../components/AnaUyelik"
+import axios from "axios"
+import { useLoginContext } from "../context/LoginProvider"
+import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
 
 const Login = () => {
   const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" });
@@ -23,27 +24,25 @@ const Login = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      setIsSubmiting(true);
-      const baseURL = process.env.REACT_APP_BASE_URL;
-      // const baseURL = "http://localhost:8080"
-      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin);
-      console.log(res);
-      setCurrentUser(res?.data);
-      console.log(res?.data?.responseValue?.token);
-      navigate("/bakiciara");
+
+      setIsSubmiting(true)
+      const baseURL = process.env.REACT_APP_BASE_URL
+      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
+      toastSuccessNotify("Başarıyla Giriş Yapıldı")
+      setCurrentUser(res?.data)
+      navigate("/bakiciara")
     } catch (err) {
-      console.log(err);
-      setIsSubmiting(false);
+      toastErrorNotify(err.response.data.error)
+      setIsSubmiting(false)
     }
-  };
-  // const [expanded, setExpanded] = useState(false)
+  }
 
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
 
   const handleClick = () => {
-    // setExpanded(false)
-    setOpenAnaUyelik(true);
-  };
+
+    setOpenAnaUyelik(true)
+  }
 
   return (
     <>

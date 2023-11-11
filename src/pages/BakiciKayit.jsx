@@ -7,9 +7,11 @@ import BakiciKayitForm from "../components/bakici-kayit/BakiciKayitForm"
 import { useState } from "react"
 import BakiciKayitBelge from "../components/bakici-kayit/BakiciKayitBelge"
 import axios from "axios"
+import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
 
 const BakiciKayit = () => {
   const [kayitRoute, setKayitRoute] = useState("form")
+  const [isLoading, setIsLoading] = useState(false)
   const [bakiciInfo, setBakiciInfo] = useState({
     name: "",
     email: "",
@@ -20,9 +22,9 @@ const BakiciKayit = () => {
     district: "",
     address: "",
     gender: "",
+    maritalStatus: "",
     birthDate: "",
     educationLevel: "",
-    maritalStatus: "",
     languages: [],
     employmentType: [],
     price_range: "",
@@ -34,15 +36,21 @@ const BakiciKayit = () => {
     confirmPassword: "",
   })
 
-  // console.log(bakiciInfo)
-
   const handleSubmit = async () => {
     const baseURL = process.env.REACT_APP_BASE_URL
     try {
-      const res = await axios.post(`${baseURL}/babysitter/signup`, bakiciInfo)
-      console.log("Kullanıcı Başarıyla Kayıt Edildi", res)
+      setIsLoading(true)
+      await axios.post(`${baseURL}/babysitter/signup`, bakiciInfo)
+      toastSuccessNotify("Başarıyla Kayıt Yapıldı")
     } catch (err) {
-      console.log(err)
+      setIsLoading(false)
+      const errors =
+        err.response.data.message ||
+        err.response.data.errors ||
+        err.response.data.error
+      errors instanceof Array
+        ? errors.map((e) => toastErrorNotify(e))
+        : toastErrorNotify(errors)
     }
   }
 
@@ -85,6 +93,7 @@ const BakiciKayit = () => {
           setKayitRoute={setKayitRoute}
           bakiciInfo={bakiciInfo}
           handleSubmit={handleSubmit}
+          isLoading={isLoading}
         />
       )}
     </div>

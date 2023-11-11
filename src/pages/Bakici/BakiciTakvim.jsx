@@ -11,7 +11,6 @@ import {
 } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 import "./../../styles/BakiciTakvim.css";
-
 const BakiciTakvim = () => {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
@@ -136,7 +135,6 @@ const BakiciTakvim = () => {
     var currentDate = startDate;
     setStartDate(null);
     setEndDate(null);
-
     if (currentDate) {
       while (currentDate <= endDate) {
         for (let i = 0; i <= specialDays.length; i++) {
@@ -163,10 +161,8 @@ const BakiciTakvim = () => {
         }
       }
       console.log(selectedDates);
-
       specialDays2.push(...[...selectedDates]);
     }
-
     // setspecialDays(specialDays)
     setSelectedDates([]);
     setspecialDays2(specialDays2);
@@ -179,7 +175,6 @@ const BakiciTakvim = () => {
         Profilinizin aktif olmasi için müsait olduğunuz günleri takvimi
         kullanarak güncelleyebilirsiniz.
       </p>
-
       <div className="bakici-takvim-bottom ">
         <div className="bakici-takvim-bottom-left">
           <h1 className="bakici-takvim-bottom-left-h1">
@@ -192,7 +187,6 @@ const BakiciTakvim = () => {
             Bir tarih aralığı veya rastgele günler seçin ve müsaitlik durumunu
             aynı anda herkes için değiştirin.
           </p>
-
           <label className="Kontakt-Form-Label" id="option-date">
             TARİH SEÇİNİZ
             <DatePicker
@@ -231,13 +225,11 @@ const BakiciTakvim = () => {
                   style={{ marginLeft: "5px" }}
                   onChange={() => setChecked(!checked)}
                 />
-
                 <p className=" d-inline ms-2">ARDIŞIK GÜN SEÇME</p>
               </label>
             </DatePicker>
             {/*<img src={Calendar} alt="Calendar" className="Arrow-tarih" /> */}
           </label>
-
           <button
             className="bakici-takvim-bottom-left-button1"
             onClick={availableSave}
@@ -250,7 +242,6 @@ const BakiciTakvim = () => {
           >
             Seçili tarihleri müsait değil olarak kaydet
           </button>
-
           <div className="bakici-takvim-bottom-uzaktamodu">
             <h3 className="bakici-takvim-bottom-uzaktamodu-h3"> UZAKTA MODU</h3>
             <p className="bakici-takvim-bottom-uzaktamodu-bilgi">
@@ -300,7 +291,6 @@ const BakiciTakvim = () => {
                 modifiersClassNames={modifiersClassNames}
               />
             )}
-
             <div className="bakici-takvim-bottom-right-kutucuklar">
               <div className="bakici-takvim-bottom-right-kutucuklar-musait">
                 <div className="bakici-takvim-bottom-right-kutucuklar-ilk"></div>
@@ -308,14 +298,12 @@ const BakiciTakvim = () => {
                   Müsait
                 </p>
               </div>
-
               <div className="bakici-takvim-bottom-right-kutucuklar-degil">
                 <div className="bakici-takvim-bottom-right-kutucuklar-ikinci"></div>
                 <p className="bakici-takvim-bottom-right-kutucuklar-text">
                   Müsait değil
                 </p>
               </div>
-
               <div className="bakici-takvim-bottom-right-kutucuklar-dolu">
                 <div className="bakici-takvim-bottom-right-kutucuklar-üçüncü"></div>
                 <p className="bakici-takvim-bottom-right-kutucuklar-text">
