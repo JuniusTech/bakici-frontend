@@ -1,49 +1,49 @@
-import React from "react"
-import "../styles/Login.css"
-import Logo from "../assets/logo.svg"
-import googleicon from "../assets/google-icon.svg"
-import { Link, useNavigate } from "react-router-dom"
-import { useState } from "react"
-import AnaUyelik from "../components/AnaUyelik"
-import axios from "axios"
-import { useLoginContext } from "../context/LoginProvider"
+import React from "react";
+import "../styles/Login.css";
+import Logo from "../assets/logo.svg";
+import googleicon from "../assets/google-icon.svg";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import AnaUyelik from "../components/AnaUyelik";
+import axios from "axios";
+import { useLoginContext } from "../context/LoginProvider";
 
 const Login = () => {
-  const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
-  const [isSubmiting, setIsSubmiting] = useState(false)
+  const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" });
+  const [isSubmiting, setIsSubmiting] = useState(false);
 
-  const { setCurrentUser } = useLoginContext()
+  const { setCurrentUser } = useLoginContext();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setEbeveynLogin({ ...ebeveynLogin, [e.target.name]: e.target.value })
-  }
+    setEbeveynLogin({ ...ebeveynLogin, [e.target.name]: e.target.value });
+  };
 
   const onSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      setIsSubmiting(true)
-      const baseURL = process.env.REACT_APP_BASE_URL
+      setIsSubmiting(true);
+      const baseURL = process.env.REACT_APP_BASE_URL;
       // const baseURL = "http://localhost:8080"
-      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
-      console.log(res)
-      setCurrentUser(res?.data)
-      console.log(res?.data?.responseValue?.token)
-      navigate("/bakiciara")
+      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin);
+      console.log(res);
+      setCurrentUser(res?.data);
+      console.log(res?.data?.responseValue?.token);
+      navigate("/bakiciara");
     } catch (err) {
-      console.log(err)
-      setIsSubmiting(false)
+      console.log(err);
+      setIsSubmiting(false);
     }
-  }
+  };
   // const [expanded, setExpanded] = useState(false)
 
-  const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
 
   const handleClick = () => {
     // setExpanded(false)
-    setOpenAnaUyelik(true)
-  }
+    setOpenAnaUyelik(true);
+  };
 
   return (
     <>
@@ -129,7 +129,7 @@ const Login = () => {
         <div className="login-img-container d-none d-lg-block"></div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
