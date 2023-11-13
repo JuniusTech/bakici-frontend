@@ -95,8 +95,6 @@ const Filtre = () => {
             />
           </div>
 
-          {/* <SelectComp options={cinsiyet} placeholder="Cinsiyet" /> */}
-
           <div className="bakici-filtre__selectdiv">
             <Select
               className="bakici-filtre__select"
@@ -107,8 +105,6 @@ const Filtre = () => {
               isSearchable={false}
             />
           </div>
-
-          {/* <SelectComp options={egitimSev} placeholder="Eğitim Seviyesi" /> */}
 
           <div className="bakici-filtre__selectdiv">
             <Select
@@ -190,8 +186,6 @@ const Filtre = () => {
             />
           </div>
 
-          {/* <NumInputDiv open={ucretOpen} setOpen={setUcretOpen} label="Ücret" /> */}
-
           <div className="w-100 position-relative ucretclose bakici-filtre__select-container">
             <div
               className="bakici-filtre__selectdiv ucret-yas d-flex justify-content-between align-items-center px-4 pb-2 ucretclose"
@@ -231,8 +225,6 @@ const Filtre = () => {
               </div>
             )}
           </div>
-
-          {/* <SelectComp options={deneyim} placeholder="Deneyim" /> */}
 
           <div className="bakici-filtre__selectdiv">
             <Select

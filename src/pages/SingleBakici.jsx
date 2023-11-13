@@ -14,6 +14,8 @@ function SingleBakici() {
   const { babysitterId } = useParams()
   const [babysitterInfo, setBabysitterInfo] = useState([])
 
+  console.log(babysitterId)
+
   useEffect(() => {
     const babysitterDetail = async () => {
       try {
