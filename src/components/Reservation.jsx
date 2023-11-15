@@ -11,9 +11,11 @@ import { formatDate } from "../helper/utils";
 import { DateRangePickerCalendar, START_DATE } from "react-nice-dates";
 import { LuCalendarDays } from "react-icons/lu";
 import axios from "axios";
+import Loading from "../helper/Loading";
 
 const Reservation = () => {
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions();
+  const [loading, setLoading] = useState(false);
   const [specialDays, setspecialDays] = useState([]);
   const [specialDays2, setspecialDays2] = useState([]);
   const [selectedDates, setSelectedDates] = useState([]);
@@ -41,7 +43,8 @@ const Reservation = () => {
   };
 
   console.log("form--", formData);
-
+  const usr = localStorage.getItem("currentUser");
+  console.log("usr--", usr);
   const handleFocusChange = (newFocus) => {
     setFocus(newFocus || START_DATE);
   };
@@ -52,17 +55,12 @@ const Reservation = () => {
     customBackground: (date) => {
       if (available) {
       }
-      // Return true for the dates you want to change the background color of
-      // For example, let's change the background color of August 15th
-      return specialDays.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
+      return specialDays.some((day) => day.getTime() === date.getTime());
     },
     customBackground2: (date) => {
       if (available) {
       }
-      // Return true for the dates you want to change the background color of
-      // For example, let's change the background color of August 15th
-
-      return specialDays2.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
+      return specialDays2.some((day) => day.getTime() === date.getTime());
     },
     selected: (date) =>
       selectedDates.some((selectedDate) => isSameDay(selectedDate, date)),
@@ -76,13 +74,20 @@ const Reservation = () => {
 
   const handleSubmit = async () => {
     try {
+      setLoading(true);
       const res = await axios.post(
-        `https://carezone.onrender.com/meeting/create/653bb52fab18b6f3d99e8c57`,
-        formData
+        `https://carezone.onrender.com/meeting/create/6533d94e8a0ad72b7e0c9f3e`,
+        formData,
+        {
+          withCredentials: true,
+        }
       );
+
       console.log("res--", res);
     } catch (error) {
       console.log(error.message);
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -97,10 +102,10 @@ const Reservation = () => {
 
         <div className="input_container">
           <p className="select_title">SERVİS</p>
-          <div className="bakici-kayit__select-div">
+          <div className="bakici-reservation__select-div">
             <Select
               className="bakici-kayit__select"
-              placeholder="Gündüz Tarife"
+              placeholder="Servis Seçiniz"
               name="gender"
               isSearchable={false}
               styles={selectStyles}
@@ -114,7 +119,7 @@ const Reservation = () => {
 
         <div className="input_container">
           <p className="select_title">YAŞ GRUBU</p>
-          <div className="bakici-kayit__select-div">
+          <div className="bakici-reservation__select-div">
             <Select
               className="bakici-kayit__select"
               placeholder="Yaş Grubu Seçiniz"
@@ -186,6 +191,7 @@ const Reservation = () => {
           kapsamındadır.
         </p>
       </div>
+      {loading && <Loading />}
     </>
   );
 };

@@ -39,7 +39,6 @@ const AppRouter = () => {
           <Route path="/ebeveynkayitonay" element={<EbeveynKayitOnay />} />
 
           <Route path="/reservation" element={<ReservationPage />} />
-
           <Route path="/profile" element={<Bakici />} />
           <Route path="/ebeveynprofil" element={<Ebeveyn />} />
           <Route path="/kontaktbas" element={<KontaktBasarili />} />

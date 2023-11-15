@@ -10,20 +10,21 @@ import { useLoginContext } from "../context/LoginProvider"
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
 
 const Login = () => {
-  const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
-  const [isSubmiting, setIsSubmiting] = useState(false)
+  const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" });
+  const [isSubmiting, setIsSubmiting] = useState(false);
 
-  const { setCurrentUser } = useLoginContext()
+  const { setCurrentUser } = useLoginContext();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setEbeveynLogin({ ...ebeveynLogin, [e.target.name]: e.target.value })
-  }
+    setEbeveynLogin({ ...ebeveynLogin, [e.target.name]: e.target.value });
+  };
 
   const onSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
+
       setIsSubmiting(true)
       const baseURL = process.env.REACT_APP_BASE_URL
       const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
@@ -36,9 +37,10 @@ const Login = () => {
     }
   }
 
-  const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
 
   const handleClick = () => {
+
     setOpenAnaUyelik(true)
   }
 
@@ -126,7 +128,7 @@ const Login = () => {
         <div className="login-img-container d-none d-lg-block"></div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

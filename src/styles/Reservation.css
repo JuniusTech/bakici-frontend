@@ -87,9 +87,12 @@
   color: rgba(69, 90, 100, 1);
 }
 
-.bakici-kayit__select-div {
+.bakici-reservation__select-div {
   display: flex;
   flex-direction: column;
+  border: 0.5px solid rgba(70, 120, 136, 1);
+  background-color: white;
+  border-radius: 50px 50px;
   width: 995px;
   height: 51px;
   position: relative;
@@ -101,7 +104,7 @@
 .bakici-kayit__datecontainer {
   width: 995px;
   height: 51px;
-  border: 1px solid rgba(69, 90, 100, 0.4);
+  border: 0.5px solid rgba(70, 120, 136, 1);
   background-color: white;
   border-radius: 50px 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -120,13 +123,13 @@
 .bakici-kayit__date {
   width: 995px;
   border-radius: 30px 30px;
-
-  border: 1px solid rgba(69, 90, 100, 0.4);
+  border: 0.5px solid rgba(70, 120, 136, 1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bakici-kayit__select {
   box-shadow: 0px 2px 2px 2px rgba(204, 204, 204, 0.2);
+  border: 0.5px solid rgba(70, 120, 136, 1);
   border-radius: 100px 100px;
   border: none;
 }
@@ -136,6 +139,7 @@
 
 .reservation_textarea {
   width: 995px;
+  border: 0.5px solid rgba(70, 120, 136, 1);
   border-radius: 10px 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -160,7 +164,7 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .bakici-kayit__select-div,
+  .bakici-reservation__select-div,
   .bakici-kayit__datecontainer,
   .bakici-kayit__date,
   .reservation_button,
@@ -170,7 +174,7 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .bakici-kayit__select-div,
+  .bakici-reservation__select-div,
   .bakici-kayit__datecontainer,
   .bakici-kayit__date,
   .reservation_button,
@@ -180,7 +184,7 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .bakici-kayit__select-div,
+  .bakici-reservation__select-div,
   .bakici-kayit__datecontainer,
   .bakici-kayit__date,
   .reservation_button,

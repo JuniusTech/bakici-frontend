@@ -25,6 +25,7 @@ const BakiciTakvim = () => {
     start_date: new Date(),
     end_date: "",
   });
+
   function CustomMultipleInput({ innerRef, onFocus, value, onChange }) {
     return (
       <input
@@ -64,12 +65,12 @@ const BakiciTakvim = () => {
       }
       // Return true for the dates you want to change the background color of
       // For example, let's change the background color of August 15th
-
       return specialDays2.some((day) => day.getTime() === date.getTime()); // (months are 0-based)
     },
     selected: (date) =>
       selectedDates.some((selectedDate) => isSameDay(selectedDate, date)),
   };
+
   const modifiersClassNames = {
     highlight: "-highlight",
     customBackground: "-customBackground",
