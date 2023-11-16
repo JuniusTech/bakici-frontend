@@ -1,25 +1,25 @@
-import React from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "../pages/Home"
-import Register from "../pages/Register"
-import Login from "../pages/Login"
-import BakiciAra from "../pages/BakiciAra"
-import IseBasvur from "../pages/IseBasvur"
-import EbeveynKayit from "../pages/EbeveynKayit"
-import EbeveynKayitOnay from "../pages/EbeveynKayitOnay"
-import BakiciKayitOnay from "../pages/BakiciKayitOnay"
-import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici"
-import BakiciKayit from "../pages/BakiciKayit"
-import Bakici from "../pages/Bakici/Bakici"
-import OfflineYardim from "../pages/OfflineYardim"
-import BakiciYardim from "../pages/BakiciYardim"
-import Kontakt from "../pages/Kontakt"
-import KontaktBasarili from "../pages/KontaktBasarili"
-import Misafir from "../pages/Misafir"
-import SingleBakici from "../pages/SingleBakici"
-import Ebeveyn from "../pages/Ebeveyn/Ebeveyn"
-import PrivateRouter from "./PrivateRouter"
-import ReservationPage from "../pages/Reservation"
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
+import BakiciAra from "../pages/BakiciAra";
+import IseBasvur from "../pages/IseBasvur";
+import EbeveynKayit from "../pages/EbeveynKayit";
+import EbeveynKayitOnay from "../pages/EbeveynKayitOnay";
+import BakiciKayitOnay from "../pages/BakiciKayitOnay";
+import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici";
+import BakiciKayit from "../pages/BakiciKayit";
+import Bakici from "../pages/Bakici/Bakici";
+import OfflineYardim from "../pages/OfflineYardim";
+import BakiciYardim from "../pages/BakiciYardim";
+import Kontakt from "../pages/Kontakt";
+import KontaktBasarili from "../pages/KontaktBasarili";
+import Misafir from "../pages/Misafir";
+import SingleBakici from "../pages/SingleBakici";
+import Ebeveyn from "../pages/Ebeveyn/Ebeveyn";
+import PrivateRouter from "./PrivateRouter";
+import ReservationPage from "../pages/Reservation";
 
 const AppRouter = () => {
   return (
@@ -54,7 +54,7 @@ const AppRouter = () => {
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default AppRouter
+export default AppRouter;

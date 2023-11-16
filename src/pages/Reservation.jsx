@@ -1,7 +1,7 @@
-import React from "react"
-import Reservation from "../components/Reservation"
-import Footer from "../components/Footer"
-import NavbarBakici from "../components/NavbarBakici"
+import React from "react";
+import Reservation from "../components/Reservation";
+import Footer from "../components/Footer";
+import NavbarBakici from "../components/NavbarBakici";
 
 const ReservationPage = () => {
   return (
@@ -10,7 +10,7 @@ const ReservationPage = () => {
       <Reservation />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default ReservationPage
+export default ReservationPage;
