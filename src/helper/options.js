@@ -1,14 +1,17 @@
+<<<<<< eren
 import hakkimda_img from "../assets/hakkimda_img.svg"
 import Yorumcu1 from "../images/yorumcu1.png"
 import Yorumcu2 from "../images/Yorumcu2.png"
 import Time1 from "../assets/Time1.svg"
 import Time2 from "../assets/Time2.svg"
 import Time3 from "../assets/Time3.svg"
+import hakkimda_img from "../assets/hakkimda_img.svg";
+>>>>>> main
 
 export const cinsiyet = [
   { value: "female", label: "Kadın" },
   { value: "male", label: "Erkek" },
-]
+];
 
 export const sehirler = [
   { value: "adana", label: "Adana" },
@@ -92,7 +95,7 @@ export const sehirler = [
   { value: "kilis", label: "Kilis" },
   { value: "osmaniye", label: "Osmaniye" },
   { value: "duzce", label: "Düzce" },
-]
+];
 
 export const ilceler = [
   { value: "beyoglu", label: "Beyoğlu" },
@@ -101,12 +104,12 @@ export const ilceler = [
   { value: "nilufer", label: "Nilüfer" },
   { value: "ceyhan", label: "Ceyhan" },
   { value: "besni", label: "Besni" },
-]
+];
 
 export const medeniDurum = [
   { value: "single", label: "Bekar" },
   { value: "married", label: "Evli" },
-]
+];
 
 export const yabanciDil = [
   { label: "Çince", value: "Chinese" },
@@ -120,7 +123,7 @@ export const yabanciDil = [
   { label: "Korece", value: "Korean" },
   { label: "İtalyanca", value: "Italian" },
   { label: "Türkce", value: "Turkish" },
-]
+];
 
 export const calismaSekli = [
   { value: "dayTime", label: "Sadece gündüz bakıcılığı" },
@@ -128,7 +131,7 @@ export const calismaSekli = [
   { value: "weekday-liveIn", label: "Sadece hafta içi yatılı" },
   { value: "weekend-liveIn", label: "Sadece hafta sonu yatılı" },
   { value: "fullTime-liveIn", label: "Pazar dahil tüm günler" },
-]
+];
 
 export const educationLevel = [
   { value: "high school", label: "Lise" },
@@ -136,7 +139,7 @@ export const educationLevel = [
   { value: "master", label: "Lisans" },
   { value: "doctorate", label: "Yüksek Lisans" },
   { value: "university", label: "Üniversite" },
-]
+];
 
 export const deneyim = [
   { value: "deneyim0", label: "0-12 Ay Deneyimli" },
@@ -145,7 +148,7 @@ export const deneyim = [
   { value: "deneyim3", label: "3 yıl" },
   { value: "deneyim4", label: "4 yıl" },
   { value: "deneyim5", label: "+5 yıl" },
-]
+];
 
 export const egitimSev = [
   { value: "doktora", label: "Doktora" },
@@ -153,7 +156,7 @@ export const egitimSev = [
   { value: "lisans", label: "Lisans" },
   { value: "uni", label: "Universite" },
   { value: "lise", label: "Lise" },
-]
+];
 
 export const babySitterInfo = [
   {
@@ -207,7 +210,7 @@ export const babySitterInfo = [
     likes: 7,
     evaluationStatus: false,
   },
-]
+];
 
 export const servis = [
   { value: "dayTime", label: "Sadece gunduz bakiciligi" },
@@ -218,12 +221,19 @@ export const servis = [
     value: "fullTime-liveIn",
     label: "Pazar dahil tum gunler yatili bakicilik",
   },
+<<<<<< eren
 ]
+];
+>>>>>> main
 export const ages = [
   { value: "0-12 months", label: "0 - 12 ay arasi" },
   { value: "1-2 years", label: "1 ve 2 yas arasi" },
   { value: "3 years and above", label: "3 yas ve uzeri" },
+<<<<<< eren
 ]
+
+];
+>>>>>> main
 
 export const rateServiceQuestions = [
   {
@@ -264,7 +274,7 @@ export const rateServiceQuestions = [
     trueRadioID: "option6-1",
     falseRadioID: "option6-2",
   },
-]
+];
 
 export const employmentOptions = [
   {
@@ -287,14 +297,14 @@ export const employmentOptions = [
     label: "Pazar dahil tüm günler yatılı bakıcılık",
     value: "tümyatili",
   },
-]
+];
 
 export const priceRange = [
   { value: "15.000-20.000", label: "15.000 - 20.000 TL" },
   { value: "20.000-25.000", label: "20.000 - 25.000 TL" },
   { value: "25.000-30.000", label: "25.000 - 30.000 TL" },
   { value: "30.000+", label: "30.000 TL üzeri" },
-]
+];
 
 export const belgeler = [
   {
@@ -323,6 +333,7 @@ export const belgeler = [
       </p>
     ),
   },
+<<<<<< eren
 ]
 export const service_options = [
   {
@@ -428,3 +439,5 @@ export const datas = [
     image: Yorumcu2,
   },
 ]
+];
+>>>>>> main

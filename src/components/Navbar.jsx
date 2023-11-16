@@ -1,52 +1,51 @@
-import Button from "react-bootstrap/Button"
-import { useEffect, useState } from "react"
-import { NavLink, useNavigate } from "react-router-dom"
-import MagnifyingGlass from "../assets/MagnifyingGlass.svg"
-import Profile from "../assets/Profile.svg"
-import ProfilePlus from "../assets/ProfilePlus.svg"
-import "../styles/Navbar.css"
-// import * as ReactBootStrap from "react-bootstrap"
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import MagnifyingGlass from "../assets/MagnifyingGlass.svg";
+import Profile from "../assets/Profile.svg";
+import ProfilePlus from "../assets/ProfilePlus.svg";
+import "../styles/Navbar.css";
+import { Navbar, Nav, Button } from "react-bootstrap";
 
-import CareZone from "../assets/CareZone.svg"
-import AnaUyelik from "./AnaUyelik"
+import CareZone from "../assets/CareZone.svg";
+import AnaUyelik from "./AnaUyelik";
 
 const CareZoneNavbar = () => {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
 
-  const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const navigate = useNavigate()
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    setExpanded(false)
-    setOpenAnaUyelik(true)
-  }
+    setExpanded(false);
+    setOpenAnaUyelik(true);
+  };
 
   const handleScroll = () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > 0) {
-      setIsScrolled(true)
+      setIsScrolled(true);
     } else {
-      setIsScrolled(false)
+      setIsScrolled(false);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navstyle = {
     color: "#263238",
     textDecoration: "none",
-  }
+  };
   const navstyle2 = {
     color: "#263238",
     textDecoration: "underline",
-  }
+  };
 
   return (
     <div>
@@ -54,24 +53,24 @@ const CareZoneNavbar = () => {
         openAnaUyelik={openAnaUyelik}
         setOpenAnaUyelik={setOpenAnaUyelik}
       />
-      <ReactBootStrap.Navbar
+      <Navbar
         collapseOnSelect
         expand="md"
         variant="dark"
         className={`Navbar ${isScrolled ? "scrolled" : ""}`}
       >
-        <ReactBootStrap.Navbar.Brand href="#home">
+        <Navbar.Brand href="#home">
           <NavLink className=" active" style={navstyle} to="/">
             <img className="Navbar-Logo" src={CareZone} alt="CareZone" />
           </NavLink>
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Toggle
+        </Navbar.Brand>
+        <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           className="toggleIcon"
         />
-        <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-          <ReactBootStrap.Nav className="m-auto"></ReactBootStrap.Nav>
-          <ReactBootStrap.Nav>
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="m-auto"></Nav>
+          <Nav>
             <NavLink className="me-3 active" style={navstyle} to="/bakiciara">
               <Button
                 className="Navbar-Button"
@@ -129,11 +128,11 @@ const CareZoneNavbar = () => {
             >
               Yardım
             </NavLink>
-          </ReactBootStrap.Nav>
-        </ReactBootStrap.Navbar.Collapse>
-      </ReactBootStrap.Navbar>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default CareZoneNavbar
+export default CareZoneNavbar;
