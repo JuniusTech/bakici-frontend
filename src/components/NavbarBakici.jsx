@@ -62,8 +62,8 @@ const NavbarBakici = () => {
                 </p>
                 <Dropdown>
                   <Dropdown.Toggle className="profile-drop-down">
-                    <img src={bakiciavatar} alt="bakiciavatar" />
                     {/* Bakıcı Avatarı eklenecek */}
+                    <img src={bakiciavatar} alt="bakiciavatar" />
                     <FontAwesomeIcon
                       style={{ marginLeft: "1rem" }}
                       color="black"
