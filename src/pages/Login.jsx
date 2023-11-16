@@ -27,11 +27,14 @@ const Login = () => {
 
       setIsSubmiting(true)
       const baseURL = process.env.REACT_APP_BASE_URL
-      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin)
+      const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin, {
+        withCredentials: true,
+      })
       toastSuccessNotify("Başarıyla Giriş Yapıldı")
       setCurrentUser(res?.data)
       navigate("/bakiciara")
     } catch (err) {
+      console.log(err)
       toastErrorNotify(err.response.data.error)
       setIsSubmiting(false)
     }

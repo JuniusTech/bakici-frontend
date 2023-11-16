@@ -1,47 +1,37 @@
-import React, { useState } from "react";
-import "../styles/BakiciDetail/BakiciDetail.css";
-import Bakici1 from "../images/Bakıcı1.png";
-import Bakici2 from "../images/Bakıcı2.png";
-import Slider from "react-slick";
-import "../styles/BakiciDetail/Slick.css";
-import "../styles/BakiciDetail/Slick-theme.css";
-import RedHeart from "../images/RedHeart.png";
-import LanguageIcon from "../images/LanguageIcon.png";
-import DeneyimIcon from "../images/DeneyimIcon.png";
-import EngelliIcon from "../images/EngelliIcon.png";
-import SaatIcon from "../images/DetayClock.png";
-import GeceIcon from "../images/DetayGeceIcon.png";
-import EkServisIcon1 from "../images/EkServisIcon1.png";
-import EkServisIcon2 from "../images/EkServisIcon2.png";
-import TarihSecimi from "./TarihSecimi";
-import Select from "react-select";
-import useSelectOptions from "./select/useSelectOptions";
-import Yorumcu1 from "../images/yorumcu1.png";
-import Yorumcu2 from "../images/Yorumcu2.png";
-import ReactPaginate from "react-paginate";
-import { useEffect } from "react";
-import kontakt_arrow from "../assets/Kontakt_Arrow.svg";
-import Time1 from "../assets/Time1.svg";
-import Time2 from "../assets/Time2.svg";
-import Time3 from "../assets/Time3.svg";
-import Footer from "../components/Footer";
-// import { baseUrl } from "./config";
+import React, { useState } from "react"
+import "../styles/BakiciDetail/BakiciDetail.css"
+import Bakici1 from "../images/Bakıcı1.png"
+import Bakici2 from "../images/Bakıcı2.png"
+import Slider from "react-slick"
+import "../styles/BakiciDetail/Slick.css"
+import "../styles/BakiciDetail/Slick-theme.css"
+import RedHeart from "../images/RedHeart.png"
+import LanguageIcon from "../images/LanguageIcon.png"
+import DeneyimIcon from "../images/DeneyimIcon.png"
+import EngelliIcon from "../images/EngelliIcon.png"
+import SaatIcon from "../images/DetayClock.png"
+import GeceIcon from "../images/DetayGeceIcon.png"
+import EkServisIcon1 from "../images/EkServisIcon1.png"
+import EkServisIcon2 from "../images/EkServisIcon2.png"
+import TarihSecimi from "./TarihSecimi"
+import Select from "react-select"
+import ReactPaginate from "react-paginate"
+import { useEffect } from "react"
+import kontakt_arrow from "../assets/Kontakt_Arrow.svg"
+import { datas, service_options } from "../helper/options"
 
-function BakiciDetail() {
-  const [specialDays, setspecialDays] = useState([]);
-  const [tarife, setTarife] = useState([]);
-  const [imgColor, setImgColor] = useState("");
+function BakiciDetail({ babysitterInfo }) {
+  const [specialDays, setspecialDays] = useState([])
   const [formData, setformData] = useState({
     selectedOption: "",
     age: "",
     start_date: new Date(),
     end_date: "",
     message: "",
-  });
+  })
   const filterColor =
-    "  invert(48%) sepia(31%) saturate(841%) hue-rotate(155deg) brightness(90%) contrast(103%)";
+    "  invert(48%) sepia(31%) saturate(841%) hue-rotate(155deg) brightness(90%) contrast(103%)"
 
-  const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions();
   var settings = {
     dots: true,
     infinite: false,
@@ -75,99 +65,14 @@ function BakiciDetail() {
         },
       },
     ],
-  };
-
-  const service_options = [
-    {
-      label: (
-        <div>
-          <img
-            src={Time1}
-            height="30px"
-            width="30.72px"
-            style={{ marginRight: "20px" }}
-          />
-          Sadece gündüz bakıcılığı{" "}
-        </div>
-      ),
-      value: " Sadece Gündüz Bakiciliği",
-    },
-    {
-      label: (
-        <div>
-          <img
-            src={Time1}
-            height="30px"
-            width="30.72px"
-            style={{ marginRight: "20px" }}
-          />
-          Sadece haftasonu gündüz bakıcılığı{" "}
-        </div>
-      ),
-      value: "Sadece Haftasonu Gündüz Bakiciligi",
-      imageSrc: "path/to/image1.jpg",
-    },
-    {
-      label: (
-        <div className="image-container">
-          <img
-            src={Time2}
-            height="30px"
-            width="30.72px"
-            style={{ marginRight: "20px" }}
-          />
-          <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
-            {" "}
-            Sadece hafta içi yatili bakıcılık
-          </p>
-        </div>
-      ),
-      value: "Sadece hafta içi yatili bakicilik",
-      imageSrc: "path/to/image1.jpg",
-    },
-    {
-      label: (
-        <div className="image-container">
-          <img
-            src={Time2}
-            height="30px"
-            width="30.72px"
-            style={{ marginRight: "20px" }}
-          />
-          <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
-            {" "}
-            Sadece hafta sonu yatili bakıcılık
-          </p>
-        </div>
-      ),
-      value: "Sadece hafta sonu yatili bakicilik",
-      imageSrc: "path/to/image1.jpg",
-    },
-    {
-      label: (
-        <div className="image-container">
-          <img
-            src={Time3}
-            height="30px"
-            width="30.72px"
-            style={{ marginRight: "20px" }}
-          />
-          <p style={{ marginLeft: "50px", marginBottom: "0px" }}>
-            {" "}
-            Pazar dahil tüm günler yatili bakıcılık
-          </p>
-        </div>
-      ),
-      imageSrc: "path/to/image1.jpg",
-    },
-  ];
+  }
 
   const customStyles = {
     control: (provided, state) => {
       if (state.selectProps.id === "second-select") {
         if (state.hasValue) {
         } else {
-          test = "10px 50px";
+          test = "10px 50px"
         }
       }
 
@@ -190,7 +95,7 @@ function BakiciDetail() {
         "&:hover": {
           border: "1px solid #2D83AC",
         },
-      };
+      }
     },
     singleValue: (provided, state) => ({
       ...provided,
@@ -227,81 +132,43 @@ function BakiciDetail() {
         color: isSelected ? "#EBEBEB" : "",
         color: "#455A64;",
         cursor: "pointer",
-      };
+      }
     },
-  };
+  }
 
   const handleDatesSelected = (dates) => {
-    setspecialDays([...specialDays, ...dates]);
-  };
+    setspecialDays([...specialDays, ...dates])
+  }
 
-  const handleChange = (e) => {
-    setTarife(e);
-  };
-
-  const gündüzTarife = [
-    { value: "gunduz", label: "Sadece gündüz bakıcılığı" },
-    { value: "hsoGunduz", label: "Sadece haftasonu gündüz" },
-    { value: "hici", label: "Sadece hafta içi yatılı" },
-    { value: "hso", label: "Sadece hafta sonu yatılı" },
-    { value: "tum", label: "Pazar dahil tüm günler" },
-  ];
-
-  const items = [...Array(17).keys()];
-  const itemsPerPage = 8;
+  const items = [...Array(17).keys()]
+  const itemsPerPage = 8
 
   ///// Pagination Start//////
-  const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
+  const [currentItems, setCurrentItems] = useState([])
+  const [pageCount, setPageCount] = useState(0)
+  const [itemOffset, setItemOffset] = useState(0)
 
   useEffect(() => {
     // Fetch items from another resources.
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(items.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset]);
+    const endOffset = itemOffset + itemsPerPage
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`)
+    setCurrentItems(items.slice(itemOffset, endOffset))
+    setPageCount(Math.ceil(items.length / itemsPerPage))
+  }, [itemOffset])
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = event.selected * itemsPerPage;
+    const newOffset = event.selected * itemsPerPage
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-  };
-
-  ////////////////////
-  let datas = [
-    {
-      name: "Ahmet Fırtına",
-      date: "08-05-2023",
-      comment:
-        "Memnun kaldık, oğlum ile kaliteli vakit geçirdiler. Montesori aktiviteleri hoşumuza gitti.",
-      point: "⭐⭐⭐⭐⭐",
-      work_type: "Part-time",
-      baby_type: "Gündüz mesai 1 ve 2 yaş arası",
-      image: Yorumcu1,
-    },
-    {
-      name: "Fatma Betül",
-      date: "10-04-2023",
-      comment:
-        "Harika bir deneyimdi. Tavsiye ediyorum. Güvenilir ve kaliteli birisi",
-      point: "⭐⭐⭐⭐⭐",
-      work_type: "Part-time",
-      baby_type: "3 yaş üzeri",
-      image: Yorumcu2,
-    },
-  ];
-
-  ////////////////////
+    )
+    setItemOffset(newOffset)
+  }
 
   return (
     <div className="bakici-detail-container">
       <div className="bakici-detail-name-container">
-        <h3>TUĞBA AKSOY</h3>
+        <h3>{babysitterInfo?.name}</h3>
       </div>
       <div className="bakici-detail-slider-container">
         <Slider {...settings} className="w-100">
@@ -336,14 +203,7 @@ function BakiciDetail() {
       <div>
         <div className="bakici-detail-hakkinda-container">
           <h5>HAKKINDA</h5>
-          <p>
-            Merhaba ben Tuğba Aksoy. 23 Yaşındayım. 3 yıllık bakıcılık deneyimim
-            var. Çoğunlukla okul öncesi çocuklar ile çalıştım. Çocukları çok
-            seviyorum. Montessori eğitimi aldım bu sebeple çocuklarla birlikte
-            kaliteli vakit geçirmek en büyük hedefim. Ankara'da ailemle ile
-            beraber yaşıyorum. Üniversite öğrencisiyim, ek gelir kazanmak istiyorum ve
-            çocuklarla vakit geçirmeyi seviyorum.
-          </p>
+          <p>{babysitterInfo?.descripton}</p>
         </div>
         <div className="deneyim-container">
           <h5>DENEYİMLERİ</h5>
@@ -351,12 +211,14 @@ function BakiciDetail() {
             <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={LanguageIcon} alt="" className="px-2" />
               <p className="text-center">
-                İyi seviye İngilizce konuşabiliyorum
+                İyi seviye {babysitterInfo?.languages} konuşabiliyorum
               </p>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={DeneyimIcon} alt="" className="px-2" />
-              <p className="text-center">+ 2 yil deneyim</p>
+              <p className="text-center">
+                + {babysitterInfo?.experience?.map((e) => e.time)} yil deneyim
+              </p>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center flex-sm-row">
               <img src={EngelliIcon} alt="" className="px-2" />
@@ -441,12 +303,7 @@ function BakiciDetail() {
             }
             placeholder="Gunduz Tarife"
           />
-          <img
-            style={{ filter: imgColor }}
-            src={kontakt_arrow}
-            alt="Arrow"
-            className="Kontakt-Arrow"
-          />
+          <img src={kontakt_arrow} alt="Arrow" className="Kontakt-Arrow" />
         </label>
 
         <div className="tarih-container">
@@ -510,10 +367,8 @@ function BakiciDetail() {
         activeClassName="active"
         renderOnZeroPageCount={null}
       />
-      
     </div>
-    
-  );
+  )
 }
 
-export default BakiciDetail;
+export default BakiciDetail

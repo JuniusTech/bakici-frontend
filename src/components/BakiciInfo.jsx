@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 
-import Kalp from "../images/kalp.png";
-import Bakici from "../images/Bakıcı1-single.png";
-import "../styles/BakiciInfo.css";
-import Child from "../assets/Child.svg";
-import { Button } from "react-bootstrap";
-import Visa from "../images/visa 1.png";
-import Vector from "../images/Vector.png";
-import Group from "../images/Group.png";
+import Kalp from "../images/kalp.png"
+import Bakici from "../images/Bakıcı1-single.png"
+import "../styles/BakiciInfo.css"
+import Child from "../assets/Child.svg"
+import { Button } from "react-bootstrap"
+import Visa from "../images/visa 1.png"
+import Vector from "../images/Vector.png"
+import Group from "../images/Group.png"
 
-function BakiciInfo() {
+function BakiciInfo({ babysitterInfo }) {
   return (
     <>
       <div className="info-section-container">
@@ -24,9 +24,9 @@ function BakiciInfo() {
                 />
               </div>
               <div className="">
-                <h5>TUĞBA AKSOY</h5>
+                <h5>{babysitterInfo?.name}</h5>
                 <p>Aktif Bakici</p>
-                <p>Ankara</p>
+                <p>{babysitterInfo?.city}</p>
               </div>
               <div className="">
                 <img src={Kalp} alt="" className="" />
@@ -44,7 +44,7 @@ function BakiciInfo() {
                 <div className="w-75 d-flex flex-column justify-content-center align-items-center d-sm-flex flex-sm-column justify-content-sm-start align-items-sm-start text-center">
                   <h5 className="">Haftalık</h5>
                   <p className="text-center text-sm-start">
-                    6 / 24 saat cocuk bakimi Pazartesi - Cumartesi
+                    {babysitterInfo?.employmentType}
                   </p>
                 </div>
                 <div className="w-25 d-flex justify-content-center align-items-center d-sm-flex justify-content-sm-start align-items-sm-start">
@@ -79,8 +79,8 @@ function BakiciInfo() {
             <hr className="bakici-info-first-hr" />
             <div>
               <div className="bakici-info-icons w-25 mx-auto d-flex justify-content-around align-items-center">
-                <img src={Visa} alt="" className="mw-100 mx-1"/>
-                <img src={Vector} alt="" className="mw-100 mx-1"/>
+                <img src={Visa} alt="" className="mw-100 mx-1" />
+                <img src={Vector} alt="" className="mw-100 mx-1" />
                 <img src={Group} alt="" className="klarna-icon mw-100 mx-1" />
               </div>
             </div>
@@ -88,7 +88,7 @@ function BakiciInfo() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default BakiciInfo;
+export default BakiciInfo
