@@ -37,14 +37,12 @@ const AppRouter = () => {
           <Route path="/isebasvur" element={<IseBasvur />} />
           <Route path="/ebeveynkayit" element={<EbeveynKayit />} />
           <Route path="/ebeveynkayitonay" element={<EbeveynKayitOnay />} />
+
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/profile" element={<Bakici />} />
           <Route path="/ebeveynprofil" element={<Ebeveyn />} />
           <Route path="/kontaktbas" element={<KontaktBasarili />} />
-          <Route
-            path="/singlebakici/:babysitterId"
-            element={<SingleBakici />}
-          />
+          <Route path="/singlebakici" element={<SingleBakici />} />
         </Route>
         {/* <Route path="/anauyelik" element={<AnaUyelik />} /> */}
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />

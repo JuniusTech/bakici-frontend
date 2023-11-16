@@ -209,8 +209,21 @@ export const babySitterInfo = [
   },
 ]
 
-export const servis = [{}]
-export const ages = [{}]
+export const servis = [
+  { value: "dayTime", label: "Sadece gunduz bakiciligi" },
+  { value: "weekend-dayTime", label: "Sadece haftasonu gunduz bakiciligi" },
+  { value: "weekday-liveIn", label: "Sadece hafta ici yatili bakicilik" },
+  { value: "weekend-liveIn", label: "Sadece haftasonu yatili bakicilik" },
+  {
+    value: "fullTime-liveIn",
+    label: "Pazar dahil tum gunler yatili bakicilik",
+  },
+]
+export const ages = [
+  { value: "0-12 months", label: "0 - 12 ay arasi" },
+  { value: "1-2 years", label: "1 ve 2 yas arasi" },
+  { value: "3 years and above", label: "3 yas ve uzeri" },
+]
 
 export const rateServiceQuestions = [
   {
@@ -311,7 +324,6 @@ export const belgeler = [
     ),
   },
 ]
-
 export const service_options = [
   {
     label: (
