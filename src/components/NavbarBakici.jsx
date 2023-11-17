@@ -14,10 +14,12 @@ import Dropdown from "react-bootstrap/Dropdown"
 import DropdownButton from "react-bootstrap/DropdownButton"
 import AnaUyelik from "./AnaUyelik"
 import { useLoginContext } from "../context/LoginProvider"
+import LoginOptions from "./LoginOptions"
 
 const NavbarBakici = () => {
   const { currentUser } = useLoginContext()
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
+  const [loginOptionModal, setLoginOptionModal] = useState(false)
 
   const navigate = useNavigate()
 
@@ -26,6 +28,10 @@ const NavbarBakici = () => {
       <AnaUyelik
         openAnaUyelik={openAnaUyelik}
         setOpenAnaUyelik={setOpenAnaUyelik}
+      />
+      <LoginOptions
+        loginOptionModal={loginOptionModal}
+        setLoginOptionModal={setLoginOptionModal}
       />
 
       <nav className="navbar-bakici row border-bottom border-2 m-0">
@@ -100,7 +106,7 @@ const NavbarBakici = () => {
                 </Link>
                 <Link
                   className="navbar-bakici__oturumac d-flex justify-content-center align-items-center gap-2 "
-                  to="/login"
+                  onClick={() => setLoginOptionModal(true)}
                 >
                   <p className="mb-0 text-nowrap">Oturum Aç</p>
                   <img className="" src={Profile} alt="Profile" />

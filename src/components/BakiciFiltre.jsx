@@ -19,14 +19,27 @@ import {
 } from "../helper/options"
 
 const Filtre = () => {
-  const [calisma, setCalisma] = useState([])
   const [yasOpen, setYasOpen] = useState(false)
   const [ucretOpen, setUcretOpen] = useState(false)
   const [filterOpen, setFilterOpen] = useState(false)
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
+  const [babyitterFilter, setBabyitterFilter] = useState({
+    city: "",
+    district: "",
+    employmentTypes: [],
+    gender: "",
+    educationLevel: "",
+    ageMin: "",
+    ageMax: "",
+    maritalStatus: "",
+    experienceMin: "",
+    experienceMax: "",
+  })
 
-  const handleChange = (e) => {
-    setCalisma(e)
+  console.log(babyitterFilter)
+
+  const handleChange = (name, value) => {
+    setBabyitterFilter({ ...babyitterFilter, [name]: value })
   }
 
   window.onclick = function (e) {
@@ -60,6 +73,14 @@ const Filtre = () => {
               options={sehirler}
               placeholder="Şehir"
               styles={selectStyles}
+              name="city"
+              value={{
+                value: babyitterFilter.city,
+                label: babyitterFilter.city,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("city", selectedOptions.label)
+              }
             />
           </div>
 
@@ -69,6 +90,14 @@ const Filtre = () => {
               options={ilceler}
               placeholder="İlçe"
               styles={selectStyles}
+              name="district"
+              value={{
+                value: babyitterFilter.district,
+                label: babyitterFilter.district,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("district", selectedOptions.label)
+              }
             />
           </div>
 
@@ -81,17 +110,21 @@ const Filtre = () => {
               controlShouldRenderValue={false}
               options={calismaSekli}
               isSearchable={false}
-              placeholder={
-                calisma.length
-                  ? `${calisma.length} Çalışma Şekli Seçildi`
-                  : "Çalışma Şekli"
-              }
+              placeholder={"Çalışma Şekli"}
               components={{
                 Option: CheckboxOption,
                 ClearIndicator: null,
               }}
               styles={selectStyles}
-              onChange={handleChange}
+              name="employmentTypes"
+              onChange={(selectedOptions) => {
+                handleChange("employmentTypes", selectedOptions)
+                console.log(selectedOptions)
+              }}
+              value={{
+                value: babyitterFilter.employmentTypes,
+                label: babyitterFilter.employmentTypes,
+              }}
             />
           </div>
 
@@ -103,6 +136,14 @@ const Filtre = () => {
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
+              name="city"
+              value={{
+                value: babyitterFilter.city,
+                label: babyitterFilter.city,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("city", selectedOptions.label)
+              }
             />
           </div>
 
@@ -114,6 +155,14 @@ const Filtre = () => {
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
+              name="city"
+              value={{
+                value: babyitterFilter.city,
+                label: babyitterFilter.city,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("city", selectedOptions.label)
+              }
             />
           </div>
 
@@ -139,18 +188,22 @@ const Filtre = () => {
                   <p className="fs-6 yasclose">En az</p>
                   <input
                     type="number"
-                    name=""
+                    name="ageMin"
                     id=""
                     className="w-100 border-1 rounded-1 yasclose"
+                    onChange={handleChange}
+                    value={babyitterFilter.ageMin || ""}
                   />
                 </div>
                 <div className="yasclose">
                   <p className="fs-6 yasclose">En fazla</p>
                   <input
                     type="number"
-                    name=""
+                    name="ageMax"
                     id=""
                     className="w-100 border-1 rounded-1 yasclose"
+                    onChange={handleChange}
+                    value={babyitterFilter.ageMax || ""}
                   />
                 </div>
               </div>
@@ -165,6 +218,14 @@ const Filtre = () => {
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
+              name="city"
+              value={{
+                value: babyitterFilter.city,
+                label: babyitterFilter.city,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("city", selectedOptions.label)
+              }
             />
           </div>
 
@@ -183,6 +244,14 @@ const Filtre = () => {
                 ClearIndicator: null,
               }}
               styles={selectStyles}
+              name="city"
+              value={{
+                value: babyitterFilter.city,
+                label: babyitterFilter.city,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("city", selectedOptions.label)
+              }
             />
           </div>
 
@@ -208,18 +277,32 @@ const Filtre = () => {
                   <p className="fs-6 ucretclose">En az</p>
                   <input
                     type="number"
-                    name=""
                     id=""
                     className="w-100 border-1 rounded-1 ucretclose"
+                    name="city"
+                    value={{
+                      value: babyitterFilter.city,
+                      label: babyitterFilter.city,
+                    }}
+                    onChange={(selectedOptions) =>
+                      handleChange("city", selectedOptions.label)
+                    }
                   />
                 </div>
                 <div className="ucretclose">
                   <p className="fs-6 ucretclose">En fazla</p>
                   <input
                     type="number"
-                    name=""
                     id=""
                     className="w-100 border-1 rounded-1 ucretclose"
+                    name="city"
+                    value={{
+                      value: babyitterFilter.city,
+                      label: babyitterFilter.city,
+                    }}
+                    onChange={(selectedOptions) =>
+                      handleChange("city", selectedOptions.label)
+                    }
                   />
                 </div>
               </div>
@@ -234,6 +317,14 @@ const Filtre = () => {
               components={{ Option: RadioOption, ClearIndicator: null }}
               styles={selectStyles}
               isSearchable={false}
+              name="city"
+              value={{
+                value: babyitterFilter.city,
+                label: babyitterFilter.city,
+              }}
+              onChange={(selectedOptions) =>
+                handleChange("city", selectedOptions.label)
+              }
             />
           </div>
 

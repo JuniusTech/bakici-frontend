@@ -9,7 +9,7 @@ import axios from "axios"
 import { useLoginContext } from "../context/LoginProvider"
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
 
-const Login = () => {
+const UserLogin = () => {
   const [ebeveynLogin, setEbeveynLogin] = useState({ email: "", password: "" })
   const [isSubmiting, setIsSubmiting] = useState(false)
 
@@ -132,4 +132,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default UserLogin
