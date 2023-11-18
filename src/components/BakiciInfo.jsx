@@ -1,5 +1,4 @@
 import React from "react"
-
 import Kalp from "../images/kalp.png"
 import Bakici from "../images/Bakıcı1-single.png"
 import "../styles/BakiciInfo.css"
@@ -10,7 +9,6 @@ import Vector from "../images/Vector.png"
 import Group from "../images/Group.png"
 
 function BakiciInfo({ babysitterInfo }) {
-  console.log(babysitterInfo)
   return (
     <>
       <div className="info-section-container">

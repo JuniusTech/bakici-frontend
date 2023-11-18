@@ -37,26 +37,15 @@ function HomeContent1() {
 
   const customStyles = {
     control: (provided, state) => {
-      if (state.selectProps.id === "first-select") {
-        test = state.hasValue ? setChildImageSource("none") : "10px 50px"
-        test = state.hasValue ? setChangeBottom("20px") : "10px 50px"
-        test = state.isFocused ? setImgColor(filterColor) : setImgColor("")
-        test = state.menuIsOpen ? setArrow(BottomArrow) : setArrow(Arrow)
-      }
-      if (state.selectProps.id === "second-select") {
-        test = state.isFocused ? setImgColor2(filterColor) : setImgColor2("")
-        test = state.menuIsOpen ? setArrow2(BottomArrow) : setArrow2(Arrow)
-      }
+      const padding =
+        state.selectProps.id === "first-select" && state.hasValue
+          ? "10px 10px"
+          : "10px 50px"
 
       return {
         ...provided,
         width: "300px",
-        ...(state.selectProps.id === "first-select" && {
-          padding: state.hasValue ? "10px 10px" : "10px 50px",
-        }),
-        ...(state.selectProps.id === "second-select" && {
-          padding: "10px 50px",
-        }),
+        padding,
         height: "64px",
         margin: "11px 0 -19px 0",
         cursor: "pointer",
@@ -71,7 +60,7 @@ function HomeContent1() {
     },
     singleValue: (provided, state) => ({
       ...provided,
-      color: "#2D83AC", // Set the desired color for the selected value
+      color: "#2D83AC",
       filter: filterColor,
     }),
     placeholder: (provided, state) => ({
@@ -150,7 +139,7 @@ function HomeContent1() {
     },
     {
       label: (
-        <div class="image-container">
+        <div className="image-container">
           <img
             src={AdultAndBaby}
             height="30px"

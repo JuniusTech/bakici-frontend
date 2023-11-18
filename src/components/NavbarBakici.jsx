@@ -15,6 +15,7 @@ import DropdownButton from "react-bootstrap/DropdownButton"
 import AnaUyelik from "./AnaUyelik"
 import { useLoginContext } from "../context/LoginProvider"
 import LoginOptions from "./LoginOptions"
+import { toastWarnNotify } from "../helper/ToastNotify"
 
 const NavbarBakici = () => {
   const { currentUser, setCurrentUser } = useLoginContext()
@@ -83,6 +84,7 @@ const NavbarBakici = () => {
                           "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
                         localStorage.removeItem("currentUser")
                         setCurrentUser("")
+                        toastWarnNotify("Oturum kapatıldı")
                         navigate("/login")
                       }}
                     >

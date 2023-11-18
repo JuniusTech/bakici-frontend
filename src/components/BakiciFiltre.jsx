@@ -23,7 +23,7 @@ const Filtre = ({ setCurrentItems }) => {
   const [ucretOpen, setUcretOpen] = useState(false)
   const [filterOpen, setFilterOpen] = useState(false)
   const { selectStyles, CheckboxOption, RadioOption } = useSelectOptions()
-  const [babyitterFilter, setBabyitterFilter] = useState({
+  const [babysitterFilter, setBabysitterFilter] = useState({
     city: "",
     district: "",
     employmentTypes: "",
@@ -37,21 +37,20 @@ const Filtre = ({ setCurrentItems }) => {
   })
 
   const handleChange = (name, value) => {
-    setBabyitterFilter({ ...babyitterFilter, [name]: value })
+    setBabysitterFilter({ ...babysitterFilter, [name]: value })
   }
 
   const onSubmit = async () => {
     try {
-      console.log(babyitterFilter)
+      console.log(babysitterFilter)
       const filterBabySitterList = await axios.get(
         `${process.env.REACT_APP_BASE_URL}/babysitter/filter`,
-        { withCredentials: true, params: babyitterFilter }
+        { withCredentials: true, params: babysitterFilter }
       )
       setCurrentItems(filterBabySitterList?.data?.babysitters)
       toastSuccessNotify("Kriterlerinize ugun bakıcılar listelenmiştir ")
     } catch (err) {
-      console.log(err)
-      toastErrorNotify(err.response?.data?.message)
+      toastErrorNotify(err.response?.data?.message || err.response?.data?.error)
     }
   }
 
@@ -88,10 +87,10 @@ const Filtre = ({ setCurrentItems }) => {
               styles={selectStyles}
               name="city"
               value={
-                babyitterFilter.city
+                babysitterFilter.city
                   ? {
-                      value: babyitterFilter.city,
-                      label: babyitterFilter.city,
+                      value: babysitterFilter.city,
+                      label: babysitterFilter.city,
                     }
                   : null
               }
@@ -109,10 +108,10 @@ const Filtre = ({ setCurrentItems }) => {
               styles={selectStyles}
               name="district"
               value={
-                babyitterFilter.district
+                babysitterFilter.district
                   ? {
-                      value: babyitterFilter.district,
-                      label: babyitterFilter.district,
+                      value: babysitterFilter.district,
+                      label: babysitterFilter.district,
                     }
                   : null
               }
@@ -145,7 +144,7 @@ const Filtre = ({ setCurrentItems }) => {
                 )
               }}
               value={calismaSekli.filter((option) =>
-                babyitterFilter.employmentTypes.includes(option.value)
+                babysitterFilter.employmentTypes.includes(option.value)
               )}
             />
           </div>
@@ -160,10 +159,10 @@ const Filtre = ({ setCurrentItems }) => {
               isSearchable={false}
               name="gender"
               value={
-                babyitterFilter.gender
+                babysitterFilter.gender
                   ? {
-                      value: babyitterFilter.gender,
-                      label: babyitterFilter.gender,
+                      value: babysitterFilter.gender,
+                      label: babysitterFilter.gender,
                     }
                   : null
               }
@@ -183,12 +182,12 @@ const Filtre = ({ setCurrentItems }) => {
               isSearchable={false}
               name="educationLevel"
               value={
-                babyitterFilter.educationLevel
+                babysitterFilter.educationLevel[0]
                   ? {
-                      value: babyitterFilter.educationLevel,
-                      label: babyitterFilter.educationLevel,
+                      value: babysitterFilter.educationLevel,
+                      label: babysitterFilter.educationLevel,
                     }
-                  : null
+                  : "Eğitim Seviyesi"
               }
               onChange={(selectedOptions) =>
                 handleChange("educationLevel", selectedOptions.value)
@@ -222,7 +221,7 @@ const Filtre = ({ setCurrentItems }) => {
                     id=""
                     className="w-100 border-1 rounded-1 yasclose"
                     onChange={(e) => handleChange("ageMin", e.target.value)}
-                    value={babyitterFilter.ageMin || ""}
+                    value={babysitterFilter.ageMin || ""}
                   />
                 </div>
                 <div className="yasclose">
@@ -233,7 +232,7 @@ const Filtre = ({ setCurrentItems }) => {
                     id=""
                     className="w-100 border-1 rounded-1 yasclose"
                     onChange={(e) => handleChange("ageMax", e.target.value)}
-                    value={babyitterFilter.ageMax || ""}
+                    value={babysitterFilter.ageMax || ""}
                   />
                 </div>
               </div>
@@ -250,10 +249,10 @@ const Filtre = ({ setCurrentItems }) => {
               isSearchable={false}
               name="maritalStatus"
               value={
-                babyitterFilter.maritalStatus
+                babysitterFilter.maritalStatus
                   ? {
-                      value: babyitterFilter.maritalStatus,
-                      label: babyitterFilter.maritalStatus,
+                      value: babysitterFilter.maritalStatus,
+                      label: babysitterFilter.maritalStatus,
                     }
                   : null
               }
@@ -287,7 +286,7 @@ const Filtre = ({ setCurrentItems }) => {
                     id=""
                     className="w-100 border-1 rounded-1 ucretclose"
                     name="experienceMin"
-                    value={babyitterFilter.experienceMin || ""}
+                    value={babysitterFilter.experienceMin || ""}
                     onChange={(e) =>
                       handleChange("experienceMin", e.target.value)
                     }
@@ -300,7 +299,7 @@ const Filtre = ({ setCurrentItems }) => {
                     id=""
                     className="w-100 border-1 rounded-1 ucretclose"
                     name="experienceMax"
-                    value={babyitterFilter.experienceMax || ""}
+                    value={babysitterFilter.experienceMax || ""}
                     onChange={(e) =>
                       handleChange("experienceMax", e.target.value)
                     }
