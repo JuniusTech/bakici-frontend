@@ -14,10 +14,12 @@ import Dropdown from "react-bootstrap/Dropdown"
 import DropdownButton from "react-bootstrap/DropdownButton"
 import AnaUyelik from "./AnaUyelik"
 import { useLoginContext } from "../context/LoginProvider"
+import LoginOptions from "./LoginOptions"
 
 const NavbarBakici = () => {
-  const { currentUser } = useLoginContext()
+  const { currentUser, setCurrentUser } = useLoginContext()
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
+  const [loginOptionModal, setLoginOptionModal] = useState(false)
 
   const navigate = useNavigate()
 
@@ -26,6 +28,10 @@ const NavbarBakici = () => {
       <AnaUyelik
         openAnaUyelik={openAnaUyelik}
         setOpenAnaUyelik={setOpenAnaUyelik}
+      />
+      <LoginOptions
+        loginOptionModal={loginOptionModal}
+        setLoginOptionModal={setLoginOptionModal}
       />
 
       <nav className="navbar-bakici row border-bottom border-2 m-0">
@@ -43,7 +49,7 @@ const NavbarBakici = () => {
             <p className="mb-0">Bakıcı Ara</p>
             <img className="" src={bakiciara} alt="bakiciara" />
           </Link>
-          {currentUser && (
+          {currentUser ? (
             <div className="d-flex align-items-center gap-5 ps-4">
               <Link className="navbar-bakici__bildirim position-relative">
                 <img src={bildirim} alt="bildirim" />
@@ -73,7 +79,10 @@ const NavbarBakici = () => {
                   <Dropdown.Menu className="text-center">
                     <Dropdown.Item
                       onClick={() => {
+                        document.cookie =
+                          "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
                         localStorage.removeItem("currentUser")
+                        setCurrentUser("")
                         navigate("/login")
                       }}
                     >
@@ -83,9 +92,7 @@ const NavbarBakici = () => {
                 </Dropdown>
               </div>
             </div>
-          )}
-
-          {!currentUser && (
+          ) : (
             <div>
               <div className="d-none d-lg-flex align-items-center gap-4">
                 <Link className="navbar-bakici__button " to="/isebasvur">
@@ -100,7 +107,7 @@ const NavbarBakici = () => {
                 </Link>
                 <Link
                   className="navbar-bakici__oturumac d-flex justify-content-center align-items-center gap-2 "
-                  to="/login"
+                  onClick={() => setLoginOptionModal(true)}
                 >
                   <p className="mb-0 text-nowrap">Oturum Aç</p>
                   <img className="" src={Profile} alt="Profile" />

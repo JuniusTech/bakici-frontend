@@ -20,13 +20,10 @@ import { useNavigate } from "react-router-dom"
 import NavbarBakici from "../components/NavbarBakici"
 
 const Kontakt = () => {
-  const [imgColor, setImgColor] = useState("")
-  const [imgColor3, setImgColor3] = useState("")
   const [changeChildImg, setchangeChildImg] = useState(true)
-  const [childImageSource, setChildImageSource] = useState("")
   const [count, setcount] = useState(0)
   const [checked, setChecked] = useState(false)
-  const { control, handleSubmit } = useForm()
+  const { handleSubmit } = useForm()
   const [dateRange, setDateRange] = useState(checked ? "" : [null, null])
   const [startDate, endDate] = dateRange
 
@@ -45,12 +42,6 @@ const Kontakt = () => {
   })
 
   const onSubmit = (event) => {
-    console.log("Service:", formData.selectedOption)
-    console.log("Age:", formData.age)
-    console.log("Start Date:", formData.start_date)
-    console.log("End Date:", formData.end_date)
-    console.log("Message", formData.message)
-
     event.preventDefault()
     if (formData.message.length >= 20) {
       nav("/kontaktbas")
@@ -265,7 +256,7 @@ const Kontakt = () => {
       paddingTop: 0,
       paddingBottom: 0,
     }),
-    option: (base, { data, isDisabled, isFocused, isSelected }) => {
+    option: (base, { isFocused, isSelected }) => {
       return {
         ...base,
         borderBottom: "1px solid rgba(69, 90, 100, 0.8)",
@@ -274,14 +265,10 @@ const Kontakt = () => {
         paddingLeft: "27px",
         backgroundColor: isFocused ? "#EBEBEB" : "",
         color: isSelected ? "#EBEBEB" : "",
-        color: "#455A64;",
+        color: "#455A64",
         cursor: "pointer",
       }
     },
-  }
-
-  const changeColorDefault3 = () => {
-    setImgColor3("")
   }
 
   const getDateColor = () => {
@@ -299,7 +286,6 @@ const Kontakt = () => {
         value={value}
         onChange={onChange}
         onFocus={onFocus}
-        onBlur={changeColorDefault3}
         placeholder="Tarih Seçin"
       />
     )
@@ -338,12 +324,7 @@ const Kontakt = () => {
               }
               placeholder="Gündüz Tarife"
             />
-            <img
-              style={{ filter: imgColor }}
-              src={kontakt_arrow}
-              alt="Arrow"
-              className="Kontakt-Arrow"
-            />
+            <img src={kontakt_arrow} alt="Arrow" className="Kontakt-Arrow" />
           </label>
 
           <label className="Kontakt-Form-Label" id="option-age">
@@ -369,19 +350,9 @@ const Kontakt = () => {
               placeholder="Yaş Grubunu Seçiniz"
             />
             {changeChildImg && (
-              <img
-                style={{ filter: imgColor, display: childImageSource }}
-                src={Child}
-                alt="Child"
-                className="Child"
-              />
+              <img src={Child} alt="Child" className="Child" />
             )}
-            <img
-              style={{ filter: imgColor }}
-              src={kontakt_arrow}
-              alt="Arrow"
-              className="Kontakt-Arrow"
-            />
+            <img src={kontakt_arrow} alt="Arrow" className="Kontakt-Arrow" />
           </label>
 
           <label className="Kontakt-Form-Label" id="option-date">
@@ -404,7 +375,6 @@ const Kontakt = () => {
                   }
 
                   arr.push(null)
-                  console.log(arr)
                   setDateRange(arr)
 
                   setformData({ ...formData, start_date: arr[0], end_date: "" })

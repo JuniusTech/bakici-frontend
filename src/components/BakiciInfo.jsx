@@ -10,6 +10,7 @@ import Vector from "../images/Vector.png"
 import Group from "../images/Group.png"
 
 function BakiciInfo({ babysitterInfo }) {
+  console.log(babysitterInfo)
   return (
     <>
       <div className="info-section-container">

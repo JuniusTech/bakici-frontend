@@ -1,25 +1,26 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Register from "../pages/Register";
-import Login from "../pages/Login";
-import BakiciAra from "../pages/BakiciAra";
-import IseBasvur from "../pages/IseBasvur";
-import EbeveynKayit from "../pages/EbeveynKayit";
-import EbeveynKayitOnay from "../pages/EbeveynKayitOnay";
-import BakiciKayitOnay from "../pages/BakiciKayitOnay";
-import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici";
-import BakiciKayit from "../pages/BakiciKayit";
-import Bakici from "../pages/Bakici/Bakici";
-import OfflineYardim from "../pages/OfflineYardim";
-import BakiciYardim from "../pages/BakiciYardim";
-import Kontakt from "../pages/Kontakt";
-import KontaktBasarili from "../pages/KontaktBasarili";
-import Misafir from "../pages/Misafir";
-import SingleBakici from "../pages/SingleBakici";
-import Ebeveyn from "../pages/Ebeveyn/Ebeveyn";
-import PrivateRouter from "./PrivateRouter";
-import ReservationPage from "../pages/Reservation";
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "../pages/Home"
+import Register from "../pages/Register"
+import BakiciAra from "../pages/BakiciAra"
+import IseBasvur from "../pages/IseBasvur"
+import EbeveynKayit from "../pages/EbeveynKayit"
+import EbeveynKayitOnay from "../pages/EbeveynKayitOnay"
+import BakiciKayitOnay from "../pages/BakiciKayitOnay"
+import MisafirLoginYonlendirici from "../pages/MisafirLoginYonlendirici"
+import BakiciKayit from "../pages/BakiciKayit"
+import Bakici from "../pages/Bakici/Bakici"
+import OfflineYardim from "../pages/OfflineYardim"
+import BakiciYardim from "../pages/BakiciYardim"
+import Kontakt from "../pages/Kontakt"
+import KontaktBasarili from "../pages/KontaktBasarili"
+import Misafir from "../pages/Misafir"
+import SingleBakici from "../pages/SingleBakici"
+import Ebeveyn from "../pages/Ebeveyn/Ebeveyn"
+import PrivateRouter from "./PrivateRouter"
+import ReservationPage from "../pages/Reservation"
+import UserLogin from "../pages/UserLogin"
+import BabysitterLogin from "../pages/BabysitterLogin"
 
 const AppRouter = () => {
   return (
@@ -27,7 +28,8 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/user-login" element={<UserLogin />} />
+        <Route path="/babysitter-login" element={<BabysitterLogin />} />
         <Route path="/yardim" element={<OfflineYardim />} />
         <Route path="/bakyardim" element={<BakiciYardim />} />
         <Route path="/misafir" element={<Misafir />} />
@@ -42,9 +44,11 @@ const AppRouter = () => {
           <Route path="/profile" element={<Bakici />} />
           <Route path="/ebeveynprofil" element={<Ebeveyn />} />
           <Route path="/kontaktbas" element={<KontaktBasarili />} />
-          <Route path="/singlebakici" element={<SingleBakici />} />
+          <Route
+            path="/singlebakici/:babysitterId"
+            element={<SingleBakici />}
+          />
         </Route>
-        {/* <Route path="/anauyelik" element={<AnaUyelik />} /> */}
         <Route path="/bakicikayitonay" element={<BakiciKayitOnay />} />
         <Route path="/bakicikayit" element={<BakiciKayit />} />
         <Route
@@ -54,7 +58,7 @@ const AppRouter = () => {
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default AppRouter;
+export default AppRouter

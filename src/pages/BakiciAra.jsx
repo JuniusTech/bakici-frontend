@@ -14,13 +14,10 @@ const BakiciAra = () => {
   const items = [...Array(17).keys()]
   const itemsPerPage = 8
 
-  ///// Pagination Start//////
   const [currentItems, setCurrentItems] = useState([])
   const [pageCount, setPageCount] = useState(0)
   const [itemOffset, setItemOffset] = useState(0)
   const [bakicilar, setBakicilar] = useState([])
-
-  console.log(currentItems)
 
   useEffect(() => {
     //bakici List
@@ -30,16 +27,12 @@ const BakiciAra = () => {
         const res = await axios.get(`${baseURL}/babysitter`, {
           withCredentials: true,
         })
-        console.log(res)
         setCurrentItems(res.data.babysitters)
       } catch (err) {
-        console.log(err)
         toastErrorNotify(err.response.data.message)
       }
     }
     bakiciList()
-    const endOffset = itemOffset + itemsPerPage
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`)
     setPageCount(Math.ceil(items.length / itemsPerPage))
     setBakicilar(items.slice(0, 4))
   }, [itemOffset])
@@ -55,7 +48,10 @@ const BakiciAra = () => {
       <div className="">
         <NavbarBakici />
         <div className="d-flex flex-column flex-lg-row">
-          <BakiciFiltre />
+          <BakiciFiltre
+            currentItems={currentItems}
+            setCurrentItems={setCurrentItems}
+          />
 
           <div className="row mt-1 mt-lg-5 p-2">
             <div className="bakiciara-bakicilar-head">
@@ -99,7 +95,8 @@ const BakiciAra = () => {
           renderOnZeroPageCount={null}
         />
         <hr className="my-5" />
-        <div className="bakiciara-önecikan-bakici-container py-2 m-auto">
+        {/* Aşağıda ki kod Öne Çıkan Bakıcılar apisi yayınlandığında yapılacak*/}
+        {/* <div className="bakiciara-önecikan-bakici-container py-2 m-auto">
           <div className="bakiciara-önecikan-bakici-header d-flex my-5 justify-content-center">
             <hr className="w-25 mx-2 mx-lg-4 my-auto" />
             <h1 className="d-flex justify-content-center ">
@@ -107,17 +104,17 @@ const BakiciAra = () => {
             </h1>
             <hr className="w-25 mx-2 mx-lg-4 my-auto" />
           </div>
-        </div>
-        <div className="row mt-5 p-2 bakiciara-önecikan-bakici-card-container">
+        </div> */}
+        {/* <div className="row mt-5 p-2 bakiciara-önecikan-bakici-card-container">
           {bakicilar.map((item) => (
             <div
               key={item}
               className="bakiciara-önecikan-bakici-cards col-lg-3 col-md-4 col-sm-6 my-xl-4 my-lg-3 my-md-2 my-sm-1 px-sm-2 py-5"
             >
-              <Bakicikart />
+              <Bakicikart key={item._id} bakici={item} />
             </div>
           ))}
-        </div>
+        </div> */}
         <div className="HomeLastComp">
           <Container>
             <img src={Logo} alt="Logo" className="HomeLastCompLogo" />

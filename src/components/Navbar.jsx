@@ -1,51 +1,48 @@
-import { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import MagnifyingGlass from "../assets/MagnifyingGlass.svg";
-import Profile from "../assets/Profile.svg";
-import ProfilePlus from "../assets/ProfilePlus.svg";
-import "../styles/Navbar.css";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { useEffect, useState } from "react"
+import { NavLink, useNavigate } from "react-router-dom"
+import MagnifyingGlass from "../assets/MagnifyingGlass.svg"
+import Profile from "../assets/Profile.svg"
+import ProfilePlus from "../assets/ProfilePlus.svg"
+import "../styles/Navbar.css"
+import { Navbar, Nav, Button } from "react-bootstrap"
 
-import CareZone from "../assets/CareZone.svg";
-import AnaUyelik from "./AnaUyelik";
+import CareZone from "../assets/CareZone.svg"
+import AnaUyelik from "./AnaUyelik"
 
 const CareZoneNavbar = () => {
-  const [expanded, setExpanded] = useState(false);
-
-  const [openAnaUyelik, setOpenAnaUyelik] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const navigate = useNavigate();
+  const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    setExpanded(false);
-    setOpenAnaUyelik(true);
-  };
+    setOpenAnaUyelik(true)
+  }
 
   const handleScroll = () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
     if (scrollTop > 0) {
-      setIsScrolled(true);
+      setIsScrolled(true)
     } else {
-      setIsScrolled(false);
+      setIsScrolled(false)
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const navstyle = {
     color: "#263238",
     textDecoration: "none",
-  };
+  }
   const navstyle2 = {
     color: "#263238",
     textDecoration: "underline",
-  };
+  }
 
   return (
     <div>
@@ -84,12 +81,7 @@ const CareZoneNavbar = () => {
                 />
               </Button>
             </NavLink>
-            <NavLink
-              className="me-3 active"
-              style={navstyle}
-              onClick={() => setExpanded(false)}
-              to="/isebasvur"
-            >
+            <NavLink className="me-3 active" style={navstyle} to="/isebasvur">
               <Button
                 className="Navbar-Button"
                 onClick={() => navigate("isebasvur")}
@@ -123,7 +115,6 @@ const CareZoneNavbar = () => {
             <NavLink
               className="me-3 active Navbar-Link-Uye-Yardım"
               style={navstyle2}
-              onClick={() => setExpanded(false)}
               to="/yardim"
             >
               Yardım
@@ -132,7 +123,7 @@ const CareZoneNavbar = () => {
         </Navbar.Collapse>
       </Navbar>
     </div>
-  );
-};
+  )
+}
 
-export default CareZoneNavbar;
+export default CareZoneNavbar

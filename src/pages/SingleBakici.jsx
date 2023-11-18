@@ -7,14 +7,15 @@ import homeicon from "../assets/homeicon.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import Footer from "../components/Footer"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
+import { toastErrorNotify } from "../helper/ToastNotify"
 
 function SingleBakici() {
   const { babysitterId } = useParams()
   const [babysitterInfo, setBabysitterInfo] = useState([])
 
-  console.log(babysitterId)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const babysitterDetail = async () => {
@@ -23,16 +24,16 @@ function SingleBakici() {
         const res = await axios.get(`${baseURL}/babysitter/${babysitterId}`, {
           withCredentials: true,
         })
+        console.log(res)
         setBabysitterInfo(res.data.babySitter)
       } catch (err) {
-        console.log(err)
+        toastErrorNotify("Bakıcı bilgileri getirilirken bir hata meydana geldi")
+        navigate("/")
       }
     }
     babysitterDetail()
   }, [babysitterId])
 
-  console.log(babysitterInfo)
-  // console.log(bakici)
   return (
     <div className="w-100 px-3">
       <NavbarBakici />
