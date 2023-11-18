@@ -17,7 +17,7 @@ import { useLoginContext } from "../context/LoginProvider"
 import LoginOptions from "./LoginOptions"
 
 const NavbarBakici = () => {
-  const { currentUser } = useLoginContext()
+  const { currentUser, setCurrentUser } = useLoginContext()
   const [openAnaUyelik, setOpenAnaUyelik] = useState(false)
   const [loginOptionModal, setLoginOptionModal] = useState(false)
 
@@ -49,7 +49,7 @@ const NavbarBakici = () => {
             <p className="mb-0">Bakıcı Ara</p>
             <img className="" src={bakiciara} alt="bakiciara" />
           </Link>
-          {currentUser && (
+          {currentUser ? (
             <div className="d-flex align-items-center gap-5 ps-4">
               <Link className="navbar-bakici__bildirim position-relative">
                 <img src={bildirim} alt="bildirim" />
@@ -79,7 +79,10 @@ const NavbarBakici = () => {
                   <Dropdown.Menu className="text-center">
                     <Dropdown.Item
                       onClick={() => {
+                        document.cookie =
+                          "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
                         localStorage.removeItem("currentUser")
+                        setCurrentUser("")
                         navigate("/login")
                       }}
                     >
@@ -89,9 +92,7 @@ const NavbarBakici = () => {
                 </Dropdown>
               </div>
             </div>
-          )}
-
-          {!currentUser && (
+          ) : (
             <div>
               <div className="d-none d-lg-flex align-items-center gap-4">
                 <Link className="navbar-bakici__button " to="/isebasvur">

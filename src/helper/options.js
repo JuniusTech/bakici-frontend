@@ -147,14 +147,6 @@ export const deneyim = [
   { value: "deneyim5", label: "+5 yıl" },
 ]
 
-export const egitimSev = [
-  { value: "doktora", label: "Doktora" },
-  { value: "yuksekLi", label: "Yüksek Lisans" },
-  { value: "lisans", label: "Lisans" },
-  { value: "uni", label: "Universite" },
-  { value: "lise", label: "Lise" },
-]
-
 export const babySitterInfo = [
   {
     id: 1,

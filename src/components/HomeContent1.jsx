@@ -29,9 +29,6 @@ function HomeContent1() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log("Selected Option:", selectedOption)
-    console.log("Location:", location)
-    console.log("Date:", date)
   }
 
   const filterColor =

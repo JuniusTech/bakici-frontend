@@ -29,12 +29,11 @@ const UserLogin = () => {
       const res = await axios.post(`${baseURL}/user/signin`, ebeveynLogin, {
         withCredentials: true,
       })
-      toastSuccessNotify("Başarıyla Giriş Yapıldı")
       setCurrentUser(res?.data)
+      toastSuccessNotify("Başarıyla Giriş Yapıldı")
       navigate("/bakiciara")
     } catch (err) {
       setIsSubmiting(false)
-      console.log(err)
       toastErrorNotify(err.response.data.message || err?.message)
     }
   }

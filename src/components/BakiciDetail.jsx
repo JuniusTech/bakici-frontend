@@ -151,7 +151,6 @@ function BakiciDetail({ babysitterInfo }) {
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`)
     setCurrentItems(items.slice(itemOffset, endOffset))
     setPageCount(Math.ceil(items.length / itemsPerPage))
   }, [itemOffset])
@@ -159,9 +158,6 @@ function BakiciDetail({ babysitterInfo }) {
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = event.selected * itemsPerPage
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    )
     setItemOffset(newOffset)
   }
 

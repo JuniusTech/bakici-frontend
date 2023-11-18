@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
+import { jwtDecode } from "jwt-decode"
 
 export const LoginContext = createContext()
 
@@ -7,13 +8,18 @@ const LoginProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("currentUser")) || null
   )
 
+  const token = document.cookie.split("=")[1]
+
   useEffect(() => {
-    if (currentUser) {
-      localStorage.setItem("currentUser", JSON.stringify(currentUser))
-    } else {
-      localStorage.removeItem("currentUser")
+    if (token) {
+      const decode = jwtDecode(token)
+      if (currentUser) {
+        localStorage.setItem("currentUser", JSON.stringify(decode))
+      } else {
+        localStorage.removeItem("currentUser")
+      }
     }
-  }, [currentUser])
+  }, [currentUser, token])
 
   const values = { currentUser, setCurrentUser }
 

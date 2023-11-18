@@ -42,12 +42,6 @@ const Kontakt = () => {
   })
 
   const onSubmit = (event) => {
-    console.log("Service:", formData.selectedOption)
-    console.log("Age:", formData.age)
-    console.log("Start Date:", formData.start_date)
-    console.log("End Date:", formData.end_date)
-    console.log("Message", formData.message)
-
     event.preventDefault()
     if (formData.message.length >= 20) {
       nav("/kontaktbas")
@@ -381,7 +375,6 @@ const Kontakt = () => {
                   }
 
                   arr.push(null)
-                  console.log(arr)
                   setDateRange(arr)
 
                   setformData({ ...formData, start_date: arr[0], end_date: "" })

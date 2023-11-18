@@ -43,7 +43,6 @@ const EbeveynKayit = () => {
     try {
       setIsSubmiting(true)
       const res = await axios.post(`${baseURL}/user/signup`, ebeveynInfo)
-      console.log("Kullanıcı Başarıyla Kayıt Edildi", res)
       navigate("/ebeveynkayitonay")
     } catch (err) {
       let errorData
@@ -62,7 +61,6 @@ const EbeveynKayit = () => {
       }
 
       setDataErrors(errorData)
-      console.log(dataErrors)
       setIsSubmiting(false)
     }
   }

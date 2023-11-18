@@ -38,7 +38,6 @@ const BabysitterLogin = () => {
       navigate("/bakiciara")
     } catch (err) {
       setIsSubmiting(false)
-      console.log(err)
       toastErrorNotify(err.response.data.message || err?.message)
     }
   }

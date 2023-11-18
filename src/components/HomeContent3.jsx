@@ -13,7 +13,6 @@ function HomeContent3() {
         <div className="Carouselx-Box">
           <Carousel
             id="carouselExampleInterval"
-            // data-bs-ride="carousel"
             className="carousel-image-container"
           >
             <Carousel.Item>
