@@ -48,10 +48,12 @@ function Bakicikart({ bakici }) {
           </div>
         </div>
         <div className="d-flex justify-content-end px-3">
-          <Link to={`/singlebakici/${bakici?._id}`}>
-            <a onClick={() => navigate(`/singlebakici`)} className="card-link">
-              İncele
-            </a>
+          <Link
+            to={`/singlebakici/${bakici?._id}`}
+            onClick={() => navigate(`/singlebakici`)}
+            className="card-link"
+          >
+            İncele
           </Link>
         </div>
       </div>

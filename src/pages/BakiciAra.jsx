@@ -17,7 +17,6 @@ const BakiciAra = () => {
   const [currentItems, setCurrentItems] = useState([])
   const [pageCount, setPageCount] = useState(0)
   const [itemOffset, setItemOffset] = useState(0)
-  const [bakicilar, setBakicilar] = useState([])
 
   useEffect(() => {
     //bakici List
@@ -34,7 +33,6 @@ const BakiciAra = () => {
     }
     bakiciList()
     setPageCount(Math.ceil(items.length / itemsPerPage))
-    setBakicilar(items.slice(0, 4))
   }, [itemOffset])
 
   // Invoke when user click to request another page.
@@ -64,10 +62,10 @@ const BakiciAra = () => {
 
             {currentItems.map((item) => (
               <div
-                key={item}
+                key={item._id}
                 className="col-lg-4 col-md-4 col-sm-6 my-xl-4 my-lg-3 my-md-2 my-sm-1"
               >
-                <Bakicikart key={item._id} bakici={item} />
+                <Bakicikart bakici={item} />
               </div>
             ))}
           </div>

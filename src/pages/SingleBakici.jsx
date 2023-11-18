@@ -24,7 +24,6 @@ function SingleBakici() {
         const res = await axios.get(`${baseURL}/babysitter/${babysitterId}`, {
           withCredentials: true,
         })
-        console.log(res)
         setBabysitterInfo(res.data.babySitter)
       } catch (err) {
         toastErrorNotify("Bakıcı bilgileri getirilirken bir hata meydana geldi")

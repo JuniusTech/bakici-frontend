@@ -180,9 +180,9 @@ function BakiciDetail({ babysitterInfo }) {
         </Slider>
         <div className="bakici-detail-heart-star-text-container d-flex flex-column justify-content-center align-items-center w-100 mt-3 flex-md-row justify-content-md-between">
           <div className="d-flex justify-content-center align-items-center my-1">
-            <div class="rating_wrap justify-content-between m-0">
-              <div class="rating ">
-                <div class="product_rate"></div>
+            <div className="rating_wrap justify-content-between m-0">
+              <div className="rating ">
+                <div className="product_rate"></div>
               </div>
             </div>
             <p className="m-0 bakici-detail-star-rate">4.7</p>
