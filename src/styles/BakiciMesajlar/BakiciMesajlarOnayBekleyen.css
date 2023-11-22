@@ -185,7 +185,7 @@
   gap: 20px;
   justify-content: space-between;
 
-  align-items: end;
+  align-items: flex-end;
 }
 .BakiciMesajlarOnayBekleyen-Right-TalepEdilen-Div-Bottom-TextArea {
   border-radius: 7px;
